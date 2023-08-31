@@ -9,34 +9,9 @@
      
     </div>
 
-    <div class="card">
-        <h1>Hello PrimeVue</h1>
-        <prime-dialog header="My Awesome Dialog" v-model:visible="dialogVisible" :style="{ width: '50vw' }">
-          <p>"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them." <br> <strong> - Andrew Hunt</strong></p>
-        </prime-dialog>
-        <prime-button
-          label="My Awesome Button"
-          icon="pi pi-angle-right"
-          class="p-button-success"
-          @click="showDialog"
-        />
-      </div>
 </template>
 <script lang="ts">
-  export default {
-    name: "App",
-    data() {
-        return {
-            dialogVisible: false
-        }
-    },
-    components: {},
-    methods: {
-        showDialog() {
-            this.dialogVisible = true;
-        }
-    }
-};
+
 </script>
 
 <style>
