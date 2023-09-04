@@ -12,17 +12,25 @@
               </p>
             </div>
             
-
-            <div class="Get-started-btn md:flex">
-                <a href="#" class="hover:bg-gray-100 bg-white rounded shadow-lg text-indigo-800"> Get Started </a>
-            </div>
+            <div class="bottom"> 
+              <div class="md:flex">
+                <button class="get-started-btn" @click="getStartedClicked">Get Started</button>
+              </div>
+            </div>  
 
         </div>
     </div>
 </template>
 
 <script lang="ts">
-
+  export default {
+    methods: {
+      getStartedClicked() {
+        // Handle the "Get Started" button click event
+        alert("Get Started button clicked!");
+      },
+    },
+  };
 </script>
 
 <style scoped>
@@ -43,5 +51,23 @@
   padding-left: 7%; 
   text-align: left; 
   color: white;
+}
+.bottom {
+  flex: 5; /* 30% height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  align-items: flex-start; /* Align content to the left */
+}
+
+.get-started-btn {
+  background-color: #6d0cff;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
