@@ -34,7 +34,7 @@
         });
     </script>
 </body>
-<style>
+<style scoped>
         /* Styles for the card container */
         .card {
             width: 600px; /* Adjusted width to be 4 times the height (150px * 4 = 600px) */
