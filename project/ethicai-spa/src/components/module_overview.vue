@@ -72,7 +72,6 @@ p {
   flex-direction: column;
   justify-content: center; /* Push content to top and bottom */
   text-align: center;
-  border: 1px solid #000;
 }
 
 .top-child {
