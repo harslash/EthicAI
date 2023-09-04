@@ -137,4 +137,3 @@ p {
   cursor: pointer;
 }
 </style>
-</script>
