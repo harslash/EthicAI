@@ -1,6 +1,6 @@
 <template>
     <div>
-   <nav class="navbar navbar-expand-sm navbar-light bg-light" aria-label="Third navbar example">
+   <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Third navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
                 <img src="../assets/logo.png" alt="Company Logo" width="130">
