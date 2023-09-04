@@ -2,6 +2,7 @@
   <!-- <landingPage></landingPage> -->
   <NavBar></NavBar>
   <LandingPage/>
+  <PageFooter/>
 </template>
 
 
@@ -9,12 +10,14 @@
 import { defineComponent } from 'vue';
 import LandingPage from './components/pages/landing-page.vue';
 import NavBar from './components/nav-bar.vue'
+import PageFooter from './components/page-footer.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     LandingPage,
-    NavBar
+    NavBar,
+    PageFooter
   }
 });
 </script>
