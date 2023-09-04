@@ -13,7 +13,7 @@
     <div class="right-container">
       <div class="top-child">
         <!-- Content for the top child container (70% height) -->
-        <div class="module-structure">Module Structure</div>
+        <div class="module-structure"><u>Module Structure</u></div>
         <ul class="contents">
           <li>The Rise of DALL·E</li>
           <li>AI Generated vs Human Art</li>
