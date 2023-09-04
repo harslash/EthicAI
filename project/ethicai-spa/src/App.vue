@@ -1,19 +1,21 @@
 <template>
-  <div class="app bg-yellow-300 ">
-    <p class="text-lg">This text is from the App component</p>
-    <purple-btn></purple-btn>
-  </div>
+  <landingPage></landingPage>
+  <NavBar/>
+
+
 </template>
 
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import purpleBtn from "./components/purple-btn.vue";
+import LandingPage from './components/pages/landing-page.vue';
+import NavBar from './components/nav-bar.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-   purpleBtn
+    LandingPage,
+    NavBar
   }
 });
 </script>
