@@ -4,24 +4,28 @@
         <div class="col-md-6 image-col">
           <!-- <img src="../../assets/landing.png"/> -->
         </div>
-        <div class="col-md-6">
-        <div class="d-flex justify-content-center align-items-center">
-            <form class="c">
+        <div class="d-flex col-md-6 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <form class="form">
                 <h3 class="mb-4 form-title">Welcome back!</h3>
                 <div class="form-text mb-5">Enter your details to begin learning</div>
+                <div class="d-flex mb-2">
+                    <label>Email address</label>
+                </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
+                 <div class="d-flex mb-2">
+                    <label>Password</label>
+                    </div>
                 <div class="mb-5">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary btn-login">Login</button>
+                    <button type="submit" class="btn btn-primary btn-login" disabled>Login</button>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-outline-primary btn-signup">Sign up</button>
+                    <button type="submit" class="btn btn-outline-primary btn-signup" disabled>Sign up</button>
                 </div>
             </form>
         </div>
@@ -64,7 +68,7 @@ export default defineComponent({
 }
 
 .container-fluid {
-    height: 100vh
+    height: 105vh
 }
 
 .btn-login {
@@ -72,12 +76,31 @@ export default defineComponent({
     width: 20rem;
 }
 
+.btn-login:hover {
+    background-color: #C324FF;
+}
+
 .btn-signup {
     width: 20rem;
+    color: #6D0CFF;
+
+}
+
+.btn-signup:hover {
+   background-color: #C324FF;
 }
 
 .form-title {
     color: #6D0CFF;
     font-family: "Open Sans", sans-serif;
+    text-align: left;
+}
+
+.form-text {
+    text-align: left;
+}
+
+.form {
+    padding-top: auto;
 }
 </style>
