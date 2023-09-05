@@ -1,6 +1,6 @@
 <template>
     <nav-bar/>
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center page-container">
       <div class="row h-100">
         <div class="col-md-6 image-col">
           <!-- <img src="../../assets/landing.png"/> -->
@@ -75,8 +75,9 @@ export default defineComponent({
     background-image: url("../../assets/landing.png")
 }
 
-.container-fluid {
-    height: 105vh
+.container-fluid.page-container {
+    height: 105vh;
+    margin-top: 60px;
 }
 
 .btn-login {
