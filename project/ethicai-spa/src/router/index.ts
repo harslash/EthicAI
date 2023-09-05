@@ -23,7 +23,19 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/ReferencesView.vue')
-  }
+  },
+  {
+  path: '/chatbots',
+  component: () => import(/* webpackChunkName: "dashboard" */ '../views/modules/chatbots/ChatbotsOverviewView.vue'),
+  children: [
+    {
+      path: 'the-age-of-chatbots', 
+      name: 'the-age-of-chatbots',
+      component: () => import(/* webpackChunkName: "dashboard-profile" */ '../views/modules/chatbots/ChatbotsPageOneView.vue')
+    },
+  ]
+}
+
 ]
 
 const router = createRouter({
