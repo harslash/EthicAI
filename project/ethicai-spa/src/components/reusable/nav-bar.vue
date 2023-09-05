@@ -17,7 +17,9 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <router-link to="/">
+                        <a class="nav-link active">Home</a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Modules</a>
@@ -31,7 +33,9 @@
             </ul>
 
             <form class="d-flex" role="search">
-                <button class="btn btn-primary" type="submit">Login</button>
+                <router-link to="/login">
+                     <button class="btn btn-primary" type="submit">Login</button>
+                </router-link>
             </form>
            
           </div>

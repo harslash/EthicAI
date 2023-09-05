@@ -1,14 +1,13 @@
 <template>
   <!-- <landingPage></landingPage> -->
   <!-- <NavBar></NavBar> -->
-  <LoginPage/>
-  <!-- <LandingHero/>
-  <LandingCard/>
-  <PageFooter/> -->
+  <div id="app">
+    <router-view></router-view>
+  </div>
+
 
 
 </template>
-
 
 <script lang="ts">
 /* eslint-disable vue/no-unused-components */

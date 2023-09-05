@@ -7,7 +7,11 @@
       <div class="col-md-2 p-5">
         <h4 class="mb-3">Company</h4>
         <ul class="footer-list">
-          <li class="mb-2"><a href="#">References</a></li>
+          <li class="mb-2">
+            <router-link to="/references">
+                <a href="#">References</a>
+            </router-link>
+          </li>
           <li class="mb-2"><a href="#">Our team</a></li>
           <li class="mb-2"><a href="#">Link</a></li>
         </ul>
