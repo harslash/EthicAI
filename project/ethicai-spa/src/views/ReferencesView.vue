@@ -7,7 +7,7 @@
 <script lang="ts">
 import ReferencesPage from '../components/pages/references-page.vue'
 export default {
-    name: 'LoginView',
+    name: 'ReferencesView',
     components: {
         'references-page': ReferencesPage
     }
