@@ -2,7 +2,7 @@
   <div class="container">
     <div class="left-container">
       <div class="image">
-        <img src="pics/purple_robot.jpeg" alt="Image">
+        <img src="../../pics/purple_robot.jpeg" alt="Image">
       </div>
       <div>
         <p class="module-name">The Rise of DALL·E</p>
@@ -30,15 +30,17 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, DefineComponent } from 'vue';
+export default defineComponent ({
+  name: 'ModuleOverview',
   methods: {
     continueClicked() {
       // Handle the "Continue" button click event here
       alert("Continue button clicked!");
     },
   },
-};
+});
 </script>
 
 <style scoped>

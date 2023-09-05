@@ -23,14 +23,16 @@
 </template>
 
 <script lang="ts">
-  export default {
+import { defineComponent, DefineComponent } from 'vue';
+  export default defineComponent({
+    name: 'LandingHero',
     methods: {
       getStartedClicked() {
         // Handle the "Get Started" button click event
         alert("Get Started button clicked!");
       },
     },
-  };
+  });
 </script>
 
 <style scoped>
