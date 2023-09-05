@@ -1,21 +1,25 @@
 <template>
-    <nav-bar />
+    <nav-bar/>
     <div class="container-fluid page-container">
         <div class="row h-100">
-
+            <div class="col-md-12">
+                <module-overview></module-overview>
+            </div>
         </div>
     </div>
-    <page-footer />
+    <page-footer/>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import NavBar from '../reusable/nav-bar.vue';
-import PageFooter from '../reusable/page-footer.vue';
+
+import { defineComponent} from 'vue';
+import NavBar from '../../reusable/nav-bar.vue'
+import PageFooter from '../../reusable/page-footer.vue';
+import ModuleOverview from '../../reusable/module_overview.vue';
 
 
 export default defineComponent({
-    name: 'ChatbotsPage1',
+    name: 'ChatbotsOverviewPage',
     data() {
         return {
 
@@ -26,7 +30,8 @@ export default defineComponent({
     },
     components: {
         'nav-bar': NavBar,
-        'page-footer': PageFooter
+        'page-footer': PageFooter,
+        'module-overview': ModuleOverview
     }
 });
 </script>

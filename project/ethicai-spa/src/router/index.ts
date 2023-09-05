@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import LandingView from '../views/LandingView.vue'
+// import LandingView from '../views/LandingView.vue'
 import LoginView from '../views/LoginView.vue';
 
 const routes: Array<RouteRecordRaw> = [
@@ -25,17 +25,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/ReferencesView.vue')
   },
   {
-  path: '/chatbots',
-  component: () => import(/* webpackChunkName: "dashboard" */ '../views/modules/chatbots/ChatbotsOverviewView.vue'),
-  children: [
-    {
-      path: 'the-age-of-chatbots', 
-      name: 'the-age-of-chatbots',
-      component: () => import(/* webpackChunkName: "dashboard-profile" */ '../views/modules/chatbots/ChatbotsPageOneView.vue')
-    },
-  ]
-}
-
+    path: '/chatbots',
+    component: () => import('../views/modules/chatbots/ChatbotsOverviewView.vue'),
+  },
+  {
+    path: '/chatbots/the-age-of-chatbots', 
+    name: 'the-age-of-chatbots',
+    component: () => import('../views/modules/chatbots/ChatbotsPageOneView.vue'),
+  },
 ]
 
 const router = createRouter({
