@@ -2,7 +2,7 @@
   <div class="container">
     <div class="left-container">
       <div class="image">
-        <img src="../../pics/purple_robot.jpeg" alt="Image">
+        <img src="../../assets//purple_robot.jpeg" alt="Image">
       </div>
       <div>
         <p class="module-name">The Rise of DALL·E</p>
