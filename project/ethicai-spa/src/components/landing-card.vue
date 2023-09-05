@@ -15,7 +15,7 @@
     <div id="second">
       <h2>Interactive learning</h2>
         <div id="image-div">
-          <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')" style="height: 200px; width: 168px;">
+          <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')"  style="height: 225px; width: 189px;">
         </div>
       
       <div id="text">  
@@ -26,7 +26,7 @@
     <div id="third">
       <h2>All in one place</h2>
         <div id="image-div">
-          <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')" style="height: 187px; width: 201px;">
+          <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')" style="height: 229px; width: 247px;">
         </div>
       
       <div id="text"> 
@@ -38,15 +38,28 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
+
 export default defineComponent({
-  name: 'LandingCard',
-  methods: {
-  },
+    name: 'LandingCard',
+    data() {
+        return {
+        }
+    },
+    methods: {
+    }
 });
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700; 
+}
+
 #wrapper {
   display: flex;
   flex-wrap: wrap; /* Wrap elements so they flow below each other */
@@ -54,6 +67,7 @@ export default defineComponent({
   flex-direction: row;
   float: center;
   padding: 1%;
+  text-align: center;
 }
 #first {
     display:flexbox;
@@ -100,5 +114,8 @@ export default defineComponent({
 #text {
   float: left; 
   clear: both;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400; 
 }
 </style>
