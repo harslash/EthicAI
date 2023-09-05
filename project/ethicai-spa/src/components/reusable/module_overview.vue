@@ -2,12 +2,11 @@
   <div class="container">
     <div class="left-container">
       <div class="image">
-        <img src="../../assets//purple_robot.jpeg" alt="Image">
+        <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
       </div>
       <div>
-        <p class="module-name">The Rise of DALL·E</p>
-        <p class="module-desc">In this module, you will discover the world of AI generated art. The highs and lows;
-          including the impact these generators have on artists and creative integrity.</p>
+        <p class="module-name">{{ moduleTitle }}</p>
+        <p class="module-desc">{{ moduleDescription }}</p>
       </div>
     </div>
     <div class="right-container">
@@ -15,15 +14,15 @@
         <!-- Content for the top child container (70% height) -->
         <div class="module-structure"><u>Module Structure</u></div>
         <ul class="contents">
-          <li>The Rise of DALL·E</li>
-          <li>AI Generated vs Human Art</li>
-          <li>Copyright and Copywrong</li>
+          <li v-for="item in modulePageNames" :key="item">{{ item }}</li>
         </ul>
       </div>
       <div class="bottom-child">
         <!-- Content for the bottom child container (30% height) -->
         <div class="continue-button">
-          <button @click="continueClicked">Continue</button>
+          <router-link :to="generateRoute(moduleName, pageName)">
+             <button @click="continueClicked">Continue</button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -34,10 +33,23 @@
 import { defineComponent} from 'vue';
 export default defineComponent ({
   name: 'ModuleOverview',
+  props: {
+    moduleTitle: String,
+    moduleDescription: String,
+    moduleImgFilename: String,
+    modulePageNames: Array as () => string[],
+    moduleName: String,
+    pageName: String
+  },
   methods: {
     continueClicked() {
       // Handle the "Continue" button click event here
-      alert("Continue button clicked!");
+      // alert("Continue button clicked!");
+    },
+    generateRoute(moduleName: string | undefined, pageName: string | undefined) {
+      // You can customize the route generation logic here
+      // For example, you can append the routePath to an existing route
+      return `/${moduleName}/${pageName}`;
     },
   },
 });
