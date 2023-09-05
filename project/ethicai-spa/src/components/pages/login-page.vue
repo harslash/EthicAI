@@ -1,4 +1,5 @@
 <template>
+    <nav-bar/>
     <div class="container-fluid text-center">
       <div class="row h-100">
         <div class="col-md-6 image-col">
@@ -33,10 +34,13 @@
         </div>
       </div>
     </div>
+    <page-footer/>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import NavBar from '../reusable/nav-bar.vue';
+import PageFooter from '../reusable/page-footer.vue';
 
 const message = ref('Hello, Vue!');
 
@@ -54,6 +58,10 @@ export default defineComponent({
     }, 
     methods: {
         
+    },
+    components: { 
+        'nav-bar': NavBar,
+        'page-footer': PageFooter
     }
 });
 </script>

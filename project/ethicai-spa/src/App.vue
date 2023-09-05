@@ -1,10 +1,10 @@
 <template>
   <!-- <landingPage></landingPage> -->
-  <NavBar></NavBar>
-  <!-- <LandingPage/> -->
-  <LandingHero/>
+  <!-- <NavBar></NavBar> -->
+  <LoginPage/>
+  <!-- <LandingHero/>
   <LandingCard/>
-  <PageFooter/>
+  <PageFooter/> -->
 
 
 </template>
