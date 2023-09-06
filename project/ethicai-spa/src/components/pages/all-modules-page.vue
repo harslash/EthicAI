@@ -1,6 +1,14 @@
 <template>
     <nav-bar />
-        <div class="container-fluid page-container text-center ">
+        <div class="container-fluid page-container text-center big-wrapper">
+
+            <div class="title">
+                <h1><u>All Modules</u></h1>
+            </div>
+
+            <div class="subtitle">
+                <h2><u>Large Language Models</u></h2>
+            </div>
 
             <!-- LLM cards -->
             <div id="wrapper">
@@ -16,15 +24,15 @@
                 </router-link>
 
                 <div class="card">
-                    <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Chatbots" style="width:100%">
+                    <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Copilot" style="width:100%">
                     <div class="container">
                         <h4>Understanding Copilot</h4>
-                        <p>Placeholder text</p>
+                        <p>Not yet implemented</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Chatbots" style="width:100%">
+                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
                     <div class="container">
                         <h4>Placeholder</h4>
                         <p>Placeholder text</p>
@@ -32,6 +40,41 @@
                 </div>
 
             </div>
+
+            <div class="subtitle">
+                <h2><u>AI Generation</u></h2>
+            </div>
+
+            <!-- AI Generation cards -->
+            <div id="wrapper" style="padding-bottom: 5%;">
+                
+                <div class="card">
+                    <img :src="require('@/assets/dalle_Thumbnail.png')" alt="DALL E" style="width:100%;">
+                    <div class="container">
+                        <h4>The Rise of DALL E</h4>
+                        <p>Placeholder text</p>
+                    </div>
+                </div>
+                
+
+                <div class="card">
+                    <img :src="require('@/assets/deepfakes_Thumbnail.png')" alt="Deepfakes" style="width:100%">
+                    <div class="container">
+                        <h4>Deepfakes & Maintaining Identity</h4>
+                        <p>Not yet implemented</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
+                    <div class="container">
+                        <h4>Placeholder</h4>
+                        <p>Placeholder text</p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     <page-footer />
 </template>
@@ -59,7 +102,35 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+.title {
+    padding-top: 8%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.subtitle {
+    padding-top: 3%;
+    margin-left: 4%;
+    margin-right: 4%;
+    text-align: left;
+
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 4%;
+
+}
 
 #wrapper {
     display: flex;
@@ -68,7 +139,6 @@ export default defineComponent({
     flex-direction: row;
     float: center;
     padding: 1%;
-    padding-top: 5%;
     margin-left: 4%;
     margin-right: 4%;
 }
