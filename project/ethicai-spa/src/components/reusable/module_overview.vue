@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container module-overview-container">
     <div class="left-container">
       <div class="image">
         <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">

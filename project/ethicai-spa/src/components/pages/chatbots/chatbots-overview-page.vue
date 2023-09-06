@@ -2,7 +2,7 @@
     <nav-bar/>
     <div class="container-fluid page-container">
         <div class="row h-100">
-            <div class="col-md-12">
+            <div class="col-md-12 d-flex align-items-center">
                 <module-overview 
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
@@ -53,7 +53,11 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .container-fluid.page-container {
-    height: 105vh;
+    height: 100vh;
     margin-top: 60px;
+}
+
+.module-overview-container {
+    height: 75%;
 }
 </style>
