@@ -1,12 +1,11 @@
 <template>
    <div class="card" style="width: 18rem;">
       <div class="card-header">
-        Featured
+        <h5>Important terms</h5>
+        <p>Click to learn more</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="py-2" v-for="item in terms" :key="item">{{ item }}</li>
       </ul>
     </div>
 </template>
@@ -16,7 +15,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'GeneralTermsCard',
     props: {
- 
+        'terms': Array as () => string[],
     },
     methods: {
 
