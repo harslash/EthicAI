@@ -1,34 +1,38 @@
 <template>
     <nav-bar />
         <div class="container-fluid page-container text-center ">
+
+            <!-- LLM cards -->
             <div id="wrapper">
+                
+                <router-link to="/chatbots" custom v-slot="{navigate}">
+                    <div class="card" @click="navigate" role="link">
+                        <img :src="require('@/assets/chatbots_Thumbnail.png')" alt="Chatbots" style="width:100%;">
+                        <div class="container">
+                            <h4>The Rise of Chatbots</h4>
+                            <p>Chatbots are now everywhere. Find out how privacy battles bias, and learn how to protect yourself from misinformation!</p>
+                        </div>
+                    </div>
+                </router-link>
 
-            <div class="card">
-                <img :src="require('@/assets/chatbots_Thumbnail.png')" alt="Chatbots" style="width:100%;">
-                <div class="container">
-                    <h4>The Rise of Chatbots</h4>
-                    <p>Chatbots are now everywhere. Find out how privacy battles bias, and learn how to protect yourself from misinformation!</p>
+                <div class="card">
+                    <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Chatbots" style="width:100%">
+                    <div class="container">
+                        <h4>Understanding Copilot</h4>
+                        <p>Placeholder text</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Chatbots" style="width:100%">
-                <div class="container">
-                    <h4>Understanding Copilot</h4>
-                    <p>Placeholder text</p>
+                <div class="card">
+                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Chatbots" style="width:100%">
+                    <div class="container">
+                        <h4>Placeholder</h4>
+                        <p>Placeholder text</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card">
-                <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Chatbots" style="width:100%">
-                <div class="container">
-                    <h4>Placeholder</h4>
-                    <p>Placeholder text</p>
-                </div>
             </div>
-
         </div>
-    </div>
     <page-footer />
 </template>
 
@@ -45,7 +49,7 @@ export default defineComponent({
         }
     },
     methods: {
-
+        
     },
     components: {
         'nav-bar': NavBar,
@@ -107,5 +111,8 @@ p {
 img {
     border-radius: 5px 5px 0 0;
     padding-bottom: 5%;
+}
+[role="link"]:hover {
+  cursor: pointer;
 }
 </style>
