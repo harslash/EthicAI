@@ -2,20 +2,31 @@
    <div class="card" style="width: 18rem;">
       <div class="card-header">
         <p class="card-header-title mb-0">Important terms</p>
-        <span class="card-header-subtitle">Click to learn more</span>
+        <span class="card-header-subtitle">Hover to learn more</span>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="py-2 card-body" v-for="item in terms" :key="item">{{ item }}</li>
+        <li 
+          class="py-2 card-body" 
+          v-for="item in termsAndDefinitions" 
+          :key="item.term"
+          v-tooltip="item.definition">{{ item.term }}
+        </li>
       </ul>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+
+interface TermObject {
+  term: string;
+  definition: string;
+}
+
 export default defineComponent({
     name: 'ImportantTermsCard',
     props: {
-        'terms': Array as () => string[],
+        'termsAndDefinitions': Array as () => TermObject[],
     },
     methods: {
 
