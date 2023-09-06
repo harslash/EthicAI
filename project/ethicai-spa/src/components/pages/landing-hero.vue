@@ -14,7 +14,9 @@
           
           <div class="bottom"> 
             <div class="md:flex">
-              <button class="get-started-btn" @click="getStartedClicked">Get Started</button>
+              <router-link to="/all-modules">
+                <button class="get-started-btn">Get Started</button>
+              </router-link>
             </div>
           </div>  
 
@@ -32,10 +34,7 @@ export default defineComponent({
       }
   },
   methods: {
-    getStartedClicked() {
-      // Handle the "Get Started" button click event
-      alert("Get Started button clicked!");
-    },
+    
   }
 });
 </script>

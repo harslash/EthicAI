@@ -33,6 +33,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'the-age-of-chatbots',
     component: () => import('../views/modules/chatbots/ChatbotsPageOneView.vue'),
   },
+  {
+    path: '/all-modules',
+    name: 'all-modules',
+    component: () => import('../views/AllModulesView.vue')
+  },
 ]
 
 const router = createRouter({
