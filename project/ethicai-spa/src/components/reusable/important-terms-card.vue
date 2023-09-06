@@ -1,15 +1,15 @@
 <template>
-   <div class="card" style="width: 18rem;">
-      <div class="card-header">
+   <div class="card terms-card" style="width: 18rem;">
+      <div class="card-header terms-card-header">
         <p class="card-header-title mb-0">Important terms</p>
         <span class="card-header-subtitle">Hover to learn more</span>
       </div>
       <ul class="list-group list-group-flush">
         <li 
-          class="py-2 card-body" 
+          class="py-2 card-body terms-card-body" 
           v-for="item in termsAndDefinitions" 
           :key="item.term"
-          v-tooltip="item.definition">{{ item.term }}
+          v-tooltip.right="{ value: getTooltipContent(item), escape: true, class: 'custom-error' }">{{ item.term }}
         </li>
       </ul>
     </div>
@@ -29,19 +29,20 @@ export default defineComponent({
         'termsAndDefinitions': Array as () => TermObject[],
     },
     methods: {
-
+        getTooltipContent(item: TermObject) {
+          return `<p class='text-black'>${item.definition}</p>`;
+        },
     },
 });
 </script>
 
-<style scoped>
+<style>
 /* Add your CSS styles here, scoped to this component */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&display=swap');
-
-.card {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+.terms-card {
   border: 2px solid #000000;
 }
-.card-header{
+.terms-card-header{
   background-color: #6D0CFF;
   color: #ffffff;
 }
@@ -57,17 +58,24 @@ export default defineComponent({
   font-size: 0.7rem;
 }
 
-.card-body {
+.terms-card-body {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     list-style-type: none;
 }
 
-.card-body:hover {
+.terms-card-body:hover {
     color: #6D0CFF;
     font-weight: 800;
 }
 
-
-
+.custom-error .p-tooltip-text {
+    background-color: #E5D1FF;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+.custom-error.p-tooltip-right .p-tooltip-arrow {
+    border-right-color: #E5D1FF;
+}
 </style>
