@@ -3,7 +3,9 @@
    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Third navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-                <img src="../../assets/logo.png" alt="Company Logo" width="130">
+            <router-link to="/">
+                  <img src="../../assets/logo.png" alt="Company Logo" width="130">
+            </router-link>    
           </a>
           <button class="navbar-toggler" type="button" 
             data-bs-toggle="collapse" 
@@ -17,13 +19,15 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                 <li class="nav-item">
-                    <router-link to="/">
-                        <a class="nav-link active">Home</a>
+                    <router-link class="nav-link" to="/">
+                        Home
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Modules</a>
-                    </li>
+                    <router-link class="nav-link" to="/all-modules">
+                       Modules
+                    </router-link>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Resources</a>
                 </li>
@@ -70,16 +74,12 @@ export default defineComponent({
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     color: #4d4d4d;
-
 }
 
 a.nav-link:hover {
     color: white;
     background-color: #6D0CFF;
-
 }
-
-
 
 li.nav-item {
     margin-left: 1rem;
