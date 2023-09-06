@@ -12,9 +12,28 @@
     <div class="right-container">
       <div class="top-child">
         <!-- Content for the top child container (70% height) -->
-        <div class="module-structure"><u>Module Structure</u></div>
+        <div class="module-structure">Module Structure</div>
         <ul class="contents">
-          <li v-for="item in modulePageNames" :key="item">{{ item }}</li>
+          <li
+            v-for="(item, index) in modulePageNames"
+            :key="item"
+          >
+            <div class="list-item">
+              <span
+                :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
+              >{{ item }}</span>
+              <i
+                v-if="index < 2"
+                class="fas fa-circle-check"
+                :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
+              ></i>
+              <i
+                v-else
+                class="far fa-circle"
+                :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
+              ></i>
+            </div>
+          </li>
         </ul>
       </div>
       <div class="bottom-child">
@@ -28,10 +47,10 @@
     </div>
   </div>
 </template>
-
 <script lang="ts">
-import { defineComponent} from 'vue';
-export default defineComponent ({
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'ModuleOverview',
   props: {
     moduleTitle: String,
@@ -39,7 +58,7 @@ export default defineComponent ({
     moduleImgFilename: String,
     modulePageNames: Array as () => string[],
     moduleName: String,
-    pageName: String
+    pageName: String,
   },
   methods: {
     continueClicked() {
@@ -51,21 +70,21 @@ export default defineComponent ({
       // For example, you can append the routePath to an existing route
       return `/${moduleName}/${pageName}`;
     },
+
   },
 });
 </script>
 
 <style scoped>
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 /* Add your CSS styles here, scoped to this component */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 20px;
-}
-
-p {
-  font-weight: lighter;
 }
 
 .container {
@@ -108,15 +127,14 @@ p {
 .module-name {
   font-weight: bold;
   font-size: 30px;
-  color: #6d0cff;
 }
 
 .module-structure {
   font-weight: bold;
   text-align: center;
-  color: #c324ff;
   margin-bottom: 10px;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 .contents {
@@ -139,6 +157,7 @@ p {
   list-style-type: circle;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .continue-button button {
@@ -148,5 +167,32 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: #6D0CFF;
+}
+
+.non-strikethrough {
+  color: #C324FF;
+}
+
+.contents li {
+  list-style-type: none; /* Remove list bullets */
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Add padding to create space between text and icons */
+}
+
+.list-item i {
+  margin-left: 50px; /* Add left margin to icons to separate them from text */
 }
 </style>
