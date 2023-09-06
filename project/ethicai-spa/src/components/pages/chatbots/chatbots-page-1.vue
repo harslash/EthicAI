@@ -2,10 +2,30 @@
     <nav-bar/>
     <div class="container-fluid page-container text-center">
         <div class="row h-25">
-            <h1>The Age of Chatbots</h1>
+            <div class="col-md-12">
+                <h1 class="mt-5">The Age of Chatbots</h1>
+            </div>
         </div>
+            <div class="row h-30 mb-5">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-center flex-wrap">
+                         <p class="text-left section-text">
+                            At their humble beginning, chatbots were primitive computer programs that mimicked human intelligence by answering questions with scripted responses. In 1966, ELIZA was created. ELIZA repeated words and phrases the user had typed, by inserting them into a list of pre-written phrases. At the time, some users of that rudimentary system were convinced they were conversing with a fellow human.
+                        </p>
+
+                        <p class="section-text">
+                        In 2011, Apple released the revolutionary voice assistant, Siri, with more advanced capabilities than any chatbot predecessors offering. Since then, the popularity of chatbots has drastically surged due to their convenience and flexibility (Ina, 2023). Nowadays, people use chatbots to provide customer service, assist in various tasks, practice language skills, and more.
+                        </p>
+                    </div>
+                   
+                  
+                </div>
+                <div class="col-md-4 d-flex">
+                    <img class="img-a" src="../../../assets//chatbots_page_1_a.jpeg" alt="2d illustration of chatbots"/>
+                </div>
+            </div>
          <div class="row h-25">
-            <div class="col-md-4">
+            <div class="col-md-4 d-flex justify-content-center">
                 <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
             </div>
             <div class="col-md-8"></div>
@@ -69,5 +89,13 @@ export default defineComponent({
 .container-fluid.page-container {
     height: 105vh;
     margin-top: 60px;
+}
+
+.img-a {
+    width: 75%;
+}
+
+.section-text {
+    width: 65%;
 }
 </style>
