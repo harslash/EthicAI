@@ -25,7 +25,7 @@
                     <img class="img-a" src="../../../assets//chatbots_page_1_a.jpeg" alt="2d illustration of chatbots"/>
                 </div>
             </div>
-            <div class="row h-30 mb-3">
+            <div class="row h-30 mb-">
                 <div class="col-md-4 d-flex justify-content-end">
                     <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
                 </div>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="section-three container">
-            <div class="row h-20">
+            <div class="row h-20 mb-3">
                 <div class="col-md-12 pb-5">
                     <h5 class="pb-4">Is this your first time using ChatGPT?</h5>
                     <div class="radio-div d-flex justify-content-around">
@@ -83,7 +83,18 @@
                     </div>
                 </div>
                  <div class="col-md-12">
-                    <h5>What is your trust level in ChatGPT?</h5>
+                    <h5 class="pb-5">What is your trust level in ChatGPT?</h5>
+                    <div class="d-flex justify-content-center">
+                        <div class="slider-container">
+                            <prime-slider v-model="value" class="w-14rem" />
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="row h-20">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <purple-btn :text="'Continue'"></purple-btn>
                 </div>
             </div>
         </div>
@@ -128,7 +139,8 @@ export default defineComponent({
                     term: 'Prompts',
                     definition: 'ChatGPT prompts are the textual inputs (e.g., questions, instructions) a user enters into ChatGPT to get responses (Scribbr, 2023).'
                 }
-            ]
+            ],
+            value: null
         }
     },
     methods: {
@@ -165,4 +177,23 @@ export default defineComponent({
 .form {
     height: 30vh;
 }
+
+.slider-container{
+    width: 50%;
+}
+
+.slider-container :deep(.p-slider-range) {
+    background: #454545;
+}
+
+.slider-container :deep(.p-slider-handle) {
+    background: #696969;
+    border: 2px solid #696969;
+}
+
+.radio-div .form-check-input:checked {
+    background-color: #696969;
+    border-color: #696969;
+}
+
 </style>
