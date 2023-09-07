@@ -6,6 +6,9 @@
         id="exampleFormControlTextarea1" 
         rows="3"
         placeholder="Enter your input here"></textarea>
+        <div class="d-flex justify-content-end pt-2">
+             <send-btn></send-btn>
+        </div>
       </div>
       <div class="form-group">
         <textarea 
@@ -18,9 +21,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import sendBtn from '../reusable-ui/send-btn.vue';
 export default defineComponent({
     name: 'ChatgptPromptForm',
+    components: {
+        'send-btn': sendBtn
+    },
     props: {
     },
     methods: {
