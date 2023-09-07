@@ -108,6 +108,7 @@ export default defineComponent({
 .sub-heading {
     text-align: left;
     font-size: 24px;
+    margin: 10px 0;
 }
 
 .gray-rectangle {
