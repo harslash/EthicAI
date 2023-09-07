@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'primevue/resources/themes/saga-blue/theme.css'; // Choose a theme
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 
 const app = createApp(App).use(router);
@@ -28,6 +29,7 @@ app.component('prime-button', Button);
 app.component('prime-slider', Slider);
 app.component('prime-dialog', Dialog);
 app.component('MenuBar', MenuBar);
+app.component('font-awesome-icon', FontAwesomeIcon)
 
 app.directive('tooltip', Tooltip);
 
