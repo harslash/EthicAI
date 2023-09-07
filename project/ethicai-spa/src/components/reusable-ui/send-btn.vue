@@ -1,5 +1,5 @@
 <template>
-      <button class="btn btn-primary send-button" type="button">
+      <button class="btn btn-primary send-button" type="button" @click="buttonClicked">
       <font-awesome-icon :icon="faPaperPlane" style="color: #ffffff;"></font-awesome-icon>
       </button>
 </template>
@@ -15,6 +15,12 @@ export default defineComponent({
         return {
             faPaperPlane: faPaperPlane,
 
+        }
+    },
+    methods: {
+          buttonClicked() {
+            // Emit a custom event when the button is clicked
+            this.$emit('button-clicked');
         }
     }
 });
