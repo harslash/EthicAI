@@ -1,8 +1,32 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container text-center ">
+    <div class="container-fluid page-container text-center">
         <div class="row h-25">
            <h1><u> References </u> </h1>
+        </div>
+        <div class="row">
+            <!-- Add seven full-width gray rectangles here -->
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="gray-rectangle"></div>
+            </div>
         </div>
     </div>
     <page-footer />
@@ -35,6 +59,11 @@ export default defineComponent({
 .container-fluid.page-container {
     height: 105vh;
     margin-top: 60px;
+}
+.gray-rectangle {
+    background-color: #ccc; /* Gray color for the rectangle */
+    height: 100px; /* Adjust the height as needed */
+    margin: 10px 0; /* Add vertical margin for spacing between rectangles */
 }
 /* Your component-specific styles go here */
 </style>
