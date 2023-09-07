@@ -1,5 +1,10 @@
 <template>
-      <button class="btn btn-primary send-button" type="button" @click="buttonClicked">
+      <button 
+        class="btn btn-primary send-button" 
+        type="button" 
+        @click="buttonClicked"
+        :disabled=disableButton
+        >
       <font-awesome-icon :icon="faPaperPlane" style="color: #ffffff;"></font-awesome-icon>
       </button>
 </template>
@@ -16,6 +21,9 @@ export default defineComponent({
             faPaperPlane: faPaperPlane,
 
         }
+    },
+    props: {
+        'disableButton': Boolean
     },
     methods: {
           buttonClicked() {
