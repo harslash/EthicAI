@@ -1,9 +1,6 @@
 <template>
   <form class="form-container d-flex justify-content-center align-items-center flex-wrap">
       <div class="form-group">
-        <div v-if="loading" class="spinner-grow text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div> 
         <textarea 
         v-model="inputPromptText"
         class="form-control" 
@@ -12,6 +9,9 @@
         placeholder="Enter your input here"
         :disabled="loading"></textarea>
         <div class="d-flex justify-content-end pt-2">
+            <div v-if="loading" class="spinner-grow" role="status">
+                <span class="sr-only">Loading...</span>
+            </div> 
              <send-btn 
                 @button-clicked="handleButtonClick"
                 :disable-button="loading"></send-btn>
@@ -81,6 +81,10 @@ export default defineComponent({
 .form-control {
     border: 2px solid black;
      border-radius: 10px;
+}
+
+.spinner-grow {
+    background-color: #BF8FFE;
 }
 
 
