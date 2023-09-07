@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-primary ">{{text}}</button>
+    <button type="button" class="btn btn-primary"  @click="buttonClicked">{{text}}</button>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -10,6 +10,9 @@ export default defineComponent({
         'text': String
     },
     methods: {
+        buttonClicked() {
+            this.$emit('button-clicked');
+        }
     }
 });
 
