@@ -60,6 +60,7 @@ export default defineComponent({
     min-height: calc(100vh - 60px); /* Set the minimum height to avoid going into the footer */
     margin-top: 60px;
     padding-bottom: 20px; /* Add some padding at the bottom for spacing */
+    padding-top: 20px;
 }
 .gray-rectangle {
     background-color: #ccc; /* Gray color for the rectangle */
