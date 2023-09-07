@@ -1,7 +1,7 @@
 <template>
     <nav-bar/>
     <div class="container-fluid page-container text-center">
-        <div class="section-one container mb-5">
+        <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection}">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
                     <h1 class="mt-5">The Age of Chatbots</h1>
@@ -42,11 +42,11 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn :text="'Continue'"></purple-btn>
+                    <purple-btn :text="'Continue'" @click="showSecondSection = true"></purple-btn>
                 </div>
             </div>
         </div>
-        <div class="section-two container mb-5">
+        <div class="section-two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
             <div class="row h-30">
                 <div class="col-md-12">
                     <h5>Have a go for yourself!</h5>
@@ -59,11 +59,13 @@
             </div>
              <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn :text="'Continue'"></purple-btn>
+                    <purple-btn :text="'Continue'" 
+                    @click="showThirdSection = true" >
+                    </purple-btn>
                 </div>
             </div>
         </div>
-        <div class="section-three container">
+        <div class="section-three container text-section" :class="{ 'hidden': !showThirdSection }" >
             <div class="row h-20 mb-3">
                 <div class="col-md-12 pb-5">
                     <h5 class="pb-4">Is this your first time using ChatGPT?</h5>
@@ -140,7 +142,10 @@ export default defineComponent({
                     definition: 'ChatGPT prompts are the textual inputs (e.g., questions, instructions) a user enters into ChatGPT to get responses (Scribbr, 2023).'
                 }
             ],
-            value: null
+            value: null,
+            showFirstSection: true,
+            showSecondSection: false,
+            showThirdSection: false
         }
     },
     methods: {
@@ -194,6 +199,18 @@ export default defineComponent({
 .radio-div .form-check-input:checked {
     background-color: #696969;
     border-color: #696969;
+}
+
+.text-section {
+  opacity: 1;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 </style>
