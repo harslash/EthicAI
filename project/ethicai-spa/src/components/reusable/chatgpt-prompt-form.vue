@@ -19,6 +19,7 @@
       </div>
       <div class="form-group">
         <textarea 
+        v-model="outputPromptText"
         class="form-control" 
         id="exampleFormControlTextarea1" 
         rows="3"
@@ -39,14 +40,17 @@ export default defineComponent({
     },
     setup() {
         const inputPromptText = ref('');
+        const outputPromptText = ref('')
         const loading = ref(false);
 
         const handleButtonClick = () => {
             inputPromptText.value = '';
+            outputPromptText.value = ''
             loading.value = true;
             setTimeout(() => {
                 console.log('GET request completed');
                 // Set loading to false at the end
+                outputPromptText.value = 'This texts is from ChatGPT'
                 loading.value = false;
             }, 2000);
         };
@@ -54,7 +58,8 @@ export default defineComponent({
         return {
             loading, 
             handleButtonClick,
-            inputPromptText
+            inputPromptText,
+            outputPromptText
         }
     }
 });
