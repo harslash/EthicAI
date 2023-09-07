@@ -42,6 +42,14 @@ const routes: Array<RouteRecordRaw> = [
     path: '/chatGPTUI',
     name: 'chatGPTUI',
     component: () => import('../components/reusable/chatgpt_ui.vue')
+  },
+  {
+    path: '/dalle',
+    component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
+  },
+  {
+    path: '/dalle/the-rise-of-dalle',
+    component: () => import('../views/modules/dalle/DallePageOneView.vue'),
   }
 ]
 
