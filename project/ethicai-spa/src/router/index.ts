@@ -38,6 +38,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'all-modules',
     component: () => import('../views/AllModulesView.vue')
   },
+  {
+    path: '/dalle',
+    component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
+  }
 ]
 
 const router = createRouter({
