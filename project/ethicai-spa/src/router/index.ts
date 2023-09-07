@@ -34,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsPageOneView.vue'),
   },
   {
+    path: '/chatbots/too-good-to-be-true', 
+    name: 'too-good-to-be-true',
+    component: () => import('../views/modules/chatbots/ChatbotsPageTwoView.vue'),
+  },
+  {
     path: '/all-modules',
     name: 'all-modules',
     component: () => import('../views/AllModulesView.vue')
