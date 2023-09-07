@@ -2,7 +2,7 @@
     <nav-bar />
     <div class="container-fluid page-container text-center ">
         <div class="row h-25">
-           <h1>References</h1>
+           <h1><u> References </u> </h1>
         </div>
     </div>
     <page-footer />
