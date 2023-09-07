@@ -96,7 +96,9 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn :text="'Continue'"></purple-btn>
+                    <router-link to="/chatbots/too-good-to-be-true">
+                        <purple-btn :text="'Continue'"></purple-btn>
+                    </router-link>  
                 </div>
             </div>
         </div>
