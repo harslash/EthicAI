@@ -48,13 +48,15 @@
             <!-- AI Generation cards -->
             <div id="wrapper" style="padding-bottom: 5%;">
                 
-                <div class="card">
-                    <img :src="require('@/assets/dalle_Thumbnail.png')" alt="DALL E" style="width:100%;">
-                    <div class="container">
-                        <h4>The Rise of DALL E</h4>
-                        <p>Placeholder text</p>
+                <router-link to="/dalle" custom v-slot="{navigate}">
+                    <div class="card" @click="navigate" role="link">
+                        <img :src="require('@/assets/dalle_Thumbnail.png')" alt="DALL E" style="width:100%;">
+                        <div class="container">
+                            <h4>The Rise of DALL·E</h4>
+                            <p>Placeholder text</p>
+                        </div>
                     </div>
-                </div>
+                </router-link>
                 
 
                 <div class="card">
