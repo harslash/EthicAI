@@ -34,24 +34,15 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsPageOneView.vue'),
   },
   {
-    path: '/chatbots/too-good-to-be-true', 
-    name: 'too-good-to-be-true',
-    component: () => import('../views/modules/chatbots/ChatbotsPageTwoView.vue'),
-  },
-  {
     path: '/all-modules',
     name: 'all-modules',
     component: () => import('../views/AllModulesView.vue')
   },
   {
-    path: '/dalle',
-    component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
-  },
-  {
-    path: '/dalle/the-rise-of-dalle', 
-    name: 'the-rise-of-dalle',
-    component: () => import('../views/modules/dalle/DallePageOneView.vue'),
-  },
+    path: '/chatGPTUI',
+    name: 'chatGPTUI',
+    component: () => import('../components/reusable/chatgpt_ui.vue')
+  }
 ]
 
 const router = createRouter({
