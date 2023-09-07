@@ -1,26 +1,33 @@
 <template>
   <form class="form-container d-flex justify-content-center align-items-center flex-wrap">
       <div class="form-group">
+        <div v-if="loading" class="spinner-grow text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div> 
         <textarea 
         class="form-control" 
         id="exampleFormControlTextarea1" 
         rows="3"
-        placeholder="Enter your input here"></textarea>
+        placeholder="Enter your input here"
+        :disabled="loading"></textarea>
         <div class="d-flex justify-content-end pt-2">
-             <send-btn @button-clicked="handleButtonClick"></send-btn>
+             <send-btn 
+                @button-clicked="handleButtonClick"
+                :disable-button="loading"></send-btn>
         </div>
       </div>
       <div class="form-group">
         <textarea 
         class="form-control" 
         id="exampleFormControlTextarea1" 
-        rows="3"></textarea>
+        rows="3"
+        :disabled="loading"></textarea>
       </div>
     </form>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref} from 'vue';
 import sendBtn from '../reusable-ui/send-btn.vue';
 export default defineComponent({
     name: 'ChatgptPromptForm',
@@ -29,11 +36,23 @@ export default defineComponent({
     },
     props: {
     },
-    methods: {
-        handleButtonClick() {
-            console.log('clicked')
+    setup() {
+        const loading = ref(false);
+
+        const handleButtonClick = () => {
+            loading.value = true;
+            setTimeout(() => {
+                console.log('GET request completed');
+                // Set loading to false at the end
+                loading.value = false;
+            }, 2000);
+        };
+
+        return {
+            loading, 
+            handleButtonClick
         }
-    },
+    }
 });
 </script>
 
