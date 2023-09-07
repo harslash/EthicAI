@@ -5,6 +5,7 @@
             <span class="sr-only">Loading...</span>
         </div> 
         <textarea 
+        v-model="inputPromptText"
         class="form-control" 
         id="exampleFormControlTextarea1" 
         rows="3"
@@ -21,7 +22,7 @@
         class="form-control" 
         id="exampleFormControlTextarea1" 
         rows="3"
-        :disabled="loading"></textarea>
+        disabled></textarea>
       </div>
     </form>
 </template>
@@ -37,9 +38,11 @@ export default defineComponent({
     props: {
     },
     setup() {
+        const inputPromptText = ref('');
         const loading = ref(false);
 
         const handleButtonClick = () => {
+            inputPromptText.value = '';
             loading.value = true;
             setTimeout(() => {
                 console.log('GET request completed');
@@ -50,7 +53,8 @@ export default defineComponent({
 
         return {
             loading, 
-            handleButtonClick
+            handleButtonClick,
+            inputPromptText
         }
     }
 });
