@@ -15,7 +15,7 @@ export default defineComponent({
 
 </script>
 
-<style scroped>
+<style lang="css" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -34,6 +34,4 @@ export default defineComponent({
 .btn:hover {
     background-color: #8638fc;
 }
-
-
 </style>>
