@@ -57,8 +57,9 @@ export default defineComponent({
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 .container-fluid.page-container {
-    height: 105vh;
+    min-height: calc(100vh - 60px); /* Set the minimum height to avoid going into the footer */
     margin-top: 60px;
+    padding-bottom: 20px; /* Add some padding at the bottom for spacing */
 }
 .gray-rectangle {
     background-color: #ccc; /* Gray color for the rectangle */
