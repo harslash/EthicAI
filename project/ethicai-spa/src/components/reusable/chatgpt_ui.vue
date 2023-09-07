@@ -1,39 +1,30 @@
-<body>
+<template>
     <div id="app">
         <div class="card">
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img src="pics/smiley_icon.png">
+                        <img :src="require('@/assets/smiley_icon.png')" alt ="smiley face icon">
                     </div>
                 </div>
                 <div class="text-container">
-                    {{ question }} <!-- Bind to the question property -->
+                    question <!-- Replace with the text "question" -->
                 </div>
             </div>
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img src="pics/robot_icon.png">
+                        <img :src="require('@/assets/robot_icon.png')" alt ="robot icon">
                     </div>
                 </div>
                 <div class="text-container">
-                    {{ answer }} <!-- Bind to the answer property -->
+                    answer <!-- Replace with the text "answer" -->
                 </div>
             </div>
         </div>
     </div>
+</template>
 
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                question: 'What is your question?', // Predefined input question
-                answer: 'This is the answer.', // Predefined output answer
-            },
-        });
-    </script>
-</body>
 <style scoped>
         /* Styles for the card container */
         .card {
