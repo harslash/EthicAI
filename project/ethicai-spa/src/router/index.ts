@@ -41,7 +41,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dalle',
     component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
-  }
+  },
+  {
+    path: '/dalle/the-rise-of-dalle', 
+    name: 'the-rise-of-dalle',
+    component: () => import('../views/modules/dalle/DallePageOneView.vue'),
+  },
 ]
 
 const router = createRouter({
