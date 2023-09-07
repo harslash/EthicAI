@@ -7,7 +7,7 @@
         rows="3"
         placeholder="Enter your input here"></textarea>
         <div class="d-flex justify-content-end pt-2">
-             <send-btn></send-btn>
+             <send-btn @button-clicked="handleButtonClick"></send-btn>
         </div>
       </div>
       <div class="form-group">
@@ -30,6 +30,9 @@ export default defineComponent({
     props: {
     },
     methods: {
+        handleButtonClick() {
+            console.log('clicked')
+        }
     },
 });
 </script>
