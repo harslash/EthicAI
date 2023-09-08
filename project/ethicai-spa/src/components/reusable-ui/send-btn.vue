@@ -34,7 +34,7 @@ export default defineComponent({
 });
 </script>
 
-<style scroped>
+<style scoped>
 .btn {
     background-color: #6D0CFF;
 }

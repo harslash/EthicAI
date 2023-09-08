@@ -41,7 +41,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/chatbots/too-good-to-be-true',
     name: 'too-good-to-be-true',
-    component: () => import('../components/pages/chatbots/chatbots-page-3.vue')
+    component: () => import('../views/modules/chatbots/ChatbotsPageTwoView.vue')
+  },
+  {
+    path: '/chatbots/hallucination',
+    name: 'hallucination',
+    component: () => import('../views/modules/chatbots/ChatbotsPageThreeView.vue')
   },
   {
     path: '/dalle',
@@ -50,6 +55,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/dalle/the-rise-of-dalle',
     component: () => import('../views/modules/dalle/DallePageOneView.vue'),
+  },
+  {
+    path: '/dalle/ai-generated-vs-human-art',
+    component: () => import('../views/modules/dalle/DallePageTwoView.vue'),
+  },
+  {
+    path: '/dalle/copyright-and-copywrong',
+    component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
   },
   {
     path: '/quiz-ui',

@@ -44,15 +44,35 @@ export default defineComponent({
         const loading = ref(false);
 
         const handleButtonClick = () => {
+            const requestBody = JSON.stringify({ prompt: inputPromptText.value });
+
             inputPromptText.value = '';
             outputPromptText.value = ''
             loading.value = true;
-            setTimeout(() => {
-                console.log('GET request completed');
-                // Set loading to false at the end
-                outputPromptText.value = 'This texts is from ChatGPT'
-                loading.value = false;
-            }, 2000);
+
+             const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: requestBody,
+            };
+
+            fetch('https://oruwgbr24mmcdfjr5efi5qxel40vodks.lambda-url.ap-southeast-2.on.aws/', requestOptions)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json(); 
+                })
+                .then((data) => {
+                    outputPromptText.value = data.response;
+                    loading.value = false;
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    loading.value = false;
+                });
         };
 
         return {
