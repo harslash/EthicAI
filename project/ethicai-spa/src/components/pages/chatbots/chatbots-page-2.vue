@@ -31,6 +31,34 @@
                             ></purple-btn>
                     </div>
                 </div>
+        </div>
+         <div 
+            ref="secondSection"
+            class="section two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
+                    <div class="row h-30 mb-5">
+                        <div class="col-md-12 pb-5">
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <p class="section-text">
+                                    The creators of ChatGPT have trained the model on an extensive collection of textual data containing over 570 GB of data (Ruby, 2023). That's over 1.3 million novels worth of information! The source of this data includes books, articles, and web pages.
+                                </p>
+                                <p class="section-text">
+                                    If you’ve been on the internet for very long, you might expect some of those sources of data to contain biases, stereotypes, and prejudiced language. ChatGPT unintentionally learns these biases and may produce offensive responses or reinforce harmful stereotypes when it replies to prompts. The training data used to create ChatGPT and other LLMs, can at times result in biassed or inappropriate responses (Ray, 2023).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                              <img class="img-a" src="../../../assets//chatbots_page_2_b.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
+                        </div>
+                    </div>
+                      <div class="row h-20">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <purple-btn 
+                                :text="'Continue'" 
+                                @click="showSecondSection = true;
+                                scrollIntoSecondSection()"
+                                ></purple-btn>
+                        </div>
+                    </div>
             </div>
     </div>
     <page-footer />
@@ -81,6 +109,18 @@ export default defineComponent({
 
 .img-a {
     width: 30%;
+}
+
+.text-section {
+  opacity: 1;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 </style>
