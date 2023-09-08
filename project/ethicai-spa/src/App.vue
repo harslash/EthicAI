@@ -13,6 +13,7 @@ import PageFooter from './components/reusable/page-footer.vue'
 import ModuleOverview from './components/reusable/module_overview.vue'
 import LandingPage from './components/pages/landing-page.vue';
 import ChatGPTUI from './components/reusable/chatgpt_ui.vue';
+import chatbots3 from './components/pages/chatbots/chatbots-page-3.vue';
 export default defineComponent({
   name: 'App',
   components: {
@@ -21,7 +22,8 @@ export default defineComponent({
     PageFooter,
     ModuleOverview,
     LandingPage,
-    ChatGPTUI
+    ChatGPTUI,
+    chatbots3
   }
 });
 </script>

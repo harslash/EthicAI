@@ -4,26 +4,48 @@
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img :src="require('@/assets/smiley_icon.png')" alt ="smiley face icon">
+                        <img :src="require('@/assets/smiley_icon.png')" alt="smiley face icon">
                     </div>
                 </div>
                 <div class="text-container">
-                    question <!-- Replace with the text "question" -->
+                    {{ questionText }}
                 </div>
             </div>
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img :src="require('@/assets/robot_icon.png')" alt ="robot icon">
+                        <img :src="require('@/assets/robot_icon.png')" alt="robot icon">
                     </div>
                 </div>
                 <div class="text-container">
-                    answer <!-- Replace with the text "answer" -->
+                    {{ answerText }}
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+
+interface TermObject {
+    term: string;
+    definition: string;
+}
+
+export default defineComponent({
+    name: 'chatgpt_ui_card',
+    props: {
+        questionText: String, // Prop for the question text
+        answerText: String,   // Prop for the answer text
+    },
+    methods: {
+        getTooltipContent(item: TermObject) {
+            return `<p class='text-black'>${item.definition}</p>`;
+        },
+    },
+});
+</script>
 
 <style scoped>
         /* Styles for the card container */
