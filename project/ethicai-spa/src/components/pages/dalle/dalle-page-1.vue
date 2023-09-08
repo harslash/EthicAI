@@ -4,12 +4,14 @@
     <!-- Element 1 -->
     <div class="row h-25">
       <div class="col-md-12">
-        <h1 class="mt-5" style="font-size: 28px;" ><u>The Rise of DALL·E</u></h1>
+        <h1 class="mt-5" style="font-size: 28px;"><u>The Rise of DALL·E</u></h1>
         <br>
       </div>
     </div>
+
+    <!-- Element 2 -->
     <div class="row h-30 mb-5 justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-8 d-flex align-items-center">
         <div class="d-flex justify-content-center flex-wrap">
           <p class="text-left section-text">
             DALL·E is a cutting-edge generative art model developed by OpenAI. It blends the names of artist Salvador Dalí and robot WALL·E. It utilizes the GPT architecture to create images from textual descriptions (OpenAI, 2022). You provide a text prompt, and DALL·E generates a corresponding image.
@@ -20,49 +22,49 @@
           </p>
         </div>
       </div>
-      <div class="col-md-4 d-flex">
+      <div class="col-md-4 d-flex align-items-center">
         <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
       </div>
     </div>
 
-    <!-- Element 2 -->
-    <div class="row h-25 justify-content-center">
+    <!-- Element 3 -->
+    <div class="row h-30 mb-5 justify-content-center">
       <div class="col-md-6 d-flex justify-content-center">
         <important-terms-card :terms-and-definitions="termsAndDefinitions" />
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 d-flex align-items-center">
         <p class="text-right section-text">
-        <br>
+          <br>
           However, it also raises some significant ethical questions about the potential misuse of AI-generated images. This includes deepfakes (which are covered in further detail in our deepfakes module), authenticity, and plagiarism.
         </p>
       </div>
     </div>
 
-    <!-- Element 3 -->
-    <div class="row h-25 justify-content-center">
+    <!-- Element 4 -->
+    <div class="row h-30 mb-5 justify-content-center">
       <div class="col-md-12">
-        <h1 class="mt-5" style="font-size: 28px;" >Imagine ... </h1>
+        <h1 class="mt-5" style="font-size: 28px;">Imagine ...</h1>
         <br>
       </div>
     </div>
 
-    <!-- Element 4 -->
-    <div class="row h-25 justify-content-center">
-    <div class="col-md-4 d-flex align-items-center"> <!-- Add align-items-center class here -->
-        <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
-    </div>
-    <div class="col-md-6">
-        <p class="text-right section-text">
-        <br>
-        You are an artist.
-        </p>
-        <p class="text-right section-text">
-        <br>
-        More than just your source of income, your work is your passion. You are proud to share your art with the world on Instagram. 
-        </p>
-    </div>
+    <!-- Element 5 -->
+    <div class="row h-30 mb-5 justify-content-center">
+      <div class="col-md-4 d-flex align-items-center">
+        <img class="img-a" src="../../../assets//artist.png" alt="a female artist holding a paintbrush" />
+      </div>
+      <div class="col-md-8 d-flex align-items-center">
+        <div class="d-flex justify-content-center flex-wrap">
+          <p class="text-left section-text">
+            You are an artist.
+          </p>
+
+          <p class="section-text">
+            More than just your source of income, your work is your passion. You are proud to share your art with the world on Instagram.
+          </p>
+        </div>
+      </div>
     </div> 
-    
   </div>
   <page-footer />
 </template>
