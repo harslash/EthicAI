@@ -48,8 +48,9 @@
         </div>
         <div class="section-two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
             <div class="row h-30">
-                <div class="col-md-12">
+                <div class="col-md-12 pb-2">
                     <h5>Have a go for yourself!</h5>
+                    <span class="gpt-prompt-note">Note: This demo is powered by the openai-api model from Hugging Face. Visit https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
                 </div>
                 <div class="col-md-3"></div>
                 <div class="col-md-6">            
@@ -209,6 +210,10 @@ export default defineComponent({
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+}
+
+.gpt-prompt-note {
+    font-size: 0.8rem;
 }
 
 </style>
