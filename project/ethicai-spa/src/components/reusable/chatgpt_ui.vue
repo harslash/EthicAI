@@ -24,7 +24,6 @@
         </div>
     </div>
 </template>
-
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
 

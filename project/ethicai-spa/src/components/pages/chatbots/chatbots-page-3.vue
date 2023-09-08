@@ -1,12 +1,11 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container text-center ">
+    <div class="container-fluid page-container text-center">
         <div class="row h-25">
             <h1>Too Good to be True?</h1>
         </div>
-
         <div>
-        <ReusableCard :questionText="questionText" :answerText="answerText" />
+            <chatgpt_ui :questionText="questionText" :answerText="answerText" />
         </div>
     </div>
     <page-footer />
@@ -16,6 +15,7 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PageFooter from '../../reusable/page-footer.vue';
+import chatgpt_ui from '../../reusable/chatgpt_ui.vue';
 
 export default defineComponent({
     name: 'ChatbotsPage3',
@@ -28,6 +28,7 @@ export default defineComponent({
     components: {
         'nav-bar': NavBar,
         'page-footer': PageFooter,
+        'chatgpt_ui': chatgpt_ui,
     },
 });
 </script>
@@ -40,4 +41,5 @@ export default defineComponent({
     margin-top: 60px;
 }
 
-/* Your component-specific styles go here */</style>
+/* Your component-specific styles go here */
+</style>
