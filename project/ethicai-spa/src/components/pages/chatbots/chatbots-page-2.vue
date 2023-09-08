@@ -1,9 +1,37 @@
 <template>
     <nav-bar />
     <div class="container-fluid page-container text-center ">
-        <div class="row h-25">
-            <h1>Too Good to be True?</h1>
-        </div>
+         <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
+                <div class="row h-10 mb-5">
+                    <div class="col-md-12">
+                        <h1 class="mt-5">Too Good to be True?</h1>
+                    </div>
+                </div>
+                <div class="row h-30 mb-5">
+                    <div class="col-md-12 pb-5">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <p class="section-text">
+                                These new AI chatbots may be impressive, but their use can lead to many problems. The users like yourself need to understand how they function and their implications.
+                            </p>
+                            <p class="section-text">
+                                The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and spitting out strings of words that it predicts will be the best response based on the data used to train it (Guinness, 2023).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                          <img class="img-a" src="../../../assets//chatbots_page_2_a.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
+                    </div>
+                </div>
+                  <div class="row h-20">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <purple-btn 
+                            :text="'Continue'" 
+                            @click="showSecondSection = true;
+                            scrollIntoSecondSection()"
+                            ></purple-btn>
+                    </div>
+                </div>
+            </div>
     </div>
     <page-footer />
 </template>
@@ -11,21 +39,30 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
-import PageFooter from '../../reusable/page-footer.vue';
+import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 
 export default defineComponent({
     name: 'ChatbotsPage2',
     data() {
         return {
-
+            showFirstSection: true,
+            showSecondSection: false,
+            showThirdSection: false
         }
     },
     methods: {
-
+        scrollIntoSecondSection() {
+            this.$nextTick(() => {
+                const element = this.$refs.secondSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+        });
+        },
     },
     components: {
         'nav-bar': NavBar,
-        'page-footer': PageFooter
+        'purple-btn': PurpleBtn
     }
 });
 </script>
@@ -34,8 +71,16 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .container-fluid.page-container {
-    height: 105vh;
     margin-top: 60px;
 }
 
-/* Your component-specific styles go here */</style>
+.section-text {
+    width: 60%;
+    text-align: left;
+}
+
+.img-a {
+    width: 30%;
+}
+
+</style>
