@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-three container text-section" :class="{ 'hidden': !showThirdSection }" >
+        <div class="section-three container text-section pb-5" :class="{ 'hidden': !showThirdSection }" >
             <div class="row h-20 mb-3">
                 <div class="col-md-12 pb-5">
                     <h5 class="pb-4">Is this your first time using ChatGPT?</h5>
@@ -103,13 +103,11 @@
             </div>
         </div>
     </div>
-    <page-footer/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
-import PageFooter from '../../reusable/page-footer.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import ChatgptPromptForm from '../../reusable/chatgpt-prompt-form.vue'
@@ -155,7 +153,6 @@ export default defineComponent({
     },
     components: {
         'nav-bar': NavBar,
-        'page-footer': PageFooter,
         'important-terms-card': ImportantTermsCard,
         'purple-btn': PurpleBtn,
         'chatgpt-prompt-form': ChatgptPromptForm
@@ -167,7 +164,6 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .container-fluid.page-container {
-    height: 180vh;
     margin-top: 60px;
 }
 
