@@ -122,6 +122,17 @@
       </div>
     </div>
 
+    <div class="row h-20">
+      <div class="col-md-12 d-flex justify-content-between">
+        <router-link to="/dalle" class="my-button">
+          <purple-btn-outline :text="'Back'"></purple-btn-outline>
+        </router-link>
+        <router-link to="/dalle/ai-generated-vs-human-art" class="my-button">
+          <purple-btn :text="'Continue'"></purple-btn>
+        </router-link>
+      </div>
+    </div>
+
   </div>
   <page-footer />
 </template>
@@ -130,6 +141,8 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PageFooter from '../../reusable/page-footer.vue';
+import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
 
 export default defineComponent({
@@ -156,6 +169,8 @@ export default defineComponent({
   components: {
     'nav-bar': NavBar,
     'page-footer': PageFooter,
+    'purple-btn': PurpleBtn,
+    'purple-btn-outline': PurpleBtnOutline,
     'important-terms-card': ImportantTermsCard,
   },
 });
@@ -191,6 +206,10 @@ export default defineComponent({
 .img-a-small {
   width: 100%; /* Adjust the width as needed */
   max-width: 250px; /* Add a maximum width to prevent it from becoming too large */
+}
+
+.my-button {
+  margin: 30px; /* Adjust the margin size as needed */
 }
 
 </style>
