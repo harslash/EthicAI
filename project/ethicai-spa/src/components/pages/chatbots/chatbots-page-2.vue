@@ -51,14 +51,14 @@
                         </div>
                     </div>
                         <div class="row h-20">
-                        <div class="col-md-12 d-flex justify-content-end">
-                            <purple-btn 
-                                :text="'Continue'" 
-                                @click="showThirdSection = true;
-                                scrollIntoThirdSection()"
-                                ></purple-btn>
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <purple-btn 
+                                    :text="'Continue'" 
+                                    @click="showThirdSection = true;
+                                    scrollIntoThirdSection()"
+                                    ></purple-btn>
+                            </div>
                         </div>
-                    </div>
         </div>
          <div 
             ref="thirdSection"
@@ -74,8 +74,23 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-12 d-flex justify-content-center">
+                        <div class="col-md-12 d-flex justify-content-center pb-5">
                             <markov-demo class="demo"></markov-demo>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center flex-wrap">
+                            <p class="section-text">
+                                As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as morality biases (Cousins, 2023).
+                            </p>
+                            <p class="section-text">
+                                <b>Lesson of the day: </b>ChatGPT would be a lousy lawmaker.
+                            </p>
+                        </div>
+                    </div>
+                     <div class="row h-20">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <router-link to="/chatbots/too-good-to-be-true">
+                                <purple-btn :text="'Continue'"></purple-btn>
+                            </router-link>
                         </div>
                     </div>
         </div>
