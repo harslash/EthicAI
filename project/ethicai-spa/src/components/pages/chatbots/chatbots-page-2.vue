@@ -1,7 +1,7 @@
 <template>
     <nav-bar />
     <div class="container-fluid page-container text-center ">
-         <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
+        <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
                 <div class="row h-10 mb-5">
                     <div class="col-md-12">
                         <h1 class="mt-5">Too Good to be True?</h1>
@@ -47,19 +47,38 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                              <img class="img-a" src="../../../assets//chatbots_page_2_b.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
+                                <img class="img-a" src="../../../assets//chatbots_page_2_b.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
                         </div>
                     </div>
-                      <div class="row h-20">
+                        <div class="row h-20">
                         <div class="col-md-12 d-flex justify-content-end">
                             <purple-btn 
                                 :text="'Continue'" 
-                                @click="showSecondSection = true;
-                                scrollIntoSecondSection()"
+                                @click="showThirdSection = true;
+                                scrollIntoThirdSection()"
                                 ></purple-btn>
                         </div>
                     </div>
-            </div>
+        </div>
+         <div 
+            ref="thirdSection"
+            class="container mb-5 text-section" :class="{ 'hidden': !showThirdSection }">
+                    <div class="row h-30 mb-5">
+                        <div class="col-md-12 pb-5">
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <p class="section-text">
+                                    Let's see how biases in a text can influence ChatGPT's response. Below is an interactive demo inspired by a Markov chain. Markov chains behave similarly to the system behind ChatGPT’s sentence completions, but are much simpler, so that it’s easier for you to see how they work. The model behind the demo mimics how ChatGPT may take in a piece of textual data and learn its biases in its training phase.
+                                </p>
+                                <p class="section-text">
+                                    Play around and see how human biases in a text set can introduce biases in the output of an LLM such as ChatGPT.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <markov-demo class="demo"></markov-demo>
+                        </div>
+                    </div>
+        </div>
     </div>
     <page-footer />
 </template>
@@ -68,6 +87,7 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import MarkovDemo from '../../interactive/markov-demo.vue';
 
 export default defineComponent({
     name: 'ChatbotsPage2',
@@ -87,10 +107,19 @@ export default defineComponent({
                 }
         });
         },
+        scrollIntoThirdSection() {
+            this.$nextTick(() => {
+                const element = this.$refs.thirdSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+            });
+        },
     },
     components: {
         'nav-bar': NavBar,
-        'purple-btn': PurpleBtn
+        'purple-btn': PurpleBtn,
+        'markov-demo': MarkovDemo
     }
 });
 </script>
@@ -121,6 +150,11 @@ export default defineComponent({
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+}
+
+.demo {
+    height: 75vh;
+    width: 80%;
 }
 
 </style>
