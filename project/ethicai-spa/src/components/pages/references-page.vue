@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="row">
-      <h2 class="section-heading">Rise of Dalle Module</h2>
+      <h2 class="section-heading">The Rise of DALL·E Module</h2>
     </div>
     <div class="row">
         <h3 class="sub-heading">The Rise of DALL·E</h3>
