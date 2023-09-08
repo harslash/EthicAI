@@ -3,11 +3,13 @@
         <div class="container pb-3">
             <div class="row">
                    <div class="col-md-12 d-flex">
-                    <div class="dropdown">
+                    <div class="dropdown px-3">
                         <button 
-                            class="btn btn-secondary 
+                            class="btn 
+                            btn-secondary 
                             dropdown-toggle 
-                            demo-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            demo-btn
+                            " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Select Corpus
                         </button>
                         <ul class="dropdown-menu">
@@ -27,6 +29,9 @@
                         @click="handleButtonClick"
                         :disabled="loading"
                         type="button">Train Model</button>
+                    <div v-if="loading" class="spinner-grow" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,12 +42,6 @@
                     <p class="demo-subtitle">Biases Category: {{corpusCategory}}</p>
                 </div>
                  <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
-            </div>
-            
-            <div class="d-flex justify-content-end pt-2">
-                <div v-if="loading" class="spinner-grow" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
             </div>
         </div>
         <div class="form-group">
