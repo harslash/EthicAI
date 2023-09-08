@@ -82,11 +82,15 @@ function splitStringToArray(inputString: string, delimiters: string[]) {
     if (currentString.trim() !== "") {
         stringArray.push(currentString.trim());
     }
-
+    console.log(stringArray)
     return stringArray;
 }
 
-function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[], startingWords: string) {
+function generateHTMLParagraph(
+    stringsArray: string[], 
+    biasedIndices: number[], 
+    startingWords: string, 
+    isMarkovOutput: boolean) {
     // Initialize an empty array to store the HTML fragments
     const htmlFragments = [];
 
@@ -106,8 +110,12 @@ function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[], 
     const joinedHTML = htmlFragments.join(' ');
 
     // Create the final HTML string with a <p> element
-    const htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
-
+    let htmlString = `<p class="markov-text">${joinedHTML}</p>`;
+    if (isMarkovOutput)
+    {
+        htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
+    }
+ 
     return htmlString;
 }
 
@@ -118,7 +126,9 @@ function updateMarkovDemo(generated: string, biasedIndices: number[], textAreaId
     if (textarea) {
         const delimiters = ['\n', '.', ',', '...', ' '];
         const result = splitStringToArray(generated, delimiters);
-        const resultHTML = generateHTMLParagraph(result, biasedIndices, startingWords);
+        const isMarkovOutput = textAreaId === 'outputTextarea' ? true : false;
+
+        const resultHTML = generateHTMLParagraph(result, biasedIndices, startingWords, isMarkovOutput);
         textarea.innerHTML = resultHTML;
     }
 }
@@ -137,6 +147,7 @@ export default defineComponent({
 
         onMounted(() => {
             // Call updateMarkovDemo after the component is mounted
+            console.log(wilsonCorpusBiasedIndicies)
             updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
         });
 
