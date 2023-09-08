@@ -61,7 +61,7 @@
         More than just your source of income, your work is your passion. You are proud to share your art with the world on Instagram. 
         </p>
     </div>
-    </div>
+    </div> 
     
   </div>
   <page-footer />
