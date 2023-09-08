@@ -57,13 +57,8 @@
                 <div class="col-md-12">
                     <h5 class="demo-title">Markov Chain Output</h5>
                 </div>
-                <div class="col-md-12">
-                    <textarea 
-                    v-model="markovIOutputText" 
-                    class="form-control" 
-                    id="exampleFormControlTextarea1" 
-                    rows="5"
-                    disabled></textarea>
+                <div class="col-md-12" id="outputTextarea">
+
                 </div>
             </div>
           
@@ -73,6 +68,69 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+
+function splitStringToArray(inputString: string, delimiters: string[]) {
+    const stringArray = [];
+    const regex = new RegExp(`(${delimiters.join('|')})`);
+    let currentString = "";
+
+    const substrings = inputString.split(regex);
+    for (const substring of substrings) {
+        if (delimiters.includes(substring)) {
+            if (currentString.trim() !== "") {
+                stringArray.push(currentString.trim());
+            }
+            stringArray.push(substring);
+            currentString = "";
+        } else {
+            currentString += substring;
+        }
+    }
+
+    if (currentString.trim() !== "") {
+        stringArray.push(currentString.trim());
+    }
+
+    return stringArray;
+}
+
+function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[]) {
+    // Initialize an empty array to store the HTML fragments
+    const htmlFragments = [];
+
+    // Loop through each string in stringsArray
+    for (let i = 0; i < stringsArray.length; i++) {
+        const currentString = stringsArray[i];
+        const isBiased = biasedIndices.includes(i);
+
+        // If the current index is in the biasedIndices, wrap it in a <span> with the class .highlight
+        const wrappedString = isBiased ? `<span class="highlight">${currentString}</span>` : currentString;
+
+        // Push the wrapped (or unwrapped) string into the HTML fragments array
+        htmlFragments.push(wrappedString);
+    }
+
+    // Join the HTML fragments into a single string
+    const joinedHTML = htmlFragments.join(' ');
+
+    // Create the final HTML string with a <p> element
+    const htmlString = `<p>${joinedHTML}</p>`;
+
+    return htmlString;
+}
+
+
+function updateMarkovOutput(generated: string, biasedIndices: number[]) {
+    const textarea = document.getElementById('outputTextarea');
+
+    if (textarea) {
+        const delimiters = ['\n', '.', ',', '...', ' '];
+        const result = splitStringToArray(generated, delimiters);
+        const resultHTML = generateHTMLParagraph(result, biasedIndices);
+        textarea.innerHTML = resultHTML;
+    }
+}
+
 export default defineComponent({
     name: 'MarkovDemo',
     components: {
@@ -90,6 +148,7 @@ export default defineComponent({
         const loading = ref(false);
 
         const handleDropdownItemClick = (itemId: string) => {
+            markovIOutputText.value = '';
             if (itemId === 'wilson') {
                 corpusId = itemId;
                 corpusLabel.value = 'Woodrow Wilson Declaration of War';
@@ -127,11 +186,10 @@ export default defineComponent({
                     return response.json();
                 })
                 .then((data) => {
-                    markovIOutputText.value = startingWords + ' ' + data.generated;
                     loading.value = false;
+                    updateMarkovOutput(data.generated, data.biased_indices);
                 })
                 .catch((error) => {
-                    console.error('Error:', error);
                     loading.value = false;
                 });
         };
@@ -199,5 +257,19 @@ export default defineComponent({
 
 .spinner-grow {
     background-color: #BF8FFE;
+}
+
+#outputTextarea :deep(.highlight) {
+    display: inline-block;
+    padding: .25em 0;
+    background: #ff6257;
+    color: black;
+}
+
+#outputTextarea {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 100px;
+    overflow-y: auto;
 }
 </style>
