@@ -41,7 +41,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/chatbots/too-good-to-be-true',
     name: 'too-good-to-be-true',
-    component: () => import('../components/pages/chatbots/chatbots-page-3.vue')
+    component: () => import('../views/modules/chatbots/ChatbotsPageTwoView.vue')
   },
   {
     path: '/dalle',
