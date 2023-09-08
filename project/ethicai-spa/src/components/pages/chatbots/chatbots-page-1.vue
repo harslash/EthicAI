@@ -10,8 +10,8 @@
             <div class="row h-30 mb-5">
                 <div class="col-md-8 d-flex align-items-center">
                     <div class="d-flex justify-content-center flex-wrap">
-                            <p class="text-left section-text">
-                            At their humble beginning, chatbots were primitive computer programs that mimicked human intelligence by answering questions with scripted responses. In 1966, ELIZA was created. ELIZA repeated words and phrases the user had typed, by inserting them into a list of pre-written phrases. At the time, some users of that rudimentary system were convinced they were conversing with a fellow human.
+                        <p class="text-left section-text">
+                        At their humble beginning, chatbots were primitive computer programs that mimicked human intelligence by answering questions with scripted responses. In 1966, ELIZA was created. ELIZA repeated words and phrases the user had typed, by inserting them into a list of pre-written phrases. At the time, some users of that rudimentary system were convinced they were conversing with a fellow human.
                         </p>
 
                         <p class="section-text">
@@ -42,12 +42,21 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn :text="'Continue'" @click="showSecondSection = true"></purple-btn>
+                    <purple-btn 
+                        :text="'Continue'" 
+                        @click="showSecondSection = true;
+                        scrollIntoSecondSection()"
+                        ></purple-btn>
                 </div>
             </div>
         </div>
-        <div class="section-two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
-            <div class="row h-30">
+        <div            
+            ref="secondSection"
+            class="section-two 
+            container mb-5 
+            text-section" 
+            :class="{ 'hidden': !showSecondSection }">
+            <div class="row h-40">
                 <div class="col-md-12 pb-2">
                     <h5>Have a go for yourself!</h5>
                     <span class="gpt-prompt-note">Note: This demo is powered by the openai-api model from Hugging Face. Visit https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
@@ -61,12 +70,16 @@
              <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
                     <purple-btn :text="'Continue'" 
-                    @click="showThirdSection = true" >
+                    @click="showThirdSection = true; 
+                    scrollIntoThirdSection()" >
                     </purple-btn>
                 </div>
             </div>
         </div>
-        <div class="section-three container text-section pb-5" :class="{ 'hidden': !showThirdSection }" >
+        <div 
+            ref="thirdSection"
+            class="section-three container text-section pb-5" 
+            :class="{ 'hidden': !showThirdSection }" >
             <div class="row h-20 mb-3">
                 <div class="col-md-12 pb-5">
                     <h5 class="pb-4">Is this your first time using ChatGPT?</h5>
@@ -150,7 +163,23 @@ export default defineComponent({
         }
     },
     methods: {
-
+        scrollIntoSecondSection() 
+        {   
+            this.$nextTick(() => {
+                const element = this.$refs.secondSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+            }); 
+        },
+         scrollIntoThirdSection() {
+            this.$nextTick(() => {
+                   const element = this.$refs.thirdSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+            }) 
+        }
     },
     components: {
         'nav-bar': NavBar,
