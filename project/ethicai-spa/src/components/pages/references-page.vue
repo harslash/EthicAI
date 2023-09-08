@@ -163,6 +163,20 @@
         </p>
       </div>
     </div>
+    <div class="row">
+      <h2 class="section-heading">Image Generation</h2>
+    </div>
+    <div class="row">
+        <h3 class="sub-heading">All Images are Produced by Bing's Image Generator</h3>
+    </div>
+    <div class="row">
+      <div class="gray-rectangle">
+        <p>
+          <b>Microsoft Corporation.</b> (2023). <b>Bing (Version 2.0) [Generative AI Model] </b> <br>
+          <a href="https://www.bing.com/create" target="_blank">https://www.bing.com/create</a>
+        </p>
+      </div>
+    </div>
   </div>
   <page-footer />
 </template>
