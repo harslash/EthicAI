@@ -62,7 +62,7 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 function splitStringToArray(inputString: string, delimiters: string[]) {
-    return inputString.split(/\s+/).filter(Boolean);
+    return inputString.split(" ").filter(Boolean);
 }
 
 function generateHTMLParagraph(
