@@ -57,6 +57,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/dalle/DallePageOneView.vue'),
   },
   {
+    path: '/dalle/ai-generated-vs-human-art',
+    component: () => import('../views/modules/dalle/DallePageTwoView.vue'),
+  },
+  {
+    path: '/dalle/copyright-and-copywrong',
+    component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
+  },
+  {
     path: '/quiz-ui',
     component: () => import('../components/reusable/quiz-ui.vue'),
   },
