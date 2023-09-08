@@ -34,7 +34,7 @@
         </div>
          <div 
             ref="secondSection"
-            class="section two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
+            class="container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
                     <div class="row h-30 mb-5">
                         <div class="col-md-12 pb-5">
                             <div class="d-flex justify-content-center flex-wrap">
@@ -62,37 +62,38 @@
         </div>
          <div 
             ref="thirdSection"
-            class="container mb-5 text-section" :class="{ 'hidden': !showThirdSection }">
-                    <div class="row h-30 mb-5">
-                        <div class="col-md-12 pb-5">
-                            <div class="d-flex justify-content-center flex-wrap">
-                                <p class="section-text">
-                                    Let's see how biases in a text can influence ChatGPT's response. Below is an interactive demo inspired by a Markov chain. Markov chains behave similarly to the system behind ChatGPT’s sentence completions, but are much simpler, so that it’s easier for you to see how they work. The model behind the demo mimics how ChatGPT may take in a piece of textual data and learn its biases in its training phase.
-                                </p>
-                                <p class="section-text">
-                                    Play around and see how human biases in a text set can introduce biases in the output of an LLM such as ChatGPT.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-center pb-5">
-                            <markov-demo class="demo"></markov-demo>
-                        </div>
-                        <div class="col-md-12 d-flex justify-content-center flex-wrap">
-                            <p class="section-text">
-                                As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as morality biases (Cousins, 2023).
-                            </p>
-                            <p class="section-text">
-                                <b>Lesson of the day: </b>ChatGPT would be a lousy lawmaker.
-                            </p>
-                        </div>
+            class="container text-section pb-5" 
+            :class="{ 'hidden': !showThirdSection }">
+            <div class="row h-30 pb-5">
+                <div class="col-md-12 pb-5">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <p class="section-text">
+                            Let's see how biases in a text can influence ChatGPT's response. Below is an interactive demo inspired by a Markov chain. Markov chains behave similarly to the system behind ChatGPT’s sentence completions, but are much simpler, so that it’s easier for you to see how they work. The model behind the demo mimics how ChatGPT may take in a piece of textual data and learn its biases in its training phase.
+                        </p>
+                        <p class="section-text">
+                            Play around and see how human biases in a text set can introduce biases in the output of an LLM such as ChatGPT.
+                        </p>
                     </div>
-                     <div class="row h-20">
-                        <div class="col-md-12 d-flex justify-content-end">
-                            <router-link to="/chatbots/too-good-to-be-true">
-                                <purple-btn :text="'Continue'"></purple-btn>
-                            </router-link>
-                        </div>
-                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center pb-5">
+                    <markov-demo class="demo"></markov-demo>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center flex-wrap">
+                    <p class="section-text">
+                        As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as morality biases (Cousins, 2023).
+                    </p>
+                    <p class="section-text">
+                        <b>Lesson of the day: </b>ChatGPT would be a lousy lawmaker.
+                    </p>
+                </div>
+            </div>
+            <div class="row h-20 pb-5">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <router-link to="/chatbots/hallucination">
+                        <purple-btn :text="'Continue'"></purple-btn>
+                    </router-link>
+                </div>
+            </div>
         </div>
     </div>
     <page-footer />
