@@ -44,6 +44,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsPageTwoView.vue')
   },
   {
+    path: '/chatbots/hallucination',
+    name: 'hallucination',
+    component: () => import('../views/modules/chatbots/ChatbotsPageThreeView.vue')
+  },
+  {
     path: '/dalle',
     component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
   },
