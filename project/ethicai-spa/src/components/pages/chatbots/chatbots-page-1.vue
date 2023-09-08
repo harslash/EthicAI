@@ -109,7 +109,10 @@
                 </div>
             </div>
             <div class="row h-20">
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-12 d-flex justify-content-between">
+                    <router-link to="/chatbots">
+                            <purple-btn-outline :text="'Back'"></purple-btn-outline>
+                    </router-link>
                     <router-link to="/chatbots/too-good-to-be-true">
                         <purple-btn :text="'Continue'"></purple-btn>
                     </router-link>  
@@ -124,6 +127,7 @@ import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
 import ChatgptPromptForm from '../../reusable/chatgpt-prompt-form.vue'
 
 export default defineComponent({
@@ -185,6 +189,7 @@ export default defineComponent({
         'nav-bar': NavBar,
         'important-terms-card': ImportantTermsCard,
         'purple-btn': PurpleBtn,
+        'purple-btn-outline': PurpleBtnOutline,
         'chatgpt-prompt-form': ChatgptPromptForm
     }
 });
