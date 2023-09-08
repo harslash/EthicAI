@@ -24,7 +24,7 @@
               >{{ item }}</span>
               <i
                 v-if="index < 2"
-                class="fas fa-circle-check"
+                class="fas fa-check-circle"
                 :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
               ></i>
               <i
