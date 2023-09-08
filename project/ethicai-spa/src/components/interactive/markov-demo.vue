@@ -86,7 +86,7 @@ function splitStringToArray(inputString: string, delimiters: string[]) {
     return stringArray;
 }
 
-function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[]) {
+function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[], startingWords: string) {
     // Initialize an empty array to store the HTML fragments
     const htmlFragments = [];
 
@@ -106,19 +106,19 @@ function generateHTMLParagraph(stringsArray: string[], biasedIndices: number[]) 
     const joinedHTML = htmlFragments.join(' ');
 
     // Create the final HTML string with a <p> element
-    const htmlString = `<p class="markov-text">${joinedHTML}</p>`;
+    const htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
 
     return htmlString;
 }
 
 
-function updateMarkovDemo(generated: string, biasedIndices: number[], textAreaId: string) {
+function updateMarkovDemo(generated: string, biasedIndices: number[], textAreaId: string, startingWords: string) {
     const textarea = document.getElementById(textAreaId);
 
     if (textarea) {
         const delimiters = ['\n', '.', ',', '...', ' '];
         const result = splitStringToArray(generated, delimiters);
-        const resultHTML = generateHTMLParagraph(result, biasedIndices);
+        const resultHTML = generateHTMLParagraph(result, biasedIndices, startingWords);
         textarea.innerHTML = resultHTML;
     }
 }
@@ -137,14 +137,14 @@ export default defineComponent({
 
         onMounted(() => {
             // Call updateMarkovDemo after the component is mounted
-            updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea');
+            updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
         });
 
-        const corpusLabel = ref('Woodrow Wilson Declaration of War');
+        let startingWords = "I have";
         let corpusId = 'wilson';
+        const corpusLabel = ref('Woodrow Wilson Declaration of War');
         const corpusCategory = ref('Political');
 
-        const markovIOutputText = ref('')
         const loading = ref(false);
 
         const handleDropdownItemClick = (itemId: string) => {
@@ -160,20 +160,19 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Woodrow Wilson Declaration of War';
                     corpusCategory.value = "Poltical"
-                    updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea');
+                    updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
 
                 }
                 if (itemId === 'corpus-b') {
                     corpusId = itemId;
                     corpusLabel.value = 'Corpus B';
                     corpusCategory.value = "Unknown"
-                    updateMarkovDemo('To be implemented', [], 'inputTextarea');
+                    updateMarkovDemo('To be implemented', [], 'inputTextarea', startingWords);
                 }
             } 
         };
 
          const handleButtonClick = () => {
-            const startingWords = "I have";
             const requestBody = JSON.stringify(
                 { corpus: corpusId, context_size: 1, words_to_generate: 100, input: startingWords}
                 );
@@ -197,7 +196,7 @@ export default defineComponent({
                 })
                 .then((data) => {
                     loading.value = false;
-                    updateMarkovDemo(data.generated, data.biased_indices, 'outputTextarea');
+                    updateMarkovDemo(data.generated, data.biased_indices, 'outputTextarea', startingWords);
                 })
                 .catch((error) => {
                     loading.value = false;
@@ -206,7 +205,6 @@ export default defineComponent({
 
         return {
             loading,
-            markovIOutputText,
             handleDropdownItemClick,
             handleButtonClick,
             corpusLabel,
