@@ -88,7 +88,10 @@
                 </div>
             </div>
             <div class="row h-20 pb-5">
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-12 d-flex justify-content-between">
+                    <router-link to="/chatbots/the-age-of-chatbots">
+                        <purple-btn-outline :text="'Back'"></purple-btn-outline>
+                    </router-link>
                     <router-link to="/chatbots/hallucination">
                         <purple-btn :text="'Continue'"></purple-btn>
                     </router-link>
@@ -103,6 +106,7 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 import MarkovDemo from '../../interactive/markov-demo.vue';
 
 export default defineComponent({
@@ -135,6 +139,7 @@ export default defineComponent({
     components: {
         'nav-bar': NavBar,
         'purple-btn': PurpleBtn,
+        'purple-btn-outline': PurpleBtnOutline,
         'markov-demo': MarkovDemo
     }
 });
