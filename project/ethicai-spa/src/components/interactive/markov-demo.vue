@@ -1,17 +1,47 @@
 <template>
-    <form class="form-container d-flex justify-content-center align-items-center flex-wrap">
+    <form class="form-container d-flex flex-column justify-content-center align-items-center">
+        <div class="container pb-3">
+            <div class="row">
+                   <div class="col-md-12 d-flex">
+                    <div class="dropdown">
+                        <button 
+                            class="btn btn-secondary 
+                            dropdown-toggle 
+                            demo-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Select Corpus
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a 
+                                    class="dropdown-item"
+                                    @click="handleDropdownItemClick('woodrow-wilson')"
+                                    >Woodrow Wilson's declaration of war</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary demo-btn" type="button">Train Model</button>
+                </div>
+            </div>
+        </div>
         <div class="form-group">
-            <textarea v-model="inputPromptText" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Enter your input here" :disabled="loading"></textarea>
+            <textarea 
+                v-model="corpusText" 
+                class="form-control" 
+                id="exampleFormControlTextarea1" 
+                rows="5"
+                disabled></textarea>
             <div class="d-flex justify-content-end pt-2">
                 <div v-if="loading" class="spinner-grow" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <send-btn @button-clicked="handleButtonClick" :disable-button="loading"></send-btn>
             </div>
         </div>
         <div class="form-group">
-            <textarea v-model="outputPromptText" class="form-control" id="exampleFormControlTextarea1" rows="3"
+            <textarea 
+                v-model="markovIOutputText" 
+                class="form-control" 
+                id="exampleFormControlTextarea1" 
+                rows="5"
                 disabled></textarea>
         </div>
     </form>
@@ -19,58 +49,32 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import sendBtn from '../reusable-ui/send-btn.vue';
 export default defineComponent({
     name: 'MarkovDemo',
     components: {
-        'send-btn': sendBtn
     },
     props: {
     },
     setup() {
-        const inputPromptText = ref('');
-        const outputPromptText = ref('')
+        const wilsonCorpus = 'I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making. On the 3rd of February last, I officially laid before you the extraordinary announcement of the Imperial German government that on and after the 1st day of February it was its purpose to put aside all restraints of law or of humanity and use its submarines to sink every vessel that sought to approach either the ports of Great Britain and Ireland or the western coasts of Europe or any of the ports controlled by the enemies of Germany within the Mediterranean...\nWhen I addressed the Congress on the 26th of February last, I thought that it would suffice to assert our neutral rights with arms, our right to use the seas against unlawful interference, our right to keep our people safe against unlawful violence.But armed neutrality, it now appears, is impracticable...Armed neutrality is ineffectual enough at best; in such circumstances and in the face of such pretensions it is worse than ineffectual: it is likely only to produce what it was meant to prevent; it is practically certain to draw us into the war without either the rights or the effectiveness of belligerents.There is one choice we cannot make, we are incapable of making: we will not choose the path of submission and suffer the most sacred rights of our nation and our people to be ignored or violated.The wrongs against which we now array ourselves are no common wrongs; they cut to the very roots of human life.\nWith a profound sense of the solemn and even tragical character of the step I am taking and of the grave responsibilities which it involves, but in unhesitating obedience to what I deem my constitutional duty, I advise that the Congress declare the recent course of the Imperial German government to be in fact nothing less than war against the government and people of the United States; that it formally accept the status of belligerent which has thus been thrust upon it; and that it take immediate steps, not only to put the country in a more thorough state of defense but also to exert all its power and employ all its resources to bring the government of the German Empire to terms and end the war...\nThe world must be made safe for democracy.Its peace must be planted upon the tested foundations of political liberty.We have no selfish ends to serve.We desire no conquest, no dominion.We seek no indemnities for ourselves, no material compensation for the sacrifices we shall freely make.We are but one of the champions of the rights of mankind.We shall be satisfied when those rights have been made as secure as the faith and the freedom of nations can make them...'
+
+        const corpusText = ref('');
+        const markovIOutputText = ref('')
         const loading = ref(false);
 
-        const handleButtonClick = () => {
-            const requestBody = JSON.stringify({ prompt: inputPromptText.value });
-
-            inputPromptText.value = '';
-            outputPromptText.value = ''
-            loading.value = true;
-
-            const requestOptions = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: requestBody,
-            };
-
-            fetch('https://oruwgbr24mmcdfjr5efi5qxel40vodks.lambda-url.ap-southeast-2.on.aws/', requestOptions)
-                .then((response) => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then((data) => {
-                    outputPromptText.value = data.response;
-                    loading.value = false;
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    loading.value = false;
-                });
+        const handleDropdownItemClick = (itemId: string) => {
+            if (itemId === 'woodrow-wilson') {
+                corpusText.value = wilsonCorpus;
+            }
         };
 
         return {
             loading,
-            handleButtonClick,
-            inputPromptText,
-            outputPromptText
+            corpusText,
+            markovIOutputText,
+            handleDropdownItemClick
         }
-    }
+    },
 });
 </script>
 
@@ -95,5 +99,15 @@ export default defineComponent({
 
 .spinner-grow {
     background-color: #BF8FFE;
+}
+
+.demo-btn {
+    background-color: #6D0CFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.demo-btn:hover {
+    background-color: #8638fc;
 }
 </style>
