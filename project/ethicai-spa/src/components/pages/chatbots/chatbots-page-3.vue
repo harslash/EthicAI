@@ -5,7 +5,7 @@
             <h1>Too Good to be True?</h1>
         </div>
         <div>
-            <chatgpt_ui :questionText="questionText" :answerText="answerText" />
+            <chatgpt_ui :questionText="questionText" :answerText="answerText" class="text"/>
         </div>
     </div>
     <page-footer />
@@ -41,5 +41,8 @@ export default defineComponent({
     margin-top: 60px;
 }
 
-/* Your component-specific styles go here */
+.text {
+    font-size: 14px; /* Adjust the size as needed */
+}
+
 </style>
