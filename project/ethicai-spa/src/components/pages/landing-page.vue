@@ -1,104 +1,108 @@
-<template> 
+<template>
     <nav-bar />
-        <!-- Hero -->
-        <div class="w-full hero bg-cover bg-center flex">
-            <div class="body">
-    
-                <div class="title" style="width: 50%; padding-top: 1%; padding-bottom: 1%;">
-                <h1 class="text-5xl text-white font-bold" style="font-size: 35px;">The best way to learn AI ethics</h1>
-                </div>
-                
-                <div class="subtitle" style="width: 50%; padding-bottom: 1%;">
-                <p class="text-white text-5xl text-left" style="font-size: x-large; line-height: 1.5;">
-                        Explore the latest AI technologies and learn how we can use them responsibly.
+    <!-- Hero -->
+    <div class="hero">
+        <div class="body">
+
+            <div class="title" style="width: 50%; padding-top: 1%; padding-bottom: 1%;">
+                <h1 style="font-size: 35px;">The best way to learn AI ethics</h1>
+            </div>
+
+            <div class="subtitle" style="width: 50%; padding-bottom: 1%;">
+                <p style="font-size: x-large; line-height: 1.5;">
+                    Explore the latest AI technologies and learn how we can use them responsibly.
                 </p>
-                </div>
-                
-                <div class="bottom"> 
-                <div class="md:flex">
+            </div>
+
+            <div class="bottom">
+                <div class="">
                     <router-link to="/all-modules">
-                    <button class="get-started-btn">Get Started</button>
+                        <button class="get-started-btn">Get Started</button>
                     </router-link>
                 </div>
-                </div>  
-    
+            </div>
+        </div>
+    </div>
+
+    <!-- Card -->
+    <div id="wrapper">
+        <div id="first">
+            <h2>Variety of AI technology</h2>
+            <div id="image-div">
+                <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')">
+            </div>
+
+            <div id="text">
+                Learn AI ethics through real-world use cases of the latest AI technologies, such as ChatGPT, DALL-E and
+                Whisper AI.
             </div>
         </div>
 
-        <!-- Card -->
-        <div id="wrapper">
-            <div id="first">
-                <h2>Variety of AI technology</h2>
-                    <div id="image-div">
-                    <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')">
-                    </div>
-                
-                <div id="text">
-                    Learn AI ethics through real-world use cases of the latest AI technologies, such as ChatGPT, DALL-E and Whisper AI. 
-                </div>
+        <div id="second">
+            <h2>Interactive learning</h2>
+            <div id="image-div">
+                <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')"
+                    style="height: 225px; width: 189px;">
             </div>
-            
-            <div id="second">
-                <h2>Interactive learning</h2>
-                    <div id="image-div">
-                    <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')"  style="height: 225px; width: 189px;">
-                    </div>
-                
-                <div id="text">  
-                    Quickly grasp relevant ideas on AI ethics through visual and interactive demos. Save yourself from reading long, boring literature and articles.
-                </div> 
-            </div>
-            
-            <div id="third">
-                <h2>All in one place</h2>
-                    <div id="image-div">
-                    <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')" style="height: 229px; width: 247px;">
-                    </div>
-                
-                <div id="text"> 
-                    Explore the intricacies of AI ethics through a series of fun and content-filled modules. All modules are easily accessible for you to continue learning anytime and anywhere. 
-                </div>
+
+            <div id="text">
+                Quickly grasp relevant ideas on AI ethics through visual and interactive demos. Save yourself from reading
+                long, boring literature and articles.
             </div>
         </div>
+
+        <div id="third">
+            <h2>All in one place</h2>
+            <div id="image-div">
+                <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')"
+                    style="height: 229px; width: 247px;">
+            </div>
+
+            <div id="text">
+                Explore the intricacies of AI ethics through a series of fun and content-filled modules. All modules are
+                easily accessible for you to continue learning anytime and anywhere.
+            </div>
+        </div>
+    </div>
     <page-footer />
 </template>
   
 <script lang="ts">
-  import { defineComponent, ref } from 'vue';
-  import NavBar from '../reusable/nav-bar.vue';
-  import PageFooter from '../reusable/page-footer.vue';
-  
-  export default defineComponent({
+import { defineComponent, ref } from 'vue';
+import NavBar from '../reusable/nav-bar.vue';
+import PageFooter from '../reusable/page-footer.vue';
+
+export default defineComponent({
     name: 'LandingPage',
     data() {
         return {
         }
     },
     methods: {
-      
+
     },
     components: {
         'nav-bar': NavBar,
         'page-footer': PageFooter
     }
-  });
-  </script>
+});
+</script>
   
-  <style scoped>
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-  /* Styles for hero */
-  h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  }
-  
-  p {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-  }
-  
-  .hero {
+/* Styles for hero */
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.hero {
     background: url('@/assets/overlaybg.png');
     background-repeat: no-repeat;
     background: cover;
@@ -108,54 +112,61 @@
     justify-content: center;
     justify-items: center;
     margin-top: 60px;
-  
-  }
-  .body {
-  display: flex;
-  flex-direction: column;
-  padding: 10%; 
-  padding-left: 7%; 
-  text-align: left; 
-  color: white;
-  }
-  .bottom {
-  flex: 5; /* 30% height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Align content to the bottom */
-  align-items: flex-start; /* Align content to the left */
-  }
-  
-  .get-started-btn {
-  background-color: #6d0cff;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  }
+
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    padding-left: 7%;
+    text-align: left;
+    color: white;
+}
+
+.bottom {
+    flex: 5;
+    /* 30% height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* Align content to the bottom */
+    align-items: flex-start;
+    /* Align content to the left */
+}
+
+.get-started-btn {
+    background-color: #6d0cff;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Styles for card */
 h2 {
-font-family: "Open Sans", sans-serif;
-font-size: 24px;
-font-weight: 700; 
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 #wrapper {
-  display: flex;
-  flex-wrap: wrap; /* Wrap elements so they flow below each other */
-  overflow: hidden;
-  flex-direction: row;
-  float: center;
-  padding: 1%;
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap elements so they flow below each other */
+    overflow: hidden;
+    flex-direction: row;
+    float: center;
+    padding: 1%;
+    text-align: center;
 }
+
 #first {
-    display:flexbox;
+    display: flexbox;
     flex: 1;
     flex-direction: column;
     justify-content: center;
@@ -164,8 +175,9 @@ font-weight: 700;
     padding-right: 5%;
     float: left;
 }
+
 #second {
-    display:flexbox;
+    display: flexbox;
     flex: 1;
     flex-direction: column;
     justify-content: center;
@@ -175,8 +187,9 @@ font-weight: 700;
     padding-bottom: 3%;
     float: left;
 }
+
 #third {
-    display:flexbox;
+    display: flexbox;
     flex: 1;
     flex-direction: column;
     justify-content: center;
@@ -185,23 +198,25 @@ font-weight: 700;
     padding-right: 5%;
     float: left;
 }
+
 #image {
-  margin: 10px;
-  align-self: center;
-  padding-top: 7%;
-  padding-bottom: 7%;
-}
-#image-div {
-  display:flexbox;
-  padding: 8%;
-  float: center;
-}
-#text {
-  float: left; 
-  clear: both;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400; 
+    margin: 10px;
+    align-self: center;
+    padding-top: 7%;
+    padding-bottom: 7%;
 }
 
-  </style>
+#image-div {
+    display: flexbox;
+    padding: 8%;
+    float: center;
+}
+
+#text {
+    float: left;
+    clear: both;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+</style>
