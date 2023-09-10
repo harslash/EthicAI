@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ModuleCompletion from '@/components/resuable/module_completion.vue';
+import ModuleCompletion from '../../../components/reusable/module_completion.vue';
 
 export default {
   components: {

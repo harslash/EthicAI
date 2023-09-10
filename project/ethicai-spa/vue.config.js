@@ -11,12 +11,4 @@ module.exports = defineConfig({
       .end();
   },
 })
-module.exports = {
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src')
-      }
-    }
-  }
-};
+
