@@ -2,7 +2,7 @@
   <div>
     <ModuleCompletion
       :moduleName="'The Rise of DALL·E'"
-      :buttonText="'Complete Module'"
+      :buttonText="'Module Complete'"
     />
   </div>
 </template>
