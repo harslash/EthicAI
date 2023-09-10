@@ -1,12 +1,14 @@
 <template>
   <nav-bar/>
   <div class="module-completion">
+  <div class="content-container">
     <h1 class="module-name">You have completed... </h1>
     <h1 class="module-name"><span style="color: #6D0CFF;">{{ moduleName }}</span></h1>
     <p class="congrats-text">Woo! Great Job!</p>
     <img src="../../assets/celebration.svg" alt="Celebration Image" style="max-width: 40%;">
     <br>
     <ModuleCompleteButton :text="buttonText" />
+  </div>
   </div>
   <page-footer/>
 </template>
@@ -36,6 +38,11 @@ export default {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin-top: 60px;
+}
+
+.content-container {
+  margin-top: 60px; /* Add space at the top */
+  margin-bottom: 20px; /* Add space at the bottom */
 }
 
 .module-name {
