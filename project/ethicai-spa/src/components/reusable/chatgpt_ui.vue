@@ -68,6 +68,7 @@ export default defineComponent({
             padding: 10px; /* Add padding for top and left */
             display: flex;
             flex-direction: row; /* Arrange children horizontally */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
 
         /* Style for the top rectangle */
