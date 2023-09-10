@@ -65,6 +65,10 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
   },
   {
+    path: '/dalle/module-complete',
+    component: () => import('../views/modules/dalle/dalle-module-complete.vue'),
+  },
+  {
     path: '/quiz-ui',
     component: () => import('../components/reusable/quiz-ui.vue'),
   },
