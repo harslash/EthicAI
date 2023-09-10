@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ModuleCompleteButton from './module-complete-btn.vue';
+import ModuleCompleteButton from '/resuable-ui/module-complete-btn.vue';
 
 export default {
   name: 'ModuleCompletion',
