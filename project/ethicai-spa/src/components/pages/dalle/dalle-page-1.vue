@@ -148,7 +148,6 @@
             </router-link>
           </div>
         </div>
-        <page-footer :class="{ 'hidden': !showFooter }" />
       </div>
     </div>
   </div>
@@ -157,7 +156,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
-import PageFooter from '../../reusable/page-footer.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
@@ -185,7 +183,6 @@ export default defineComponent({
       showThirdSection: false,
       showFourthSection: false,
       showFifthSection: false,
-      showFooter: false,
     };
   },
   methods: {
@@ -222,14 +219,12 @@ export default defineComponent({
         const element = this.$refs.fifthSection as HTMLElement;
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
-          this.showFooter = true;
         }
       });
     },
   },
   components: {
     'nav-bar': NavBar,
-    'page-footer': PageFooter,
     'purple-btn': PurpleBtn,
     'purple-btn-outline': PurpleBtnOutline,
     'important-terms-card': ImportantTermsCard,
@@ -267,10 +262,6 @@ export default defineComponent({
 .img-a-small {
   width: 100%; /* Adjust the width as needed */
   max-width: 250px; /* Add a maximum width to prevent it from becoming too large */
-}
-
-.my-button {
-  margin: 30px; /* Adjust the margin size as needed */
 }
 
 .hidden {

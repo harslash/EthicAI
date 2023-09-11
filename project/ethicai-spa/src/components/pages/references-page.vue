@@ -146,6 +146,22 @@
           <b>Nanou, E.</b> (2022, September 17). <b>Should AI-Generated Art Be Considered Real Art?</b> MUO.<br>
           <a href="https://www.makeuseof.com/is-ai-generated-art-real-art/" target="_blank">https://www.makeuseof.com/is-ai-generated-art-real-art/</a>
         </p>
+        <p>
+          <b>NGA.</b> (n.d.). <b>Collection.</b> National Gallery of Art.<br>
+          <a href="https://www.nga.gov/collection.html" target="_blank">https://www.nga.gov/collection.html</a>
+        </p>
+        <p>
+          <b>Public Domain Pictures.</b> (n.d.). <b>PublicDomainPictures.net.</b> PublicDomainPictures.net.<br>
+          <a href="https://www.publicdomainpictures.net/en/" target="_blank">https://www.publicdomainpictures.net/en/</a>
+        </p>
+        <p>
+          <b>WikiArt.</b> (n.d.). <b>WikiArt.org - Visual art encyclopedia.</b> www.wikiart.org. Retrieved August 2023.<br>
+          <a href="https://www.wikiart.org/en/" target="_blank">https://www.wikiart.org/en/</a>
+        </p>
+        <p>
+          <b>Playground.</b> (n.d.). <b>Playground AI. [Generative AI Model]</b><br>
+          <a href="https://playgroundai.com/" target="_blank">https://playgroundai.com/</a>
+        </p>
       </div>
     </div>
     <div class="row">
@@ -167,13 +183,17 @@
       <h2 class="section-heading">Image Generation</h2>
     </div>
     <div class="row">
-        <h3 class="sub-heading">All Images are Produced by Bing's Image Generator</h3>
+        <h3 class="sub-heading">All Images are Produced using the Following Image Generators</h3>
     </div>
     <div class="row">
       <div class="gray-rectangle">
         <p>
           <b>Microsoft Corporation.</b> (2023). <b>Bing (Version 2.0) [Generative AI Model] </b> <br>
           <a href="https://www.bing.com/create" target="_blank">https://www.bing.com/create</a>
+        </p>
+        <p>
+          <b>Playground.</b> (n.d.). <b>Playground AI. [Generative AI Model]</b><br>
+          <a href="https://playgroundai.com/" target="_blank">https://playgroundai.com/</a>
         </p>
       </div>
     </div>
