@@ -16,7 +16,3 @@ export default {
   }
 };
 </script>
-
-<style>
-/* Your page-specific styles go here */
-</style>

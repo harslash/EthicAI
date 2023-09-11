@@ -1,25 +1,28 @@
 <template>
-  <nav-bar/>
-  <div class="module-completion">
-  <div class="content-container">
-    <h1 class="module-name">You have completed... </h1>
-    <h1 class="module-name"><span style="color: #6D0CFF;">{{ moduleName }}</span></h1>
-    <p class="congrats-text">Woo! Great Job!</p>
-    <img src="../../assets/celebration.svg" alt="Celebration Image" style="max-width: 40%;">
-    <br>
-    <ModuleCompleteButton :text="buttonText" />
+  <div>
+    <nav-bar />
+    <div class="module-completion">
+      <div class="content-container">
+        <h1 class="module-name">You have completed...</h1>
+        <h1 class="module-name"><span style="color: #6D0CFF;">{{ moduleName }}</span></h1>
+        <p class="congrats-text">Woo! Great Job!</p>
+        <img src="../../assets/celebration.svg" alt="Celebration Image" class="celebration-image">
+        <router-link to="/all-modules" class="continue-link">
+          <ModuleCompleteButton :text="buttonText" />
+        </router-link>
+      </div>
+    </div>
+    <page-footer />
   </div>
-  </div>
-  <page-footer/>
 </template>
 
 <script>
-import { defineComponent} from 'vue';
+import { defineComponent } from 'vue';
 import ModuleCompleteButton from '../reusable-ui/module-complete-btn.vue';
-import NavBar from './nav-bar.vue'
+import NavBar from './nav-bar.vue';
 import PageFooter from './page-footer.vue';
 
-export default {
+export default defineComponent({
   name: 'ModuleCompletion',
   components: {
     ModuleCompleteButton,
@@ -28,9 +31,9 @@ export default {
   },
   props: {
     moduleName: String,
-    buttonText: String
-  }
-};
+    buttonText: String,
+  },
+});
 </script>
 
 <style scoped>
@@ -41,14 +44,14 @@ export default {
 }
 
 .content-container {
-  margin-top: 60px; /* Add space at the top */
-  margin-bottom: 20px; /* Add space at the bottom */
+  margin-top: 80px; /* Add space at the top */
+  margin-bottom: 40px; /* Add space at the bottom */
 }
 
 .module-name {
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .congrats-text {
@@ -57,8 +60,16 @@ export default {
 }
 
 .celebration-image {
-  max-width: 100%;
+  width: 30%;
   height: auto;
-  margin-bottom: 20px;
+  margin-top: 40px; /* Add space at the top */
+  margin-bottom: 40px; /* Add space at the bottom */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.continue-link {
+  text-decoration: none;
 }
 </style>
