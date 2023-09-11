@@ -94,7 +94,10 @@
             </div>
 
             <div class="row h-20">
-                <div class="col-md-12 d-flex justify-content-end">
+                <div class="col-md-12 d-flex justify-content-between">
+                    <router-link to="/dalle/ai-generated-vs-human-art">
+                            <purple-btn-outline :text="'Back'"></purple-btn-outline>
+                    </router-link>
                     <router-link to="/dalle" custom v-slot="{navigate}">
                         <purple-btn :text="'Continue'" @click="navigate" role="link"> </purple-btn>
                     </router-link>
@@ -108,6 +111,7 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
 
 export default defineComponent({
     name: 'DallePage3',
@@ -132,6 +136,7 @@ export default defineComponent({
     components: {
         'nav-bar': NavBar,
         'purple-btn': PurpleBtn,
+        'purple-btn-outline': PurpleBtnOutline,
     }
 });
 </script>
