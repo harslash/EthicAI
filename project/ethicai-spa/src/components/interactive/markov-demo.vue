@@ -4,10 +4,10 @@
             <div class="row">
                    <div class="col-md-12 d-flex">
                     <div class="dropdown px-3">
-                        <button 
-                            class="btn 
-                            btn-secondary 
-                            dropdown-toggle 
+                        <button
+                            class="btn
+                            btn-secondary
+                            dropdown-toggle
                             demo-btn
                             " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Select Corpus
@@ -24,8 +24,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button 
-                        class="btn btn-primary demo-btn" 
+                    <button
+                        class="btn btn-primary demo-btn"
                         @click="handleButtonClick"
                         :disabled="loading"
                         type="button">Train Model</button>
@@ -53,7 +53,7 @@
 
                 </div>
             </div>
-          
+
         </div>
     </form>
 </template>
@@ -62,13 +62,14 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 function splitStringToArray(inputString: string, delimiters: string[]) {
-    return inputString.split(/\s+/).filter(Boolean);
+    inputString = inputString.replaceAll(" ", " ꙮ").replaceAll("\n", "\nꙮ");
+    return inputString.split("ꙮ").filter(string => string !== "");
 }
 
 function generateHTMLParagraph(
-    stringsArray: string[], 
-    biasedIndices: number[], 
-    startingWords: string, 
+    stringsArray: string[],
+    biasedIndices: number[],
+    startingWords: string,
     isMarkovOutput: boolean) {
     // Initialize an empty array to store the HTML fragments
     const htmlFragments = [];
@@ -94,7 +95,7 @@ function generateHTMLParagraph(
     {
         htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
     }
- 
+
     return htmlString;
 }
 
@@ -119,9 +120,9 @@ export default defineComponent({
     props: {
     },
     setup() {
-        const wilsonCorpus = 'I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making. On the 3rd of February last, I officially laid before you the extraordinary announcement of the Imperial German government that on and after the 1st day of February it was its purpose to put aside all restraints of law or of humanity and use its submarines to sink every vessel that sought to approach either the ports of Great Britain and Ireland or the western coasts of Europe or any of the ports controlled by the enemies of Germany within the Mediterranean...\nWhen I addressed the Congress on the 26th of February last, I thought that it would suffice to assert our neutral rights with arms, our right to use the seas against unlawful interference, our right to keep our people safe against unlawful violence. But armed neutrality, it now appears, is impracticable... Armed neutrality is ineffectual enough at best; in such circumstances and in the face of such pretensions it is worse than ineffectual: it is likely only to produce what it was meant to prevent; it is practically certain to draw us into the war without either the rights or the effectiveness of belligerents. There is one choice we cannot make, we are incapable of making: we will not choose the path of submission and suffer the most sacred rights of our nation and our people to be ignored or violated. The wrongs against which we now array ourselves are no common wrongs; they cut to the very roots of human life.\nWith a profound sense of the solemn and even tragical character of the step I am taking and of the grave responsibilities which it involves, but in unhesitating obedience to what I deem my constitutional duty, I advise that the Congress declare the recent course of the Imperial German government to be in fact nothing less than war against the government and people of the United States; that it formally accept the status of belligerent which has thus been thrust upon it; and that it take immediate steps, not only to put the country in a more thorough state of defense but also to exert all its power and employ all its resources to bring the government of the German Empire to terms and end the war...\nThe world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty. We have no selfish ends to serve. We desire no conquest, no dominion. We seek no indemnities for ourselves, no material compensation for the sacrifices we shall freely make. We are but one of the champions of the rights of mankind. We shall be satisfied when those rights have been made as secure as the faith and the freedom of nations can make them...';
+        const wilsonCorpus = 'I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making. On the 3rd of February last, I officially laid before you the extraordinary announcement of the Imperial German government that on and after the 1st day of February it was its purpose to put aside all restraints of law or of humanity and use its submarines to sink every vessel that sought to approach either the ports of Great Britain and Ireland or the western coasts of Europe or any of the ports controlled by the enemies of Germany within the Mediterranean...\n\nWhen I addressed the Congress on the 26th of February last, I thought that it would suffice to assert our neutral rights with arms, our right to use the seas against unlawful interference, our right to keep our people safe against unlawful violence. But armed neutrality, it now appears, is impracticable... Armed neutrality is ineffectual enough at best; in such circumstances and in the face of such pretensions it is worse than ineffectual: it is likely only to produce what it was meant to prevent; it is practically certain to draw us into the war without either the rights or the effectiveness of belligerents. There is one choice we cannot make, we are incapable of making: we will not choose the path of submission and suffer the most sacred rights of our nation and our people to be ignored or violated. The wrongs against which we now array ourselves are no common wrongs; they cut to the very roots of human life.\n\nWith a profound sense of the solemn and even tragical character of the step I am taking and of the grave responsibilities which it involves, but in unhesitating obedience to what I deem my constitutional duty, I advise that the Congress declare the recent course of the Imperial German government to be in fact nothing less than war against the government and people of the United States; that it formally accept the status of belligerent which has thus been thrust upon it; and that it take immediate steps, not only to put the country in a more thorough state of defense but also to exert all its power and employ all its resources to bring the government of the German Empire to terms and end the war...\n\nThe world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty. We have no selfish ends to serve. We desire no conquest, no dominion. We seek no indemnities for ourselves, no material compensation for the sacrifices we shall freely make. We are but one of the champions of the rights of mankind. We shall be satisfied when those rights have been made as secure as the faith and the freedom of nations can make them...';
 
-        const wilsonCorpusBiasedIndicies = [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 86, 87, 88, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 169, 170, 171, 172, 173, 174, 189, 190, 191, 192, 238, 239, 240, 241, 242, 243, 248, 249, 258, 260, 308, 309, 315, 316, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 385, 386, 387, 388, 395, 396, 397, 398, 399, 400, 401, 402, 403, 413, 414, 415, 416, 434, 435, 436, 437, 438, 439, 451, 452, 453, 454, 455, 462, 463, 464, 465, 466, 467];
+        const wilsonCorpusBiasedIndicies = [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 86, 87, 88, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 171, 172, 173, 174, 175, 176, 191, 192, 193, 194, 240, 241, 242, 243, 244, 245, 250, 251, 260, 262, 312, 313, 319, 320, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 389, 390, 391, 392, 399, 400, 401, 402, 403, 404, 405, 406, 407, 419, 420, 421, 422, 440, 441, 442, 443, 444, 445, 457, 458, 459, 460, 461, 468, 469, 470, 471, 472, 473];
 
 
         onMounted(() => {
@@ -138,13 +139,13 @@ export default defineComponent({
         const loading = ref(false);
 
         const handleDropdownItemClick = (itemId: string) => {
-     
+
             let inputTextArea = document.getElementById('inputTextarea');
             let outputTextarea = document.getElementById('outputTextarea');
             if (outputTextarea) {
                 outputTextarea.innerHTML = '';
             }
-            
+
             if (inputTextArea) {
                 if (itemId === 'wilson') {
                     corpusId = itemId;
@@ -159,7 +160,7 @@ export default defineComponent({
                     corpusCategory.value = "Unknown"
                     updateMarkovDemo('To be implemented', [], 'inputTextarea', startingWords);
                 }
-            } 
+            }
         };
 
          const handleButtonClick = () => {
