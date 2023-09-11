@@ -31,13 +31,15 @@
                     </div>
                 </div>
 
+                <!-- 
                 <div class="card">
                     <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
                     <div class="container">
                         <h4>Placeholder</h4>
                         <p>Placeholder text</p>
                     </div>
-                </div>
+                </div> -->
+                
 
             </div>
 
@@ -67,13 +69,14 @@
                     </div>
                 </div>
 
+                <!-- 
                 <div class="card">
                     <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
                     <div class="container">
                         <h4>Placeholder</h4>
                         <p>Placeholder text</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -132,6 +135,10 @@ h2 {
     font-size: 24px;
     margin-left: 4%;
 
+    /* more padding for 2 card layout */
+    padding-left: 7%;
+    padding-right: 7%;
+
 }
 
 #wrapper {
@@ -143,6 +150,10 @@ h2 {
     padding: 1%;
     margin-left: 4%;
     margin-right: 4%;
+
+    /* more padding for 2 card layout */
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .card {
@@ -163,6 +174,7 @@ h2 {
 
 .card:hover {
     background-color: #E5D1FF;
+
 }
 
 h4 {
