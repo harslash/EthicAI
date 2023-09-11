@@ -49,6 +49,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsPageThreeView.vue')
   },
   {
+    path: '/chatbots/misuses-and-plagarism',
+    name: 'misuses-and-plagarism',
+    component: () => import('../components/pages/chatbots/chatbots-page-4.vue')
+  },
+  {
     path: '/dalle',
     component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
   },

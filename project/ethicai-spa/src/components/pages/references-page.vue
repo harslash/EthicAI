@@ -56,12 +56,20 @@
           <a href="https://www.linkedin.com/pulse/astonishing-amount-data-analyzed-chatgpt-story-told-nimit-gupta/" target="_blank">https://www.linkedin.com/pulse/astonishing-amount-data-analyzed-chatgpt-story-told-nimit-gupta/</a>
         </p>
         <p>
+          <b>Post, E. </b>(2004, December 10). <b>Etiquette. Project Gutenberg.</b><br>
+          <a href="https://www.gutenberg.org/ebooks/14314" target="_blank">https://www.gutenberg.org/ebooks/14314</a>
+        </p>
+        <p>
           <b>Ray, P.</b> (2023). <b>ChatGPT: A comprehensive review on background, applications, key challenges, bias, ethics, limitations and future scope.</b> Internet of Things and Cyber-physical Systems, 3, 121–154.<br>
           <a href="https://doi.org/10.1016/j.iotcps.2023.04.003" target="_blank">https://doi.org/10.1016/j.iotcps.2023.04.003</a>
         </p>
         <p>
           <b>Ruby, D.</b> (2023). <b>30+ Detailed ChatGPT Statistics — Users & Facts (August 2023).</b> DemandSage.<br>
           <a href="https://www.demandsage.com/chatgpt-statistics/" target="_blank">https://www.demandsage.com/chatgpt-statistics/</a>
+        </p>
+        <p>
+          <b>Wilson’s War Message to Congress </b> (1917, April 2). <b> Khan Academy.</b><br>
+          <a href="https://www.khanacademy.org/humanities/world-history/euro-hist/american-entry-world-war-i/a/wilsons-war-message-to-congress-april-2-1917" target="_blank">https://www.khanacademy.org/humanities/world-history/euro-hist/american-entry-world-war-i/a/wilsons-war-message-to-congress-april-2-1917</a>. Accessed September 11, 2023.
         </p>
       </div>
     </div>
