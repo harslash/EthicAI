@@ -24,15 +24,15 @@
                 </div>
                   <div class="row h-20">
                     <div class="col-md-12 d-flex justify-content-end">
-                        <purple-btn 
-                            :text="'Continue'" 
+                        <purple-btn
+                            :text="'Continue'"
                             @click="showSecondSection = true;
                             scrollIntoSecondSection()"
                             ></purple-btn>
                     </div>
                 </div>
         </div>
-         <div 
+         <div
             ref="secondSection"
             class="container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
                     <div class="row h-30 mb-5">
@@ -52,26 +52,29 @@
                     </div>
                         <div class="row h-20">
                             <div class="col-md-12 d-flex justify-content-end">
-                                <purple-btn 
-                                    :text="'Continue'" 
+                                <purple-btn
+                                    :text="'Continue'"
                                     @click="showThirdSection = true;
                                     scrollIntoThirdSection()"
                                     ></purple-btn>
                             </div>
                         </div>
         </div>
-         <div 
+         <div
             ref="thirdSection"
-            class="container text-section pb-5" 
+            class="container text-section pb-5"
             :class="{ 'hidden': !showThirdSection }">
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            Let's see how biases in a text can influence ChatGPT's response. Below is an interactive demo inspired by a Markov chain. Markov chains behave similarly to the system behind ChatGPT’s sentence completions, but are much simpler, so that it’s easier for you to see how they work. The model behind the demo mimics how ChatGPT may take in a piece of textual data and learn its biases in its training phase.
+                            Let's see how biases in a text can influence how language models response. The demo below allows you to train a ‘Markov chain’ model on some training data, then see the kind of output it produces. Just like ChatGPT, Markov chains can generate sentences. They both learn statistical relationships between words from their training data, then they can complete sentences by predicting the most likely next word in the text. However, Markov chains are much simpler than the system behind ChatGPT, and you’ll see a direct correspondence between the training corpus and what the Markov chain generates.
                         </p>
                         <p class="section-text">
-                            Play around and see how human biases in a text set can introduce biases in the output of an LLM such as ChatGPT.
+                            Pay attention to the red highlighting: it shows biassed phrases that can be carried through into the output of the model. This is similar to what goes on when ChatGPT repeats biassed ideas it learnt from the internet.
+                        </p>
+                        <p class="section-text">
+                            Experiment for yourself, by training the Markov chain model on each corpus of training data, and consider the relationship between biases in the input and output.
                         </p>
                     </div>
                 </div>
