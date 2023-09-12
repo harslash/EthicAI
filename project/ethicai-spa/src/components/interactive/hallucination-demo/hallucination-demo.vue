@@ -14,10 +14,10 @@
             <div class="col-md-2"></div>
             <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
                 <div class="explanation-container" :class="isUserCorrect ? 'alert alert-success' : 'alert alert-danger'">
-                    <p v-if="isUserCorrect" class="h5">Correct!</p>
-                    <p v-else class="h5">Incorrect!</p>
+                    <p v-if="isUserCorrect" class="h5">Well done!</p>
+                    <p v-else class="h5">Try again!</p>
 
-                    <p v-if="isHallucination" class="h6">The response is factually incorrect</p>
+                    <p v-if="isHallucination" class="h6">ChatGPT produces hallucination here</p>
                     <p v-else class="h6">The response is factually correct</p>
 
                     <p>{{ explanationText }}</p>
