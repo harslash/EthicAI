@@ -1,8 +1,8 @@
 {
     "results": [
         {
-            "question": "What's the best way to tell if a ChatGPT \"fact\" is a hallucination?",
-            "correct_answer": "Verify with credible sources",
+            "question": "What's the best way to verify if a ChatGPT \"fact\" is a hallucination?",
+            "correct_answer": "Compare with credible sources",
             "incorrect_answers": [
                 "Ask ChatGPT again to confirm",
                 "Google it",
