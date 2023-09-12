@@ -62,6 +62,7 @@
 import { defineComponent, ref, onMounted } from 'vue';
 
 function splitStringToArray(inputString: string, delimiters: string[]) {
+    // Split after newlines and spaces
     inputString = inputString.replaceAll(" ", " ꙮ").replaceAll("\n", "\nꙮ");
     return inputString.split("ꙮ").filter(string => string !== "");
 }
@@ -80,6 +81,7 @@ function generateHTMLParagraph(
         const isBiased = biasedIndices.includes(i);
 
         // If the current index is in the biasedIndices, wrap it in a <span> with the class .highlight
+        // pre-wrap to preserve whitespace between words, otherwise HTML removes trailing whitespace
         const wrappedString = isBiased ? `<span class="highlight" style="white-space: pre-wrap;">${currentString}</span>` : currentString;
 
         // Push the wrapped (or unwrapped) string into the HTML fragments array
@@ -93,6 +95,7 @@ function generateHTMLParagraph(
     let htmlString = `<p class="markov-text">${joinedHTML}</p>`;
     if (isMarkovOutput)
     {
+        // prepend initial/prompt words to output
         htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
     }
 
