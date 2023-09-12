@@ -5,7 +5,7 @@
                 <chatgpt-ui-card :question-text="questionText" :answer-text="answerText"></chatgpt-ui-card>
             </div>
         </div>
-        <div class="row">
+        <div class="row" :class="{ 'hidden': !showButtons}">
              <div class="col-md-12 d-flex justify-content-around">
                 <purple-btn-outline :text="'Hallucination'" @click="handleHallucinationBtnClick()"> </purple-btn-outline>
                 <purple-btn-outline :text="'Correct'" @click="handleCorrectBtnClick()"> </purple-btn-outline>
@@ -28,7 +28,7 @@ export default defineComponent({
     },
     props: {
     },
-    setup() {
+    setup(_, context) {
         const handleHallucinationBtnClick = () => {
             if (questionId.value < 5) {
                 if (jsonData.data[questionId.value].isHallucination) {
@@ -37,6 +37,11 @@ export default defineComponent({
                     console.log('Incorrect, the prompt is factually correct')
                 }
                 questionId.value += 1;
+            }
+
+            if (questionId.value == 5) {
+                context.emit('end-of-demo-event');
+                showButtons.value = false;
             }
           
             refreshCard();
@@ -51,6 +56,11 @@ export default defineComponent({
                 }
                 questionId.value += 1;
              }
+
+            if (questionId.value == 5) {
+                context.emit('end-of-demo-event');
+                showButtons.value = false;
+            }
           
             refreshCard();
         }
@@ -65,18 +75,17 @@ export default defineComponent({
         const questionText = ref('');
         const answerText = ref('');
         const questionId = ref(0);
+        const showButtons = ref(true);
 
         refreshCard();
-
-
-
 
         return {
             questions: jsonData.data,
             handleHallucinationBtnClick,
             handleCorrectBtnClick,
             questionText,
-            answerText
+            answerText,
+            showButtons
         }
     },
 });
@@ -85,4 +94,11 @@ export default defineComponent({
 <style scoped>
 /* Add your CSS styles here, scoped to this component */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
 </style>
