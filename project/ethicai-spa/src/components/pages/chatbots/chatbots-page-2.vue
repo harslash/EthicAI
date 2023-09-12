@@ -1,6 +1,6 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container text-center ">
+    <div class="container-fluid page-container text-center">
         <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
                 <div class="row h-10 mb-5">
                     <div class="col-md-12">
