@@ -76,10 +76,10 @@
               <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
               <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="scrollPage('secondPromptCard')"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="scrollPage('secondPromptCard'); showSecondPromptCard = true"></purple-outline-btn>
           </div>
          
-          <div ref="secondPromptCard" class="guideline-example-container pb-4">
+          <div ref="secondPromptCard" class="guideline-example-container pb-4" :class="{ 'hidden': !showSecondPromptCard }">
             <p class="section-text pb-1 purple-text">
               Giving a clear and unambiguous task
             </p>
@@ -87,10 +87,10 @@
                 <quiz-ui-card :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"></quiz-ui-card>
                 <quiz-ui-card :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="scrollPage('thirdPromptCard'); showThirdPromptCard = true"></purple-outline-btn>
           </div>
 
-          <div class="guideline-example-container pb-4">
+          <div ref="thirdPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showThirdPromptCard }">
             <p class="section-text pb-1 purple-text">
                 Providing examples and additional guidelines
             </p>
@@ -98,11 +98,11 @@
                 <quiz-ui-card :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"></quiz-ui-card>
                 <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`"></quiz-ui-card>
             </div>
-              <purple-outline-btn :text="'Next'"></purple-outline-btn>
+              <purple-outline-btn :text="'Next'" @click="scrollPage('fourthPromptCard'); showFourthPromptCard = true"></purple-outline-btn>
           </div>
 
 
-          <div class="guideline-example-container pb-4">
+          <div ref="fourthPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showFourthPromptCard }">
             <p class="section-text pb-1 purple-text">
                 Specifying the output type
             </p>
@@ -111,11 +111,11 @@
                 <quiz-ui-card :card-text="'What happened leading up to WWII? Bulleted list.'"></quiz-ui-card>
                 <quiz-ui-card :card-text="`What happened leading up to WWII?`"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'"  @click="scrollPage('fifthPromptCard'); showFifthPromptCard = true"></purple-outline-btn>
           </div>
 
 
-          <div class="guideline-example-container pb-4">
+          <div ref="fifthPromptCard"  class="guideline-example-container pb-4"  :class="{'hidden': !showFifthPromptCard }">
             <p class="section-text pb-1 purple-text">
                   And being as elaborate as possible to improve the prompt
             </p>
