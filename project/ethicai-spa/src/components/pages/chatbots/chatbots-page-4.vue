@@ -162,13 +162,37 @@
             <div class="col-md-12 d-flex justify-content-end">
                 <purple-btn
                     :text="'Continue'"
-                    @click="showFourthSection = true;"
+                    @click="scrollPage('fourthSection'); showFourthSection = true;"
                     ></purple-btn>
             </div>
         </div>
         
       </div>
 
+      <div 
+          ref="fourthSection" 
+          class="container mb-5"
+          :class="{ 'hidden': !showFourthSection }">
+          <div class="row">
+            <div class="col-md-12 pb-5 d-flex justify-content-center flex-wrap"> 
+                <p class="section-text purple-text">Guideline 3: Keep your information private (Cousins, 2023)</p>
+                 <p class="section-text">This one is hopefully self-explanatory. Remember that most publicly available AI models are still under development. AI models such as ChatGPT store and process your user data, including your conversations, location, and IP address. This information is collected to improve the AI and human trainers may access it. Don’t enter any data that is sensitive, personal, or confidential.</p>
+            </div>
+            <div class="col">
+              <img class="img-b" src="../../../assets/chatbots_page_4_c.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
+          </div>
+          </div>
+          <div class="row h-20 pb-5">
+            <div class="col-md-12 d-flex justify-content-between">
+                <router-link to="/chatbots/hallucination">
+                    <purple-outline-btn :text="'Back'"></purple-outline-btn>
+                </router-link>
+                <router-link to="/chatbots/quiz">
+                    <purple-btn :text="'Continue'"></purple-btn>
+                </router-link>
+            </div>
+          </div>
+        </div>
   </div>
 </template>
 
