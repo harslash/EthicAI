@@ -20,7 +20,7 @@
         },
         {
              "id": 4,
-             "prompt": "`From which work of literature is the following quote? \"Kia tūpato ki ngā kurī, kia tūpato ki ngā kaimahi kino, kia tūpato ki ngā kaitūkino i te kikokiko\"",
+             "prompt": "From which work of literature is the following quote? \"Kia tūpato ki ngā kurī, kia tūpato ki ngā kaimahi kino, kia tūpato ki ngā kaitūkino i te kikokiko\"",
              "response": "The quote \"Kia tūpato ki ngā kurī, kia tūpato ki ngā kaimahi kino, kia tūpato ki ngā kaitūkino i te kikokiko\" is from the Maori translation of George Orwell's novel \"Animal Farm.\" In English, the quote translates to \"Beware of the dogs, beware of the wicked workers, beware of those who persecute you in the flesh.\" The Maori translation of \"Animal Farm\" is titled \"Te Wharetoroa a Hoiho,\" and this quote is from that translation.",
              "isHallucination": true
         },
