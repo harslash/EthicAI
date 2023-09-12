@@ -59,10 +59,10 @@
             <div class="row h-40">
                 <div class="col-md-12 pb-2">
                     <h5>Have a go for yourself!</h5>
-                    <span class="gpt-prompt-note">Note: This demo is powered by the openai-api model from Hugging Face. Visit https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
+                    <span class="gpt-prompt-note">Note: This demo is powered by the OpenAssistant model from Hugging Face. Visit https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
                 </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-6">            
+                <div class="col-md-2"></div>
+                <div class="col-md-8">            
                     <chatgpt-prompt-form class="form"></chatgpt-prompt-form>
                 </div>
                  <div class="col-md-2"></div>
@@ -102,7 +102,14 @@
                     <h5 class="pb-5">What is your trust level in ChatGPT?</h5>
                     <div class="d-flex justify-content-center">
                         <div class="slider-container">
-                            <prime-slider v-model="value" class="w-14rem" />
+                            <prime-slider v-model="value" class="w-14rem mb-2" :step="25"/>
+                             <div class=" d-flex justify-content-between">
+                                <span class="slider-label">Low</span>
+                                <span class="slider-label">Moderate</span>
+                                <span class="slider-label">Neutral</span>
+                                <span class="slider-label">High</span>
+                                <span class="slider-label">Complete</span>
+                            </div>
                         </div>
                     </div>
                    
@@ -213,7 +220,7 @@ export default defineComponent({
 }
 
 .form {
-    height: 30vh;
+    height: 40vh;
 }
 
 .slider-container{
@@ -228,7 +235,6 @@ export default defineComponent({
     background: #696969;
     border: 2px solid #696969;
 }
-
 .radio-div .form-check-input:checked {
     background-color: #696969;
     border-color: #696969;
