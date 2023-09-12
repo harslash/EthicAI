@@ -3,7 +3,7 @@
     <div class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
-                <module-overview 
+                <module-overview
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
@@ -30,7 +30,7 @@ export default defineComponent({
     data() {
         return {
             moduleTitle: 'The Rise of DALL·E',
-            moduleDescription: 'In this module, you will discover the world of AI generated art. The highs and lows; including the impact these generators have on artists and creative integrity.',
+            moduleDescription: 'In this module, you will discover the world of AI generated art. The highs and lows, including the impact these generators have on artists and creative integrity.',
             moduleImgSrc: '../../../assets/purple_robot.jpeg',
             modulePageNames: ['The Rise of DALL-E', 'AI Generated vs. Human Art', 'Copyright and Copywrong'],
             moduleName: 'dalle',

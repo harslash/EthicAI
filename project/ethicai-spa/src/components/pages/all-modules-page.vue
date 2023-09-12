@@ -12,7 +12,7 @@
 
             <!-- LLM cards -->
             <div id="wrapper">
-                
+
                 <router-link to="/chatbots" custom v-slot="{navigate}">
                     <div class="card" @click="navigate" role="link">
                         <img :src="require('@/assets/chatbots_Thumbnail.png')" alt="Chatbots" style="width:100%;">
@@ -27,11 +27,11 @@
                     <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Copilot" style="width:100%">
                     <div class="container">
                         <h4>Understanding Copilot</h4>
-                        <p>Not yet implemented</p>
+                        <p>Coming soon!</p>
                     </div>
                 </div>
 
-                <!-- 
+                <!--
                 <div class="card">
                     <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
                     <div class="container">
@@ -39,7 +39,7 @@
                         <p>Placeholder text</p>
                     </div>
                 </div> -->
-                
+
 
             </div>
 
@@ -49,7 +49,7 @@
 
             <!-- AI Generation cards -->
             <div id="wrapper" style="padding-bottom: 5%;">
-                
+
                 <router-link to="/dalle" custom v-slot="{navigate}">
                     <div class="card" @click="navigate" role="link">
                         <img :src="require('@/assets/dalle_Thumbnail.png')" alt="DALL E" style="width:100%;">
@@ -59,17 +59,17 @@
                         </div>
                     </div>
                 </router-link>
-                
+
 
                 <div class="card">
                     <img :src="require('@/assets/deepfakes_Thumbnail.png')" alt="Deepfakes" style="width:100%">
                     <div class="container">
                         <h4>Deepfakes & Maintaining Identity</h4>
-                        <p>Not yet implemented</p>
+                        <p>Coming soon!</p>
                     </div>
                 </div>
 
-                <!-- 
+                <!--
                 <div class="card">
                     <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
                     <div class="container">
@@ -97,7 +97,7 @@ export default defineComponent({
         }
     },
     methods: {
-        
+
     },
     components: {
         'nav-bar': NavBar,

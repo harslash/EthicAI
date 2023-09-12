@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="demo-title"> {{ corpusLabel }}</h5>
-                    <p class="demo-subtitle">Biases Category: {{corpusCategory}}</p>
+                    <p class="demo-subtitle">Bias Category: {{corpusCategory}}</p>
                 </div>
                  <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
             </div>
@@ -80,14 +80,14 @@ function generateHTMLParagraph(
         const isBiased = biasedIndices.includes(i);
 
         // If the current index is in the biasedIndices, wrap it in a <span> with the class .highlight
-        const wrappedString = isBiased ? `<span class="highlight">${currentString}</span>` : currentString;
+        const wrappedString = isBiased ? `<span class="highlight" style="white-space: pre-wrap;">${currentString}</span>` : currentString;
 
         // Push the wrapped (or unwrapped) string into the HTML fragments array
         htmlFragments.push(wrappedString);
     }
 
     // Join the HTML fragments into a single string
-    const joinedHTML = htmlFragments.join(' ');
+    const joinedHTML = htmlFragments.join('');
 
     // Create the final HTML string with a <p> element
     let htmlString = `<p class="markov-text">${joinedHTML}</p>`;
@@ -133,7 +133,7 @@ export default defineComponent({
 
         let startingWords = "I have";
         let corpusId = 'wilson';
-        const corpusLabel = ref('Woodrow Wilson Declaration of War');
+        const corpusLabel = ref('Woodrow Wilson’s 1917 Declaration of War');
         const corpusCategory = ref('Political');
 
         const loading = ref(false);
@@ -149,8 +149,8 @@ export default defineComponent({
             if (inputTextArea) {
                 if (itemId === 'wilson') {
                     corpusId = itemId;
-                    corpusLabel.value = 'Woodrow Wilson Declaration of War';
-                    corpusCategory.value = "Poltical"
+                    corpusLabel.value = 'Woodrow Wilson’s 1917 Declaration of War';
+                    corpusCategory.value = "Political"
                     updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
 
                 }
