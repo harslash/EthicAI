@@ -3,7 +3,7 @@
     <div class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
-                <module-overview 
+                <module-overview
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
@@ -32,7 +32,7 @@ export default defineComponent({
             moduleTitle: 'The Age of Chatbots',
             moduleDescription: 'In this module, you’ll learn about what chatbots are, the limitations of ChatGPT, and guidelines surrounding using ChatGPT.',
             moduleImgSrc: '../../../assets/chatbots_module.png',
-            modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Misuse and Plagarism', 'Module Quiz'],
+            modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Misuse and Plagiarism', 'Module Quiz'],
             moduleName: 'chatbots',
             pageName: 'the-age-of-chatbots',
             moduleImgFilename: 'chatbots_module.png'

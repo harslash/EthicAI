@@ -29,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsOverviewView.vue'),
   },
   {
-    path: '/chatbots/the-age-of-chatbots', 
+    path: '/chatbots/the-age-of-chatbots',
     name: 'the-age-of-chatbots',
     component: () => import('../views/modules/chatbots/ChatbotsPageOneView.vue'),
   },
@@ -49,8 +49,8 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/chatbots/ChatbotsPageThreeView.vue')
   },
   {
-    path: '/chatbots/misuses-and-plagarism',
-    name: 'misuses-and-plagarism',
+    path: '/chatbots/misuses-and-plagiarism',
+    name: 'misuses-and-plagiarism',
      component: () => import('../views/modules/chatbots/ChatbotsPageFourView.vue')
   },
   {
