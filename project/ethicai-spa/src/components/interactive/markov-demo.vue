@@ -80,14 +80,14 @@ function generateHTMLParagraph(
         const isBiased = biasedIndices.includes(i);
 
         // If the current index is in the biasedIndices, wrap it in a <span> with the class .highlight
-        const wrappedString = isBiased ? `<span class="highlight">${currentString}</span>` : currentString;
+        const wrappedString = isBiased ? `<span class="highlight" style="white-space: pre-wrap;">${currentString}</span>` : currentString;
 
         // Push the wrapped (or unwrapped) string into the HTML fragments array
         htmlFragments.push(wrappedString);
     }
 
     // Join the HTML fragments into a single string
-    const joinedHTML = htmlFragments.join(' ');
+    const joinedHTML = htmlFragments.join('');
 
     // Create the final HTML string with a <p> element
     let htmlString = `<p class="markov-text">${joinedHTML}</p>`;
