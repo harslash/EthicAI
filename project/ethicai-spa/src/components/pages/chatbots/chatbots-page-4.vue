@@ -79,7 +79,7 @@
                 ></quiz-ui-card>
               <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="scrollPage('secondPromptCard'); showSecondPromptCard = true"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="showSecondPromptCard = true; scrollPage('secondPromptCard'); "></purple-outline-btn>
           </div>
          
           <div ref="secondPromptCard" class="guideline-example-container pb-4" :class="{ 'hidden': !showSecondPromptCard }">
@@ -93,7 +93,7 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="scrollPage('thirdPromptCard'); showThirdPromptCard = true"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="showThirdPromptCard = true; scrollPage('thirdPromptCard')"></purple-outline-btn>
           </div>
 
           <div ref="thirdPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showThirdPromptCard }">
@@ -107,7 +107,7 @@
               </quiz-ui-card>
                 <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-              <purple-outline-btn :text="'Next'" @click="scrollPage('fourthPromptCard'); showFourthPromptCard = true"></purple-outline-btn>
+              <purple-outline-btn :text="'Next'" @click=" showFourthPromptCard = true; scrollPage('fourthPromptCard')"></purple-outline-btn>
           </div>
 
           <div ref="fourthPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showFourthPromptCard }">
@@ -122,7 +122,7 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :card-text="`What happened leading up to WWII?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"  @click="scrollPage('fifthPromptCard'); showFifthPromptCard = true"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'"  @click="showFifthPromptCard = true; scrollPage('fifthPromptCard')"></purple-outline-btn>
           </div>
 
 
@@ -138,7 +138,7 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="scrollPage('thirdSection'); showThirdSection = true;"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="showThirdSection = true; scrollPage('thirdSection');"></purple-outline-btn>
           </div>
         </div>
       </div>
@@ -162,7 +162,7 @@
             <div class="col-md-12 d-flex justify-content-end">
                 <purple-btn
                     :text="'Continue'"
-                    @click="scrollPage('fourthSection'); showFourthSection = true;"
+                    @click=" showFourthSection = true; scrollPage('fourthSection');"
                     ></purple-btn>
             </div>
         </div>
