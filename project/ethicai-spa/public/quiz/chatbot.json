@@ -1,36 +1,86 @@
 {
     "results": [
         {
-            "question": "What's the best way to tell if a ChatGPT \"fact\" is a hallucination?",
-            "correct_answer": "Verify with credible sources",
+            "question": "What's the best way to verify if a ChatGPT \"fact\" is a hallucination?",
+            "correct_answer": "Compare with credible sources",
             "incorrect_answers": [
                 "Ask ChatGPT again to confirm",
-                "From the vibes",
-                "Ask a friend what they think"
+                "Google it",
+                "Feel the vibes"
             ]
         },
         {
             "question": "Which of these was the first chatbot?",
             "correct_answer": "ELIZA",
             "incorrect_answers": [
-                "Siri",
-                "ChatGPT"
+                "ChatGPT",
+                "Siri"
+            ]
+        },
+        {
+            "question": "Where do Large Language Models <em>NOT</em> get their information?",
+            "correct_answer": "Public cameras connected to the internet",
+            "incorrect_answers": [
+                "The internet",
+                "User interactions with them",
+                "Digitised books"
+            ]
+        },
+        {
+            "question": "Compared to ChatGPT, Markov chains...",
+            "correct_answer": "...work with less training data",
+            "incorrect_answers": [
+                "...take longer to train",
+                "...understand more of the 'structure' of their prompt",
+                "...expend more energy to run"
+            ]
+        },
+        {
+            "question": "Which of these is a problem with Large Language Models?",
+            "correct_answer": "Their output can contain harmful biases",
+            "incorrect_answers": [
+                "They can only complete logical/mathematical tasks",
+                "They can only process input that's in a specific format"
+            ]
+        },
+        {
+            "question": "Why does ChatGPT produce biassed outputs?",
+            "correct_answer": "It was trained on biassed text from the internet",
+            "incorrect_answers": [
+                "It reflects the bias in the questions humans prompt it with"
+            ]
+        },
+        {
+            "question": "When is it acceptable to use ChatGPT for academic work?",
+            "correct_answer": "To brainstorm ideas, but not provide facts",
+            "incorrect_answers": [
+                "Never",
+                "To provide facts, but not to brainstorm ideas",
+                "To write sections of text, as long as you cite ChatGPT"
             ]
         },
         {
             "question": "Which prompt is most likely to lead to hallucinations from ChatGPT?",
-            "correct_answer": "When was the Kate Edger Information Commons opened?",
+            "correct_answer": "\"When was the Kate Edger Information Commons opened?\"",
             "incorrect_answers": [
-                "Write me a sonnet about frogs"
+                "\"Write me a sonnet about frogs.\""
             ]
         },
         {
-            "question": "Which of these is NOT a technique for improving your prompts?",
+            "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",
             "correct_answer": "Repeating the prompt multiple times",
             "incorrect_answers": [
                 "Giving a clear task",
                 "Adding examples",
                 "Defining a role for the AI tool to fill"
+            ]
+        },
+        {
+            "question": "Which of these is <em>NOT</em> a Large Language Model?",
+            "correct_answer": "Apple's Siri",
+            "incorrect_answers": [
+                "Google's Bard",
+                "OpenAI's ChatGPT"
             ]
         }
     ]
