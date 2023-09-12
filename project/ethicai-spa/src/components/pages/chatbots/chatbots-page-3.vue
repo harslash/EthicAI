@@ -60,6 +60,35 @@
                     </div>
             </div>
         </div>
+        <div
+            ref="thirdSection"
+            class="container mb-5 text-section" :class="{ 'hidden': !showThirdSection }">
+                    <div class="row h-30 mb-5">
+                        <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
+                            <div class="section-text">
+                                Do you have what it takes to judge ChatGPT's responses for accuracy? Look at each generated response from ChatGPT, and see if the response is factually correct.
+                            </div>
+                        </div>
+                        <div class="col-md-12 pb-5">
+                         <hallucination-demo @end-of-demo-event="handleEndOfDemoEvent"></hallucination-demo>
+                        </div>
+            </div>
+        </div>
+
+        <div ref="lastSection" class="container text-section" :class="{ 'hidden': !showLastSection }">
+            <div class="row">
+                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
+                    <div class="section-text">
+                        <b>Lesson of the day:</b> Don’t ask ChatGPT for directions in a new city.
+                    </div>
+                </div>
+            <div class="row h-20 pb-5">
+                <div class="col-md-12 d-flex justify-content-end">
+                    <purple-btn :text="'Continue'"></purple-btn>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </template>
 
@@ -68,6 +97,7 @@ import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import ChatGPTUICard from '../../reusable/chatgpt_ui.vue';
+import HallucinationDemo from '../../interactive/hallucination-demo/hallucination-demo.vue';
 
 
 export default defineComponent({
@@ -78,7 +108,8 @@ export default defineComponent({
             answerText: "Yes, there are months that can have fewer than four Tuesdays. This occurs when a month starts on a Tuesday and is either 28 or 29 days long. Let's break down the possibilities:\n\nFebruary: In common years (non-leap years), February has 28 days. If February starts on a Tuesday, it will have only 3 Tuesdays.",
             showFirstSection: true,
             showSecondSection: false,
-            showThirdSection: false
+            showThirdSection: false,
+            showLastSection: false
         }
     },
      methods: {
@@ -98,11 +129,24 @@ export default defineComponent({
                 }
             });
         },
+        scrollIntoLastSection() {
+            this.$nextTick(() => {
+                const element = this.$refs.lastSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+            });
+        },
+        handleEndOfDemoEvent() {
+            this.showLastSection = true;
+            this.scrollIntoLastSection();
+        }
     },
     components: {
         'nav-bar': NavBar,
         'purple-btn': PurpleBtn,
-        'chatgpt-ui-card': ChatGPTUICard
+        'chatgpt-ui-card': ChatGPTUICard,
+        'hallucination-demo': HallucinationDemo
 
     },
 });
