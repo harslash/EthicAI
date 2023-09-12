@@ -6,15 +6,20 @@
         class="form-control" 
         id="exampleFormControlTextarea1" 
         rows="3"
-        placeholder="Enter your input here"
+        placeholder="Ask AI a question!"
         :disabled="loading"></textarea>
         <div class="d-flex justify-content-end pt-2">
             <div v-if="loading" class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
             </div> 
+            <button class="btn btn-primary" 
+                    type="button" 
+                    @click="clearPrompText()"  
+                    :disabled="loading || !isReadyForClearingPrompt">Clear</button>
              <send-btn 
                 @button-clicked="handleButtonClick"
-                :disable-button="loading"></send-btn>
+                :disable-button="loading || !isReadyForNewPrompt"
+                ></send-btn>
         </div>
       </div>
       <div class="form-group">
@@ -22,14 +27,14 @@
         v-model="outputPromptText"
         class="form-control" 
         id="exampleFormControlTextarea1" 
-        rows="3"
+        rows="4"
         disabled></textarea>
       </div>
     </form>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref} from 'vue';
+import { defineComponent, ref, watch} from 'vue';
 import sendBtn from '../reusable-ui/send-btn.vue';
 export default defineComponent({
     name: 'ChatgptPromptForm',
@@ -42,13 +47,20 @@ export default defineComponent({
         const inputPromptText = ref('');
         const outputPromptText = ref('')
         const loading = ref(false);
+        let isReadyForNewPrompt = ref(true);
+        let isReadyForClearingPrompt = ref(false);
+
+        const clearPrompText = () => {
+            inputPromptText.value = '';
+            outputPromptText.value = ''
+            isReadyForNewPrompt.value = true;
+        }
 
         const handleButtonClick = () => {
             const requestBody = JSON.stringify({ prompt: inputPromptText.value });
 
-            inputPromptText.value = '';
-            outputPromptText.value = ''
             loading.value = true;
+            isReadyForNewPrompt.value = false;
 
              const requestOptions = {
                 method: 'POST',
@@ -75,9 +87,20 @@ export default defineComponent({
                 });
         };
 
+        watch(inputPromptText, (newVal: string) => {
+            if (newVal.length > 0) {
+                isReadyForClearingPrompt.value = true;
+            } else {
+                isReadyForClearingPrompt.value = false;
+            }
+        });
+
         return {
             loading, 
+            isReadyForNewPrompt,
+            isReadyForClearingPrompt,
             handleButtonClick,
+            clearPrompText,
             inputPromptText,
             outputPromptText
         }
@@ -105,6 +128,14 @@ export default defineComponent({
 
 .spinner-grow {
     background-color: #BF8FFE;
+}
+
+.btn {
+       background-color: #6D0CFF;
+}
+
+.btn:hover {
+  background-color: #8638fc;
 }
 
 
