@@ -17,7 +17,7 @@
                     <div class="card" @click="navigate" role="link">
                         <img :src="require('@/assets/chatbots_Thumbnail.png')" alt="Chatbots" style="width:100%;">
                         <div class="container">
-                            <h4>The Rise of Chatbots</h4>
+                            <h4>The Age of Chatbots</h4>
                             <p>Chatbots are now everywhere. Find out how privacy battles bias, and learn how to protect yourself from misinformation!</p>
                         </div>
                     </div>
