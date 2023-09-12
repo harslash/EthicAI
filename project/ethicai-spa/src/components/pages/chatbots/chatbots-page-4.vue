@@ -138,24 +138,35 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="scrollPage('thirdSection'); showThirdSection = true;"></purple-outline-btn>
           </div>
         </div>
-
-      
-        
       </div>
     </div>
 
     <div 
         ref="thirdSection" 
-        class="row justify-content-center mb-5"
+        class="container mb-5"
          :class="{ 'hidden': !showThirdSection }">
-        <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
-            <p class="section-text">
-              Guideline 1: Effective prompting (NSW Education, 2023).
-            </p>
+
+        <div class="row">
+          <div class="col-md-12 pb-5 d-flex justify-content-center flex-wrap"> 
+              <p class="section-text purple-text">Guideline 2: Review and verify (Alston, 2023)</p>
+               <p class="section-text">Remember that AI models still have the critical flaw of hallucinations, no matter how good your prompt is. So, whether you’re writing code, solving problems, or researching, take the time to verify each and every output.</p>
+          </div>
+          <div class="col">
+            <img class="img-b" src="../../../assets/chatbots_page_4_b.jpeg" alt="2d illustration of a robot pulling messages from a box"/>
         </div>
+        </div>
+          <div class="row h-20">
+            <div class="col-md-12 d-flex justify-content-end">
+                <purple-btn
+                    :text="'Continue'"
+                    @click="showFourthSection = true;"
+                    ></purple-btn>
+            </div>
+        </div>
+        
       </div>
 
   </div>
@@ -175,6 +186,7 @@ export default defineComponent({
       showFirstSection: true,
       showSecondSection: false,
       showThirdSection: false,
+      showFourthSection: false,
       showSecondPromptCard: false,
       showThirdPromptCard: false,
       showFourthPromptCard: false,
@@ -227,6 +239,10 @@ export default defineComponent({
   border-radius: 10px;
   margin-right: 10px; /* Reduce the margin-right to create less space */
   max-width: 100%; /* Ensure the image doesn't exceed its container width */
+}
+
+.img-b {
+  width: 30%;
 }
 
 h2 {
