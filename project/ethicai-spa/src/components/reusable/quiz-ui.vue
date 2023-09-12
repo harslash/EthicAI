@@ -1,7 +1,9 @@
 <template>
   <div class="quiz-ui-card">
     <!-- Icon in the upper left corner -->
-    <i class="fas fa-smile" style="color: #6d0cff; font-size: 1.5em;"></i>
+    <i v-if="isHappy" class="fas fa-smile" style="font-size: 1.5em;" :style="{color: isNormal? '#6D0CFF': '#55E86D'}"></i>
+
+    <i v-if="!isHappy" class="fas fa-frown" style="font-size: 1.5em;" :style="{ color: isNormal ? '#6D0CFF' : '#FF0000'}"></i>
     
     <!-- Text input via props -->
     <div class="content">
@@ -24,7 +26,16 @@ import { defineComponent, PropType } from 'vue';
 export default defineComponent({
   name: 'QuizUICard',
   props: {
-    cardText: String, // Prop for the card text
+    cardText: String, 
+    isHappy: {
+      type: Boolean,
+      default: true
+    },
+    isNormal: {
+      type: Boolean,
+      default: true
+    }
+    // Prop for the card text
   },
 });
 </script>
