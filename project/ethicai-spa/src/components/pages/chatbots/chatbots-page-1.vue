@@ -82,7 +82,7 @@
             :class="{ 'hidden': !showThirdSection }" >
             <div class="row h-20 mb-3">
                 <div class="col-md-12 pb-5">
-                    <h5 class="pb-4">Is this your first time using ChatGPT?</h5>
+                    <h5 class="pb-4">Is this your first time using a LLM?</h5>
                     <div class="radio-div d-flex justify-content-around">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
