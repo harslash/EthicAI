@@ -47,15 +47,15 @@
 
     <div class="row justify-content-center mb-5"> <!-- Center the row -->
       <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
-        <div class="d-flex justify-content-center flex-column align-items-center"> <!-- Center content vertically and horizontally -->
+        <div class="justify-content-center align-items-center"> <!-- Center content vertically and horizontally -->
           <h2>
             Here are some guidelines you can follow for using AI chatbots effectively:
           </h2>
           <br>
+        </div>
           <p class="section-text">
             Guideline 1: Effective prompting (NSW Education, 2023).
           </p>
-        </div>
       </div>
     </div>
 
@@ -113,6 +113,7 @@ export default defineComponent({
   text-align: left;
   margin-bottom: 10px; /* Add margin between paragraphs */
 }
+
 
 .img-a {
   border-radius: 10px;
