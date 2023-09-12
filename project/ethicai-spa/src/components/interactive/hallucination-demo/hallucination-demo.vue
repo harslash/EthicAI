@@ -6,10 +6,24 @@
             </div>
         </div>
         <div class="row" :class="{ 'hidden': !showButtons}">
-             <div class="col-md-12 d-flex justify-content-around">
-                <purple-btn-outline :text="'Hallucination'" @click="handleHallucinationBtnClick()"> </purple-btn-outline>
-                <purple-btn-outline :text="'Correct'" @click="handleCorrectBtnClick()"> </purple-btn-outline>
+            <div class="col-md-12 d-flex justify-content-around pb-5">
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Hallucination'" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Correct'" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
+                <purple-btn-outline v-if="!isReadyForAnswer" :text="'Next'" @click="handleNextBtnClick()"> </purple-btn-outline>
             </div>
+            <div class="col-md-2"></div>
+            <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
+                <div class="explanation-container" :class="isUserCorrect ? 'alert alert-success' : 'alert alert-danger'">
+                    <p v-if="isUserCorrect" class="h5">Correct!</p>
+                    <p v-else class="h5">Incorrect!</p>
+
+                    <p v-if="isHallucination" class="h6">The response is factually incorrect</p>
+                    <p v-else class="h6">The response is factually correct</p>
+
+                    <p>{{ explanationText }}</p>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
         </div>
    </div>
 </template>
@@ -29,12 +43,24 @@ export default defineComponent({
     props: {
     },
     setup(_, context) {
-        const handleHallucinationBtnClick = () => {
+        const handleHallucinationBtnClick = (value: boolean) => {
+            if (!isQuizStarted.value) {
+                isQuizStarted.value = true;
+            }
+
+            if (!isReadyForAnswer.value) {
+                isReadyForAnswer.value = true;
+            } else {
+                isReadyForAnswer.value = false;
+            }
+
             if (questionId.value < 5) {
-                if (jsonData.data[questionId.value].isHallucination) {
-                    console.log('Well done')
+                if (value == jsonData.data[questionId.value].isHallucination) {
+                    isUserCorrect.value = true;
+                    isHallucination.value = true;
                 } else {
-                    console.log('Incorrect, the prompt is factually correct')
+                    isUserCorrect.value = false
+                    isHallucination.value = false;
                 }
                 questionId.value += 1;
             }
@@ -43,25 +69,39 @@ export default defineComponent({
                 context.emit('end-of-demo-event');
                 showButtons.value = false;
             }
-          
-            refreshCard();
         }
 
-        const handleCorrectBtnClick = () => {
+        const handleCorrectBtnClick = (value: boolean) => {
+            if (!isQuizStarted.value) {
+                isQuizStarted.value = true;
+            }
+
+            if (!isReadyForAnswer.value) {
+                isReadyForAnswer.value = true;
+            } else {
+                isReadyForAnswer.value = false;
+            }
+
             if (questionId.value < 5) { 
-                if (!jsonData.data[questionId.value].isHallucination) {
-                    console.log('Well done')
+                if (value == jsonData.data[questionId.value].isHallucination) {
+                    isUserCorrect.value = true;
+                    isHallucination.value = false;
                 } else {
-                    console.log('Incorrect, the prompt is a type of hallucination')
+                    isUserCorrect.value = false
+                    isHallucination.value = true;
                 }
                 questionId.value += 1;
-             }
+             }  
+        }
 
+        const handleNextBtnClick = () => {
             if (questionId.value == 5) {
                 context.emit('end-of-demo-event');
                 showButtons.value = false;
             }
-          
+            
+            isReadyForAnswer.value = true;
+            isQuizStarted.value = false;
             refreshCard();
         }
 
@@ -69,11 +109,18 @@ export default defineComponent({
             if (questionId.value < 5) {
                 questionText.value = jsonData.data[questionId.value].prompt;
                 answerText.value = jsonData.data[questionId.value].response;
+                explanationText.value = jsonData.data[questionId.value].explanation;
             }  
         }
 
         const questionText = ref('');
         const answerText = ref('');
+        const explanationText = ref('');
+        const isUserCorrect = ref(false);
+        const isHallucination = ref(false);
+        const isQuizStarted = ref(false);
+        const isReadyForAnswer = ref(true)
+
         const questionId = ref(0);
         const showButtons = ref(true);
 
@@ -83,8 +130,14 @@ export default defineComponent({
             questions: jsonData.data,
             handleHallucinationBtnClick,
             handleCorrectBtnClick,
+            handleNextBtnClick,
             questionText,
+            explanationText,
             answerText,
+            isUserCorrect,
+            isHallucination,
+            isQuizStarted,
+            isReadyForAnswer,
             showButtons
         }
     },
