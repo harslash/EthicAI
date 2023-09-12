@@ -44,8 +44,8 @@
             ]
         },
         {
-            "question": "Why does ChatGPT produce biassed outputs?",
-            "correct_answer": "It was trained on biassed text from the internet",
+            "question": "Why does ChatGPT produce biased outputs?",
+            "correct_answer": "It was trained on biased text from the internet",
             "incorrect_answers": [
                 "It reflects the bias in the questions humans prompt it with"
             ]
