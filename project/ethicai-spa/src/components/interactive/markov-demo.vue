@@ -19,7 +19,7 @@
                             </li>
                              <li>
                                 <a class="dropdown-item"
-                                    @click="handleDropdownItemClick('etiqutte')">Etiqutte
+                                    @click="handleDropdownItemClick('etiquette')">Etiqutte
                                 </a>
                             </li>
                         </ul>
@@ -163,11 +163,11 @@ export default defineComponent({
                     updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
 
                 }
-                if (itemId === 'etiqutte') {
+                if (itemId === 'etiquette') {
                     corpusId = itemId;
-                    corpusLabel.value = 'Etqiutte';
+                    corpusLabel.value = 'Etiquette';
                     corpusCategory.value = "Gender"
-                    startingWords = 'A Gentleman';
+                    startingWords = 'A';
                     updateMarkovDemo(etiqutteCorpus, etiquetteCorpusBiasedIndicies, 'inputTextarea', startingWords);
                 }
             }
