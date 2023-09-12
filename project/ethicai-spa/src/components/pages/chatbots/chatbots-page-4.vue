@@ -42,7 +42,7 @@
       </div>
         <div class="row h-10">
             <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-left">
-                <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollIntoSecondSection()" />
+                <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollPage('secondSection')" />
             </div>
         </div>
     </div>
@@ -76,10 +76,10 @@
               <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
               <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="scrollPage('secondPromptCard')"></purple-outline-btn>
           </div>
          
-          <div class="guideline-example-container pb-4">
+          <div ref="secondPromptCard" class="guideline-example-container pb-4">
             <p class="section-text pb-1 purple-text">
               Giving a clear and unambiguous task
             </p>
@@ -160,13 +160,17 @@ export default defineComponent({
     return {
       showFirstSection: true,
       showSecondSection: false,
-      showThirdSection: false
+      showThirdSection: false,
+      showSecondPromptCard: false,
+      showThirdPromptCard: false,
+      showFourthPromptCard: false,
+      showFifthPromptCard: false,
     };
   },
   methods: {
-    scrollIntoSecondSection() {
+    scrollPage(reference: string) {
       this.$nextTick(() => {
-        const element = this.$refs.secondSection as HTMLElement;
+        const element = this.$refs[reference] as HTMLElement;
         if (element) {
           element.scrollIntoView({
             behavior: 'smooth',
@@ -175,7 +179,7 @@ export default defineComponent({
           });
         }
       });
-    },
+    }
   },
   components: {
     'nav-bar': NavBar,
