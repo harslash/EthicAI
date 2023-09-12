@@ -68,32 +68,63 @@
           </p>
 
 
-
-          <p class="section-text pb-1 purple-text">
-            Defining a character and/or role for the AI tool
-          </p>
-
-          <div class="d-flex justify-content-between pb-3">
-            <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
-                  <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
+          <div class="guideline-example-container pb-4">
+             <p class="section-text pb-1 purple-text">
+              Defining a character and/or role for the AI tool
+            </p>
+            <div class="d-flex justify-content-between pb-3">
+              <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
+              <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
+            </div>
+            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+          </div>
+         
+          <div class="guideline-example-container pb-4">
+            <p class="section-text pb-1 purple-text">
+              Giving a clear and unambiguous task
+            </p>
+            <div class="d-flex justify-content-between pb-3">
+                <quiz-ui-card :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"></quiz-ui-card>
+                <quiz-ui-card :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
+            </div>
+            <purple-outline-btn :text="'Next'"></purple-outline-btn>
           </div>
 
-          <p class="section-text pb-1 purple-text">
-             Giving a clear and unambiguous task
-          </p>
-
-          <div class="d-flex justify-content-between pb-3">
-              <quiz-ui-card :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"></quiz-ui-card>
-              <quiz-ui-card :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
+          <div class="guideline-example-container pb-4">
+            <p class="section-text pb-1 purple-text">
+                Providing examples and additional guidelines
+            </p>
+            <div class="d-flex justify-content-between pb-3">
+                <quiz-ui-card :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"></quiz-ui-card>
+                <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`"></quiz-ui-card>
+            </div>
+              <purple-outline-btn :text="'Next'"></purple-outline-btn>
           </div>
 
-          <p class="section-text pb-1 purple-text">
-              Providing examples and additional guidelines
-          </p>
 
-          <div class="d-flex justify-content-between pb-3">
-              <quiz-ui-card :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"></quiz-ui-card>
-              <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`"></quiz-ui-card>
+          <div class="guideline-example-container pb-4">
+            <p class="section-text pb-1 purple-text">
+                Specifying the output type
+            </p>
+
+            <div class="d-flex justify-content-between pb-3">
+                <quiz-ui-card :card-text="'What happened leading up to WWII? Bulleted list.'"></quiz-ui-card>
+                <quiz-ui-card :card-text="`What happened leading up to WWII?`"></quiz-ui-card>
+            </div>
+            <purple-outline-btn :text="'Next'"></purple-outline-btn>
+          </div>
+
+
+          <div class="guideline-example-container pb-4">
+            <p class="section-text pb-1 purple-text">
+                  And being as elaborate as possible to improve the prompt
+            </p>
+
+            <div class="d-flex justify-content-between pb-3">
+                <quiz-ui-card :card-text="`What's a synonym for 'dilate', but is like when a flower opens up? In the sense of getting wider or more expansive.?`"></quiz-ui-card>
+                <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`"></quiz-ui-card>
+            </div>
+            <purple-outline-btn :text="'Next'"></purple-outline-btn>
           </div>
         </div>
 
@@ -120,6 +151,7 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleOutlineBtn from '../../reusable-ui/purple-btn-outline.vue'
 import QuizUICard from '../../reusable/quiz-ui.vue'
 
 export default defineComponent({
@@ -148,6 +180,7 @@ export default defineComponent({
   components: {
     'nav-bar': NavBar,
     'purple-btn': PurpleBtn,
+    'purple-outline-btn': PurpleOutlineBtn,
     'quiz-ui-card': QuizUICard
   },
 });
