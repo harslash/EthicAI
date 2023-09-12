@@ -104,11 +104,11 @@
                         <div class="slider-container">
                             <prime-slider v-model="value" class="w-14rem mb-2" :step="25"/>
                              <div class=" d-flex justify-content-between">
+                                <span class="slider-label">None</span>
                                 <span class="slider-label">Low</span>
-                                <span class="slider-label">Moderate</span>
                                 <span class="slider-label">Neutral</span>
+                                <span class="slider-label">Moderate</span>
                                 <span class="slider-label">High</span>
-                                <span class="slider-label">Complete</span>
                             </div>
                         </div>
                     </div>

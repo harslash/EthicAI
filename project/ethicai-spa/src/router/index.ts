@@ -55,6 +55,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/chatbots/quiz',
+    name: 'quiz',
      component: () => import('../views/modules/chatbots/ChatbotsPageFiveView.vue')
   },
   {

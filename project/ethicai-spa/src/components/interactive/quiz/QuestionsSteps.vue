@@ -55,10 +55,10 @@ function nextQuestion(result) {
 </script>
 
 <template>
-  <div class="mx-auto p-16 bg-gray-50 lg:max-w-[60%]">
+  <div class="tw-mx-auto tw-p-16 tw-bg-gray-50 tw-h-full">
     <p v-if="state.isLoading">Loading, please wait...</p>
     <div v-else>
-      <h2 class="pl-2 text-2xl mb-16">Question {{ state.step + 1 }}.</h2>
+      <h2 class="tw-pl-2 tw-text-2xl tw-mb-16">Question {{ state.step + 1 }}.</h2>
       <QuestionBox @result="nextQuestion" :question="currentQuestion" />
     </div>
   </div>
