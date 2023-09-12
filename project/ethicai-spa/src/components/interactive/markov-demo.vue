@@ -159,15 +159,15 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Woodrow Wilson’s 1917 Declaration of War';
                     corpusCategory.value = "Political"
-                    startingWords = "I have";
+                    startingWords = "I";
                     updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndicies, 'inputTextarea', startingWords);
 
                 }
-                if (itemId === 'etiqutte') {
+                if (itemId === 'etiquette') {
                     corpusId = itemId;
-                    corpusLabel.value = 'Etqiutte';
+                    corpusLabel.value = 'Etiquette';
                     corpusCategory.value = "Gender"
-                    startingWords = 'A Gentleman';
+                    startingWords = 'A';
                     updateMarkovDemo(etiqutteCorpus, etiquetteCorpusBiasedIndicies, 'inputTextarea', startingWords);
                 }
             }
