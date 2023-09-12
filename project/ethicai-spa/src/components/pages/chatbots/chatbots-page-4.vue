@@ -9,9 +9,10 @@
 
     <div
       ref="firstSection"
-      class="row h-30 mb-5 justify-content-center"
-      :class="{ 'hidden': !showFirstSection }"
-    >
+      class="container h-30 mb-5 justify-content-center"
+      :class="{ 'hidden': !showFirstSection }">
+
+      <div class="row">
       <div class="col-md-8 d-flex align-items-center">
         <div class="d-flex justify-content-center flex-wrap">
           <p class="section-text">
@@ -38,6 +39,7 @@
         <img class="img-a" src="../../../assets/chatbots_page_4_a.jpeg" alt="an art piece depicting a purple swirl" />
       </div>
 
+      </div>
         <div class="row h-10">
             <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-left">
                 <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollIntoSecondSection()" />
@@ -45,7 +47,11 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mb-5"> <!-- Center the row -->
+    <div 
+      ref="secondSection" 
+      class="row justify-content-center mb-5"
+       :class="{ 'hidden': !showSecondSection }"
+      > <!-- Center the row -->
       <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
         <div class="justify-content-center align-items-center"> <!-- Center content vertically and horizontally -->
           <h2>
@@ -72,6 +78,7 @@ export default defineComponent({
   data() {
     return {
       showFirstSection: true,
+      showSecondSection: false
     };
   },
   methods: {
@@ -125,4 +132,9 @@ h2 {
   font-size: 25px;
 }
 
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
 </style>
