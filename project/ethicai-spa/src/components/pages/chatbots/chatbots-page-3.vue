@@ -29,6 +29,37 @@
                         </div>
                     </div>
         </div>
+        <div
+            ref="secondSection"
+            class="container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
+                    <div class="row h-30 mb-5">
+                        <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
+                            <div class="section-text">
+                                An example can be seen below:
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center pb-5">
+                            <chatgpt-ui-card 
+                                :questionText="questionText"
+                                :answerText="answerText"
+                                ></chatgpt-ui-card>
+                        </div>
+                        <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
+                                <div class="section-text">
+                                In fact, all months have four Tuesdays. However, with reasoning that seems convincing, ChatGPT could fool trusting users into accepting false information. As a user of the chatbot, you are responsible for confirming the accuracy of ChatGPT's responses. This is especially important when dealing with information on sensitive topics such as legal knowledge, medical treatments and industry compliance requirements. If users unquestioningly trust information from ChatGPT in those areas, there may be severe real-world consequences. 
+                                </div>
+                        </div>
+                    <div class="row h-20">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <purple-btn
+                                :text="'Continue'"
+                                @click="showThirdSection = true;
+                                scrollIntoThirdSection()"
+                                ></purple-btn>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -36,16 +67,18 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import ChatGPTUICard from '../../reusable/chatgpt_ui.vue';
 
 
 export default defineComponent({
     name: 'ChatbotsPage3',
     data() {
         return {
-            questionText: 'Your question goes here',
-            answerText: 'Your answer goes here',
+            questionText: 'Are there any months that have less than four tuesdays?',
+            answerText: "Yes, there are months that can have fewer than four Tuesdays. This occurs when a month starts on a Tuesday and is either 28 or 29 days long. Let's break down the possibilities:\n\nFebruary: In common years (non-leap years), February has 28 days. If February starts on a Tuesday, it will have only 3 Tuesdays.",
             showFirstSection: true,
-            showSecondSection: false
+            showSecondSection: false,
+            showThirdSection: false
         }
     },
      methods: {
@@ -57,10 +90,19 @@ export default defineComponent({
                 }
             });
         },
+        scrollIntoThirdSection() {
+            this.$nextTick(() => {
+                const element = this.$refs.thirdSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                }
+            });
+        },
     },
     components: {
         'nav-bar': NavBar,
-        'purple-btn': PurpleBtn
+        'purple-btn': PurpleBtn,
+        'chatgpt-ui-card': ChatGPTUICard
 
     },
 });
