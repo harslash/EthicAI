@@ -35,14 +35,28 @@
         </div>
       </div>
       <div class="col-md-4 d-flex align-items-center">
-        <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
+        <img class="img-a" src="../../../assets/chatbots_page_4_a.jpeg" alt="an art piece depicting a purple swirl" />
       </div>
 
         <div class="row h-10">
-            <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-top">
+            <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-left">
                 <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollIntoSecondSection()" />
             </div>
         </div>
+    </div>
+
+    <div class="row justify-content-center mb-5"> <!-- Center the row -->
+      <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
+        <div class="d-flex justify-content-center flex-column align-items-center"> <!-- Center content vertically and horizontally -->
+          <h2>
+            Here are some guidelines you can follow for using AI chatbots effectively:
+          </h2>
+          <br>
+          <p class="section-text">
+            Guideline 1: Effective prompting (NSW Education, 2023).
+          </p>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -97,6 +111,17 @@ export default defineComponent({
 .section-text {
   width: 80%;
   text-align: left;
+  margin-bottom: 10px; /* Add margin between paragraphs */
+}
+
+.img-a {
+  border-radius: 10px;
+  margin-right: 10px; /* Reduce the margin-right to create less space */
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+}
+
+h2 {
+  font-size: 25px;
 }
 
 </style>
