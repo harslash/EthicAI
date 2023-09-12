@@ -67,14 +67,17 @@
             When writing your prompt, provide clear roles and examples. This involves:
           </p>
 
-
           <div class="guideline-example-container pb-4">
              <p class="section-text pb-1 purple-text">
               Defining a character and/or role for the AI tool
             </p>
+
             <div class="d-flex justify-content-between pb-3">
-              <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
-              <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
+              <quiz-ui-card 
+                :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"
+                :isNormal="false" 
+                ></quiz-ui-card>
+              <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
             <purple-outline-btn :text="'Next'" @click="scrollPage('secondPromptCard'); showSecondPromptCard = true"></purple-outline-btn>
           </div>
@@ -84,8 +87,11 @@
               Giving a clear and unambiguous task
             </p>
             <div class="d-flex justify-content-between pb-3">
-                <quiz-ui-card :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"></quiz-ui-card>
-                <quiz-ui-card :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
+                <quiz-ui-card 
+                :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"
+                :isNormal="false" 
+                ></quiz-ui-card>
+                <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
             </div>
             <purple-outline-btn :text="'Next'" @click="scrollPage('thirdPromptCard'); showThirdPromptCard = true"></purple-outline-btn>
           </div>
@@ -95,12 +101,14 @@
                 Providing examples and additional guidelines
             </p>
             <div class="d-flex justify-content-between pb-3">
-                <quiz-ui-card :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"></quiz-ui-card>
-                <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`"></quiz-ui-card>
+                <quiz-ui-card 
+                :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"
+                :isNormal="false">
+              </quiz-ui-card>
+                <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
               <purple-outline-btn :text="'Next'" @click="scrollPage('fourthPromptCard'); showFourthPromptCard = true"></purple-outline-btn>
           </div>
-
 
           <div ref="fourthPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showFourthPromptCard }">
             <p class="section-text pb-1 purple-text">
@@ -108,8 +116,11 @@
             </p>
 
             <div class="d-flex justify-content-between pb-3">
-                <quiz-ui-card :card-text="'What happened leading up to WWII? Bulleted list.'"></quiz-ui-card>
-                <quiz-ui-card :card-text="`What happened leading up to WWII?`"></quiz-ui-card>
+                <quiz-ui-card 
+                :card-text="'What happened leading up to WWII? Bulleted list.'"
+                :isNormal="false" 
+                ></quiz-ui-card>
+                <quiz-ui-card :card-text="`What happened leading up to WWII?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
             <purple-outline-btn :text="'Next'"  @click="scrollPage('fifthPromptCard'); showFifthPromptCard = true"></purple-outline-btn>
           </div>
@@ -117,12 +128,15 @@
 
           <div ref="fifthPromptCard"  class="guideline-example-container pb-4"  :class="{'hidden': !showFifthPromptCard }">
             <p class="section-text pb-1 purple-text">
-                  And being as elaborate as possible to improve the prompt
+                And being as elaborate as possible to improve the prompt
             </p>
 
             <div class="d-flex justify-content-between pb-3">
-                <quiz-ui-card :card-text="`What's a synonym for 'dilate', but is like when a flower opens up? In the sense of getting wider or more expansive.?`"></quiz-ui-card>
-                <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`"></quiz-ui-card>
+                <quiz-ui-card 
+                :card-text="`What's a synonym for 'dilate', but is like when a flower opens up? In the sense of getting wider or more expansive.?`"
+                :isNormal="false" 
+                ></quiz-ui-card>
+                <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
             <purple-outline-btn :text="'Next'"></purple-outline-btn>
           </div>
