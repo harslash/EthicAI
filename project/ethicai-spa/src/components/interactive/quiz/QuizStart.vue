@@ -1,9 +1,20 @@
 <template>
-  <div class="tw-grid tw-place-items-center tw-mx-auto tw-p-16 tw-bg-gray-50 tw-w-full tw-h-full">
-    <h1 class="tw-text-center tw-my-5 tw-p-2 tw-text-4xl">Quiz Review</h1>
-    <div :style="{ backgroundColor: '#6D0CFF' }" @click="$emit('quiz-started')"
-      class="tw-flex tw-justify-center tw-items-center tw-w-80 tw-min-h-[85px] tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
-      <p class="tw-text-2xl tw-text-center tw-top-1/2 tw-text-white">Start</p>
+  <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center tw-flex">
+    <div class="row">
+      <div class="col-sm px-md-5">
+        <p class="tw-text-lg">QUIZ</p>
+        <!-- Will implement this with props later to change text -->
+        <h2 class="tw-text-4xl tw-leading-relaxed tw-font-bold">You have completed "The Age of Chatbots". Take this quick quiz to check your understanding.</h2>
+        <div :style="{ backgroundColor: '#6D0CFF' }" @click="$emit('quiz-started')"
+          class="tw-justify-center tw-mt-8 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
+          <p class="tw-text-xl tw-text-center tw-text-white">Start Quiz</p>
+        </div>
+      </div>
+      <div class="col-sm px-md-5">
+        <div class="image tw-float-right">
+          <img class="tw-rounded-xl" :src="require(`@/assets/chatbots_module_quiz.png`)" alt="image">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -11,5 +22,10 @@
 <style scoped>
 .hover-scale:hover {
   transform: scale(1.05);
+}
+
+.image img {
+  width: 475px;
+  height: 475px;
 }
 </style>

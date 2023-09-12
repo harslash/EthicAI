@@ -27,4 +27,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.container-fluid.page-container {
+    height: 100vh;
+    margin-top: 60px;
+}
+</style>

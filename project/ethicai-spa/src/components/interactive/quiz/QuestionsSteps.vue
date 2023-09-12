@@ -55,11 +55,13 @@ function nextQuestion(result) {
 </script>
 
 <template>
-  <div class="tw-mx-auto tw-p-16 tw-bg-gray-50 tw-h-full">
-    <p v-if="state.isLoading">Loading, please wait...</p>
-    <div v-else>
-      <h2 class="tw-pl-2 tw-text-2xl tw-mb-16">Question {{ state.step + 1 }}.</h2>
-      <QuestionBox @result="nextQuestion" :question="currentQuestion" />
+  <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center">
+    <div class="tw-mx-auto tw-p-16 tw-h-full">
+      <p v-if="state.isLoading">Loading, please wait...</p>
+      <div v-else>
+        <p class="tw-pl-2 tw-text-lg tw-mb-16">QUESTION {{ state.step + 1 }}.</p>
+        <QuestionBox @result="nextQuestion" :question="currentQuestion" />
+      </div>
     </div>
   </div>
 </template>
