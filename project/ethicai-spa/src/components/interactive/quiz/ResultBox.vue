@@ -15,9 +15,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="mx-auto p-16 bg-gray-50 lg:max-w-[60%]">
+  <div class="tw-mx-auto tw-p-16 tw-bg-gray-50 tw-w-full tw-h-full">
     <div>
-      <p class="text-xl text-cyan-500">Congratulations 🎉,<br />
+      <p class="tw-text-xl" :style="{ color: '#6D0CFF' }">Congratulations 🎉,<br />
         You answered
         <b>{{ props.result.score }}/{{ props.result.numQuestions }}</b>
         questions correctly!

@@ -1,9 +1,15 @@
 <template>
-  <div class="grid place-items-center mx-auto p-16 bg-gray-50 lg:max-w-[60%]">
-    <h1 class="text-center my-5 p-2 text-4xl">Quiz Review</h1>
+  <div class="tw-grid tw-place-items-center tw-mx-auto tw-p-16 tw-bg-gray-50 tw-w-full tw-h-full">
+    <h1 class="tw-text-center tw-my-5 tw-p-2 tw-text-4xl">Quiz Review</h1>
     <div :style="{ backgroundColor: '#6D0CFF' }" @click="$emit('quiz-started')"
-      class="flex justify-center items-center w-80 min-h-[85px] cursor-pointer rounded-xl hover:scale-105 transition-all duration-150">
-      <p class="text-2xl text-center top-1/2 text-white">Start</p>
+      class="tw-flex tw-justify-center tw-items-center tw-w-80 tw-min-h-[85px] tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
+      <p class="tw-text-2xl tw-text-center tw-top-1/2 tw-text-white">Start</p>
     </div>
   </div>
 </template>
+
+<style scoped>
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+</style>

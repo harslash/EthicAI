@@ -42,8 +42,10 @@ function forwardToResult(res) {
 </script>
 
 <template>
-    <component :is="currentComponent" v-bind="bindData" @quiz-started="forwardToQuestioningStep"
-        @finished="forwardToResult" />
+    <div class="tw-w-full tw-h-full">
+        <component :is="currentComponent" v-bind="bindData" @quiz-started="forwardToQuestioningStep"
+            @finished="forwardToResult" />
+    </div>
 </template>
 
 <style scoped></style>
