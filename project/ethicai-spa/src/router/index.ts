@@ -51,7 +51,15 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/chatbots/misuses-and-plagarism',
     name: 'misuses-and-plagarism',
-    component: () => import('../components/pages/chatbots/chatbots-page-4.vue')
+     component: () => import('../views/modules/chatbots/ChatbotsPageFourView.vue')
+  },
+  {
+    path: '/chatbots/quiz',
+     component: () => import('../views/modules/chatbots/ChatbotsPageFiveView.vue')
+  },
+  {
+    path: '/chatbots/module-complete',
+     component: () => import('../views/modules/chatbots/ChatbotsPageSixView.vue')
   },
   {
     path: '/dalle',
