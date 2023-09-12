@@ -277,7 +277,7 @@ export default defineComponent({
             this.$nextTick(() => {
                 const element = this.$refs.secondSection as HTMLElement;
                 if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
                 }
             }); 
         },
