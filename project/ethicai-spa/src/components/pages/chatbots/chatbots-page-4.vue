@@ -49,21 +49,69 @@
 
     <div 
       ref="secondSection" 
-      class="row justify-content-center mb-5"
-       :class="{ 'hidden': !showSecondSection }"
-      > <!-- Center the row -->
-      <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
-        <div class="justify-content-center align-items-center"> <!-- Center content vertically and horizontally -->
-          <h2>
+      class="container justify-content-center mb-5"
+      :class="{ 'hidden': !showSecondSection }"> 
+      <div class="row pb-5"> 
+        <div class="col-md-12 d-flex justify-content-center align-items-center flex-wrap"> <!-- Center content vertically and horizontally -->
+          <h4 class="section-text pb-3">
             Here are some guidelines you can follow for using AI chatbots effectively:
-          </h2>
-          <br>
-        </div>
-          <p class="section-text">
+          </h4>
+          <p class="section-text purple-text">
             Guideline 1: Effective prompting (NSW Education, 2023).
           </p>
+          <p class="section-text">
+            A well-constructed prompt has the power to significantly enhance output quality while minimizing errors and irrelevant responses from generative AI tools.
+          </p>
+
+          <p class="section-text pb-4">
+            When writing your prompt, provide clear roles and examples. This involves:
+          </p>
+
+
+
+          <p class="section-text pb-1 purple-text">
+            Defining a character and/or role for the AI tool
+          </p>
+
+          <div class="d-flex justify-content-between pb-3">
+            <quiz-ui-card :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"></quiz-ui-card>
+                  <quiz-ui-card :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
+          </div>
+
+          <p class="section-text pb-1 purple-text">
+             Giving a clear and unambiguous task
+          </p>
+
+          <div class="d-flex justify-content-between pb-3">
+              <quiz-ui-card :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"></quiz-ui-card>
+              <quiz-ui-card :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
+          </div>
+
+          <p class="section-text pb-1 purple-text">
+              Providing examples and additional guidelines
+          </p>
+
+          <div class="d-flex justify-content-between pb-3">
+              <quiz-ui-card :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"></quiz-ui-card>
+              <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`"></quiz-ui-card>
+          </div>
+        </div>
+
+      
+        
       </div>
     </div>
+
+    <div 
+        ref="thirdSection" 
+        class="row justify-content-center mb-5"
+         :class="{ 'hidden': !showThirdSection }">
+        <div class="col-md-8 pb-5"> <!-- Reduce the column width -->
+            <p class="section-text">
+              Guideline 1: Effective prompting (NSW Education, 2023).
+            </p>
+        </div>
+      </div>
 
   </div>
 </template>
@@ -72,13 +120,15 @@
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import QuizUICard from '../../reusable/quiz-ui.vue'
 
 export default defineComponent({
   name: 'ChatbotsPage4',
   data() {
     return {
       showFirstSection: true,
-      showSecondSection: false
+      showSecondSection: false,
+      showThirdSection: false
     };
   },
   methods: {
@@ -98,6 +148,7 @@ export default defineComponent({
   components: {
     'nav-bar': NavBar,
     'purple-btn': PurpleBtn,
+    'quiz-ui-card': QuizUICard
   },
 });
 </script>
@@ -116,11 +167,10 @@ export default defineComponent({
 }
 
 .section-text {
-  width: 80%;
+  width: 60%;
   text-align: left;
   margin-bottom: 10px; /* Add margin between paragraphs */
 }
-
 
 .img-a {
   border-radius: 10px;
@@ -137,4 +187,11 @@ h2 {
   max-height: 0;
   overflow: hidden;
 }
+
+.purple-text {
+  color: #6D0CFF;
+  font-weight: 600;
+}
+
+
 </style>
