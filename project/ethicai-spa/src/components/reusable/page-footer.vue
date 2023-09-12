@@ -13,15 +13,12 @@
             </router-link>
           </li>
           <li class="mb-2"><a href="#">Our team</a></li>
-          <li class="mb-2"><a href="#">Link</a></li>
         </ul>
       </div>
       <div class="col-md-2 p-5">
          <h4 class="mb-3">Product</h4>
           <ul class="footer-list">
-            <li class="mb-2"><a href="#">Link</a></li>
-            <li class="mb-2"><a href="#">Link</a></li>
-            <li class="mb-2"><a href="#">Link</a></li>
+            <li class="mb-2"><a href="#">T&C</a></li>
           </ul>
       </div>
     </div>
