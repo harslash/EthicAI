@@ -71,7 +71,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/dalle/module-complete',
-    component: () => import('../components/pages/dalle/dalle-module-complete.vue'),
+    component: () => import('../views/modules/dalle/DallePageFourView.vue'),
   },
   {
     path: '/quiz-ui',

@@ -98,7 +98,7 @@
                     <router-link to="/dalle/ai-generated-vs-human-art">
                             <purple-btn-outline :text="'Back'"></purple-btn-outline>
                     </router-link>
-                    <router-link to="/dalle" custom v-slot="{navigate}">
+                    <router-link to="/dalle/module-complete" custom v-slot="{navigate}">
                         <purple-btn :text="'Continue'" @click="navigate" role="link"> </purple-btn>
                     </router-link>
                 </div>
