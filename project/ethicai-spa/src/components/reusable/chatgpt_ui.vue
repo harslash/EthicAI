@@ -89,6 +89,8 @@ export default defineComponent({
             justify-content: flex-start; /* Align items to the top of the child container */
             align-items: flex-start; /* Align items to the left of the child container */
             margin-top: 5px;
+            text-align: left;
+            white-space: pre-line;
         }
 
         .icon-container {
