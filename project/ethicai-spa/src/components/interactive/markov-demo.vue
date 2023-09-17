@@ -188,7 +188,7 @@ export default defineComponent({
                 body: requestBody,
             };
 
-            fetch('https://cwlspalwoizpw6aqf7piiskpce0cioco.lambda-url.ap-southeast-2.on.aws/', requestOptions)
+            fetch('https://zrcoxf2hz6zzhkaztnldiqutwy0mnhre.lambda-url.ap-southeast-2.on.aws/', requestOptions)
                 .then((response) => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
