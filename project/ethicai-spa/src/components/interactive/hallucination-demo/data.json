@@ -1,0 +1,39 @@
+{
+    "data" : [
+        {
+            "id": 1,
+            "prompt": "Where is DB Cooper?",
+            "response": "The whereabouts of D.B. Cooper, the unidentified individual who parachuted out of a commercial airliner with a large sum of money in 1971, remain unknown to this day. D.B. Cooper's true identity and fate have baffled law enforcement agencies and amateur sleuths for decades.\nOn November 24, 1971, Cooper hijacked a Northwest Orient Airlines flight from Portland, Oregon, to Seattle, Washington, and later parachuted out of the plane with a ransom of $200,000. Despite an extensive manhunt and investigation, Cooper's identity and location were never conclusively determined.\nNumerous theories and speculations have emerged over the years, ranging from the possibility that Cooper perished during the jump to claims that he successfully disappeared and lived under an assumed identity. Despite ongoing interest and occasional discoveries of potential evidence, no definitive answers have been found, and the case remains one of the greatest unsolved mysteries in U.S. criminal history.\nVarious law enforcement agencies, amateur investigators, and journalists have pursued leads and theories about D.B. Cooper's fate, but as of my last knowledge update in September 2021, no conclusive evidence had been found to solve the case. If there have been any new developments or discoveries since then, I would not have access to that information.",
+            "isHallucination": false,
+            "explanation" : "ChatGPT is right that D.B. Cooper was never found, and it's not known where he is."
+        },
+        {
+            "id": 2,
+            "prompt": "How much wood could a woodchuck chuck, if a woodchuck could chuck wood?",
+            "response": "The phrase \"How much wood could a woodchuck chuck, if a woodchuck could chuck wood?\" is a tongue-twister and not meant to be taken literally. It's a playful and humorous way of asking a question that doesn't have a real answer. The purpose of tongue-twisters is to challenge your pronunciation and articulation skills, not to convey meaningful information.",
+            "isHallucination": false,
+            "explanation": "ChatGPT doesn't make the mistake of trying to give an answer to this question, which doesn't have an answer."
+       },
+        {
+            "id": 3,
+            "prompt": "New Zealand dancer Freda Stark was involved in a murder trial in 1935. What were the circumstances surrounding the trial?",
+            "response": "Freda Stark was indeed a New Zealand dancer who became famous in the 1930s, and she was involved in a highly publicized murder trial in 1935. The trial centered around her romantic involvement with a man named Thelma Mareo. Here are the key circumstances surrounding the trial:\nRomantic Relationship: Freda Stark was a dancer at the Peter Pan Cabaret in Auckland, New Zealand. She became romantically involved with Thelma Mareo, who was also known as Thelma Trott. Their relationship was unconventional for the time, as it was a same-sex relationship, and homosexuality was largely taboo in the 1930s.\nThe Murder: On July 5, 1935, Thelma Mareo was found dead in her home. She had been shot multiple times. The circumstances of her death were suspicious, and it was clear that foul play was involved.\nInvestigation and Arrest: Freda Stark was arrested and charged with the murder of Thelma Mareo. The police believed that Stark had shot Mareo in a fit of jealousy and rage.\nSensational Trial: The trial of Freda Stark attracted significant media attention and was considered one of the most sensational trials in New Zealand's history at the time. The case became widely known as the \"Pyjama Girl Murder\" case due to the fact that Thelma Mareo was found dead in her pajamas.\nAcquittal: Despite the sensationalism and public interest in the case, Freda Stark was ultimately acquitted of the murder charges in December 1935. The jury found that there was not enough evidence to convict her, and the case remained unsolved. The murder trial of Freda Stark and the relationship between Stark and Thelma Mareo remain a part of New Zealand's historical and cultural lore. The case is often remembered for its social and cultural significance in the context of the 1930s, as it shed light on issues related to gender, sexuality, and societal norms of the time.",
+            "isHallucination": true,
+            "explanation" : "ChatGPT makes several mistakes here. It claims Thelma Mareo was a man (she was a woman) and that she was shot (she ingested Veronal). Freda Stark was not charged with her murder, she was a witness in the prosecution of Eric Mareo, who was convicted of the murder. However, ChatGPT is right about the media sensationalising the trial due to Thelma Mareo and Freda Stark's same-sex relationship."
+        },
+        {
+             "id": 4,
+             "prompt": "From which work of literature is the following quote? \"Kia tūpato ki ngā kurī, kia tūpato ki ngā kaimahi kino, kia tūpato ki ngā kaitūkino i te kikokiko\"",
+             "response": "The quote \"Kia tūpato ki ngā kurī, kia tūpato ki ngā kaimahi kino, kia tūpato ki ngā kaitūkino i te kikokiko\" is from the Maori translation of George Orwell's novel \"Animal Farm.\" In English, the quote translates to \"Beware of the dogs, beware of the wicked workers, beware of those who persecute you in the flesh.\" The Maori translation of \"Animal Farm\" is titled \"Te Wharetoroa a Hoiho,\" and this quote is from that translation.",
+             "isHallucination": true,
+             "explanation": "ChatGPT makes a confident guess here, but the text is actually from He Tīmatanga, a translation of the Bible into te reo Māori (from Piripai/Philippians 3:2)."
+        },
+        {
+            "id": 5,
+            "prompt": "259908277 * 228680813 * 588567230 = ???",
+            "response": "The product of the three numbers you provided is:\n259,908,277 * 228,680,813 * 588,567,230 = 34,600,973,731,669,472,683,205,410",
+            "isHallucination": true,
+            "explanation": "The real answer is 34982103123547261316483230, or roughly 3.498e+25. ChatGPT gets the maths wrong."
+        }
+    ]
+}

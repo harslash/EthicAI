@@ -1,2 +1,3 @@
-# capstone-project-team-28
-capstone-project-team-28 created by GitHub Classroom
+# EthicAI
+
+EthicAI is an educational web app focused on interactive based learning.
