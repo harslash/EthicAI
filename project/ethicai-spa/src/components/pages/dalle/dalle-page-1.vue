@@ -50,6 +50,7 @@
       <!-- Element 4 -->
       <div ref="secondSection" class="row h-30 mb-5 justify-content-center" :class="{ 'hidden': !showSecondSection }">
         <div class="col-md-12">
+          <br>
           <h1 class="mt-5" style="font-size: 28px;">Imagine ...</h1>
           <br />
         </div>
@@ -128,7 +129,7 @@
               Your income from commissions is dwindling. Why would your followers value what you do, when an AI can generate something in the same style at a fraction of the time and cost.
             </p>
             <p class="section-text">
-              Denied a stable income, you slip into poverty.
+              Denied a stable income, you are forced to make a career change.
             </p>
             <p class="section-text">
               <b>So ends the tale of an artist, undone by artwork they had created.</b>
