@@ -217,6 +217,10 @@
                     </div>
                 </div>
             </div>
+            <div v-if="scoreVisible" class="row h-10">
+                <div class="col-md-12 score-container">
+                    <span class="purple-text"><p><em><u>You scored: {{ score }} / 5 correctly! Great work</u></em></p></span>
+                </div>
             </div>
 
             <div class="row h-20" style="padding-bottom: 20px;">
@@ -231,6 +235,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 
 <script lang="ts">
@@ -241,36 +246,42 @@ import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
 
 
 export default defineComponent({
-    name: 'DallePage2',
-    data() {
-        return {
-            value: null,
-            showFirstSection: true,
-            showSecondSection: false,
-            
-            showFirstQuestion: true,
-            showSecondQuestion: false,
-            showThirdQuestion: false,
-            showFourthQuestion: false,
-            showFifthQuestion: false,
-            showContinue: false,
+  name: 'DallePage2',
+  data() {
+    return {
+      value: null,
+      showFirstSection: true,
+      showSecondSection: false,
 
-            firstQuestionShowCorrect: false,
-            firstQuestionShowIncorrect: false,
+      showFirstQuestion: true,
+      showSecondQuestion: false,
+      showThirdQuestion: false,
+      showFourthQuestion: false,
+      showFifthQuestion: false,
+      showContinue: false,
 
-            secondQuestionShowCorrect: false,
-            secondQuestionShowIncorrect: false,
+      firstQuestionShowCorrect: false,
+      firstQuestionShowIncorrect: false,
 
-            thirdQuestionShowCorrect: false,
-            thirdQuestionShowIncorrect: false,
+      secondQuestionShowCorrect: false,
+      secondQuestionShowIncorrect: false,
 
-            fourthQuestionShowCorrect: false,
-            fourthQuestionShowIncorrect: false,
+      thirdQuestionShowCorrect: false,
+      thirdQuestionShowIncorrect: false,
 
-            fifthQuestionShowCorrect: false,
-            fifthQuestionShowIncorrect: false,
-        }
-    },
+      fourthQuestionShowCorrect: false,
+      fourthQuestionShowIncorrect: false,
+
+      fifthQuestionShowCorrect: false,
+      fifthQuestionShowIncorrect: false,
+
+      score: 0, // Initialize the score
+      totalQuestions: 5, // Total number of questions
+      correctAnswers: 0, // Initialize correct answers counter
+      wrongAnswers: 0,
+      scoreVisible: false, // Initialize wrong answers counter
+    };
+  },
     methods: {
         scrollIntoSecondSection() 
         {   
@@ -326,26 +337,47 @@ export default defineComponent({
                 }
             }); 
         },
+        // Update the score and answer counters when a question is answered correctly
+        onCorrectClick() {
+        this.score += 1; // Increment the score
+        this.correctAnswers += 1; // Increment correct answers counter
+        this.checkCompletion(); // Check if all questions are answered
+        },
+
+        // Update the score and answer counters when a question is answered incorrectly
+        onIncorrectClick() {
+        this.wrongAnswers += 1; // Increment wrong answers counter
+        this.checkCompletion(); // Check if all questions are answered
+        },
+
+        // Check if all questions are answered and show the Continue button if necessary
+        checkCompletion() {
+        if (this.correctAnswers + this.wrongAnswers === this.totalQuestions) {
+            // All questions are answered
+            this.scoreVisible = true;
+            this.showContinue = true;
+        }
+        },
         onFirstCorrectClick() 
         {
             this.firstQuestionShowCorrect = true;
             const element = this.$refs.firstQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            
-
+            this.onCorrectClick();
         },
         onFirstIncorrectClick()
         {
             this.firstQuestionShowIncorrect = true;
             const element = this.$refs.firstQuestion as HTMLElement;
             element.style.pointerEvents="none"
+            this.onIncorrectClick();
         },
         onSecondCorrectClick() 
         {
             this.secondQuestionShowCorrect = true;
             const element = this.$refs.secondQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            
+            this.onCorrectClick();  
 
         },
         onSecondIncorrectClick()
@@ -353,27 +385,29 @@ export default defineComponent({
             this.secondQuestionShowIncorrect = true;
             const element = this.$refs.secondQuestion as HTMLElement;
             element.style.pointerEvents="none"
+            this.onIncorrectClick();
         },
         onThirdCorrectClick() 
         {
             this.thirdQuestionShowCorrect = true;
             const element = this.$refs.thirdQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            
-
+            this.onCorrectClick();
+    
         },
         onThirdIncorrectClick()
         {
             this.thirdQuestionShowIncorrect = true;
             const element = this.$refs.thirdQuestion as HTMLElement;
             element.style.pointerEvents="none"
+            this.onIncorrectClick();
         },
         onFourthCorrectClick() 
         {
             this.fourthQuestionShowCorrect = true;
             const element = this.$refs.fourthQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            
+            this.onCorrectClick();
 
         },
         onFourthIncorrectClick()
@@ -381,13 +415,14 @@ export default defineComponent({
             this.fourthQuestionShowIncorrect = true;
             const element = this.$refs.fourthQuestion as HTMLElement;
             element.style.pointerEvents="none"
+            this.onIncorrectClick();
         },
         onFifthCorrectClick() 
         {
             this.fifthQuestionShowCorrect = true;
             const element = this.$refs.fifthQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            
+            this.onCorrectClick();
 
         },
         onFifthIncorrectClick()
@@ -395,6 +430,7 @@ export default defineComponent({
             this.fifthQuestionShowIncorrect = true;
             const element = this.$refs.fifthQuestion as HTMLElement;
             element.style.pointerEvents="none"
+            this.onIncorrectClick();
         },
     },
     components: {
@@ -485,4 +521,16 @@ export default defineComponent({
     height: 380px;
     object-fit: cover;
 }
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.purple-text {
+  color: #6D0CFF; /* Purple color code */
+  font-weight: bold; /* You can add other styles as needed */
+}
+
 </style>
