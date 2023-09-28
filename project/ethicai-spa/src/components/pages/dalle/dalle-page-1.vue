@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar />
+    <nav-bar></nav-bar>
     <div class="container-fluid page-container text-center">
       <!-- Element 1 -->
       <div class="row h-25">
@@ -140,6 +140,25 @@
           <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
+          <div class="col-md-12 d-flex justify-content-end">
+            <purple-btn :text="'Continue'" @click="showSixthSection = true; scrollIntoSixthSection()" />
+          </div>
+        </div>
+      </div>
+
+      <div ref="sixthSection" class="row h-30 mb-5 justify-content-center" :class="{ 'hidden': !showSixthSection }">
+      <div class="col-md-12 text-center"> <!-- Added text-center class -->
+        <br>
+        <h1 class="mt-5" style="font-size: 28px;">So... is this realistic?</h1>
+        <br />
+        <p class="text-center section-text justify-content-center">
+          Actually yes. Many artists are actually speaking out about their experiences of being victims of AI using their work as part of their training sets.
+          <br><br>
+          Go to this article to learn more about the artists Sarah Andersen, Kelly McKernan, and Karla Ortiz who began a lawsuit in January against Stable Diffusion and Midjourney, who are prominent AI generation tools.
+        </p>
+      </div>
+
+        <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-between">
             <router-link to="/dalle" class="my-button">
               <purple-btn-outline :text="'Back'" />
@@ -184,6 +203,7 @@ export default defineComponent({
       showThirdSection: false,
       showFourthSection: false,
       showFifthSection: false,
+      showSixthSection: false,
     };
   },
   methods: {
@@ -218,6 +238,14 @@ export default defineComponent({
     scrollIntoFifthSection() {
       this.$nextTick(() => {
         const element = this.$refs.fifthSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        }
+      });
+    },
+    scrollIntoSixthSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.sixthSection as HTMLElement;
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
         }
@@ -269,6 +297,12 @@ export default defineComponent({
   opacity: 0;
   max-height: 0;
   overflow: hidden;
+}
+
+.container-fluid.page-container {
+  height: auto;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 </style>
