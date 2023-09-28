@@ -49,7 +49,7 @@
         <div ref="secondSection" class="section-two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
-                    <h3>Which painting was created by a <em>human</em>?</h3>
+                    <h3>Which artwork was created by a <em>human</em>?</h3>
                 </div>
             </div>
 
