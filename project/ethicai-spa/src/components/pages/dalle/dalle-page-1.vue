@@ -147,7 +147,7 @@
       </div>
 
       <div ref="sixthSection" class="row h-30 mb-5 justify-content-center" :class="{ 'hidden': !showSixthSection }">
-      <div class="col-md-12 text-center"> <!-- Added text-center class -->
+      <div class="col-md-12 text-center!important"> <!-- Added text-center class -->
         <br>
         <h1 class="mt-5" style="font-size: 28px;">So... is this realistic?</h1>
         <br />
