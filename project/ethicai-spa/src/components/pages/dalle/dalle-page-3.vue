@@ -15,7 +15,7 @@
             </p>
             <br>
             <p>
-              Do you think that AI should have rights to the artwork it produces?
+              <b>Do you think that AI should have rights to the artwork it produces?</b>
             </p>
             <div class="radio-div d-flex justify-content-around">
             <div class="form-check">
@@ -36,7 +36,11 @@
   
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollIntoSecondSection()" />
+            <purple-btn
+                v-if="!section1Completed"
+                :text="'Continue'"
+                @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;"
+                />
           </div>
         </div>
       </div>
@@ -76,7 +80,11 @@
   
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn :text="'Continue'" @click="showThirdSection = true; scrollIntoThirdSection()" />
+            <purple-btn
+                v-if="section1Completed && !section2Completed"
+                :text="'Continue'"
+                @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"
+                />
           </div>
         </div>
       </div>
@@ -116,10 +124,11 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end"> <!-- Center align the "Continue" button -->
-            <purple-btn 
-              :text="'Continue'" 
-              @click="showFourthSection = true; scrollIntoFourthSection()"
-            ></purple-btn>
+            <purple-btn
+                v-if="section2Completed && !section3Completed"
+                :text="'Continue'"
+                @click="showFourthSection = true; scrollIntoFourthSection(); section3Completed = true;"
+                />
           </div>
         </div>
       </div>
@@ -204,6 +213,11 @@
         showThirdSection: false,
         showFourthSection: false,
         showFifthSection: false,
+        section1Completed: false,
+        section2Completed: false,
+        section3Completed: false,
+        section4Completed: false,
+        section5Completed: false,
       };
     },
     methods: {
