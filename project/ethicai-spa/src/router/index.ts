@@ -75,7 +75,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/dalle/DallePageTwoView.vue'),
   },
   {
-    path: '/dalle/copyright-and-copywrong',
+    path: '/dalle/the-complexities-of-copyright',
     component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
   },
   {

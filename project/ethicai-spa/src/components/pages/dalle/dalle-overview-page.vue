@@ -32,7 +32,7 @@ export default defineComponent({
             moduleTitle: 'The Rise of DALL·E',
             moduleDescription: 'In this module, you will discover the world of AI generated art. The highs and lows, including the impact these generators have on artists and creative integrity.',
             moduleImgSrc: '../../../assets/purple_robot.jpeg',
-            modulePageNames: ['The Rise of DALL-E', 'AI Generated vs. Human Art', 'Copyright and Copywrong'],
+            modulePageNames: ['The Rise of DALL-E', 'AI Generated vs. Human Art', 'The Complexities of Copyright'],
             moduleName: 'dalle',
             pageName: 'the-rise-of-dalle',
             moduleImgFilename: 'purple_robot.jpeg'

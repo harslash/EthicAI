@@ -29,7 +29,7 @@
       </div>
 
       <!-- Element 3 -->
-      <div class="row h-30 mb-5 justify-content-center">
+      <div class="row h-30 mb-10 justify-content-center">
         <div class="col-md-6 d-flex justify-content-center">
           <important-terms-card :terms-and-definitions="termsAndDefinitions" />
         </div>
@@ -152,22 +152,47 @@
         <h1 class="mt-5" style="font-size: 28px;">So... is this realistic?</h1>
         <br />
         <p class="text-center justify-content-center">
-          <b>Actually yes. </b> Many artists are actually speaking out about their experiences of being victims of AI using their work as part of their training sets.
-          <br><br>
-          Go to this article to learn more about the artists Sarah Andersen, Kelly McKernan, and Karla Ortiz who began a lawsuit in January against Stable Diffusion and Midjourney, who are prominent AI generation tools.
+          <b>Actually yes. </b> Many artists are actually speaking out about their experiences of being victims of AI using their work as part of their training sets. The article below &darr; &darr; refers to a 2023 lawsuit.
         </p>
       </div>
 
-        <div class="row h-20">
-          <div class="col-md-12 d-flex justify-content-between">
-            <router-link to="/dalle" class="my-button">
-              <purple-btn-outline :text="'Back'" />
-            </router-link>
-            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button">
-              <purple-btn :text="'Continue'" />
-            </router-link>
-          </div>
+      <div class="mb-12"></div>
+      
+
+        <div class="article-snippet">
+          <div class="article-image">
+            <a href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart" target="_blank">
+              <img src="../../../assets//artist_article.webp" alt="Artist at Work" />
+            </a>
         </div>
+          <h2 class="article-title">AI art tools Stable Diffusion and Midjourney targeted with copyright lawsuit</h2>
+          <p class="article-meta">Published on January 17, 2023 by James Vincent</p>
+          <p class="article-excerpt">
+            Many artists are actually speaking out about their experiences of being victims of AI using their work as part of their training sets. Learn more about the artists Sarah Andersen, Kelly McKernan, and Karla Ortiz who began a lawsuit in January against Stable Diffusion and Midjourney, who are prominent AI generation tools. 
+          </p>
+          <a class="article-link" href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart" target="_blank">Read More</a>
+      </div>
+
+      <div class="mb-8">
+        <br><br>
+      </div>
+
+
+      <div class="row h-20">
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
+          <router-link to="/dalle" class="my-button">
+            <purple-btn-outline :text="'Back'" />
+          </router-link>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <div class="mr-10"> <!-- Add some right margin for spacing -->
+            <p style="margin-bottom: 0;"><b>How does this happen?</b></p>
+          </div>
+          <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-left: 20px;">
+            <purple-btn :text="'Continue'" />
+          </router-link>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -303,6 +328,61 @@ export default defineComponent({
   height: auto;
   margin-top: 60px;
   margin-bottom: 20px;
+}
+
+/* CSS for the article snippet */
+.article-snippet {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px; /* Decreased margin-top to create space */
+  max-width: 1000px; /* Decreased max-width to make it narrower */
+}
+
+.article-title {
+  font-size: 18px; /* Decreased font size for the title */
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: #888;
+}
+
+.article-excerpt {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.article-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.article-link:hover {
+  text-decoration: underline;
+}
+
+.article-image {
+  text-align: center; /* Center align the image */
+  margin-bottom: 20px; /* Add some spacing between the image and the snippet */
+}
+
+.article-image img {
+  max-width: 100%; /* Ensure the image fits within its container */
+}
+
+/* CSS for the article snippet (previously provided) */
+.article-snippet {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 500px;
 }
 
 </style>
