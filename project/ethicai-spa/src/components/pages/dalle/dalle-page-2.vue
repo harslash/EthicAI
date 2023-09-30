@@ -228,7 +228,7 @@
                     <router-link to="/dalle">
                             <purple-btn-outline :text="'Back'"></purple-btn-outline>
                     </router-link>
-                    <router-link to="/dalle/copyright-and-copywrong">
+                    <router-link to="/dalle/the-complexities-of-copyright">
                         <purple-btn :text="'Continue'"> </purple-btn>
                     </router-link>
                 </div>

@@ -168,7 +168,7 @@
           <h2 class="article-title">AI art tools Stable Diffusion and Midjourney targeted with copyright lawsuit</h2>
           <p class="article-meta">Published on January 17, 2023 by James Vincent</p>
           <p class="article-excerpt">
-            Many artists are actually speaking out about their experiences of being victims of AI using their work as part of their training sets. Learn more about the artists Sarah Andersen, Kelly McKernan, and Karla Ortiz who began a lawsuit in January against Stable Diffusion and Midjourney, who are prominent AI generation tools. 
+            Learn more about the artists Sarah Andersen, Kelly McKernan, and Karla Ortiz who began a lawsuit in January against Stable Diffusion and Midjourney, who are prominent AI generation tools. 
           </p>
           <a class="article-link" href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart" target="_blank">Read More</a>
       </div>
