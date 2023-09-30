@@ -42,7 +42,11 @@
       </div>
         <div class="row h-10">
             <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-left">
-                <purple-btn :text="'Continue'" @click="showSecondSection = true; scrollPage('secondSection')" />
+              <purple-btn
+                v-if="!section1Completed"
+                :text="'Continue'"
+                @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;"
+                />
             </div>
         </div>
     </div>
@@ -67,7 +71,7 @@
             When writing your prompt, provide clear roles and examples. This involves:
           </p>
 
-          <div class="guideline-example-container pb-4">
+          <div ref="firstPromptCard"  class="guideline-example-container pb-4">
              <p class="section-text pb-1 purple-text">
               Defining a character and/or role for the AI tool
             </p>
@@ -79,7 +83,11 @@
                 ></quiz-ui-card>
               <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="showSecondPromptCard = true; scrollPage('secondPromptCard'); "></purple-outline-btn>
+            <purple-outline-btn
+              v-if="!showSecondPromptCard"
+              :text="'Next'"
+              @click="showSecondPromptCard = true; scrollPage('secondPromptCard')"
+            ></purple-outline-btn>
           </div>
          
           <div ref="secondPromptCard" class="guideline-example-container pb-4" :class="{ 'hidden': !showSecondPromptCard }">
@@ -93,7 +101,11 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :isNormal="false" :isHappy="false" :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="showThirdPromptCard = true; scrollPage('thirdPromptCard')"></purple-outline-btn>
+            <purple-outline-btn
+              v-if="!showThirdPromptCard" 
+              :text="'Next'"
+              @click="showThirdPromptCard = true; scrollPage('thirdPromptCard')"
+            ></purple-outline-btn>
           </div>
 
           <div ref="thirdPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showThirdPromptCard }">
@@ -107,7 +119,11 @@
               </quiz-ui-card>
                 <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-              <purple-outline-btn :text="'Next'" @click=" showFourthPromptCard = true; scrollPage('fourthPromptCard')"></purple-outline-btn>
+            <purple-outline-btn
+              v-if="!showFourthPromptCard"
+              :text="'Next'"
+              @click="showFourthPromptCard = true; scrollPage('fourthPromptCard')"
+            ></purple-outline-btn>
           </div>
 
           <div ref="fourthPromptCard"  class="guideline-example-container pb-4" :class="{ 'hidden': !showFourthPromptCard }">
@@ -122,7 +138,11 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :card-text="`What happened leading up to WWII?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"  @click="showFifthPromptCard = true; scrollPage('fifthPromptCard')"></purple-outline-btn>
+            <purple-outline-btn
+              v-if="!showFifthPromptCard" 
+              :text="'Next'"
+              @click="showFifthPromptCard = true; scrollPage('fifthPromptCard')"
+            ></purple-outline-btn>
           </div>
 
 
@@ -138,7 +158,7 @@
                 ></quiz-ui-card>
                 <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false" :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'" @click="showThirdSection = true; scrollPage('thirdSection');"></purple-outline-btn>
+            <purple-outline-btn :text="'Next'" @click="showThirdSection = true; scrollIntoThirdSection();section2Completed = true;"></purple-outline-btn>
           </div>
         </div>
       </div>
@@ -160,10 +180,11 @@
         </div>
           <div class="row h-20">
             <div class="col-md-12 d-flex justify-content-end">
-                <purple-btn
-                    :text="'Continue'"
-                    @click=" showFourthSection = true; scrollPage('fourthSection');"
-                    ></purple-btn>
+              <purple-btn
+                v-if="section2Completed && !section3Completed"
+                :text="'Continue'"
+                @click="showFourthSection = true; scrollIntoFourthSection(); section3Completed = true;"
+                />
             </div>
         </div>
         
@@ -197,11 +218,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue'; // Import ref
+
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
-import PurpleOutlineBtn from '../../reusable-ui/purple-btn-outline.vue'
-import QuizUICard from '../../reusable/quiz-ui.vue'
+import PurpleOutlineBtn from '../../reusable-ui/purple-btn-outline.vue';
+import QuizUICard from '../../reusable/quiz-ui.vue';
 
 export default defineComponent({
   name: 'ChatbotsPage4',
@@ -215,12 +237,15 @@ export default defineComponent({
       showThirdPromptCard: false,
       showFourthPromptCard: false,
       showFifthPromptCard: false,
+      section1Completed: false,
+      section2Completed: false,
+      section3Completed: false,
     };
   },
   methods: {
-    scrollPage(reference: string) {
+    scrollIntoSecondSection() {
       this.$nextTick(() => {
-        const element = this.$refs[reference] as HTMLElement;
+        const element = this.$refs.secondSection as HTMLElement; // Changed to 'firstSection'
         if (element) {
           element.scrollIntoView({
             behavior: 'smooth',
@@ -229,13 +254,46 @@ export default defineComponent({
           });
         }
       });
+    },
+    scrollIntoThirdSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.thirdSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'start',
+          });
+        }
+      });
+    },
+    scrollIntoFourthSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.fourthSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'start',
+          });
+        }
+      });
+    },
+      scrollPage(ref: string) {
+    const element = document.getElementById(ref);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: 'smooth',
+      });
     }
+}
   },
   components: {
     'nav-bar': NavBar,
     'purple-btn': PurpleBtn,
     'purple-outline-btn': PurpleOutlineBtn,
-    'quiz-ui-card': QuizUICard
+    'quiz-ui-card': QuizUICard,
   },
 });
 </script>

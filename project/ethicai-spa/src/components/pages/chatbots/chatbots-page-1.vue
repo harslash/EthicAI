@@ -40,11 +40,11 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn 
-            :text="'Continue'" 
-            @click="showSecondSection = true;
-            scrollIntoSecondSection()"
-          ></purple-btn>
+          <purple-btn
+                v-if="!section1Completed"
+                :text="'Continue'"
+                @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;"
+                />
         </div>
       </div>
     </div>
@@ -68,10 +68,11 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn :text="'Continue'" 
-            @click="showThirdSection = true; 
-            scrollIntoThirdSection()" 
-          ></purple-btn>
+          <purple-btn
+                v-if="section1Completed && !section2Completed"
+                :text="'Continue'"
+                @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"
+                />
         </div>
       </div>
     </div>
@@ -178,6 +179,9 @@ export default defineComponent({
       showSecondSection: false,
       showThirdSection: false,
       showThanksMessage: false, // Added a missing comma here
+      section1Completed: false,
+      section2Completed: false,
+      section3Completed: false,
     };
   },
   watch: {
