@@ -38,11 +38,11 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn 
-                        :text="'Continue'" 
-                        @click="showSecondSection = true;
-                        scrollIntoSecondSection()"
-                        ></purple-btn>
+                    <purple-btn
+                        v-if="!section1Completed"
+                        :text="'Continue'"
+                        @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;"
+                        />
                 </div>
             </div>
         </div>
@@ -223,13 +223,13 @@
                 </div>
             </div>
 
-            <div class="row h-20" style="padding-bottom: 20px;">
-                <div  class="col-md-12 d-flex justify-content-between">
+            <div class="row h-20" style="padding-bottom: 20px;" v-if="quizCompleted">
+                <div class="col-md-12 d-flex justify-content-between">
                     <router-link to="/dalle">
-                            <purple-btn-outline :text="'Back'"></purple-btn-outline>
+                    <purple-btn-outline :text="'Back'"></purple-btn-outline>
                     </router-link>
                     <router-link to="/dalle/the-complexities-of-copyright">
-                        <purple-btn :text="'Continue'"> </purple-btn>
+                    <purple-btn :text="'Continue'"></purple-btn>
                     </router-link>
                 </div>
             </div>
@@ -280,6 +280,9 @@ export default defineComponent({
       correctAnswers: 0, // Initialize correct answers counter
       wrongAnswers: 0,
       scoreVisible: false, // Initialize wrong answers counter
+
+      section1Completed: false,
+      quizCompleted: false,
     };
   },
     methods: {
@@ -356,6 +359,7 @@ export default defineComponent({
             // All questions are answered
             this.scoreVisible = true;
             this.showContinue = true;
+            this.quizCompleted = true; 
         }
         },
         onFirstCorrectClick() 
@@ -433,6 +437,7 @@ export default defineComponent({
             this.onIncorrectClick();
         },
     },
+    
     components: {
         'nav-bar': NavBar,
         'purple-btn': PurpleBtn,
