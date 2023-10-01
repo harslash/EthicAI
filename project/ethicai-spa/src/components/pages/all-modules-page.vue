@@ -3,11 +3,11 @@
         <div class="container-fluid page-container text-center big-wrapper">
 
             <div class="title">
-                <h1><u>All Modules</u></h1>
+                <h1>All Modules </h1>
             </div>
 
             <div class="subtitle">
-                <h2><u>Large Language Models</u></h2>
+                <h2>Large Language Models</h2>
             </div>
 
             <!-- LLM cards -->
@@ -31,20 +31,13 @@
                     </div>
                 </div>
 
-                <!--
-                <div class="card">
-                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
-                    <div class="container">
-                        <h4>Placeholder</h4>
-                        <p>Placeholder text</p>
-                    </div>
-                </div> -->
+                
 
 
             </div>
 
             <div class="subtitle">
-                <h2><u>AI Generation</u></h2>
+                <h2>AI Generation</h2>
             </div>
 
             <!-- AI Generation cards -->
@@ -69,14 +62,6 @@
                     </div>
                 </div>
 
-                <!--
-                <div class="card">
-                    <img :src="require('@/assets/placeholder_Thumbnail.png')" alt="Placeholder" style="width:100%">
-                    <div class="container">
-                        <h4>Placeholder</h4>
-                        <p>Placeholder text</p>
-                    </div>
-                </div> -->
 
             </div>
 
