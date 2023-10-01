@@ -240,9 +240,6 @@
                     <h3>How to identify AI-generated images?</h3>
                 </div>
             </div>
-                <div class="col-md-8 text-center">
-                    <p> If you would like to learn more about how to identify AI generated images, you can through this article &darr; &darr; </p>
-                </div>
                 <div class="article-snippet text-center align-items-center mx-auto">
                 <div class="article-image">
                     <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
