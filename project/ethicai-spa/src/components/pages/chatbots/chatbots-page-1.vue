@@ -15,7 +15,7 @@
             </p>
 
             <p class="section-text">
-              In 2011, Apple released the revolutionary voice assistant, Siri, with more advanced capabilities than any chatbot predecessors offering. Since then, the popularity of chatbots has drastically surged due to their convenience and flexibility (Ina, 2023). Nowadays, people use chatbots to provide customer service, assist in various tasks, practice language skills, and more.
+              In 2011, Apple released the revolutionary voice assistant, Siri, with more advanced capabilities than any chatbot predecessors offering. Since then, the popularity of chatbots has drastically surged due to their convenience and flexibility (<router-link :to="{ name: 'references' }">Ina, 2023</router-link>). Nowadays, people use chatbots to provide customer service, assist in various tasks, practice language skills, and more.
             </p>
           </div>
         </div>

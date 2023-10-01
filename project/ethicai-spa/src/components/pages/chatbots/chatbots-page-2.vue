@@ -14,7 +14,7 @@
                                 These new AI chatbots may be impressive, but their use can lead to many problems. The users like yourself need to understand how they function and their implications.
                             </p>
                             <p class="section-text">
-                                The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and spitting out strings of words that it predicts will be the best response based on the data used to train it (Guinness, 2023).
+                                The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and spitting out strings of words that it predicts will be the best response based on the data used to train it (<router-link :to="{ name: 'references' }">Guinness, 2023</router-link>) .
                             </p>
                         </div>
                     </div>
@@ -39,10 +39,10 @@
                         <div class="col-md-12 pb-5">
                             <div class="d-flex justify-content-center flex-wrap">
                                 <p class="section-text">
-                                    The creators of ChatGPT have trained the model on an extensive collection of textual data containing over 570 GB of data (Ruby, 2023). That's over 1.3 million novels worth of information! The source of this data includes books, articles, and web pages.
+                                    The creators of ChatGPT have trained the model on an extensive collection of textual data containing over 570 GB of data (<router-link :to="{ name: 'references' }">Ruby, 2023</router-link>). That's over 1.3 million novels worth of information! The source of this data includes books, articles, and web pages.
                                 </p>
                                 <p class="section-text">
-                                    If you’ve been on the internet for very long, you might expect some of those sources of data to contain biases, stereotypes, and prejudiced language. ChatGPT unintentionally learns these biases and may produce offensive responses or reinforce harmful stereotypes when it replies to prompts. The training data used to create ChatGPT and other LLMs, can at times result in biassed or inappropriate responses (Ray, 2023).
+                                    If you’ve been on the internet for very long, you might expect some of those sources of data to contain biases, stereotypes, and prejudiced language. ChatGPT unintentionally learns these biases and may produce offensive responses or reinforce harmful stereotypes when it replies to prompts. The training data used to create ChatGPT and other LLMs, can at times result in biassed or inappropriate responses (<router-link :to="{ name: 'references' }">Ray, 2023</router-link>).
                                 </p>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-md-12 d-flex justify-content-center flex-wrap">
                     <p class="section-text">
-                        As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as morality biases (Cousins, 2023).
+                        As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as morality biases (<router-link :to="{ name: 'references' }">Cousins, 2023</router-link>).
                     </p>
                     <p class="section-text">
                         <b>Lesson of the day: </b>ChatGPT would be a lousy lawmaker.

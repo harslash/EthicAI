@@ -11,7 +11,7 @@
                         <div class="col-md-12 pb-5">
                             <div class="d-flex justify-content-center flex-wrap">
                                 <p class="section-text">
-                                    Can an AI hallucinate? Yes, but not in the way we normally think of that word. ChatGPT often generates confident, plausible-sounding responses that are just blatantly incorrect or nonsensical. This behaviour is called hallucination, a critical flaw in existing publicly-available LLMs. OpenAI, the company that developed ChatGPT, have repeatedly warned users about ChatGPT’s hallucinations, which they admit are a challenging issue to overcome (OpenAI, n.d.).
+                                    Can an AI hallucinate? Yes, but not in the way we normally think of that word. ChatGPT often generates confident, plausible-sounding responses that are just blatantly incorrect or nonsensical. This behaviour is called hallucination, a critical flaw in existing publicly-available LLMs. OpenAI, the company that developed ChatGPT, have repeatedly warned users about ChatGPT’s hallucinations, which they admit are a challenging issue to overcome (<router-link :to="{ name: 'references' }">OpenAI, n.d.</router-link>).
                                 </p>
                             </div>
                         </div>
