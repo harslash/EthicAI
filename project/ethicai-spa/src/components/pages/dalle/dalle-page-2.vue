@@ -23,7 +23,7 @@
                         </p>
 
                         <p class="text-left section-text">
-                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI (Nanou, 2022).
+                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI (<router-link :to="{ name: 'references' }">Nanou, 2022</router-link>).
                         </p>
 
                         <p class="text-left section-text">

@@ -15,11 +15,14 @@
         <div class="col-md-8 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
-              DALL·E is a cutting-edge generative art model developed by OpenAI. It blends the names of artist Salvador Dalí and robot WALL·E. It utilizes the GPT architecture to create images from textual descriptions (OpenAI, 2022). You provide a text prompt, and DALL·E generates a corresponding image.
+              DALL·E is a cutting-edge generative art model developed by OpenAI. It blends the names of artist Salvador Dalí and robot WALL·E. It utilizes the GPT architecture to create images from textual descriptions
+              (<router-link :to="{ name: 'references' }">OpenAI, 2022</router-link>).
+              You provide a text prompt, and DALL·E generates a corresponding image.
             </p>
 
             <p class="section-text">
-              This model has a remarkable capacity to bridge text and images, exemplifying AI's ability to produce imaginative content (TechTarget, 2023).
+              This model has a remarkable capacity to bridge text and images, exemplifying AI's ability to produce imaginative content
+              (<router-link to="/references">TechTarget, 2023</router-link>).
             </p>
           </div>
         </div>
