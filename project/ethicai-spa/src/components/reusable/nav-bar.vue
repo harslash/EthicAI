@@ -35,12 +35,6 @@
                     <a class="nav-link active" aria-current="page" href="#">About us</a>
                 </li>  
             </ul>
-
-            <form class="d-flex" role="search">
-                <router-link to="/login">
-                     <button class="btn btn-primary" type="submit">Login</button>
-                </router-link>
-            </form>
            
           </div>
         </div>
