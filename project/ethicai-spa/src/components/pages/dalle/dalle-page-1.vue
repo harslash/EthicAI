@@ -1,6 +1,7 @@
 <template>
   <div>
     <nav-bar></nav-bar>
+    <ProgressBar></ProgressBar>
     <div class="container-fluid page-container text-center">
       <!-- Element 1 -->
       <div class="row h-25">
@@ -227,6 +228,7 @@ import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
+import ProgressBar from '../../reusable-ui/progress-bar.vue';
 
 export default defineComponent({
   name: 'DallePage1',
@@ -310,6 +312,7 @@ export default defineComponent({
     'purple-btn': PurpleBtn,
     'purple-btn-outline': PurpleBtnOutline,
     'important-terms-card': ImportantTermsCard,
+    'ProgressBar': ProgressBar,
   },
 });
 </script>
