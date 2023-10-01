@@ -1,7 +1,6 @@
 <template>
   <div>
     <nav-bar></nav-bar>
-    <ProgressBar></ProgressBar>
     <div class="container-fluid page-container text-center">
       <!-- Element 1 -->
       <div class="row h-25">
@@ -312,7 +311,7 @@ export default defineComponent({
     'purple-btn': PurpleBtn,
     'purple-btn-outline': PurpleBtnOutline,
     'important-terms-card': ImportantTermsCard,
-    'ProgressBar': ProgressBar,
+    'progress-bar': ProgressBar,
   },
 });
 </script>

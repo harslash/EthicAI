@@ -1,12 +1,11 @@
 <template>
     <div class="progress-container">
+      <button @click="decrementProgress" class="nav-button left-arrow">&lt;</button>
       <div class="progress-wrapper">
         <div class="progress-bar" :style="{ width: progress + '%' }"></div>
+        <div class="center-bubble"></div>
       </div>
-      <div class="nav-buttons">
-        <button @click="decrementProgress">&lt;</button>
-        <button @click="incrementProgress">&gt;</button>
-      </div>
+      <button @click="incrementProgress" class="nav-button right-arrow">&gt;</button>
     </div>
   </template>
   
