@@ -256,10 +256,11 @@
                 </p>
                 <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
                 <br>
+                </div>
 
                 <div class="col-md-8 text-center">
+                    <br>
                     <p> add some text here about overall message: e.g. that its hard to tell</p>
-                </div>
                 </div>
 
                 <div class="row h-20" style="padding-bottom: 20px;" v-if="quizCompleted">
