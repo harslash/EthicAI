@@ -216,14 +216,53 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div v-if="scoreVisible" class="row h-10">
-                <div class="col-md-12 score-container">
+                <div v-if="scoreVisible" class="row h-10">
+                    <div class="col-md-12 score-container">
                     <span class="purple-text"><p><em><u>You scored: {{ score }} / 5 correctly! Great work</u></em></p></span>
+                    </div>
+
+                </div>
+        
+            </div>
+            <div class="row h-20">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <purple-btn
+                                v-if="!section2Completed"
+                                :text="'Continue'"
+                                @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"
+                                />
+                    </div>
+                </div>
+
+            <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ 'hidden': !showThirdSection }">
+                <div class="row h-10 mb-5">
+                <div class="col-md-12">
+                    <h3>How to identify AI-generated images?</h3>
                 </div>
             </div>
+                <div class="col-md-8 text-center">
+                    <p> If you would like to learn more about how to identify AI generated images, you can through this article &darr; &darr; </p>
+                </div>
+                <div class="article-snippet text-center align-items-center mx-auto">
+                <div class="article-image">
+                    <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
+                    <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+                    </a>
+                </div>
+                <h2 class="article-title">How to identify AI-generated images</h2>
+                <p class="article-meta">Published on June 22, 2023 by Hagop Kavafian</p>
+                <p class="article-excerpt">
+                    AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
+                </p>
+                <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
+                <br>
 
-            <div class="row h-20" style="padding-bottom: 20px;" v-if="quizCompleted">
+                <div class="col-md-8 text-center">
+                    <p> add some text here about overall message: e.g. that its hard to tell</p>
+                </div>
+                </div>
+
+                <div class="row h-20" style="padding-bottom: 20px;" v-if="quizCompleted">
                 <div class="col-md-12 d-flex justify-content-between">
                     <router-link to="/dalle">
                     <purple-btn-outline :text="'Back'"></purple-btn-outline>
@@ -233,9 +272,10 @@
                     </router-link>
                 </div>
             </div>
+            </div>
+        </div>
         </div>
     </div>
-</div>
 </template>
 
 <script lang="ts">
@@ -252,6 +292,7 @@ export default defineComponent({
       value: null,
       showFirstSection: true,
       showSecondSection: false,
+      showThirdSection: false,
 
       showFirstQuestion: true,
       showSecondQuestion: false,
@@ -282,6 +323,8 @@ export default defineComponent({
       scoreVisible: false, // Initialize wrong answers counter
 
       section1Completed: false,
+      section2Completed: false,
+      section3Completed: false,
       quizCompleted: false,
     };
   },
@@ -290,6 +333,15 @@ export default defineComponent({
         {   
             this.$nextTick(() => {
                 const element = this.$refs.secondSection as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
+                }
+            }); 
+        },
+        scrollIntoThirdSection() 
+        {   
+            this.$nextTick(() => {
+                const element = this.$refs.thirdSection as HTMLElement;
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
                 }
@@ -538,4 +590,57 @@ export default defineComponent({
   font-weight: bold; /* You can add other styles as needed */
 }
 
+  .article-snippet {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px; /* Decreased margin-top to create space */
+    max-width: 1000px; /* Decreased max-width to make it narrower */
+  }
+  
+  .article-title {
+    font-size: 18px; /* Decreased font size for the title */
+    margin-bottom: 10px;
+  }
+  
+  .article-meta {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .article-excerpt {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .article-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .article-link:hover {
+    text-decoration: underline;
+  }
+  
+  .article-image {
+    text-align: center; /* Center align the image */
+    margin-bottom: 20px; /* Add some spacing between the image and the snippet */
+  }
+  
+  .article-image img {
+    max-width: 100%; /* Ensure the image fits within its container */
+  }
+  
+  /* CSS for the article snippet (previously provided) */
+  .article-snippet {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+  }
 </style>
