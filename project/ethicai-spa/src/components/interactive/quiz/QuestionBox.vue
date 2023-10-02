@@ -27,6 +27,8 @@ const answers = computed(() => {
   return shuffleArray(list)
 })
 
+let currentResult;
+
 watch(() => props.question.question, {
   immediate: true
 })
@@ -37,14 +39,16 @@ async function solve(answer) {
   }
 
   resultVisible.value = true
-  await asyncTimeout(3000)
-  resultVisible.value = false
 
   if (answer.isCorrect) {
-    emit('result', 'correct')
+    currentResult = 'correct'
   } else {
-    emit('result', 'wrong')
+    currentResult = 'wrong'
   }
+}
+
+async function nextQuestion() {
+  emit('result', currentResult)
 }
 </script>
 
@@ -57,13 +61,18 @@ async function solve(answer) {
         :class="{ 'hover-scale tw-cursor-pointer': !resultVisible }"
         class="tw-rounded-xl tw-min-h-[150px] tw-w-full tw-mx-3 tw-p-3 tw-transition-all tw-duration-150 tw-text-white tw-flex tw-justify-around tw-items-center">
         <p :class="answer.value.length > 16 ? 'tw-text-md' : 'tw-text-3xl tw-text-center'" v-html="answer.value" />
-        <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct' : 'wrong'}.png`"
-          :class="answer.isCorrect ? 'tw-w-[48px] tw-h-[48px]' : 'tw-w-[35px] tw-h-[35px]'"
-          :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
+        <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct1' : 'wrong1'}.png`"
+          :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
       </div>
     </div>
     <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
       <p class="explanation-text"> {{ props.question.explanation }}</p>
+    </div>
+    <div v-if="resultVisible" class="tw-text-center">
+      <div @click="resultVisible = false; nextQuestion();" :style="{ backgroundColor: '#6D0CFF' }"
+        class="tw-m-auto tw-py-2 tw-px-5 tw-mt-5 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
+        <p class="tw-text-xl tw-text-center tw-text-white">Next</p>
+      </div>
     </div>
   </div>
 </template>
