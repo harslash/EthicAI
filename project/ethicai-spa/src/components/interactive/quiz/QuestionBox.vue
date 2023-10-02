@@ -50,8 +50,8 @@ async function solve(answer) {
 
 <template>
   <div class="relative pb-40">
-    <h1 :class="{ 'tw-text-gray-400': resultVisible }" class="tw-text-3xl tw-transition-colors tw-duration-150 tw-select-none"
-      v-html="props.question.question" />
+    <h1 :class="{ 'tw-text-gray-400': resultVisible }"
+      class="tw-text-3xl tw-transition-colors tw-duration-150 tw-select-none" v-html="props.question.question" />
     <div class="tw-mt-10 tw-flex tw-justify-between tw-items-center">
       <div v-for="answer in answers" :key="answer.value" :style="{ backgroundColor: color }" @click="solve(answer)"
         :class="{ 'hover-scale tw-cursor-pointer': !resultVisible }"
@@ -62,11 +62,23 @@ async function solve(answer) {
           :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
       </div>
     </div>
+    <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
+      <p class="explanation-text"> {{ props.question.explanation }}</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .hover-scale:hover {
   transform: scale(1.05);
+}
+
+.explanation-bg {
+  background-color: rgb(209, 231, 221);
+}
+
+.explanation-text {
+  color: rgb(10, 54, 34);
+  margin: 0;
 }
 </style>

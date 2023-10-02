@@ -7,7 +7,8 @@
                 "Ask ChatGPT again to confirm",
                 "Google it",
                 "Feel the vibes"
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
         },
         {
             "question": "Which of these was the first chatbot?",
@@ -15,7 +16,8 @@
             "incorrect_answers": [
                 "ChatGPT",
                 "Siri"
-            ]
+            ],
+            "explanation": "ELIZA was created in 1966."
         },
         {
             "question": "Where do Large Language Models <em>NOT</em> get their information?",
@@ -24,7 +26,8 @@
                 "The internet",
                 "User interactions with them",
                 "Digitised books"
-            ]
+            ],
+            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them."
         },
         {
             "question": "Compared to ChatGPT, Markov chains...",
@@ -33,7 +36,8 @@
                 "...take longer to train",
                 "...understand more of the 'structure' of their prompt",
                 "...expend more energy to run"
-            ]
+            ],
+            "explanation": "Markov chains are a simpler model than ChatGPT, and can be trained on less data."
         },
         {
             "question": "Which of these is a problem with Large Language Models?",
@@ -41,14 +45,16 @@
             "incorrect_answers": [
                 "They can only complete logical/mathematical tasks",
                 "They can only process input that's in a specific format"
-            ]
+            ],
+            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect the biases in that text."
         },
         {
             "question": "Why does ChatGPT produce biased outputs?",
             "correct_answer": "It was trained on biased text from the internet",
             "incorrect_answers": [
                 "It reflects the bias in the questions humans prompt it with"
-            ]
+            ],
+            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect the biases in that text."
         },
         {
             "question": "When is it acceptable to use ChatGPT for academic work?",
@@ -57,14 +63,16 @@
                 "Never",
                 "To provide facts, but not to brainstorm ideas",
                 "To write sections of text, as long as you cite ChatGPT"
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
         },
         {
             "question": "Which prompt is most likely to lead to hallucinations from ChatGPT?",
             "correct_answer": "\"When was the Kate Edger Information Commons opened?\"",
             "incorrect_answers": [
                 "\"Write me a sonnet about frogs.\""
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
         },
         {
             "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",
@@ -73,7 +81,8 @@
                 "Giving a clear task",
                 "Adding examples",
                 "Defining a role for the AI tool to fill"
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
         },
         {
             "question": "Which of these is <em>NOT</em> a Large Language Model?",
@@ -81,7 +90,8 @@
             "incorrect_answers": [
                 "Google's Bard",
                 "OpenAI's ChatGPT"
-            ]
+            ],
+            "explanation": "Siri is a voice assistant, not a Large Language Model."
         }
     ]
 }
