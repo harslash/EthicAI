@@ -46,7 +46,7 @@
                 "They can only complete logical/mathematical tasks",
                 "They can only process input that's in a specific format"
             ],
-            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect the biases in that text."
+            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect harmful biases in that text."
         },
         {
             "question": "Why does ChatGPT produce biased outputs?",
@@ -54,7 +54,7 @@
             "incorrect_answers": [
                 "It reflects the bias in the questions humans prompt it with"
             ],
-            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect the biases in that text."
+            "explanation": "ChatGPT can reflect the biases  in the text it was trained on."
         },
         {
             "question": "When is it acceptable to use ChatGPT for academic work?",
@@ -64,7 +64,7 @@
                 "To provide facts, but not to brainstorm ideas",
                 "To write sections of text, as long as you cite ChatGPT"
             ],
-            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It should not be used in settings where accuracy is important."
         },
         {
             "question": "Which prompt is most likely to lead to hallucinations from ChatGPT?",
@@ -72,7 +72,7 @@
             "incorrect_answers": [
                 "\"Write me a sonnet about frogs.\""
             ],
-            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
+            "explanation": "Sonnets about frogs don't exist, so ChatGPT will have to make them up."
         },
         {
             "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",
@@ -82,7 +82,7 @@
                 "Adding examples",
                 "Defining a role for the AI tool to fill"
             ],
-            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
+            "explanation": "Repeating the prompt multiple times will not improve the quality of the output."
         },
         {
             "question": "Which of these is <em>NOT</em> a Large Language Model?",
