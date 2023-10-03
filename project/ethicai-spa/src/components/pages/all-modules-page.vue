@@ -23,7 +23,7 @@
                     </div>
                 </router-link>
 
-                <div class="card">
+                <div class="card" style="visibility: hidden;">
                     <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Copilot" style="width:100%">
                     <div class="container">
                         <h4>Understanding Copilot</h4>
