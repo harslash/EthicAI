@@ -25,8 +25,8 @@
             <img width="400" alt="ELIZA conversation" src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
         </div>
       </div>
-      <div class="row h-30 mb-">
-        <div class="col-md-4 d-flex justify-content-end">
+      <div class="row h-30 mb-3">
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end pb-5">
           <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
         </div>
         <div class="col-md-8 d-flex align-items-center">
@@ -227,7 +227,7 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 1600px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -246,9 +246,17 @@ export default defineComponent({
   transition: color 2s ease-in-out;
 }
 
+.img-a {
+  width: 25%;
+}
+
 @media (max-width: 767.98px) {
   .section-text {
     width: 90%;
+  }
+
+  .img-a {
+    width: 60%;
   }
 }
 
