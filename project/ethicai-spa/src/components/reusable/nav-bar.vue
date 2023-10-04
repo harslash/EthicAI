@@ -32,7 +32,9 @@
                     <a class="nav-link active" aria-current="page" href="#">Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About us</a>
+                     <router-link class="nav-link" to="/about-us">
+                           About Us
+                    </router-link>
                 </li>  
             </ul>
            

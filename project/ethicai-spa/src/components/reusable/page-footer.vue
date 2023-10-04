@@ -4,7 +4,7 @@
       <div class="col-md-8 p-5">
         <img class src="../../assets/logo-bland.png" width="220"/>
       </div>
-      <div class="col-md-2 p-5">
+      <div class="col-md-4 p-5">
         <h4 class="mb-3">Company</h4>
         <ul class="footer-list">
           <li class="mb-2">
@@ -12,14 +12,12 @@
                 <a href="#">References</a>
             </router-link>
           </li>
-          <li class="mb-2"><a href="#">Our team</a></li>
+          <li class="mb-2">
+              <router-link to="/about-us">
+                <a href="#">About Us</a>
+              </router-link>
+          </li>
         </ul>
-      </div>
-      <div class="col-md-2 p-5">
-         <h4 class="mb-3">Product</h4>
-          <ul class="footer-list">
-            <li class="mb-2"><a href="#">T&C</a></li>
-          </ul>
       </div>
     </div>
   </div>
