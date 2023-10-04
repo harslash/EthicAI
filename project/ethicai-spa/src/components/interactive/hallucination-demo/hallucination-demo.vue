@@ -64,11 +64,6 @@ export default defineComponent({
                 }
                 questionId.value += 1;
             }
-
-            if (questionId.value == 5) {
-                context.emit('end-of-demo-event');
-                showButtons.value = false;
-            }
         }
 
         const handleCorrectBtnClick = (value: boolean) => {
@@ -92,6 +87,7 @@ export default defineComponent({
                 }
                 questionId.value += 1;
              }  
+             
         }
 
         const handleNextBtnClick = () => {
