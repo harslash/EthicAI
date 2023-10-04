@@ -59,4 +59,10 @@ export default defineComponent({
     text-decoration: none;
     color: #b3b4b5;
   }
+
+  @media (max-width: 767.98px) {
+    .container-fluid  {
+      height: 400px;
+    }
+  }
 </style>
