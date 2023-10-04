@@ -111,13 +111,14 @@
               <div class="col-md-10 d-flex align-items-center justify-content-center">
                 <figure>
                   <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="display: inline-block; margin: 12.5px 5px; border-radius: 5px;"/>
-                  <figcaption> <b>AI Image Generation of Pope Francis (<router-link :to="{ name: 'references' }">Cartter, 2023</router-link>)</b> </figcaption>
+                  <figcaption> <b>AI Image Generation of Pope Francis <span class="reference-link" @click="handleReferenceClick('copyright')">(Cartter, 2023)</span></b></figcaption>
                 </figure>
               </div>
               <br>
   
               <p class="text-left section-text">
-                Current models like DALL-E also allow rendering public figures in offensive or inappropriate contexts. While a careful eye may be able to tell current AI images apart from real ones, it is easy to be tricked by images that look like they show those public figures in events which are not real. These artificial pictures (dubbed “deepfakes”) can damage individuals’ reputation; furthermore, politicians and leaders have reason to fear their implications for national security (<router-link :to="{ name: 'references' }">Parra & Shroud, 2023</router-link>). To learn more about deepfakes, visit our module here.
+                Current models like DALL-E also allow rendering public figures in offensive or inappropriate contexts. While a careful eye may be able to tell current AI images apart from real ones, it is easy to be tricked by images that look like they show those public figures in events which are not real. These artificial pictures (dubbed “deepfakes”) can damage individuals’ reputation; furthermore, politicians and leaders have reason to fear their implications for national security 
+                <span class="reference-link" @click="handleReferenceClick('copyright')">(Parra & Shroud, 2023)</span>. To learn more about deepfakes, visit our module here.
               </p>
             </div>
           </div>
@@ -253,6 +254,10 @@
           }
         });
       },
+     handleReferenceClick(referenceSectionId: string) {
+        const hash = `#${referenceSectionId}`;
+        this.$router.push({ name: 'references', hash });
+      }
     },
     components: {
       'nav-bar': NavBar,

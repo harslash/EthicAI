@@ -23,7 +23,9 @@
                         </p>
 
                         <p class="text-left section-text">
-                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI (<router-link :to="{ name: 'references' }">Nanou, 2022</router-link>).
+                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI 
+                            
+                            <span class="reference-link" @click="handleReferenceClick('generatedVsHuman')">(Nanou, 2022)</span>.
                         </p>
 
                         <p class="text-left section-text">
@@ -486,6 +488,10 @@ export default defineComponent({
             element.style.pointerEvents="none"
             this.onIncorrectClick();
         },
+        handleReferenceClick(referenceSectionId: string) {
+            const hash = `#${referenceSectionId}`;
+            this.$router.push({ name: 'references', hash });
+        }
     },
     
     components: {
