@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="row h-30 mb-5">
-        <div class="col-md-8 d-flex align-items-center">
+        <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
             Let's delve into the past when chatbots were in their infancy. These early computer programs had a modest ambition: to simulate human intelligence by offering pre-scripted responses to questions. In the year 1966, a notable chatbot named ELIZA was born. ELIZA's unique approach involved reusing the user's input in a set of predefined phrases. Surprisingly, this basic system often left users believing they were engaged in a genuine human conversation. 
@@ -20,16 +20,16 @@
           </div>
         </div>
 
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
           <a title="File:ELIZA conversation.jpg, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">
             <img width="400" alt="ELIZA conversation" src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
         </div>
       </div>
       <div class="row h-30 mb-3">
-        <div class="col-md-4 d-flex justify-content-center justify-content-md-end pb-5">
+        <div class="col-md-5 d-flex justify-content-center justify-content-md-end pb-5">
           <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
         </div>
-        <div class="col-md-8 d-flex align-items-center">
+        <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text">
               The world of chatbots has witnessed a remarkable evolution with the advent of Large Language Models (LLMs). These sophisticated systems have become a game-changer, as they can handle a wide range of text-based tasks. Imagine tasks like summarizing, translating, and generating content with the help of information gathered from vast datasets of online text. One LLM-based chatbot that might ring a bell is ChatGPT. It's a chatbot that can chat with you in a way that feels remarkably human.             
