@@ -1,50 +1,53 @@
 <template>
   <div class="container module-overview-container">
-    <div class="left-container">
-      <div class="image">
-        <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
-      </div>
-      <div>
-        <p class="module-name">{{ moduleTitle }}</p>
-        <p class="module-desc">{{ moduleDescription }}</p>
-      </div>
-    </div>
-    <div class="right-container">
-      <div class="top-child">
-        <!-- Content for the top child container (70% height) -->
-        <div class="module-structure">Module Structure</div>
-        <ul class="contents">
-          <li
-            v-for="(item, index) in modulePageNames"
-            :key="item"
-          >
-            <div class="list-item">
-              <span
-                :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
-              >{{ item }}</span>
-              <i
-                v-if="index < 2"
-                class="fas fa-check-circle"
-                :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
-              ></i>
-              <i
-                v-else
-                class="far fa-circle"
-                :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
-              ></i>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="bottom-child">
-        <!-- Content for the bottom child container (30% height) -->
-        <div class="continue-button">
-          <router-link :to="generateRoute(moduleName, pageName)">
-             <button @click="continueClicked">Continue</button>
-          </router-link>
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="image">
+            <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
+          </div>
+          <div>
+            <p class="module-name">{{ moduleTitle }}</p>
+            <p class="module-desc">{{ moduleDescription }}</p>
+          </div>
         </div>
-      </div>
+        <div class="col-md-6 d-flex flex-column">
+          <div class="top-child">
+        <!-- Content for the top child container (70% height) -->
+            <div class="module-structure">Module Structure</div>
+            <ul class="contents">
+              <li
+                v-for="(item, index) in modulePageNames"
+                :key="item"
+              >
+                <div class="list-item">
+                  <span
+                    :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
+                  >{{ item }}</span>
+                  <i
+                    v-if="index < 2"
+                    class="fas fa-check-circle"
+                    :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
+                  ></i>
+                  <i
+                    v-else
+                    class="far fa-circle"
+                    :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
+                  ></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-child">
+            <!-- Content for the bottom child container (30% height) -->
+            <div class="continue-button">
+              <router-link :to="generateRoute(moduleName, pageName)">
+                <button @click="continueClicked">Continue</button>
+              </router-link>
+            </div>
+          </div>
+        </div>
     </div>
+   
   </div>
 </template>
 <script lang="ts">
@@ -127,6 +130,7 @@ body {
 .module-name {
   font-weight: bold;
   font-size: 30px;
+  text-align: center;
 }
 
 .module-structure {

@@ -53,11 +53,12 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 .container-fluid.page-container {
-    height: 100vh;
+    height: 110vh;
     margin-top: 60px;
 }
-
-.module-overview-container {
-    height: 75%;
+@media (min-width: 767.98px) {
+    .module-overview-container {
+        height: 75%;
+    }
 }
 </style>
