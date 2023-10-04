@@ -118,7 +118,7 @@
     <div class="row">
       <h2 class="section-heading">The Rise of DALL·E Module</h2>
     </div>
-    <div class="row">
+    <div class="row" id="dalle">
         <h3 class="sub-heading">The Rise of DALL·E</h3>
     </div>
     <div class="row">
@@ -145,7 +145,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="generatedVsHuman">
         <h3 class="sub-heading">AI Generated vs Human Art</h3>
     </div>
     <div class="row">
@@ -172,7 +172,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="copyright">
         <h3 class="sub-heading">Copyright and Copywrong</h3>
     </div>
     <div class="row">
