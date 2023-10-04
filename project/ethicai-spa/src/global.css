@@ -1,0 +1,5 @@
+/* Global styles */
+.reference-link {
+    text-decoration: underline;
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+}
