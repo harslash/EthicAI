@@ -11,7 +11,7 @@
             </div>
 
             <!-- LLM cards -->
-            <div id="wrapper">
+            <div id="wrapper" class="d-flex flex-md-row flex-column">
 
                 <router-link to="/chatbots" custom v-slot="{navigate}">
                     <div class="card" @click="navigate" role="link">
@@ -23,7 +23,7 @@
                     </div>
                 </router-link>
 
-                <div class="card" style="visibility: hidden;">
+                <div id="copilotCard" class="card" style="visibility: hidden;">
                     <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Copilot" style="width:100%">
                     <div class="container">
                         <h4>Understanding Copilot</h4>
@@ -41,7 +41,7 @@
             </div>
 
             <!-- AI Generation cards -->
-            <div id="wrapper" style="padding-bottom: 5%;">
+            <div id="wrapper" style="padding-bottom: 5%;" class="d-flex flex-md-row flex-column">
 
                 <router-link to="/dalle" custom v-slot="{navigate}">
                     <div class="card" @click="navigate" role="link">
@@ -61,8 +61,6 @@
                         <p>Coming soon!</p>
                     </div>
                 </div>
-
-
             </div>
 
         </div>
@@ -145,7 +143,6 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-
     display:flexbox;
     flex: 1;
     flex-direction: column;
@@ -156,6 +153,7 @@ h2 {
     margin: 3%;
 
 }
+
 
 .card:hover {
     background-color: #E5D1FF;
@@ -184,4 +182,11 @@ img {
 [role="link"]:hover {
   cursor: pointer;
 }
+
+
+  @media (max-width: 767.98px) {
+    #copilotCard {
+        display: none;
+    }
+  }
 </style>
