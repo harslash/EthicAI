@@ -229,12 +229,12 @@ h2 {
 }
 
 
- @media (max-width: 576px) {
+@media (max-width: 576px) {
     .body {
-      align-items: center;
+        align-items: center;
     }
     .subtitle, .title {
         width: 90%;
     }
-  }
+}
 </style>
