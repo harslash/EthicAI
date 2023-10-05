@@ -19,12 +19,12 @@
                 <div class="col-md-8 d-flex align-items-center">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="text-left section-text">
-                            There is no agreed-upon definition of art. It may be subjective. Experts disagree. What we call AI art, differs from human-made art because it is driven by commands and instructions, rather than an expression of genuine emotion.                        
+                            There is no agreed-upon definition of art. It may be subjective. Experts disagree. What we call AI art, differs from human-made art because it is driven by commands and instructions, rather than an expression of genuine emotion.
                         </p>
 
                         <p class="text-left section-text">
-                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI 
-                            
+                            AI generators merge visual features from pre-existing images to assemble a requested concept. Some claim 'true' art must be unique; others argue that even human-made art might just be a recombination based on existing styles — which in some ways is similar to generative AI
+
                             <span class="reference-link" @click="handleReferenceClick('generatedVsHuman')">(Nanou, 2022)</span>.
                         </p>
 
@@ -56,11 +56,11 @@
             </div>
 
             <div class="row h-30">
-                <!-- quiz, has its own 'section' for each question --> 
+                <!-- quiz, has its own 'section' for each question -->
 
                 <!-- First question -->
                 <div id="firstQuestion" ref="firstQuestion" class="question-one container mb-5 text-section" :class="{ 'hidden': !showFirstQuestion}">
-                    <div class="col-md-12 d-flex align-self-center justify-content-center" >          
+                    <div class="col-md-12 d-flex align-self-center justify-content-center" >
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -90,10 +90,10 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Second question -->
             <div ref="secondQuestion" class="question-two container mb-5 text-section" :class="{ 'hidden': !showSecondQuestion}">
-                <div class="col-md-12 d-flex align-self-center justify-content-center" >          
+                <div class="col-md-12 d-flex align-self-center justify-content-center" >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -125,7 +125,7 @@
 
             <!-- Third question -->
             <div ref="thirdQuestion" class="question-three container mb-5 text-section" :class="{ 'hidden': !showThirdQuestion}">
-                <div class="col-md-12 d-flex align-self-center justify-content-center" >          
+                <div class="col-md-12 d-flex align-self-center justify-content-center" >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -157,7 +157,7 @@
 
             <!-- Fourth question-->
             <div ref="fourthQuestion" class="question-four container mb-5 text-section" :class="{ 'hidden': !showFourthQuestion}">
-                <div class="col-md-12 d-flex align-self-center justify-content-center" >          
+                <div class="col-md-12 d-flex align-self-center justify-content-center" >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -185,12 +185,12 @@
                         </div>
                     </div>
                 </div>
-            </div>                        
+            </div>
 
             <div class="row h-30">
             <!-- Fifth question -->
             <div ref="fifthQuestion" class="question-five container mb-5 text-section" :class="{ 'hidden': !showFifthQuestion}">
-                <div class="col-md-12 d-flex align-self-center justify-content-center" >          
+                <div class="col-md-12 d-flex align-self-center justify-content-center" >
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -224,7 +224,7 @@
                     </div>
 
                 </div>
-        
+
             </div>
             <div class="row h-20">
                         <div class="col-md-12 d-flex justify-content-end">
@@ -259,7 +259,7 @@
 
                 <div class="col-md-8 text-center">
                     <br>
-                    <p> add some text here about overall message: e.g. that its hard to tell</p>
+                    <p> Some of these are quite tricky to decide, even for the savviest of quiz-takers. It just goes to show how important it is to pay attention to details. </p>
                 </div>
 
                 <div class="row h-20" style="padding-bottom: 20px;" v-if="quizCompleted">
@@ -329,23 +329,23 @@ export default defineComponent({
     };
   },
     methods: {
-        scrollIntoSecondSection() 
-        {   
+        scrollIntoSecondSection()
+        {
             this.$nextTick(() => {
                 const element = this.$refs.secondSection as HTMLElement;
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
                 }
-            }); 
+            });
         },
-        scrollIntoThirdSection() 
-        {   
+        scrollIntoThirdSection()
+        {
             this.$nextTick(() => {
                 const element = this.$refs.thirdSection as HTMLElement;
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
                 }
-            }); 
+            });
         },
         scrollIntoSecondQuestion()
         {
@@ -354,7 +354,7 @@ export default defineComponent({
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
-            }); 
+            });
         },
         scrollIntoThirdQuestion()
         {
@@ -363,7 +363,7 @@ export default defineComponent({
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
-            }); 
+            });
         },
         scrollIntoFourthQuestion()
         {
@@ -372,7 +372,7 @@ export default defineComponent({
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
-            }); 
+            });
         },
         scrollIntoFifthQuestion()
         {
@@ -381,7 +381,7 @@ export default defineComponent({
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
-            }); 
+            });
         },
         scrollIntoContinue()
         {
@@ -390,7 +390,7 @@ export default defineComponent({
                 if (element) {
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
-            }); 
+            });
         },
         // Update the score and answer counters when a question is answered correctly
         onCorrectClick() {
@@ -411,10 +411,10 @@ export default defineComponent({
             // All questions are answered
             this.scoreVisible = true;
             this.showContinue = true;
-            this.quizCompleted = true; 
+            this.quizCompleted = true;
         }
         },
-        onFirstCorrectClick() 
+        onFirstCorrectClick()
         {
             this.firstQuestionShowCorrect = true;
             const element = this.$refs.firstQuestion as HTMLElement;
@@ -428,12 +428,12 @@ export default defineComponent({
             element.style.pointerEvents="none"
             this.onIncorrectClick();
         },
-        onSecondCorrectClick() 
+        onSecondCorrectClick()
         {
             this.secondQuestionShowCorrect = true;
             const element = this.$refs.secondQuestion as HTMLElement;
             element.style.pointerEvents="none"
-            this.onCorrectClick();  
+            this.onCorrectClick();
 
         },
         onSecondIncorrectClick()
@@ -443,13 +443,13 @@ export default defineComponent({
             element.style.pointerEvents="none"
             this.onIncorrectClick();
         },
-        onThirdCorrectClick() 
+        onThirdCorrectClick()
         {
             this.thirdQuestionShowCorrect = true;
             const element = this.$refs.thirdQuestion as HTMLElement;
             element.style.pointerEvents="none"
             this.onCorrectClick();
-    
+
         },
         onThirdIncorrectClick()
         {
@@ -458,7 +458,7 @@ export default defineComponent({
             element.style.pointerEvents="none"
             this.onIncorrectClick();
         },
-        onFourthCorrectClick() 
+        onFourthCorrectClick()
         {
             this.fourthQuestionShowCorrect = true;
             const element = this.$refs.fourthQuestion as HTMLElement;
@@ -473,7 +473,7 @@ export default defineComponent({
             element.style.pointerEvents="none"
             this.onIncorrectClick();
         },
-        onFifthCorrectClick() 
+        onFifthCorrectClick()
         {
             this.fifthQuestionShowCorrect = true;
             const element = this.$refs.fifthQuestion as HTMLElement;
@@ -493,7 +493,7 @@ export default defineComponent({
             this.$router.push({ name: 'references', hash });
         }
     },
-    
+
     components: {
         'nav-bar': NavBar,
         'purple-btn': PurpleBtn,
@@ -601,23 +601,23 @@ export default defineComponent({
     margin-top: 20px; /* Decreased margin-top to create space */
     max-width: 1000px; /* Decreased max-width to make it narrower */
   }
-  
+
   .article-title {
     font-size: 18px; /* Decreased font size for the title */
     margin-bottom: 10px;
   }
-  
+
   .article-meta {
     font-size: 14px;
     color: #888;
   }
-  
+
   .article-excerpt {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 10px;
   }
-  
+
   .article-link {
     color: #007bff;
     text-decoration: none;
@@ -625,20 +625,20 @@ export default defineComponent({
     display: inline-block;
     margin-top: 10px;
   }
-  
+
   .article-link:hover {
     text-decoration: underline;
   }
-  
+
   .article-image {
     text-align: center; /* Center align the image */
     margin-bottom: 20px; /* Add some spacing between the image and the snippet */
   }
-  
+
   .article-image img {
     max-width: 100%; /* Ensure the image fits within its container */
   }
-  
+
   /* CSS for the article snippet (previously provided) */
   .article-snippet {
     background-color: #f7f7f7;
