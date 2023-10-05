@@ -8,6 +8,7 @@
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
                     :module-page-names="modulePageNames"
+                    :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
                     :page-name="pageName"
                     ></module-overview>
@@ -33,6 +34,7 @@ export default defineComponent({
             moduleDescription: 'In this module, you will discover the world of AI generated art. The highs and lows, including the impact these generators have on artists and creative integrity.',
             moduleImgSrc: '../../../assets/purple_robot.jpeg',
             modulePageNames: ['The Rise of DALL-E', 'AI Generated vs. Human Art', 'The Complexities of Copyright'],
+            modulePageRoutes: ['the-rise-of-dalle', 'ai-generated-vs-human-art', 'the-complexities-of-copyright'],
             moduleName: 'dalle',
             pageName: 'the-rise-of-dalle',
             moduleImgFilename: 'purple_robot.jpeg'

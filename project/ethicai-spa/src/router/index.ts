@@ -72,14 +72,17 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/dalle/DalleOverviewView.vue'),
   },
   {
+    name:'the-rise-of-dalle',
     path: '/dalle/the-rise-of-dalle',
     component: () => import('../views/modules/dalle/DallePageOneView.vue'),
   },
   {
+    name:'ai-generated-vs-human-art',
     path: '/dalle/ai-generated-vs-human-art',
     component: () => import('../views/modules/dalle/DallePageTwoView.vue'),
   },
   {
+    name:'the-complexities-of-copyright',
     path: '/dalle/the-complexities-of-copyright',
     component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
   },

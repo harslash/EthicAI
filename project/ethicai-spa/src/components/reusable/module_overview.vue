@@ -19,7 +19,7 @@
                 v-for="(item, index) in modulePageNames"
                 :key="item"
               >
-                <div class="list-item">
+                <div class="list-item" @click="handleListItemClick(index)">
                   <span
                     :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
                   >{{ item }}</span>
@@ -60,6 +60,7 @@ export default defineComponent({
     moduleDescription: String,
     moduleImgFilename: String,
     modulePageNames: Array as () => string[],
+    modulePageRoutes: Array as () => string[],
     moduleName: String,
     pageName: String,
   },
@@ -73,7 +74,12 @@ export default defineComponent({
       // For example, you can append the routePath to an existing route
       return `/${moduleName}/${pageName}`;
     },
-
+    handleListItemClick(index: number) {
+      if (this.modulePageRoutes) {
+          const pageName = this.modulePageRoutes[index]
+          this.$router.push({ name: pageName });
+      }
+    }
   },
 });
 </script>
@@ -194,6 +200,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px; /* Add padding to create space between text and icons */
+  cursor: pointer;
+}
+.list-item:hover {
+  background-color: #E5D1FF;
 }
 
 .list-item i {
