@@ -212,7 +212,7 @@
             <p style="margin-bottom: 0;"><b>How does this happen?</b></p>
           </div>
           <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-left: 20px;">
-            <purple-btn :text="'Continue'" />
+            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"/>
           </router-link>
         </div>
       </div>
@@ -307,6 +307,9 @@ export default defineComponent({
     handleReferenceClick(referenceSectionId: string) {
       const hash = `#${referenceSectionId}`;
       this.$router.push({name: 'references', hash});
+    },
+    handlePageCompletionClick(this: any) {
+      this.$registerPageAsCompleted('dalle', 'the-rise-of-dalle');
     }
   },
   components: {

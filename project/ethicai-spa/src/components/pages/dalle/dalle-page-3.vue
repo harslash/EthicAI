@@ -190,8 +190,8 @@
         <router-link to="/dalle/ai-generated-vs-human-art">
             <purple-btn-outline :text="'Back'"></purple-btn-outline>
         </router-link>
-        <router-link to="/dalle/module-complete" custom v-slot="{ navigate }">
-            <purple-btn :text="'Continue'" @click="navigate" role="link"></purple-btn>
+        <router-link to="/dalle/module-complete">
+            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
         </router-link>
         </div>
     </div>
@@ -257,6 +257,9 @@
      handleReferenceClick(referenceSectionId: string) {
         const hash = `#${referenceSectionId}`;
         this.$router.push({ name: 'references', hash });
+      },
+      handlePageCompletionClick(this: any) {
+          this.$registerPageAsCompleted('dalle', 'the-complexities-of-copyright');
       }
     },
     components: {
