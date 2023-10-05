@@ -72,4 +72,22 @@ export default defineComponent({
 .continue-link {
   text-decoration: none;
 }
+
+
+@media (max-width: 576px) {
+    .celebration-image {
+        width: 50%;
+    }
+    .module-name {
+      font-size: 32px;
+    }
+
+    .congrats-text {
+      font-size: 18px;
+    }
+
+    .module-complete-button {
+      font-size: 14px;
+    }
+}
 </style>
