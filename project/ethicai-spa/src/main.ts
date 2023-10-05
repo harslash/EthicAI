@@ -19,6 +19,11 @@ const app = createApp(App).use(router);
 app.use(PrimeVue);
 app.use(router)
 
+//global methods
+import { registerPageAsCompleted } from './helpers';
+
+app.config.globalProperties.$registerPageAsCompleted = registerPageAsCompleted;
+
 //Vue components
 import Button from "primevue/button"
 import Slider from 'primevue/slider';
