@@ -21,10 +21,10 @@
               >
                 <div class="list-item" @click="handleListItemClick(index)">
                   <span
-                    :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
+                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
                   >{{ item }}</span>
                   <i
-                    v-if="index < 2"
+                    v-if="isPageVisted(index)"
                     class="fas fa-check-circle"
                     :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
                   ></i>
@@ -51,7 +51,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'ModuleOverview',
@@ -63,6 +63,11 @@ export default defineComponent({
     modulePageRoutes: Array as () => string[],
     moduleName: String,
     pageName: String,
+  },
+  data () {
+    return {
+      modulePageStates: [false]
+    }
   },
   methods: {
     continueClicked() {
@@ -79,8 +84,50 @@ export default defineComponent({
           const pageName = this.modulePageRoutes[index]
           this.$router.push({ name: pageName });
       }
+    },
+    isPageVisted(index: number): boolean {
+      return this.modulePageStates[index];
+    },
+    setModulePageStates() {
+      if (this.modulePageRoutes) {
+        const cookieValue = document.cookie
+          .split('; ')
+          .find((row) => row.startsWith(`${this.moduleName}ModuleState=`));
+
+        if (cookieValue) {
+          const storedArrayString = cookieValue.split('=')[1];
+          const storedArray: object[] = JSON.parse(storedArrayString);
+
+          //set the pages states accordingly
+          storedArray.forEach((pageState, index) => {
+            const pageStateKey = Object.keys(pageState)[0];
+            const pageStateValue = Object.values(pageState)[0]
+            this.modulePageStates[index] = pageStateValue
+          })
+        } else {
+          //initialise all pages to be unvisted from the start
+          this.modulePageStates = Array.from({ length: this.modulePageRoutes.length }, () => false);
+
+          const moduleState: object[] = [];
+
+          this.modulePageRoutes.forEach(route => {
+            const stateObject: { [key: string]: boolean } = {};
+            stateObject[route] = false;
+            moduleState.push(stateObject);
+          })
+
+          const moduleStateString = JSON.stringify(moduleState);
+
+          const expires = new Date();
+          expires.setTime(expires.getTime() + 7 * 24 * 60 * 60 * 1000); // Cookie will expire in 7 days
+          document.cookie = `${this.moduleName}ModuleState=${moduleStateString};expires=${expires.toUTCString()};path=/`;
+        }
+      }
     }
   },
+   mounted() {
+    this.setModulePageStates();
+  }
 });
 </script>
 
