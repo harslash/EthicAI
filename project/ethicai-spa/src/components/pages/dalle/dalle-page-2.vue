@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <div class="row h-30">
+            <div id="firstTry" class="row h-30">
                 <!-- quiz, has its own 'section' for each question -->
 
                 <!-- First question -->
@@ -66,7 +66,7 @@
                                 <div class="col-md-6 mb-3">
                                     <div class="card" :class="firstQuestionShowCorrect? 'purp': 'non-purp-grey'" @click="onFirstCorrectClick(); showSecondQuestion = true; scrollIntoSecondQuestion()" role="link">
                                         <div class="card-body">
-                                            <img class="img-b" src="../../../assets//real_image_1.jpg" alt="Dog with birds" style="display: inline-block; border-radius: 5px;"/>
+                                            <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                         </div>
                                     </div>
 
@@ -75,14 +75,14 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <div class="card" :class="firstQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onFirstIncorrectClick(); showSecondQuestion = true; scrollIntoSecondQuestion()" role="link">
+                                    <div class="card" :class="firstQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onFirstIncorrectClick(); showSecondQuestion = true;" role="link">
                                         <div class="card-body">
-                                            <img class="img-b" src="../../../assets//fake_image_1.png" alt="Dog with birds" style="display: inline-block;  border-radius: 5px;"/>
+                                            <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image" style="display: inline-block;  border-radius: 5px;"/>
                                         </div>
                                     </div>
 
                                     <div class="incorrect" :class="{ 'hidden': !firstQuestionShowIncorrect}">
-                                        <p style="display: block;"> <span style="color: #707070;"> Incorrect! </span> <br> This was created by a machine, not a person.</p>
+                                        <p style="display: block;"> <span style="color: #707070;"> Oops, you have misidentified this as human made! </span> <br> {{teachableMsg1}} </p>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                             <div class="col-md-6 mb-3">
                                 <div class="card" :class="secondQuestionShowCorrect? 'purp': 'non-purp-grey'" @click="onSecondCorrectClick(); showThirdQuestion = true; scrollIntoThirdQuestion()" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//real_image_2.jpg" alt="Lithographic image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
@@ -108,14 +108,14 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <div class="card" :class="secondQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onSecondIncorrectClick(); showThirdQuestion = true; scrollIntoThirdQuestion()" role="link">
+                                <div class="card" :class="secondQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onSecondIncorrectClick(); showThirdQuestion = true;" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//fake_image_2.png" alt="Lithographic image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
                                 <div class="incorrect" :class="{ 'hidden': !secondQuestionShowIncorrect}">
-                                    <p style="display: block;"> <span style="color: #707070;"> Incorrect! </span> <br> This was created by a machine, not a person.</p>
+                                    <p style="display: block;"> <span style="color: #707070;"> Oops, you have misidentified this as human made! </span> <br> {{teachableMsg2}} </p>
                                 </div>
                             </div>
                         </div>
@@ -129,20 +129,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <div class="card" :class="thirdQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onThirdIncorrectClick(); showFourthQuestion = true; scrollIntoFourthQuestion()" role="link">
+                                <div class="card" :class="thirdQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onThirdIncorrectClick(); showFourthQuestion = true;" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//fake_image_3.png" alt="Nature image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
                                 <div class="incorrect" :class="{ 'hidden': !thirdQuestionShowIncorrect}">
-                                    <p style="display: block;"> <span style="color: #707070;"> Incorrect! </span> <br> This was created by a machine, not a person.</p>
+                                    <p style="display: block;"> <span style="color: #707070;"> Oops, you have misidentified this as human made! </span> <br> {{teachableMsg3}} </p>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="card" :class="thirdQuestionShowCorrect? 'purp': 'non-purp-grey'" @click="onThirdCorrectClick(); showFourthQuestion = true; scrollIntoFourthQuestion()" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//real_image_3.jpg" alt="Nature image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
@@ -161,20 +161,20 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <div class="card" :class="fourthQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onFourthIncorrectClick(); showFifthQuestion = true; scrollIntoFifthQuestion()" role="link">
+                                <div class="card" :class="fourthQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onFourthIncorrectClick(); showFifthQuestion = true;" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//fake_image_4.png" alt="Print of people" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
                                 <div class="incorrect" :class="{ 'hidden': !fourthQuestionShowIncorrect}">
-                                    <p style="display: block;"> <span style="color: #707070;"> Incorrect! </span> <br> This was created by a machine, not a person.</p>
+                                    <p style="display: block;"> <span style="color: #707070;"> Oops, you have misidentified this as human made! </span> <br> {{teachableMsg4}} </p>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <div class="card" :class="fourthQuestionShowCorrect? 'purp': 'non-purp-grey'" @click="onFourthCorrectClick(); showFifthQuestion = true; scrollIntoFifthQuestion()" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//real_image_4.jpg" alt="Dog with birds" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
@@ -196,7 +196,7 @@
                             <div class="col-md-6 mb-3">
                                 <div class="card" :class="fifthQuestionShowCorrect? 'purp': 'non-purp-grey'" @click="onFifthCorrectClick(); showContinue = true; scrollIntoContinue()" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//real_image_5.jpg" alt="Surrealist image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
@@ -207,12 +207,12 @@
                             <div class="col-md-6 mb-3">
                                 <div class="card" :class="fifthQuestionShowIncorrect? 'grey': 'non-purp-grey'" @click="onFifthIncorrectClick(); showContinue = true; scrollIntoContinue()" role="link">
                                     <div class="card-body">
-                                        <img class="img-b" src="../../../assets//fake_image_5.png" alt="Surrealist image" style="display: inline-block; border-radius: 5px;"/>
+                                        <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image" style="display: inline-block; border-radius: 5px;"/>
                                     </div>
                                 </div>
 
                                 <div class="incorrect" :class="{ 'hidden': !fifthQuestionShowIncorrect}">
-                                    <p style="display: block;"> <span style="color: #707070;"> Incorrect! </span> <br> This was created by a machine, not a person.</p>
+                                    <p style="display: block;"> <span style="color: #707070;"> Oops, you have misidentified this as human made! </span> <br> {{teachableMsg5}} </p>
                                 </div>
                             </div>
                         </div>
@@ -222,14 +222,25 @@
                     <div class="col-md-12 score-container">
                     <span class="purple-text"><p><em><u>You scored: {{ score }} / 5 correctly! Great work</u></em></p></span>
                     </div>
-
+                    
                 </div>
 
             </div>
+
+            <div class="row h-20">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <purple-btn
+                                v-if="quizCompleted && !section2Completed && !redoQuiz"
+                                :text="'Retry'"
+                                @click="showFirstQuestion = true; redo();"
+                                />
+                    </div>
+                </div>            
+
             <div class="row h-20">
                         <div class="col-md-12 d-flex justify-content-end">
                             <purple-btn
-                                v-if="!section2Completed"
+                                v-if="quizCompleted && !section2Completed"
                                 :text="'Continue'"
                                 @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"
                                 />
@@ -279,7 +290,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, toHandlers } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
@@ -299,7 +310,23 @@ export default defineComponent({
       showThirdQuestion: false,
       showFourthQuestion: false,
       showFifthQuestion: false,
+      showSixthQuestion: false,
       showContinue: false,
+      realimg1FileName: 'real_image_1.jpg',
+      realimg2FileName: 'real_image_2.jpg',
+      realimg3FileName: 'real_image_3.jpg',
+      realimg4FileName: 'real_image_4.jpg',
+      realimg5FileName: 'real_image_5.jpg',
+      fakeimg1FileName: 'fake_image_1.png',
+      fakeimg2FileName: 'fake_image_2.png',
+      fakeimg3FileName: 'fake_image_3.png',
+      fakeimg4FileName: 'fake_image_4.png',
+      fakeimg5FileName: 'fake_image_5.png',
+      teachableMsg1: "The key tell here is the fuzzy almost dreamy aspect of the artwork with the bird near the ground on the right being misshapen.",
+      teachableMsg2: "The key tell here is the glow around the cactus which doesn't align with natural light. This artwork also has very soft features which is consistent with AI generated work. The human-made image also has text at the top and bottom, which current AI tends to mess up.",
+      teachableMsg3: "The key tell here is the dreamy aspect to the artwork, with soft edges, which is consistent with AI.",
+      teachableMsg4: "The key tell here is that AI struggles to create many people with detailed features so the act of silhouetting the fishermen helps to hide this.",
+      teachableMsg5: "The key tell here is that AI struggles to create hands and fingers as for a majority of art, hands aren’t the main focus.",
 
       firstQuestionShowCorrect: false,
       firstQuestionShowIncorrect: false,
@@ -326,6 +353,7 @@ export default defineComponent({
       section2Completed: false,
       section3Completed: false,
       quizCompleted: false,
+      redoQuiz: false,
     };
   },
     methods: {
@@ -382,6 +410,79 @@ export default defineComponent({
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
             });
+        },
+        redo()
+        {
+            this.showSecondQuestion = false,
+            this.showThirdQuestion = false,
+            this.showFourthQuestion = false,
+            this.showFifthQuestion = false,
+            this.showContinue = false,
+
+            // Reset score
+            this.score = 0, 
+            this.correctAnswers = 0;
+            this.wrongAnswers = 0;
+            this.scoreVisible = false;
+            this.showContinue = false;
+            this.quizCompleted = false;
+            this.redoQuiz = true;
+
+            // Resetting all pointer events
+            const firstElement = this.$refs.firstQuestion as HTMLElement;
+            firstElement.style.pointerEvents="auto";
+            const secondElement = this.$refs.secondQuestion as HTMLElement;
+            secondElement.style.pointerEvents="auto";
+            const thirdElement = this.$refs.thirdQuestion as HTMLElement;
+            thirdElement.style.pointerEvents="auto";
+            const fourthElement = this.$refs.fourthQuestion as HTMLElement;
+            fourthElement.style.pointerEvents="auto";
+            const fifthElement = this.$refs.fifthQuestion as HTMLElement;
+            fifthElement.style.pointerEvents="auto";
+
+            // Resetting questions
+            this.firstQuestionShowCorrect = false,
+            this.firstQuestionShowIncorrect = false,
+            this.secondQuestionShowCorrect = false,
+            this.secondQuestionShowIncorrect = false,
+            this.thirdQuestionShowCorrect = false,
+            this.thirdQuestionShowIncorrect = false,
+            this.fourthQuestionShowCorrect = false,
+            this.fourthQuestionShowIncorrect = false,
+            this.fifthQuestionShowCorrect = false,
+            this.fifthQuestionShowIncorrect = false,
+
+            // Changing images
+            this.realimg1FileName = 'real_image_6.jpg';
+            this.realimg2FileName = 'real_image_7.jpeg';
+            this.realimg3FileName = 'real_image_8.jpg';
+            this.realimg4FileName = 'real_image_9.jpg';
+            this.realimg5FileName = 'real_image_10.jpg';
+            this.fakeimg1FileName = 'fake_image_6.png';
+            this.fakeimg2FileName = 'fake_image_7.png';
+            this.fakeimg3FileName = 'fake_image_8.png';
+            this.fakeimg4FileName = 'fake_image_9.png';
+            this.fakeimg5FileName = 'fake_image_10.png';
+
+            // Changing teachable message
+            this.teachableMsg1 = "The key tell here is the misdrawn face, which, if you see closely, has some noticeable asymmetrical and enlarged features – such as the right side of the face, where the eye appears bigger.";
+            this.teachableMsg2 = "The key tell here is the dreamy aspect to the artwork, with soft edges, which is consistent with AI.";
+            this.teachableMsg3 = "The key tell here is the dreamy aspect to the artwork, with soft edges – the background is also blurry and indistinct, which is consistent with AI.";
+            this.teachableMsg4 = "The key tell here is that AI struggles to create hands and fingers as for a majority of art, hands aren’t the main focus.";
+            this.teachableMsg5 = "The key tell here is the blurred aspect to the artwork, with soft edges, which is consistent with AI.";
+
+            this.$nextTick(() => {
+                const element = this.$refs.firstQuestion as HTMLElement;
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
+                }
+            });
+            // this.$nextTick(() => {
+            //     const element = this.$refs.firstQuestion as HTMLElement;
+            //     if (element) {
+            //         element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+            //     }
+            // });
         },
         scrollIntoContinue()
         {
