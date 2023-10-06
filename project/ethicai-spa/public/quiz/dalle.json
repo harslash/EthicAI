@@ -1,86 +1,57 @@
 {
     "results": [
         {
-            "question": "What's the best way to verify if a ChatGPT \"fact\" is a hallucination?",
-            "correct_answer": "Compare with credible sources",
+            "question": "Why do AI image generators pose risks to human artists?",
+            "correct_answer": "All are correct.",
             "incorrect_answers": [
-                "Ask ChatGPT again to confirm",
-                "Google it",
-                "Feel the vibes"
+                "As artwork off the internet can be used in their training sets, stealing the artists work/style.",
+                "People think artwork produced by robots is cooler.",
+                "AI can produce artwork cheaper and more efficiently than people."
             ]
         },
         {
-            "question": "Which of these was the first chatbot?",
-            "correct_answer": "ELIZA",
+            "question": "How do AI image generators produce images?",
+            "correct_answer": "They have a database of artwork which they learn from, so they can respond to user prompts.",
             "incorrect_answers": [
-                "ChatGPT",
-                "Siri"
+                "With little robot hands and an easel.",
+                "By asking human artists to draw them and then digitising these drawings into digital images.",
+                "By selecting pre-made templates and filling them with random colours and shapes."
             ]
         },
         {
-            "question": "Where do Large Language Models <em>NOT</em> get their information?",
-            "correct_answer": "Public cameras connected to the internet",
+            "question": "What are the overall benefits of AI image generators?",
+            "correct_answer": "They are efficient and cost effective.",
             "incorrect_answers": [
-                "The internet",
-                "User interactions with them",
-                "Digitised books"
+                "They can predict the future by creating images of events that haven't happened yet.",
+                "They generally don’t require human input, so are fully automated.",
+                "They only create positive images, so help battle depression."
             ]
         },
         {
-            "question": "Compared to ChatGPT, Markov chains...",
-            "correct_answer": "...work with less training data",
+            "question": "Which of these is NOT a way to identify AI-generated images?",
+            "correct_answer": "Simply look for a tiny AI robot emoji hidden somewhere in the image.",
             "incorrect_answers": [
-                "...take longer to train",
-                "...understand more of the 'structure' of their prompt",
-                "...expend more energy to run"
+                "Take a closer look at the people as there may be inconsistencies e.g. 6 fingers.",
+                "Inconsistent light sources, shadows aren’t where they should be.",
+                "Some features are fuzzy, and lack sharpness, leading to a dreamy feeling."
             ]
         },
         {
-            "question": "Which of these is a problem with Large Language Models?",
-            "correct_answer": "Their output can contain harmful biases",
+            "question": "Who owns an image that an AI art generator creates?",
+            "correct_answer": "It is unclear, as this is a complex legal issue.",
             "incorrect_answers": [
-                "They can only complete logical/mathematical tasks",
-                "They can only process input that's in a specific format"
+                "The user who inputted the prompt.",
+                "The creator of the art generator.",
+                "The artist(s) whose work is in the generator’s training set."
             ]
         },
         {
-            "question": "Why does ChatGPT produce biased outputs?",
-            "correct_answer": "It was trained on biased text from the internet",
+            "question": "How do you avoid plagiarism issues when using someone’s work?",
+            "correct_answer": "All are correct.",
             "incorrect_answers": [
-                "It reflects the bias in the questions humans prompt it with"
-            ]
-        },
-        {
-            "question": "When is it acceptable to use ChatGPT for academic work?",
-            "correct_answer": "To brainstorm ideas, but not provide facts",
-            "incorrect_answers": [
-                "Never",
-                "To provide facts, but not to brainstorm ideas",
-                "To write sections of text, as long as you cite ChatGPT"
-            ]
-        },
-        {
-            "question": "Which prompt is most likely to lead to hallucinations from ChatGPT?",
-            "correct_answer": "\"When was the Kate Edger Information Commons opened?\"",
-            "incorrect_answers": [
-                "\"Write me a sonnet about frogs.\""
-            ]
-        },
-        {
-            "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",
-            "correct_answer": "Repeating the prompt multiple times",
-            "incorrect_answers": [
-                "Giving a clear task",
-                "Adding examples",
-                "Defining a role for the AI tool to fill"
-            ]
-        },
-        {
-            "question": "Which of these is <em>NOT</em> a Large Language Model?",
-            "correct_answer": "Apple's Siri",
-            "incorrect_answers": [
-                "Google's Bard",
-                "OpenAI's ChatGPT"
+                "Check how to credit them and do so accordingly.",
+                "Only use ideas/ snippets of others' work rather than the whole thing.",
+                "Consult the creator if it isn’t clear how to credit them."
             ]
         }
     ]

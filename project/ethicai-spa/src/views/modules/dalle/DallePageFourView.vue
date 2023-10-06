@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import DallePageFour from '../../../components/pages/dalle/dalle-module-complete.vue';
+import DallePageFour from '../../../components/pages/dalle/dalle-page-4.vue';
 export default {
     name: 'DallePageFourView',
     components: {

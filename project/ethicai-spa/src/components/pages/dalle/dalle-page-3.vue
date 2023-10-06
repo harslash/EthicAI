@@ -190,7 +190,7 @@
         <router-link to="/dalle/ai-generated-vs-human-art">
             <purple-btn-outline :text="'Back'"></purple-btn-outline>
         </router-link>
-        <router-link to="/dalle/module-complete">
+        <router-link to="/dalle/quiz">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
         </router-link>
         </div>

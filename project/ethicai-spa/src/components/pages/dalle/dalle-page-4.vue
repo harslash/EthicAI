@@ -3,7 +3,7 @@
     <div class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
-                <quiz-container category="dalle"></quiz-container>
+                <quiz-container category="dalle" module_name="The Rise of Dalle"></quiz-container>
             </div>
         </div>
     </div>
