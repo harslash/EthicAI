@@ -58,12 +58,12 @@ async function nextQuestion() {
       class="tw-text-3xl tw-transition-colors tw-duration-150 tw-select-none" v-html="props.question.question" />
     <div class="tw-mt-10 tw-flex tw-justify-between tw-items-center">
       <div v-for="answer in answers" :key="answer.value" :style="{ backgroundColor: color }" @click="solve(answer)"
-        :class="{ 'hover-scale tw-cursor-pointer': !resultVisible }"
-        class="tw-rounded-xl tw-min-h-[150px] tw-w-full tw-mx-3 tw-p-3 tw-transition-all tw-duration-150 tw-text-white tw-flex tw-justify-around tw-items-center">
-        <p :class="answer.value.length > 16 ? 'tw-text-md' : 'tw-text-3xl tw-text-center'" v-html="answer.value" />
-        <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct1' : 'wrong1'}.png`"
-          :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
-      </div>
+      :class="{ 'hover-scale tw-cursor-pointer': !resultVisible }"
+      class="tw-rounded-xl tw-min-h-[150px] tw-w-full tw-mx-3 tw-p-3 tw-transition-all tw-duration-150 tw-text-white tw-flex tw-justify-around tw-items-center">
+      <p :class="answer.value.length > 16 ? 'tw-text-md' : 'tw-text-3xl tw-text-center' + (answer.value.length > 16 ? ' tw-max-w-[150px]' : '')" v-html="answer.value" />
+      <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct1' : 'wrong1'}.svg`"
+        :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
+    </div>
     </div>
     <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
       <p class="explanation-text"> {{ props.question.explanation }}</p>
