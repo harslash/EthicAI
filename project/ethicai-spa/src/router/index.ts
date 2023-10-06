@@ -60,7 +60,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/chatbots/quiz',
-    name: 'quiz',
+    name: 'chatbot-quiz',
      component: () => import('../views/modules/chatbots/ChatbotsPageFiveView.vue')
   },
   {
@@ -87,7 +87,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/modules/dalle/DallePageThreeView.vue'),
   },
   {
-    name:'quiz',
+    name:'dalle-quiz',
     path: '/dalle/quiz',
     component: () => import('../views/modules/dalle/DallePageFourView.vue'),
   },

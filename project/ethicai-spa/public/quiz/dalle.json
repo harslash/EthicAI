@@ -7,7 +7,8 @@
                 "As artwork off the internet can be used in their training sets, stealing the artists work/style.",
                 "People think artwork produced by robots is cooler.",
                 "AI can produce artwork cheaper and more efficiently than people."
-            ]
+            ],
+            "explanation":"The training process can result in plagiarism of artists work \n AI-generated art's novelty can create competition \n AI's efficiency makes its art more affordable, leading to unfair competition for human artists"
         },
         {
             "question": "How do AI image generators produce images?",
@@ -16,7 +17,8 @@
                 "With little robot hands and an easel.",
                 "By asking human artists to draw them and then digitising these drawings into digital images.",
                 "By selecting pre-made templates and filling them with random colours and shapes."
-            ]
+            ],
+            "explanation": "AI image generators need a large dataset for training purposes and they base their work off this information."
         },
         {
             "question": "What are the overall benefits of AI image generators?",
@@ -25,7 +27,8 @@
                 "They can predict the future by creating images of events that haven't happened yet.",
                 "They generally don’t require human input, so are fully automated.",
                 "They only create positive images, so help battle depression."
-            ]
+            ],
+            "explanation": "AI image generators are fast, taking seconds for simple requests and a few minutes for complex ones. They're cost-effective because tokens are much cheaper than the price of human-made artwork, due to reduced labour time."
         },
         {
             "question": "Which of these is NOT a way to identify AI-generated images?",
@@ -34,7 +37,8 @@
                 "Take a closer look at the people as there may be inconsistencies e.g. 6 fingers.",
                 "Inconsistent light sources, shadows aren’t where they should be.",
                 "Some features are fuzzy, and lack sharpness, leading to a dreamy feeling."
-            ]
+            ],
+            "explanation": "All methods except searching for a robot emoji, offer practical and realistic ways to identify AI-generated images."
         },
         {
             "question": "Who owns an image that an AI art generator creates?",
@@ -43,7 +47,8 @@
                 "The user who inputted the prompt.",
                 "The creator of the art generator.",
                 "The artist(s) whose work is in the generator’s training set."
-            ]
+            ],
+            "explanation": "The ownership of an image created by an AI art generator is not yet established in many jurisdictions. Copyright laws and intellectual property rights are still evolving in response to the use of AI in creative processes."
         },
         {
             "question": "How do you avoid plagiarism issues when using someone’s work?",
@@ -52,7 +57,8 @@
                 "Check how to credit them and do so accordingly.",
                 "Only use ideas/ snippets of others' work rather than the whole thing.",
                 "Consult the creator if it isn’t clear how to credit them."
-            ]
+            ],
+            "explanation": " These are all great ways to avoid plagiarism issues."
         }
     ]
 }

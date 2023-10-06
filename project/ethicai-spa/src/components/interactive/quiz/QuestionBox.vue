@@ -50,6 +50,16 @@ async function solve(answer) {
 async function nextQuestion() {
   emit('result', currentResult)
 }
+
+function parsedExplanation(explanation) {
+  if (explanation) {
+    // Replace \n with <br> only if \n exists in the text
+    return explanation.includes("\n")
+      ? explanation.replace(/\n/g, '<br>')
+      : explanation;
+  }
+  return '';
+}
 </script>
 
 <template>
@@ -66,7 +76,7 @@ async function nextQuestion() {
     </div>
     </div>
     <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
-      <p class="explanation-text"> {{ props.question.explanation }}</p>
+      <p class="explanation-text" v-html="parsedExplanation(props.question.explanation)"></p>
     </div>
     <div v-if="resultVisible" class="tw-text-center">
       <div @click="resultVisible = false; nextQuestion();" :style="{ backgroundColor: '#6D0CFF' }"
