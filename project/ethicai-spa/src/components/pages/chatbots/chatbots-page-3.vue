@@ -39,14 +39,14 @@
                             </div>
                         </div>
                         <div class="col-md-12 d-flex justify-content-center pb-5">
-                            <chatgpt-ui-card 
+                            <chatgpt-ui-card
                                 :questionText="questionText"
                                 :answerText="answerText"
                                 ></chatgpt-ui-card>
                         </div>
                         <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                                 <div class="section-text">
-                                In fact, all months have four Tuesdays. However, with reasoning that seems convincing, ChatGPT could fool trusting users into accepting false information. As a user of the chatbot, you are responsible for confirming the accuracy of ChatGPT's responses. This is especially important when dealing with information on sensitive topics such as legal knowledge, medical treatments and industry compliance requirements. If users unquestioningly trust information from ChatGPT in those areas, there may be severe real-world consequences. 
+                                In fact, all months have four Tuesdays. However, with reasoning that seems convincing, ChatGPT could fool trusting users into accepting false information. As a user of the chatbot, you are responsible for confirming the accuracy of ChatGPT's responses. This is especially important when dealing with information on sensitive topics such as legal knowledge, medical treatments and industry compliance requirements. If users unquestioningly trust information from ChatGPT in those areas, there may be severe real-world consequences.
                                 </div>
                         </div>
                     <div class="row h-20">
@@ -79,7 +79,7 @@
             <div class="row">
                  <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <div class="section-text">
-                        <b>Lesson of the day:</b> Don’t ask ChatGPT for directions in a new city.
+                        <b>Lesson of the day:</b> Don’t ask ChatGPT to do your maths homework.
                     </div>
                 </div>
             <div class="row h-20 pb-5">
