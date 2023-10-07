@@ -14,7 +14,7 @@
                                 These new AI chatbots may be impressive, but their use can lead to many problems. The users like yourself need to understand how they function and their implications.
                             </p>
                             <p class="section-text">
-                                The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and spitting out strings of words that it predicts will be the best response based on the data used to train it (<router-link :to="{ name: 'references' }">Guinness, 2023</router-link>) .
+                                The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and spitting out strings of words that it predicts will be the best response based on the data used to train it (<router-link :to="{ name: 'references' }">Guinness, 2023</router-link>).
                             </p>
                         </div>
                     </div>
