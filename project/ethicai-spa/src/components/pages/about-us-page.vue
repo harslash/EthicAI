@@ -4,9 +4,11 @@
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
                     <h1 class="mt-5 heading">About Us</h1>
+
+                    The EthicAI team is a quintet of passionate, competent computer science students in our final year of study at the University of Auckland. We want to see artificial intelligence used responsibly, so we created the EthicAI website to make engaging educational material accessible for all university students to learn about AI. Our site was made in 2023 for the Computer Science 399 course with the support of Danielle Lottridge and Thomas Lacombe, who provided valuable feedback and guidance.
                 </div>
         </div>
-     
+
     </div>
     <page-footer/>
 </template>
