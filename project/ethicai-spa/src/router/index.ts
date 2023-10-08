@@ -95,10 +95,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/dalle/module-complete',
     component: () => import('../views/modules/dalle/DallePageFiveView.vue'),
   },
-  {
-    path: '/quiz-ui',
-    component: () => import('../components/reusable/quiz-ui.vue'),
-  },
 ]
 
 const router = createRouter({
