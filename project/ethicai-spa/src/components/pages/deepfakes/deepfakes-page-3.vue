@@ -7,6 +7,14 @@
                     <h1 class="mt-5">Real or Not Real?</h1>
                 </div>
             </div>
+            <div class="col-md-12 d-flex justify-content-between">
+                <router-link to="/deepfakes/ai-for-evil">
+                    <purple-btn-outline :text="'Back'"></purple-btn-outline>
+                </router-link>
+                <router-link to="/deepfakes/deepfakes-in-media">
+                    <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+                </router-link>
+            </div>
         </div>
     </div>
 </template>
@@ -14,8 +22,8 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
-// import PurpleBtn from '../../reusable-ui/purple-btn.vue';
-// import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
+import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 
 export default defineComponent({
     name: 'DeepfakesPage3',
@@ -25,13 +33,13 @@ export default defineComponent({
     },
     methods: {
         handlePageCompletionClick(this: any) {
-            this.$registerPageAsCompleted('deepfakes', 'the-real-or-not-real');
+            this.$registerPageAsCompleted('deepfakes', 'real-or-not-real');
         }
     },
     components: {
         'nav-bar': NavBar,
-        // 'purple-btn': PurpleBtn,
-        // 'purple-btn-outline': PurpleBtnOutline,
+        'purple-btn': PurpleBtn,
+        'purple-btn-outline': PurpleBtnOutline,
     }
 });
 </script>
