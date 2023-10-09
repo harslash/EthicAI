@@ -146,6 +146,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import("../views/modules/deepfakes/DeepfakesPageSixView.vue"),
   },
+  {
+    path: "/deepfakes/module-complete",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageSevenView.vue"),
+  },
 ];
 
 const router = createRouter({
