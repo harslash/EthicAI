@@ -9,7 +9,7 @@ const props = defineProps({
   result: {
     type: Object,
     required: true
-  }
+  },
 })
 
 </script>
@@ -22,9 +22,8 @@ const props = defineProps({
         <b>{{ props.result.score }}/{{ props.result.numQuestions }}</b>
         questions correctly!
       </p>
-      <!-- TODO: implement this with props later to change text and image(?) -->
       <div class="tw-flex tw-justify-center tw-items-center tw-mt-20">
-        <router-link class="tw-no-underline" to="/chatbots/module-complete">
+        <router-link class="tw-no-underline" :to="`/${category}/module-complete`">
           <div :style="{ backgroundColor: '#6D0CFF' }"
             class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
             <p class="tw-text-xl tw-text-center tw-text-white">Continue</p>
