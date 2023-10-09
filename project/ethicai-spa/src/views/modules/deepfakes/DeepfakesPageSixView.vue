@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import DeepfakesPageSix from '../../../components/pages/deepfakes/deepfakes-page-3.vue';
+import DeepfakesPageSix from '../../../components/pages/deepfakes/deepfakes-page-6.vue';
 export default {
     name: 'DeepfakesPageSixView',
     components: {
