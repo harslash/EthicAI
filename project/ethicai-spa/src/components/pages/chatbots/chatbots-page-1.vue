@@ -1,7 +1,7 @@
 <template>
-  <nav-bar/>
+  <nav-bar />
   <div class="container-fluid page-container text-center">
-    <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection}">
+    <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h1 class="mt-5">The Age of Chatbots</h1>
@@ -11,18 +11,29 @@
         <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
-            Let's delve into the past when chatbots were in their infancy. These early computer programs had a modest ambition: to simulate human intelligence by offering pre-scripted responses to questions. In the year 1966, a notable chatbot named ELIZA was born. ELIZA's unique approach involved reusing the user's input in a set of predefined phrases. Surprisingly, this basic system often left users believing they were engaged in a genuine human conversation. 
+              Let's delve into the past when chatbots were in their infancy. These early computer programs had a modest
+              ambition: to simulate human intelligence by offering pre-scripted responses to questions. In the year 1966,
+              a notable chatbot named ELIZA was born. ELIZA's unique approach involved reusing the user's input in a set
+              of predefined phrases. Surprisingly, this basic system often left users believing they were engaged in a
+              genuine human conversation.
             </p>
 
             <p class="section-text">
-           Fast forward to 2011, and Apple introduced Siri, a voice assistant that pushed the boundaries of chatbot capabilities. Siri's advanced features marked a significant turning point. Since then, chatbots have gained widespread popularity due to their user-friendly interface, simplifying interactions with computers         (<router-link :to="{ name: 'references' }">Ina, 2023</router-link>). Today, chatbots find utility across a spectrum of tasks, from customer service to assisting with everyday activities and language practice, among other applications.
+              Fast forward to 2011, and Apple introduced Siri, a voice assistant that pushed the boundaries of chatbot
+              capabilities. Siri's advanced features marked a significant turning point. Since then, chatbots have gained
+              widespread popularity due to their user-friendly interface, simplifying interactions with computers
+              (<router-link :to="{ name: 'references' }">Ina, 2023</router-link>). Today, chatbots find utility across a
+              spectrum of tasks, from customer service to assisting with everyday activities and language practice, among
+              other applications.
             </p>
           </div>
         </div>
 
         <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
-          <a title="File:ELIZA conversation.jpg, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">
-            <img width="400" alt="ELIZA conversation" src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
+          <a title="File:ELIZA conversation.jpg, Public domain, via Wikimedia Commons"
+            href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">
+            <img width="400" alt="ELIZA conversation"
+              src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
         </div>
       </div>
       <div class="row h-30 mb-3">
@@ -32,88 +43,91 @@
         <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text">
-              The world of chatbots has witnessed a remarkable evolution with the advent of Large Language Models (LLMs). These sophisticated systems have become a game-changer, as they can handle a wide range of text-based tasks. Imagine tasks like summarizing, translating, and generating content with the help of information gathered from vast datasets of online text. One LLM-based chatbot that might ring a bell is ChatGPT. It's a chatbot that can chat with you in a way that feels remarkably human.             
+              The world of chatbots has witnessed a remarkable evolution with the advent of Large Language Models (LLMs).
+              These sophisticated systems have become a game-changer, as they can handle a wide range of text-based tasks.
+              Imagine tasks like summarizing, translating, and generating content with the help of information gathered
+              from vast datasets of online text. One LLM-based chatbot that might ring a bell is ChatGPT. It's a chatbot
+              that can chat with you in a way that feels remarkably human.
             </p>
             <p class="section-text">
-             Since the rise of LLMs, chatbots like ChatGPT and Google Bard have truly captured the spotlight. These chatbots appear to have an uncanny knowledge of the world and, best of all, they're readily available to anyone with an internet connection. Thanks to this accessibility, ChatGPT has become a go-to tool for answering questions, lending a hand with writing tasks, creating content, and much more.
+              Since the rise of LLMs, chatbots like ChatGPT and Google Bard have truly captured the spotlight. These
+              chatbots appear to have an uncanny knowledge of the world and, best of all, they're readily available to
+              anyone with an internet connection. Thanks to this accessibility, ChatGPT has become a go-to tool for
+              answering questions, lending a hand with writing tasks, creating content, and much more.
             </p>
-          </div>  
+          </div>
         </div>
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn
-                v-if="!section1Completed"
-                :text="'Continue'"
-                @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;"
-                />
+          <purple-btn v-if="!section1Completed" :text="'Continue'"
+            @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
         </div>
       </div>
     </div>
-    <div            
-      ref="secondSection"
-      class="section-two 
+    <div ref="secondSection" class="section-two 
       container mb-5 
-      text-section" 
-      :class="{ 'hidden': !showSecondSection }"
-    >
-    <div class="row">
+      text-section" :class="{ 'hidden': !showSecondSection }">
+      <div class="row">
         <div class="col-md-12">
           <div class="d-flex justify-content-center">
             <p class="section-text">
-                Here's a glimpse into ChatGPT's inner workings. ChatGPT undergoes comprehensive training by drawing data from diverse sources on the internet, including Wikipedia, books, news articles, and scientific journals. After this immersive learning process, ChatGPT is primed for interaction. As showcased in our flowchart, you initiate interaction by sending ChatGPT a prompt or question. ChatGPT, armed with the knowledge it has acquired during training, then crafts a tailored response, promptly delivering it back to you, the user.
-              </p>
+              Here's a glimpse into ChatGPT's inner workings. ChatGPT undergoes comprehensive training by drawing data
+              from diverse sources on the internet, including Wikipedia, books, news articles, and scientific journals.
+              After this immersive learning process, ChatGPT is primed for interaction. As showcased in our flowchart, you
+              initiate interaction by sending ChatGPT a prompt or question. ChatGPT, armed with the knowledge it has
+              acquired during training, then crafts a tailored response, promptly delivering it back to you, the user.
+            </p>
           </div>
-       </div>
-       <div class="col-md-12">
-          <img src="../../../assets//chatbots_page_1_a.png" class="img-a" alt="flowchat diagram explaing the interaction between a user and ChatGPT"/>
-       </div>
-    </div>
+        </div>
+        <div class="col-md-12">
+          <img src="../../../assets//chatbots_page_1_a.png" class="img-a"
+            alt="flowchat diagram explaing the interaction between a user and ChatGPT" />
+        </div>
+      </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn
-                v-if="section1Completed && !section2Completed"
-                :text="'Continue'"
-                @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;"
-                />
+          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
+            @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
         </div>
       </div>
     </div>
-    <div 
-        ref="thirdSection"
-        class="section-three container text-section pb-5" 
-        :class="{ 'hidden': !showThirdSection }">
-        <div class="row h-40">
-          <div class="col-md-12 pb-2">
-            <div class="d-flex align-items-center flex-column">
-              <h5>Engage with ChatGPT</h5>
-              <p class="section-text">Welcome to our ChatGPT interaction feature. You can interact in two ways:</p>
-              <p class="section-text px-3">1. Your Questions: Enter your own questions or prompts in the text box and receive responses from ChatGPT.</p>
-              <p class="section-text px-3">2. Pre-Generated Prompts: Choose from a selection of pre-made prompts to start a conversation.</p>
+    <div ref="thirdSection" class="section-three container text-section pb-5" :class="{ 'hidden': !showThirdSection }">
+      <div class="row h-40">
+        <div class="col-md-12 pb-2">
+          <div class="d-flex align-items-center flex-column">
+            <h5>Engage with ChatGPT</h5>
+            <p class="section-text">Welcome to our ChatGPT interaction feature. You can interact in two ways:</p>
+            <p class="section-text px-3">1. Your Questions: Enter your own questions or prompts in the text box and
+              receive responses from ChatGPT.</p>
+            <p class="section-text px-3">2. Pre-Generated Prompts: Choose from a selection of pre-made prompts to start a
+              conversation.</p>
 
-              <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering ChatGPT's capabilities. Enjoy the interaction!</p>
-              <span class="gpt-prompt-note">Note: This demo is powered by the OpenAssistant model from Hugging Face. Visit https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
-            </div>
-           
+            <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
+              ChatGPT's capabilities. Enjoy the interaction!</p>
+            <span class="gpt-prompt-note">Note: This demo is powered by the OpenAssistant model from Hugging Face. Visit
+              https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
           </div>
+
         </div>
-        <div class="row pb-5">
-          <div class="col-md-2"></div>
-          <div class="col-md-8">            
-            <chatgpt-prompt-form class="form"></chatgpt-prompt-form>
-          </div>
-          <div class="col-md-2"></div>
+      </div>
+      <div class="row pb-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <chatgpt-prompt-form class="form"></chatgpt-prompt-form>
         </div>
-        <div class="row h-20">
-            <div class="col-md-12 d-flex justify-content-between">
-            <router-link to="/chatbots">
-                <purple-btn-outline :text="'Back'"></purple-btn-outline>
-            </router-link>
-            <router-link to="/chatbots/too-good-to-be-true">
-                <purple-btn :text="'Continue'"></purple-btn>
-            </router-link>  
-            </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row h-20">
+        <div class="col-md-12 d-flex justify-content-between">
+          <router-link to="/chatbots">
+            <purple-btn-outline :text="'Back'"></purple-btn-outline>
+          </router-link>
+          <router-link to="/chatbots/too-good-to-be-true">
+            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+          </router-link>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -172,13 +186,16 @@ export default defineComponent({
     },
   },
   methods: {
-    scrollIntoSection(sectionName: string) {   
+    scrollIntoSection(sectionName: string) {
       this.$nextTick(() => {
         const element = this.$refs[sectionName] as HTMLElement;
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
         }
-      }); 
+      });
+    },
+    handlePageCompletionClick(this: any) {
+      this.$registerPageAsCompleted('chatbots', 'the-age-of-chatbots');
     },
   },
   components: {
@@ -207,7 +224,7 @@ export default defineComponent({
   height: 40vh;
 }
 
-.slider-container{
+.slider-container {
   width: 50%;
 }
 
@@ -259,7 +276,4 @@ export default defineComponent({
     width: 60%;
   }
 }
-
-
-
 </style>

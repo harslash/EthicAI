@@ -3,7 +3,7 @@
     <div class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
-                <quiz-container category="chatbots" module_name="The Age of Chatbots"></quiz-container>
+                <quiz-container category="deepfakes" module_name="The Depths of Deepfakes"></quiz-container>
             </div>
         </div>
     </div>

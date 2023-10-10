@@ -107,6 +107,52 @@ const routes: Array<RouteRecordRaw> = [
     path: "/dalle/module-complete",
     component: () => import("../views/modules/dalle/DallePageFiveView.vue"),
   },
+  {
+    path: "/deepfakes",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesOverviewView.vue"),
+  },
+  {
+    name: "the-depth-of-deepfakes",
+    path: "/deepfakes/the-depth-of-deepfakes",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageOneView.vue"),
+  },
+  {
+    name: "ai-for-evil",
+    path: "/deepfakes/ai-for-evil",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageTwoView.vue"),
+  },
+  {
+    name: "real-or-not-real",
+    path: "/deepfakes/real-or-not-real",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageThreeView.vue"),
+  },
+  {
+    name: "deepfakes-in-media",
+    path: "/deepfakes/deepfakes-in-media",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageFourView.vue"),
+  },
+  {
+    name: "judgement-day",
+    path: "/deepfakes/judgement-day",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageFiveView.vue"),
+  },
+  {
+    name: "deepfakes-quiz",
+    path: "/deepfakes/quiz",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageSixView.vue"),
+  },
+  {
+    path: "/deepfakes/module-complete",
+    component: () =>
+      import("../views/modules/deepfakes/DeepfakesPageSevenView.vue"),
+  },
 ];
 
 const router = createRouter({

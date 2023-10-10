@@ -1,9 +1,9 @@
 <template>
     <div>
-        <ModuleCompletion :moduleName="'The Age of Chatbots'" :buttonText="'Module Complete'" />
+        <ModuleCompletion :moduleName="'The Depths of Deepfakes'" :buttonText="'Module Complete'" />
     </div>
 </template>
-  
+
 <script lang="ts">
 import { registerPageAsCompleted } from '@/helpers';
 import ModuleCompletion from '../../../components/reusable/module_completion.vue';
@@ -15,7 +15,7 @@ export default defineComponent({
     },
     methods: {
         handlePageCompletionClick() {
-            registerPageAsCompleted('chatbots', 'chatbot-quiz');
+            registerPageAsCompleted('deepfakes', 'deepfakes-quiz');
         },
     },
     created() {
@@ -23,4 +23,3 @@ export default defineComponent({
     },
 });
 </script>
-  

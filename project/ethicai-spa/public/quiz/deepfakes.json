@@ -1,0 +1,24 @@
+{
+    "results": [
+        {
+            "question": "Deepfakes Question 1.",
+            "correct_answer": "Correct Answer",
+            "incorrect_answers": [
+                "Incorrect Answer A",
+                "Incorrect Answer B",
+                "Incorrect Answer C"
+            ],
+            "explanation": "Explanation"
+        },
+        {
+            "question": "Deepfakes Question 2.",
+            "correct_answer": "Correct Answer",
+            "incorrect_answers": [
+                "Incorrect Answer A",
+                "Incorrect Answer B",
+                "Incorrect Answer C"
+            ],
+            "explanation": "Explanation"
+        }
+    ]
+}
