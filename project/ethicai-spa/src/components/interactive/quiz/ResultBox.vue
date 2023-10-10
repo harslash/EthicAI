@@ -29,13 +29,13 @@ let pass = grade >= 50;
         {{ pass ? 'Nice job, you passed!' : 'Sorry, you didn\'t pass :(' }}
       </p>
       <div class="tw-flex tw-w-3/6 tw-m-auto">
-        <div class="tw-w-60 tw-h-40 tw-m-auto" style="background-color: #f2f2f2;">
+        <div class="tw-w-60 tw-h-38 tw-m-auto" style="background-color: #f2f2f2;">
           <p class="tw-uppercase tw-text-center tw-font-bold tw-mt-2" style="color:#6D0CFF">Grade</p>
           <p class="tw-text-center tw-text-4xl">{{ grade }}%</p>
           <hr class="tw-w-5/6 tw-m-auto">
           <p class="tw-uppercase tw-text-center tw-mt-2 tw-text-sm">Passing Score: 50%</p>
         </div>
-        <div class="tw-w-60 tw-h-40 tw-m-auto" style="background-color: #f2f2f2;">
+        <div class="tw-w-60 tw-h-38 tw-m-auto" style="background-color: #f2f2f2;">
           <p class="tw-uppercase tw-text-center tw-font-bold tw-mt-2" style="color:#6D0CFF">Score</p>
           <p class="tw-text-center tw-text-4xl">{{ props.result.score }}/{{ props.result.numQuestions }}</p>
           <hr class="tw-w-5/6 tw-m-auto">
