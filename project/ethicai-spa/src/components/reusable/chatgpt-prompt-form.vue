@@ -1,5 +1,5 @@
 <template>
-  <form class="form-container d-flex justify-content-center align-items-center flex-wrap">
+  <form class="form-container d-flex justify-content-center align-items-center flex-column">
       <div class="form-group">
         <textarea 
         v-model="inputPromptText"
@@ -8,14 +8,16 @@
         rows="3"
         placeholder="Ask AI a question!"
         :disabled="loading"></textarea>
-        <div class="d-flex justify-content-end pt-2">
+        <div class="d-flex justify-content-end py-3">
             <div v-if="loading" class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
             </div> 
             <button class="btn btn-primary" 
                     type="button" 
                     @click="clearPrompText()"  
-                    :disabled="loading || !isReadyForClearingPrompt">Clear</button>
+                    :disabled="loading || !isReadyForClearingPrompt">      
+                <font-awesome-icon :icon="faTrash" style="color: #ffffff;"></font-awesome-icon>
+            </button>
              <send-btn 
                 @button-clicked="handleButtonClick"
                 :disable-button="loading || !isReadyForNewPrompt"
@@ -25,9 +27,9 @@
       <div class="form-group">
         <textarea 
         v-model="outputPromptText"
-        class="form-control" 
+        class="form-control output-box" 
         id="exampleFormControlTextarea1" 
-        rows="4"
+        rows="7"
         disabled></textarea>
       </div>
     </form>
@@ -36,6 +38,8 @@
 <script lang="ts">
 import { defineComponent, ref, watch} from 'vue';
 import sendBtn from '../reusable-ui/send-btn.vue';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 export default defineComponent({
     name: 'ChatgptPromptForm',
     components: {
@@ -102,7 +106,8 @@ export default defineComponent({
             handleButtonClick,
             clearPrompText,
             inputPromptText,
-            outputPromptText
+            outputPromptText,
+            faTrash
         }
     }
 });
@@ -115,15 +120,17 @@ export default defineComponent({
     border: 2px solid #E8E4E4;
     box-shadow: 5px 5px 5px #E8E4E4;
     border-radius: 20px;
+    height: 400px;
 }
 
 .form-group {
-    width: 60%;
+    width: 70%;
 }
 
 .form-control {
     border: 2px solid black;
-     border-radius: 10px;
+    border-radius: 10px;
+    resize: none;
 }
 
 .spinner-grow {
@@ -131,12 +138,18 @@ export default defineComponent({
 }
 
 .btn {
-       background-color: #6D0CFF;
+    background-color: #6D0CFF;
 }
 
 .btn:hover {
   background-color: #8638fc;
 }
 
+
+@media (max-width: 767.98px) {
+   .form-group {
+        width: 80%;
+    }
+}
 
 </style>
