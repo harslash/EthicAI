@@ -1,33 +1,40 @@
 <template>
-  <div>
-    <nav-bar />
-    <div class="module-completion">
-      <div class="content-container">
-        <h1 class="module-name">You have completed...</h1>
-        <h1 class="module-name"><span style="color: #6D0CFF;">{{ moduleName }}</span></h1>
-        <p class="congrats-text">Woo! Great Job!</p>
-        <img src="../../assets/celebration.svg" alt="Celebration Image" class="celebration-image">
-        <router-link to="/all-modules" class="continue-link">
-          <ModuleCompleteButton :text="buttonText" />
-        </router-link>
-      </div>
+  <nav-bar />
+  <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
+  <div class="module-completion pt-4">
+    <div class="content-container">
+      <h1 class="module-name">You have completed...</h1>
+      <h1 class="module-name">
+        <span style="color: #6d0cff">{{ moduleName }}</span>
+      </h1>
+      <p class="congrats-text">Woo! Great Job!</p>
+      <img
+        src="../../assets/celebration.svg"
+        alt="Celebration Image"
+        class="celebration-image"
+      />
+      <router-link to="/all-modules" class="continue-link">
+        <ModuleCompleteButton :text="buttonText" />
+      </router-link>
     </div>
-    <page-footer />
   </div>
+  <page-footer />
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import ModuleCompleteButton from '../reusable-ui/module-complete-btn.vue';
-import NavBar from './nav-bar.vue';
-import PageFooter from './page-footer.vue';
+import { defineComponent } from "vue";
+import ModuleNavigationBar from "../reusable/module-navigation-bar.vue";
+import ModuleCompleteButton from "../reusable-ui/module-complete-btn.vue";
+import NavBar from "./nav-bar.vue";
+import PageFooter from "./page-footer.vue";
 
 export default defineComponent({
-  name: 'ModuleCompletion',
+  name: "ModuleCompletion",
   components: {
     ModuleCompleteButton,
-    'nav-bar': NavBar,
-    'page-footer': PageFooter,
+    "nav-bar": NavBar,
+    "module-navigation-bar": ModuleNavigationBar,
+    "page-footer": PageFooter,
   },
   props: {
     moduleName: String,
@@ -39,7 +46,7 @@ export default defineComponent({
 <style scoped>
 .module-completion {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin-top: 60px;
 }
 
@@ -73,21 +80,20 @@ export default defineComponent({
   text-decoration: none;
 }
 
-
 @media (max-width: 576px) {
-    .celebration-image {
-        width: 50%;
-    }
-    .module-name {
-      font-size: 32px;
-    }
+  .celebration-image {
+    width: 50%;
+  }
+  .module-name {
+    font-size: 32px;
+  }
 
-    .congrats-text {
-      font-size: 18px;
-    }
+  .congrats-text {
+    font-size: 18px;
+  }
 
-    .module-complete-button {
-      font-size: 14px;
-    }
+  .module-complete-button {
+    font-size: 14px;
+  }
 }
 </style>
