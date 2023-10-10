@@ -1,21 +1,27 @@
 <template>
   <div>
-    <ModuleCompletion :moduleName="'The Rise of DALL·E'" :buttonText="'Module Complete'" />
+    <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
+    <ModuleCompletion
+      :moduleName="'The Rise of DALL·E'"
+      :buttonText="'Module Complete'"
+    />
   </div>
 </template>
 
 <script>
-import { registerPageAsCompleted } from '@/helpers';
-import ModuleCompletion from '../../../components/reusable/module_completion.vue';
-import { defineComponent } from 'vue'; // Import defineComponent from Vue 3
+import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
+import { registerPageAsCompleted } from "@/helpers";
+import ModuleCompletion from "../../../components/reusable/module_completion.vue";
+import { defineComponent } from "vue"; // Import defineComponent from Vue 3
 
 export default defineComponent({
   components: {
-    ModuleCompletion
+    ModuleCompletion,
+    "module-navigation-bar": ModuleNavigationBar,
   },
   methods: {
     handlePageCompletionClick() {
-      registerPageAsCompleted('dalle', 'dalle-quiz');
+      registerPageAsCompleted("dalle", "dalle-quiz");
     },
   },
   created() {
