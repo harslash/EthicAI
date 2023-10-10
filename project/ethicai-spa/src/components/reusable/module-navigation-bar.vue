@@ -61,6 +61,14 @@ export default defineComponent({
         "chatbot-quiz",
         "chatbots-complete",
       ],
+      deepfakesModulePageRoutes: [
+        "the-depth-of-deepfakes",
+        "ai-for-evil",
+        "real-or-not-real",
+        "deepfakes-in-media",
+        "judgement-day",
+        "deepfakes-quiz",
+      ],
       progressWidth: 0,
     };
   },
@@ -90,6 +98,15 @@ export default defineComponent({
           currentPageIndex == this.chatbotsModulePageRoutes.length - 1
             ? 100
             : (currentPageIndex / this.chatbotsModulePageRoutes.length) * 100;
+      }
+
+      if (this.moduleName == "deepfakes") {
+        currentPageIndex =
+          this.deepfakesModulePageRoutes.indexOf(currentPageName);
+        newWidth =
+          currentPageIndex == this.deepfakesModulePageRoutes.length - 1
+            ? 100
+            : (currentPageIndex / this.deepfakesModulePageRoutes.length) * 100;
       }
 
       this.progressWidth = newWidth;
@@ -144,6 +161,19 @@ export default defineComponent({
         ) {
           this.$router.push({
             name: this.chatbotsModulePageRoutes[currentPageIndex + 1],
+          });
+        }
+      }
+
+      if (this.moduleName == "deepfakes") {
+        currentPageIndex =
+          this.deepfakesModulePageRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex >= 0 &&
+          currentPageIndex < this.deepfakesModulePageRoutes.length - 1
+        ) {
+          this.$router.push({
+            name: this.deepfakesModulePageRoutes[currentPageIndex + 1],
           });
         }
       }

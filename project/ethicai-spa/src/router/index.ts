@@ -149,6 +149,7 @@ const routes: Array<RouteRecordRaw> = [
       import("../views/modules/deepfakes/DeepfakesPageSixView.vue"),
   },
   {
+    name: "deepfakes-complete",
     path: "/deepfakes/module-complete",
     component: () =>
       import("../views/modules/deepfakes/DeepfakesPageSevenView.vue"),
