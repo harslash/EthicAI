@@ -3,6 +3,7 @@
     <div class="d-flex justify-content-center align-items-center">
       <div
         class="prev-icon-container d-flex align-items-center justify-content-center"
+        @click="handlePrevIconClick()"
       >
         <i
           class="fas fa-solid fa-chevron-left prev-icon"
@@ -21,6 +22,7 @@
       </div>
       <div
         class="next-icon-container d-flex align-items-center justify-content-center"
+        @click="handleNextIconClick()"
       >
         <i
           class="fas fa-solid fa-chevron-right next-icon"
@@ -75,17 +77,76 @@ export default defineComponent({
 
       if (this.moduleName == "dalle") {
         currentPageIndex = this.dalleModuleRoutes.indexOf(currentPageName);
-        newWidth = (currentPageIndex / this.dalleModuleRoutes.length) * 100;
+        newWidth =
+          currentPageIndex == this.dalleModuleRoutes.length - 1
+            ? 100
+            : (currentPageIndex / this.dalleModuleRoutes.length) * 100;
       }
 
       if (this.moduleName == "chatbots") {
         currentPageIndex =
           this.chatbotsModulePageRoutes.indexOf(currentPageName);
         newWidth =
-          (currentPageIndex / this.chatbotsModulePageRoutes.length) * 100;
+          currentPageIndex == this.chatbotsModulePageRoutes.length - 1
+            ? 100
+            : (currentPageIndex / this.chatbotsModulePageRoutes.length) * 100;
       }
 
       this.progressWidth = newWidth;
+    },
+    handlePrevIconClick() {
+      const routeName = this.$route.name;
+      const currentPageName: string =
+        routeName !== null && routeName !== undefined
+          ? routeName.toString()
+          : "";
+
+      let currentPageIndex = -1;
+      if (this.moduleName == "dalle") {
+        currentPageIndex = this.dalleModuleRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex > 0 &&
+          currentPageIndex < this.dalleModuleRoutes.length
+        ) {
+          this.$router.push({
+            name: this.dalleModuleRoutes[currentPageIndex - 1],
+          });
+        }
+      }
+    },
+    handleNextIconClick() {
+      const routeName = this.$route.name;
+      const currentPageName: string =
+        routeName !== null && routeName !== undefined
+          ? routeName.toString()
+          : "";
+
+      let currentPageIndex = -1;
+
+      if (this.moduleName == "dalle") {
+        currentPageIndex = this.dalleModuleRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex >= 0 &&
+          currentPageIndex < this.dalleModuleRoutes.length - 1
+        ) {
+          this.$router.push({
+            name: this.dalleModuleRoutes[currentPageIndex + 1],
+          });
+        }
+      }
+
+      if (this.moduleName == "chatbots") {
+        currentPageIndex =
+          this.chatbotsModulePageRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex >= 0 &&
+          currentPageIndex < this.chatbotsModulePageRoutes.length - 1
+        ) {
+          this.$router.push({
+            name: this.chatbotsModulePageRoutes[currentPageIndex + 1],
+          });
+        }
+      }
     },
   },
   mounted() {
@@ -113,13 +174,14 @@ export default defineComponent({
 
 .prev-icon,
 .next-icon {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .prev-icon-container,
 .next-icon-container {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .prev-icon-container:hover,
