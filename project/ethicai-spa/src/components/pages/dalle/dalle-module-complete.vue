@@ -1,7 +1,8 @@
 <template>
   <div>
     <ModuleCompletion
-      :moduleName="'The Rise of DALL·E'"
+      :moduleTitle="'The Rise of DALL·E'"
+      :moduleName="'dalle'"
       :buttonText="'Module Complete'"
     />
   </div>

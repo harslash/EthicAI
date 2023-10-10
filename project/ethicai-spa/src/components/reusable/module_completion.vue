@@ -1,11 +1,11 @@
 <template>
   <nav-bar />
-  <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-  <div class="module-completion pt-4">
+  <module-navigation-bar :moduleName="moduleName"></module-navigation-bar>
+  <div class="module-completion pt-3">
     <div class="content-container">
       <h1 class="module-name">You have completed...</h1>
       <h1 class="module-name">
-        <span style="color: #6d0cff">{{ moduleName }}</span>
+        <span style="color: #6d0cff">{{ moduleTitle }}</span>
       </h1>
       <p class="congrats-text">Woo! Great Job!</p>
       <img
@@ -37,6 +37,7 @@ export default defineComponent({
     "page-footer": PageFooter,
   },
   props: {
+    moduleTitle: String,
     moduleName: String,
     buttonText: String,
   },
