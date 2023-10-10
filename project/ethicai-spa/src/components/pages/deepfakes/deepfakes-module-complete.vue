@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ModuleCompletion :moduleName="'The Depths of Deepfakes'" :buttonText="'Module Complete'" />
+        <ModuleCompletion :moduleTitle="'The Depths of Deepfakes'" :moduleName="'deepfakes'" :buttonText="'Module Complete'" />
     </div>
 </template>
 

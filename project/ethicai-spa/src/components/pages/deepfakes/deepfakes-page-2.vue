@@ -1,5 +1,6 @@
 <template>
   <nav-bar />
+  <module-navigation-bar :moduleName="'deepfakes'"></module-navigation-bar>
   <div class="container-fluid page-container text-center">
     <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
@@ -104,10 +105,7 @@
         </div>
       </div>
       <div class="row h-20 mt-5">
-        <div class="col-md-12 d-flex justify-content-between">
-          <router-link to="/deepfakes/the-depth-of-deepfakes">
-            <purple-btn-outline :text="'Back'"></purple-btn-outline>
-          </router-link>
+        <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/deepfakes/real-or-not-real">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
           </router-link>
@@ -120,8 +118,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
+import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
-import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 
 export default defineComponent({
   name: 'DeepfakesPage2',
@@ -153,8 +151,8 @@ export default defineComponent({
   },
   components: {
     'nav-bar': NavBar,
-    'purple-btn': PurpleBtn,
-    'purple-btn-outline': PurpleBtnOutline,
+    "module-navigation-bar": ModuleNavigationBar,
+    'purple-btn': PurpleBtn
   }
 });
 </script>
