@@ -5,6 +5,12 @@
         <div v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
             {{preGeneratedPrompt}}
         </div>
+        <button v-if="!loading" class="btn btn-primary refresh-btn mx-3" 
+                type="button" 
+                @click="refreshPrompt()"  
+                :disabled="loading">      
+            <font-awesome-icon :icon="faArrowsRotate" style="color: #ffffff;"></font-awesome-icon>
+        </button>
     </div>
 
     <div class="form-group">
@@ -45,7 +51,7 @@
 <script lang="ts">
 import { defineComponent, ref, watch} from 'vue';
 import sendBtn from '../reusable-ui/send-btn.vue';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faArrowsRotate} from '@fortawesome/free-solid-svg-icons';
 
 export default defineComponent({
     name: 'ChatgptPromptForm',
@@ -83,6 +89,10 @@ export default defineComponent({
             inputPromptText.value = '';
             outputPromptText.value = ''
             isReadyForNewPrompt.value = true;
+        }
+
+        const refreshPrompt = () => {
+            preGeneratedPrompt.value = getRandomPrompt(preGeneratedPrompts);
         }
 
         const handleButtonClick = () => {
@@ -168,8 +178,10 @@ export default defineComponent({
             handlePromptClick,
             clearPrompText,
             inputPromptText,
+            refreshPrompt,
             outputPromptText,
-            faTrash
+            faTrash,
+            faArrowsRotate
         }
     }
 });
@@ -213,12 +225,17 @@ export default defineComponent({
     color: #A6A6A6;
     cursor: pointer;
     text-align: left;
-    width: 50%;
+    width: 60%;
     padding: 6px 6px;
 }
 
 .pre-generated-prompt:hover {
     background-color:  #e3e3e3;
+}
+
+.refresh-btn {
+    height: 40px;
+    width: 40px;
 }
 
 
