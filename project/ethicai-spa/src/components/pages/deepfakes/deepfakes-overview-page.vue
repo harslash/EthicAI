@@ -27,12 +27,11 @@ export default defineComponent({
         return {
             moduleTitle: 'The Depth of Deepfakes',
             moduleDescription: 'In this module, you will learn about deepfakes and the nature of synthetic media, together with the implications this modification of media has on the real world.',
-            moduleImgSrc: '../../../assets/chatbots_module.png',
             modulePageNames: ['The Depth of Deepfakes', 'AI For Evil', 'Real or Not Real?', 'Deepfakes in Media', 'Judgement Day', 'Module Quiz'],
             modulePageRoutes: ['the-depth-of-deepfakes', 'ai-for-evil', 'real-or-not-real', 'deepfakes-in-media', 'judgement-day', 'deepfakes-quiz'],
             moduleName: 'deepfakes',
             pageName: 'the-depth-of-deepfakes',
-            moduleImgFilename: 'chatbots_module.png'
+            moduleImgFilename: 'deepfakes_module.png'
         }
     },
     methods: {
