@@ -220,10 +220,6 @@ export default defineComponent({
   text-align: left;
 }
 
-.form {
-  height: 40vh;
-}
-
 .slider-container {
   width: 50%;
 }
