@@ -68,6 +68,7 @@ export default defineComponent({
         "deepfakes-in-media",
         "judgement-day",
         "deepfakes-quiz",
+        "deepfakes-complete",
       ],
       progressWidth: 0,
     };
@@ -119,6 +120,7 @@ export default defineComponent({
           : "";
 
       let currentPageIndex = -1;
+
       if (this.moduleName == "dalle") {
         currentPageIndex = this.dalleModuleRoutes.indexOf(currentPageName);
         if (
@@ -127,6 +129,30 @@ export default defineComponent({
         ) {
           this.$router.push({
             name: this.dalleModuleRoutes[currentPageIndex - 1],
+          });
+        }
+      }
+
+      if (this.moduleName == "chatbots") {
+        currentPageIndex = this.chatbotsModulePageRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex > 0 &&
+          currentPageIndex < this.chatbotsModulePageRoutes.length
+        ) {
+          this.$router.push({
+            name: this.chatbotsModulePageRoutes[currentPageIndex - 1],
+          });
+        }
+      }
+
+      if (this.moduleName == "deepfakes") {
+        currentPageIndex = this.deepfakesModulePageRoutes.indexOf(currentPageName);
+        if (
+          currentPageIndex > 0 &&
+          currentPageIndex < this.deepfakesModulePageRoutes.length
+        ) {
+          this.$router.push({
+            name: this.deepfakesModulePageRoutes[currentPageIndex - 1],
           });
         }
       }
