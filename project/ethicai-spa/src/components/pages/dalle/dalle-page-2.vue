@@ -601,10 +601,7 @@
             style="padding-bottom: 20px"
             v-if="quizCompleted"
           >
-            <div class="col-md-12 d-flex justify-content-between">
-              <router-link to="/dalle">
-                <purple-btn-outline :text="'Back'"></purple-btn-outline>
-              </router-link>
+            <div class="col-md-12 d-flex justify-content-end">
               <router-link to="/dalle/the-complexities-of-copyright">
                 <purple-btn
                   :text="'Continue'"
@@ -624,7 +621,6 @@ import { defineComponent, toHandlers } from "vue";
 import NavBar from "../../reusable/nav-bar.vue";
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from "../../reusable-ui/purple-btn.vue";
-import PurpleBtnOutline from "../../reusable-ui/purple-btn-outline.vue";
 
 export default defineComponent({
   name: "DallePage2",
@@ -950,7 +946,6 @@ export default defineComponent({
     "nav-bar": NavBar,
     "module-navigation-bar": ModuleNavigationBar,
     "purple-btn": PurpleBtn,
-    "purple-btn-outline": PurpleBtnOutline,
   },
 });
 </script>

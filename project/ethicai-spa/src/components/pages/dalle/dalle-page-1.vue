@@ -309,12 +309,7 @@
         <div class="mb-8"><br /><br /></div>
 
         <div class="row h-20">
-          <div class="col-md-6 d-flex justify-content-start align-items-center">
-            <router-link to="/dalle" class="my-button">
-              <purple-btn-outline :text="'Back'" />
-            </router-link>
-          </div>
-          <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <div class="col-md-12 d-flex justify-content-end align-items-center">
             <div class="mr-10">
               <!-- Add some right margin for spacing -->
               <p style="margin-bottom: 0"><b>How does this happen?</b></p>
@@ -341,7 +336,6 @@ import { defineComponent } from "vue";
 import NavBar from "../../reusable/nav-bar.vue";
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from "../../reusable-ui/purple-btn.vue";
-import PurpleBtnOutline from "../../reusable-ui/purple-btn-outline.vue";
 import ImportantTermsCard from "../../reusable/important-terms-card.vue";
 
 export default defineComponent({
@@ -451,7 +445,6 @@ export default defineComponent({
     "nav-bar": NavBar,
     "module-navigation-bar": ModuleNavigationBar,
     "purple-btn": PurpleBtn,
-    "purple-btn-outline": PurpleBtnOutline,
     "important-terms-card": ImportantTermsCard,
   },
 });
