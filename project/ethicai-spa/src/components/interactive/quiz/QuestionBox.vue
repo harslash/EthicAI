@@ -81,7 +81,7 @@ function parsedExplanation(explanation) {
     </div>
     <div v-if="resultVisible" class="tw-text-center">
       <div @click="resultVisible = false; nextQuestion();" :style="{ backgroundColor: '#6D0CFF' }"
-        class="tw-m-auto tw-py-2 tw-px-5 tw-mt-5 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl hover-scale tw-transition-all tw-duration-150">
+        class="tw-m-auto tw-py-2 tw-px-5 tw-mt-5 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150">
         <p class="tw-text-xl tw-text-center tw-text-white">Next</p>
       </div>
     </div>
