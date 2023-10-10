@@ -34,6 +34,7 @@ export default defineComponent({
 
 .container-fluid.page-container {
     margin-top: 60px;
+    height: 90vh;
 }
 
 .heading {
