@@ -88,6 +88,8 @@ export default defineComponent({
         const handleButtonClick = () => {
             const requestBody = JSON.stringify({ prompt: inputPromptText.value });
 
+            outputPromptText.value = '';
+
             loading.value = true;
 
              const requestOptions = {
@@ -117,8 +119,9 @@ export default defineComponent({
 
         const handlePromptClick = () => {
             const requestBody = JSON.stringify({ prompt: preGeneratedPrompt.value });
+            
             inputPromptText.value = preGeneratedPrompt.value;
-
+            outputPromptText.value = '';
             loading.value = true;
 
              const requestOptions = {
