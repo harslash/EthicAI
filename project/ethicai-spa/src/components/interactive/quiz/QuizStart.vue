@@ -18,7 +18,7 @@ export default {
       </div>
       <div class="col-sm px-md-5">
         <div class="image tw-float-right">
-          <img class="tw-rounded-xl" :src="require(`@/assets/chatbots_module_quiz.png`)" alt="image">
+          <img class="tw-rounded-xl" :src="require(`@/assets/module_quiz.png`)" alt="image">
         </div>
       </div>
     </div>
@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .image img {
-  width: 475px;
+  width: auto;
   height: 475px;
 }
 </style>
