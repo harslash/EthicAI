@@ -40,7 +40,7 @@
                             </li>
                              <li>
                                 <a class="dropdown-item"
-                                    @click="handleAdjustBiasesDropdownClick('inversesd')">{{biasedDropdownItemTwoText}}
+                                    @click="handleAdjustBiasesDropdownClick('inverted')">{{biasedDropdownItemTwoText}}
                                 </a>
                             </li>
                         </ul>
@@ -61,6 +61,7 @@
                 <div class="col-md-12">
                     <h5 class="demo-title"> {{ corpusLabel }}</h5>
                     <p class="demo-subtitle">Bias Category: {{corpusCategory}}</p>
+                    <p class="demo-subtitle">Biased Training: {{biasedTrainingName}}</p>
                 </div>
                  <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
             </div>
@@ -80,7 +81,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed } from 'vue';
+import { defineComponent, ref, onMounted, computed} from 'vue';
 
 function splitStringToArray(inputString: string, delimiters: string[]) {
     // Split after newlines and spaces
@@ -156,7 +157,6 @@ export default defineComponent({
 
         onMounted(() => {
             // Call updateMarkovDemo after the component is mounted
-            console.log(wilsonCorpusBiasedIndices)
             updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndices, 'inputTextarea', startingWords);
         });
 
@@ -164,6 +164,8 @@ export default defineComponent({
         let corpusId = 'wilson';
         const corpusLabel = ref('Woodrow Wilson’s 1917 Declaration of War');
         const corpusCategory = ref('Political');
+
+        const biasedTrainingName = ref('Biases towards Germany');
 
         const loading = ref(false);
 
@@ -180,6 +182,7 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Woodrow Wilson’s 1917 Declaration of War';
                     corpusCategory.value = "Political"
+                    biasedTrainingName.value = 'Biased towards Germany'
                     startingWords = "I";
                     updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndices, 'inputTextarea', startingWords);
 
@@ -188,6 +191,7 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Etiquette';
                     corpusCategory.value = "Gender"
+                    biasedTrainingName.value = 'Biased towards women'
                     startingWords = 'A';
                     updateMarkovDemo(etiquetteCorpus, etiquetteCorpusBiasedIndices, 'inputTextarea', startingWords);
                 }
@@ -200,11 +204,37 @@ export default defineComponent({
 
         const biasedDropdownItemTwoText = computed(() => {
             return corpusLabel.value === "Woodrow Wilson’s 1917 Declaration of War" ? "Biases towards America" : "Biases towards men";
-        });
+        });        
 
         const handleAdjustBiasesDropdownClick = (itemId: string) => {
-            console.log(itemId)
-        }
+            let inputTextArea = document.getElementById('inputTextarea');
+
+            if (inputTextArea) {
+                if (corpusLabel.value === 'Woodrow Wilson’s 1917 Declaration of War') {
+                    if (itemId === 'original') {
+                        corpusId = 'wilson';
+                        biasedTrainingName.value = 'Biased towards Germany';
+                    }
+
+                    if (itemId === 'inverted') {
+                        corpusId = 'inverted-wilson';
+                        biasedTrainingName.value = 'Biased towards America';
+                    }
+                }
+                if (corpusLabel.value === 'Etiquette') {
+                    if (itemId === 'original') {
+                        corpusId = 'etiquette';
+                        biasedTrainingName.value = 'Biased towards women';
+                    }
+
+                    if (itemId === 'inverted') {
+                        corpusId = 'inverted-etiquette';
+                        biasedTrainingName.value = 'Biased towards men';
+                    }
+                    }
+                }
+            }
+        
 
          const handleButtonClick = () => {
             const requestBody = JSON.stringify(
@@ -245,7 +275,8 @@ export default defineComponent({
             biasedDropdownItemTwoText,
             handleAdjustBiasesDropdownClick,
             corpusLabel,
-            corpusCategory
+            corpusCategory,
+            biasedTrainingName
         }
     },
 });
@@ -298,6 +329,7 @@ export default defineComponent({
 .demo-subtitle {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    margin-bottom: 0.25rem;
 }
 
 .spinner-grow {
