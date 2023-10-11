@@ -2,13 +2,10 @@
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
   <div class="container-fluid page-container text-center">
-    <div
-      class="section-one container mb-5 text-section"
-      :class="{ hidden: !showFirstSection }"
-    >
+    <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">The Complexities of Copyright</h1>
+          <h1 class="tw-mt-24">The Complexities of Copyright</h1>
         </div>
       </div>
 
@@ -21,30 +18,18 @@
           </p>
           <br />
           <p>
-            <b
-              >Do you think that AI should have rights to the artwork it
-              produces?</b
-            >
+            <b>Do you think that AI should have rights to the artwork it
+              produces?</b>
           </p>
           <div class="radio-div d-flex justify-content-around">
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault1"
-              />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
               <label class="form-check-label" for="flexRadioDefault1">
                 Yes
               </label>
             </div>
             <div class="form-check">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="flexRadioDefault"
-                id="flexRadioDefault2"
-              />
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
               <label class="form-check-label" for="flexRadioDefault2">
                 No
               </label>
@@ -55,24 +40,17 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn
-            v-if="!section1Completed"
-            :text="'Continue'"
-            @click="
-              showSecondSection = true;
-              scrollIntoSecondSection();
-              section1Completed = true;
-            "
-          />
+          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+            showSecondSection = true;
+          scrollIntoSecondSection();
+          section1Completed = true;
+          " />
         </div>
       </div>
     </div>
 
-    <div
-      ref="secondSection"
-      class="mb-5 justify-content-center text-section section-one container"
-      :class="{ hidden: !showSecondSection }"
-    >
+    <div ref="secondSection" class="mb-5 justify-content-center text-section section-one container"
+      :class="{ hidden: !showSecondSection }">
       <div class="row justify-content-center">
         <!-- Center the content -->
         <div class="col-md-8 text-center">
@@ -95,10 +73,7 @@
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
               <a href="https://archive.ph/604QJ" target="_blank">
-                <img
-                  src="../../../assets//nyt_article.png"
-                  alt="New York Times article snippet"
-                />
+                <img src="../../../assets//nyt_article.png" alt="New York Times article snippet" />
               </a>
             </div>
             <h2 class="article-title">
@@ -113,12 +88,7 @@
               provided insight into the broader legal war over authorship and
               intellectual property.
             </p>
-            <a
-              class="article-link"
-              href="https://archive.ph/604QJ"
-              target="_blank"
-              >Read More</a
-            >
+            <a class="article-link" href="https://archive.ph/604QJ" target="_blank">Read More</a>
             <br />
           </div>
         </div>
@@ -126,26 +96,18 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn
-            v-if="section1Completed && !section2Completed"
-            :text="'Continue'"
-            @click="
-              showThirdSection = true;
-              scrollIntoThirdSection();
-              section2Completed = true;
-            "
-          />
+          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+            showThirdSection = true;
+          scrollIntoThirdSection();
+          section2Completed = true;
+          " />
         </div>
       </div>
     </div>
 
     <div class="mb-12"></div>
 
-    <div
-      ref="thirdSection"
-      class="section-two container mb-5 text-section"
-      :class="{ hidden: !showThirdSection }"
-    >
+    <div ref="thirdSection" class="section-two container mb-5 text-section" :class="{ hidden: !showThirdSection }">
       <div class="row h-30">
         <div class="row h-10 mb-5">
           <div class="col-md-12">
@@ -172,29 +134,16 @@
               compensation.
             </p>
             <br />
-            <div
-              class="col-md-10 d-flex align-items-center justify-content-center"
-            >
+            <div class="col-md-10 d-flex align-items-center justify-content-center">
               <figure>
-                <img
-                  class="img-a"
-                  src="../../../assets//pope.png"
-                  alt="an art piece depicting a purple swirl"
-                  style="
+                <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="
                     display: inline-block;
                     margin: 12.5px 5px;
                     border-radius: 5px;
-                  "
-                />
+                  " />
                 <figcaption>
-                  <b
-                    >AI Image Generation of Pope Francis
-                    <span
-                      class="reference-link"
-                      @click="handleReferenceClick('copyright')"
-                      >(Cartter, 2023)</span
-                    ></b
-                  >
+                  <b>AI Image Generation of Pope Francis
+                    <span class="reference-link" @click="handleReferenceClick('copyright')">(Cartter, 2023)</span></b>
                 </figcaption>
               </figure>
             </div>
@@ -209,11 +158,8 @@
               “deepfakes”) can damage individuals’ reputation; furthermore,
               politicians and leaders have reason to fear their implications for
               national security
-              <span
-                class="reference-link"
-                @click="handleReferenceClick('copyright')"
-                >(Parra & Shroud, 2023)</span
-              >. To learn more about deepfakes, visit our module here.
+              <span class="reference-link" @click="handleReferenceClick('copyright')">(Parra & Shroud, 2023)</span>. To
+              learn more about deepfakes, visit our module here.
             </p>
           </div>
         </div>
@@ -221,25 +167,17 @@
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <!-- Center align the "Continue" button -->
-          <purple-btn
-            v-if="section2Completed && !section3Completed"
-            :text="'Continue'"
-            @click="
-              showFourthSection = true;
-              scrollIntoFourthSection();
-              section3Completed = true;
-            "
-          />
+          <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+            showFourthSection = true;
+          scrollIntoFourthSection();
+          section3Completed = true;
+          " />
         </div>
       </div>
     </div>
   </div>
 
-  <div
-    ref="fourthSection"
-    class="section-two container mb-5"
-    :class="{ hidden: !showFourthSection }"
-  >
+  <div ref="fourthSection" class="section-two container mb-5" :class="{ hidden: !showFourthSection }">
     <div class="row h-10 mb-5">
       <div class="col-md-12">
         <h3 class="text-center">What have we learned?</h3>
@@ -249,20 +187,14 @@
 
     <div class="row h-30">
       <div class="col-md-1"></div>
-      <div
-        class="col-md-10 d-flex align-items-center justify-content-center text-center"
-      >
+      <div class="col-md-10 d-flex align-items-center justify-content-center text-center">
         <figure>
-          <img
-            class="img-a mx-auto"
-            src="../../../assets//copyright-copywrong-happykid.png"
-            alt="a happy kid in front of a laptop"
-            style="
+          <img class="img-a mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
+            alt="a happy kid in front of a laptop" style="
               display: inline-block;
               margin: 12.5px 5px;
               border-radius: 5px;
-            "
-          />
+            " />
         </figure>
       </div>
       <div class="col-md-1"></div>
@@ -316,11 +248,7 @@
     <div class="row h-20">
       <div class="col-md-12 d-flex justify-content-end">
         <router-link to="/dalle/quiz">
-          <purple-btn
-            :text="'Continue'"
-            @click="handlePageCompletionClick()"
-            role="link"
-          ></purple-btn>
+          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
         </router-link>
       </div>
     </div>
@@ -492,12 +420,15 @@ export default defineComponent({
   background-color: #f7f7f7;
   border: 1px solid #ddd;
   padding: 20px;
-  margin-top: 20px; /* Decreased margin-top to create space */
-  max-width: 1000px; /* Decreased max-width to make it narrower */
+  margin-top: 20px;
+  /* Decreased margin-top to create space */
+  max-width: 1000px;
+  /* Decreased max-width to make it narrower */
 }
 
 .article-title {
-  font-size: 18px; /* Decreased font size for the title */
+  font-size: 18px;
+  /* Decreased font size for the title */
   margin-bottom: 10px;
 }
 
@@ -525,12 +456,15 @@ export default defineComponent({
 }
 
 .article-image {
-  text-align: center; /* Center align the image */
-  margin-bottom: 20px; /* Add some spacing between the image and the snippet */
+  text-align: center;
+  /* Center align the image */
+  margin-bottom: 20px;
+  /* Add some spacing between the image and the snippet */
 }
 
 .article-image img {
-  max-width: 100%; /* Ensure the image fits within its container */
+  max-width: 100%;
+  /* Ensure the image fits within its container */
 }
 
 /* CSS for the article snippet (previously provided) */

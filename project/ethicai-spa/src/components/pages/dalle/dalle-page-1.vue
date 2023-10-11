@@ -1,24 +1,14 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
+    <nav-bar />
     <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
     <div class="container-fluid page-container text-center">
-      <!-- Element 1 -->
       <div class="row h-25">
         <div class="col-md-12">
-          <h1 class="mt-5" style="font-size: 28px">
-            <u>The Rise of DALL·E</u>
-          </h1>
-          <br />
+          <h1 class="tw-mt-24">The Rise of DALL·E</h1>
         </div>
       </div>
-
-      <!-- Element 2 -->
-      <div
-        ref="firstSection"
-        class="row h-30 mb-5 justify-content-center"
-        :class="{ hidden: !showFirstSection }"
-      >
+      <div ref="firstSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFirstSection }">
         <div class="col-md-8 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
@@ -26,35 +16,22 @@
               It blends the names of artist Salvador Dalí and robot WALL·E. It
               utilizes the GPT architecture to create images from textual
               descriptions
-              <span
-                class="reference-link"
-                @click="handleReferenceClick('dalle')"
-                >(OpenAI, 2022)</span
-              >. You provide a text prompt, and DALL·E generates a corresponding
+              <span class="reference-link" @click="handleReferenceClick('dalle')">(OpenAI, 2022)</span>. You provide a
+              text prompt, and DALL·E generates a corresponding
               image.
             </p>
 
             <p class="section-text">
               This model has a remarkable capacity to bridge text and images,
               exemplifying AI's ability to produce imaginative content
-              <span
-                class="reference-link"
-                @click="handleReferenceClick('dalle')"
-                >(TechTarget, 2023)</span
-              >.
+              <span class="reference-link" @click="handleReferenceClick('dalle')">(TechTarget, 2023)</span>.
             </p>
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-center">
-          <img
-            class="img-a"
-            src="../../../assets//dalle_page1_img.png"
-            alt="an art piece depicting a purple swirl"
-          />
+          <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
         </div>
       </div>
-
-      <!-- Element 3 -->
       <div class="row h-30 mb-10 justify-content-center">
         <div class="col-md-6 d-flex justify-content-center">
           <important-terms-card :terms-and-definitions="termsAndDefinitions" />
@@ -71,36 +48,22 @@
 
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="!section1Completed"
-              :text="'Continue'"
-              @click="
-                showSecondSection = true;
-                scrollIntoSecondSection();
-                section1Completed = true;
-              "
-            />
+            <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+              showSecondSection = true;
+            scrollIntoSecondSection();
+            section1Completed = true;
+            " />
           </div>
         </div>
       </div>
-
-      <!-- Element 4 -->
-      <div
-        ref="secondSection"
-        class="row h-30 mb-5 justify-content-center"
-        :class="{ hidden: !showSecondSection }"
-      >
+      <div ref="secondSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showSecondSection }">
         <div class="col-md-12">
           <br />
           <h1 class="mt-5" style="font-size: 28px">Imagine ...</h1>
           <br />
         </div>
         <div class="col-md-4 d-flex align-items-center">
-          <img
-            class="img-a-small"
-            src="../../../assets//artist.png"
-            alt="a female artist holding a paintbrush"
-          />
+          <img class="img-a-small" src="../../../assets//artist.png" alt="a female artist holding a paintbrush" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -113,25 +76,15 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="section1Completed && !section2Completed"
-              :text="'Continue'"
-              @click="
-                showThirdSection = true;
-                scrollIntoThirdSection();
-                section2Completed = true;
-              "
-            />
+            <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+              showThirdSection = true;
+            scrollIntoThirdSection();
+            section2Completed = true;
+            " />
           </div>
         </div>
       </div>
-
-      <!-- Element 6 -->
-      <div
-        ref="thirdSection"
-        class="row h-30 mb-5 justify-content-center"
-        :class="{ hidden: !showThirdSection }"
-      >
+      <div ref="thirdSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showThirdSection }">
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
@@ -144,39 +97,21 @@
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-center">
-          <img
-            class="img-a-large"
-            src="../../../assets//haters.png"
-            alt="mean Instagram comments section"
-          />
+          <img class="img-a-large" src="../../../assets//haters.png" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="section2Completed && !section3Completed"
-              :text="'Continue'"
-              @click="
-                showFourthSection = true;
-                scrollIntoFourthSection();
-                section3Completed = true;
-              "
-            />
+            <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+              showFourthSection = true;
+            scrollIntoFourthSection();
+            section3Completed = true;
+            " />
           </div>
         </div>
       </div>
-
-      <!-- Element 7 -->
-      <div
-        ref="fourthSection"
-        class="row h-30 mb-5 justify-content-center"
-        :class="{ hidden: !showFourthSection }"
-      >
+      <div ref="fourthSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFourthSection }">
         <div class="col-md-4 d-flex align-items-center">
-          <img
-            class="img-a-medium"
-            src="../../../assets//identical_art.jpeg"
-            alt="two art pieces that look identical"
-          />
+          <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces that look identical" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -195,25 +130,15 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="section3Completed && !section4Completed"
-              :text="'Continue'"
-              @click="
-                showFifthSection = true;
-                scrollIntoFifthSection();
-                section4Completed = true;
-              "
-            />
+            <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'" @click="
+              showFifthSection = true;
+            scrollIntoFifthSection();
+            section4Completed = true;
+            " />
           </div>
         </div>
       </div>
-
-      <!-- Element 8 -->
-      <div
-        ref="fifthSection"
-        class="row h-30 mb-5 justify-content-center"
-        :class="{ hidden: !showFifthSection }"
-      >
+      <div ref="fifthSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFifthSection }">
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
@@ -225,42 +150,27 @@
               Denied a stable income, you are forced to make a career change.
             </p>
             <p class="section-text">
-              <b
-                >So ends the tale of an artist, undone by artwork they had
-                created.</b
-              >
+              <b>So ends the tale of an artist, undone by artwork they had
+                created.</b>
             </p>
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-center">
-          <img
-            class="img-a-medium"
-            src="../../../assets//sad_piggy.jpeg"
-            alt="mean Instagram comments section"
-          />
+          <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="section4Completed && !section5Completed"
-              :text="'Continue'"
-              @click="
-                showSixthSection = true;
-                scrollIntoSixthSection();
-                section5Completed = true;
-              "
-            />
+            <purple-btn v-if="section4Completed && !section5Completed" :text="'Continue'" @click="
+              showSixthSection = true;
+            scrollIntoSixthSection();
+            section5Completed = true;
+            " />
           </div>
         </div>
       </div>
 
-      <div
-        ref="sixthSection"
-        class="row h-30 mb-8 justify-content-center"
-        :class="{ hidden: !showSixthSection }"
-      >
+      <div ref="sixthSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showSixthSection }">
         <div class="col-md-8 text-center!important">
-          <!-- Added text-center class -->
           <br />
           <h1 class="mt-5" style="font-size: 28px">So... is this realistic?</h1>
           <br />
@@ -276,14 +186,9 @@
 
         <div class="article-snippet">
           <div class="article-image">
-            <a
-              href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart"
-              target="_blank"
-            >
-              <img
-                src="../../../assets//artist_article.webp"
-                alt="Artist at Work"
-              />
+            <a href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart"
+              target="_blank">
+              <img src="../../../assets//artist_article.webp" alt="Artist at Work" />
             </a>
           </div>
           <h2 class="article-title">
@@ -298,12 +203,9 @@
             Karla Ortiz who began a lawsuit in January against Stable Diffusion
             and Midjourney, who are prominent AI generation tools.
           </p>
-          <a
-            class="article-link"
+          <a class="article-link"
             href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart"
-            target="_blank"
-            >Read More</a
-          >
+            target="_blank">Read More</a>
         </div>
 
         <div class="mb-8"><br /><br /></div>
@@ -311,18 +213,10 @@
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end align-items-center">
             <div class="mr-10">
-              <!-- Add some right margin for spacing -->
               <p style="margin-bottom: 0"><b>How does this happen?</b></p>
             </div>
-            <router-link
-              to="/dalle/ai-generated-vs-human-art"
-              class="my-button"
-              style="margin-left: 20px"
-            >
-              <purple-btn
-                :text="'Continue'"
-                @click="handlePageCompletionClick()"
-              />
+            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-left: 20px">
+              <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
             </router-link>
           </div>
         </div>
@@ -468,18 +362,18 @@ export default defineComponent({
 }
 
 .img-a-large {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 500px; /* Add a maximum width to prevent it from becoming too large */
+  width: 100%;
+  max-width: 500px;
 }
 
 .img-a-medium {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 350px; /* Add a maximum width to control the size */
+  width: 100%;
+  max-width: 350px;
 }
 
 .img-a-small {
-  width: 100%; /* Adjust the width as needed */
-  max-width: 250px; /* Add a maximum width to prevent it from becoming too large */
+  width: 100%;
+  max-width: 250px;
 }
 
 .hidden {
@@ -494,17 +388,16 @@ export default defineComponent({
   margin-bottom: 20px;
 }
 
-/* CSS for the article snippet */
 .article-snippet {
   background-color: #f7f7f7;
   border: 1px solid #ddd;
   padding: 20px;
-  margin-top: 20px; /* Decreased margin-top to create space */
-  max-width: 1000px; /* Decreased max-width to make it narrower */
+  margin-top: 20px;
+  max-width: 1000px;
 }
 
 .article-title {
-  font-size: 18px; /* Decreased font size for the title */
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -532,15 +425,14 @@ export default defineComponent({
 }
 
 .article-image {
-  text-align: center; /* Center align the image */
-  margin-bottom: 20px; /* Add some spacing between the image and the snippet */
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .article-image img {
-  max-width: 100%; /* Ensure the image fits within its container */
+  max-width: 100%;
 }
 
-/* CSS for the article snippet (previously provided) */
 .article-snippet {
   background-color: #f7f7f7;
   border: 1px solid #ddd;

@@ -2,29 +2,22 @@
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
   <div class="container-fluid page-container text-center">
-    <div
-      class="section-one container mb-5 text-section"
-      :class="{ hidden: !showFirstSection }"
-    >
+    <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">AI Generated vs. Human Art</h1>
+          <h1 class="tw-mt-24">AI Generated vs. Human Art</h1>
         </div>
       </div>
 
       <div class="row h-30">
         <div class="col-md-4 d-flex align-items-center">
           <figure>
-            <img
-              class="img-a"
-              src="../../../assets//Robot_Head_by_DALL-E_2.jpg"
-              alt="Escher Robot Head by DALL-E 2"
+            <img class="img-a" src="../../../assets//Robot_Head_by_DALL-E_2.jpg" alt="Escher Robot Head by DALL-E 2"
               style="
                 display: inline-block;
                 margin: 25px 10px;
                 border-radius: 5px;
-              "
-            />
+              " />
             <figcaption><b>Escher Robot Head by DALL-E 2</b></figcaption>
           </figure>
         </div>
@@ -45,11 +38,7 @@
               recombination based on existing styles — which in some ways is
               similar to generative AI
 
-              <span
-                class="reference-link"
-                @click="handleReferenceClick('generatedVsHuman')"
-                >(Nanou, 2022)</span
-              >.
+              <span class="reference-link" @click="handleReferenceClick('generatedVsHuman')">(Nanou, 2022)</span>.
             </p>
 
             <p class="text-left section-text">
@@ -69,23 +58,15 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn
-            v-if="!section1Completed"
-            :text="'Continue'"
-            @click="
-              showSecondSection = true;
-              scrollIntoSecondSection();
-              section1Completed = true;
-            "
-          />
+          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+            showSecondSection = true;
+          scrollIntoSecondSection();
+          section1Completed = true;
+          " />
         </div>
       </div>
     </div>
-    <div
-      ref="secondSection"
-      class="section-two container mb-5 text-section"
-      :class="{ hidden: !showSecondSection }"
-    >
+    <div ref="secondSection" class="section-two container mb-5 text-section" :class="{ hidden: !showSecondSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h3>Which artwork was created by a <em>human</em>?</h3>
@@ -96,42 +77,24 @@
         <!-- quiz, has its own 'section' for each question -->
 
         <!-- First question -->
-        <div
-          id="firstQuestion"
-          ref="firstQuestion"
-          class="question-one container mb-5 text-section"
-          :class="{ hidden: !showFirstQuestion }"
-        >
-          <div
-            class="col-md-12 d-flex align-self-center justify-content-center"
-          >
+        <div id="firstQuestion" ref="firstQuestion" class="question-one container mb-5 text-section"
+          :class="{ hidden: !showFirstQuestion }">
+          <div class="col-md-12 d-flex align-self-center justify-content-center">
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div
-                    class="card"
-                    :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'"
-                    @click="
-                      onFirstCorrectClick();
-                      showSecondQuestion = true;
-                      scrollIntoSecondQuestion();
-                    "
-                    role="link"
-                  >
+                  <div class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                    onFirstCorrectClick();
+                  showSecondQuestion = true;
+                  scrollIntoSecondQuestion();
+                  " role="link">
                     <div class="card-body">
-                      <img
-                        class="img-b"
-                        :src="require(`@/assets/${realimg1FileName}`)"
-                        alt="Image"
-                        style="display: inline-block; border-radius: 5px"
-                      />
+                      <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Image"
+                        style="display: inline-block; border-radius: 5px" />
                     </div>
                   </div>
 
-                  <div
-                    class="correct"
-                    :class="{ hidden: !firstQuestionShowCorrect }"
-                  >
+                  <div class="correct" :class="{ hidden: !firstQuestionShowCorrect }">
                     <p style="display: block">
                       <span style="color: #6d0cff"> Correct! +1 point </span>
                       <br />
@@ -140,31 +103,18 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div
-                    class="card"
-                    :class="
-                      firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
-                    "
-                    @click="
-                      onFirstIncorrectClick();
-                      showSecondQuestion = true;
-                    "
-                    role="link"
-                  >
+                  <div class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                    " @click="
+    onFirstIncorrectClick();
+  showSecondQuestion = true;
+  " role="link">
                     <div class="card-body">
-                      <img
-                        class="img-b"
-                        :src="require(`@/assets/${fakeimg1FileName}`)"
-                        alt="Image"
-                        style="display: inline-block; border-radius: 5px"
-                      />
+                      <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image"
+                        style="display: inline-block; border-radius: 5px" />
                     </div>
                   </div>
 
-                  <div
-                    class="incorrect"
-                    :class="{ hidden: !firstQuestionShowIncorrect }"
-                  >
+                  <div class="incorrect" :class="{ hidden: !firstQuestionShowIncorrect }">
                     <p style="display: block">
                       <span style="color: #707070">
                         Oops, you have misidentified this as human made!
@@ -181,39 +131,23 @@
       </div>
 
       <!-- Second question -->
-      <div
-        ref="secondQuestion"
-        class="question-two container mb-5 text-section"
-        :class="{ hidden: !showSecondQuestion }"
-      >
+      <div ref="secondQuestion" class="question-two container mb-5 text-section" :class="{ hidden: !showSecondQuestion }">
         <div class="col-md-12 d-flex align-self-center justify-content-center">
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'"
-                  @click="
-                    onSecondCorrectClick();
-                    showThirdQuestion = true;
-                    scrollIntoThirdQuestion();
-                  "
-                  role="link"
-                >
+                <div class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  onSecondCorrectClick();
+                showThirdQuestion = true;
+                scrollIntoThirdQuestion();
+                " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${realimg2FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="correct"
-                  :class="{ hidden: !secondQuestionShowCorrect }"
-                >
+                <div class="correct" :class="{ hidden: !secondQuestionShowCorrect }">
                   <p style="display: block">
                     <span style="color: #6d0cff"> Correct! +1 point </span>
                     <br />
@@ -222,31 +156,18 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="
-                    secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
-                  "
-                  @click="
-                    onSecondIncorrectClick();
-                    showThirdQuestion = true;
-                  "
-                  role="link"
-                >
+                <div class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  " @click="
+    onSecondIncorrectClick();
+  showThirdQuestion = true;
+  " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${fakeimg2FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="incorrect"
-                  :class="{ hidden: !secondQuestionShowIncorrect }"
-                >
+                <div class="incorrect" :class="{ hidden: !secondQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
                       Oops, you have misidentified this as human made!
@@ -262,38 +183,22 @@
       </div>
 
       <!-- Third question -->
-      <div
-        ref="thirdQuestion"
-        class="question-three container mb-5 text-section"
-        :class="{ hidden: !showThirdQuestion }"
-      >
+      <div ref="thirdQuestion" class="question-three container mb-5 text-section" :class="{ hidden: !showThirdQuestion }">
         <div class="col-md-12 d-flex align-self-center justify-content-center">
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'"
-                  @click="
-                    onThirdIncorrectClick();
-                    showFourthQuestion = true;
-                  "
-                  role="link"
-                >
+                <div class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
+                  onThirdIncorrectClick();
+                showFourthQuestion = true;
+                " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${fakeimg3FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="incorrect"
-                  :class="{ hidden: !thirdQuestionShowIncorrect }"
-                >
+                <div class="incorrect" :class="{ hidden: !thirdQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
                       Oops, you have misidentified this as human made!
@@ -304,30 +209,18 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'"
-                  @click="
-                    onThirdCorrectClick();
-                    showFourthQuestion = true;
-                    scrollIntoFourthQuestion();
-                  "
-                  role="link"
-                >
+                <div class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  onThirdCorrectClick();
+                showFourthQuestion = true;
+                scrollIntoFourthQuestion();
+                " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${realimg3FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="correct"
-                  :class="{ hidden: !thirdQuestionShowCorrect }"
-                >
+                <div class="correct" :class="{ hidden: !thirdQuestionShowCorrect }">
                   <p style="display: block">
                     <span style="color: #6d0cff"> Correct! +1 point </span>
                     <br />
@@ -341,40 +234,24 @@
       </div>
 
       <!-- Fourth question-->
-      <div
-        ref="fourthQuestion"
-        class="question-four container mb-5 text-section"
-        :class="{ hidden: !showFourthQuestion }"
-      >
+      <div ref="fourthQuestion" class="question-four container mb-5 text-section"
+        :class="{ hidden: !showFourthQuestion }">
         <div class="col-md-12 d-flex align-self-center justify-content-center">
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="
-                    fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
-                  "
-                  @click="
-                    onFourthIncorrectClick();
-                    showFifthQuestion = true;
-                  "
-                  role="link"
-                >
+                <div class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  " @click="
+    onFourthIncorrectClick();
+  showFifthQuestion = true;
+  " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${fakeimg4FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="incorrect"
-                  :class="{ hidden: !fourthQuestionShowIncorrect }"
-                >
+                <div class="incorrect" :class="{ hidden: !fourthQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
                       Oops, you have misidentified this as human made!
@@ -385,30 +262,18 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div
-                  class="card"
-                  :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'"
-                  @click="
-                    onFourthCorrectClick();
-                    showFifthQuestion = true;
-                    scrollIntoFifthQuestion();
-                  "
-                  role="link"
-                >
+                <div class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  onFourthCorrectClick();
+                showFifthQuestion = true;
+                scrollIntoFifthQuestion();
+                " role="link">
                   <div class="card-body">
-                    <img
-                      class="img-b"
-                      :src="require(`@/assets/${realimg4FileName}`)"
-                      alt="Image"
-                      style="display: inline-block; border-radius: 5px"
-                    />
+                    <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Image"
+                      style="display: inline-block; border-radius: 5px" />
                   </div>
                 </div>
 
-                <div
-                  class="correct"
-                  :class="{ hidden: !fourthQuestionShowCorrect }"
-                >
+                <div class="correct" :class="{ hidden: !fourthQuestionShowCorrect }">
                   <p style="display: block">
                     <span style="color: #6d0cff"> Correct! +1 point </span>
                     <br />
@@ -423,41 +288,24 @@
 
       <div class="row h-30">
         <!-- Fifth question -->
-        <div
-          ref="fifthQuestion"
-          class="question-five container mb-5 text-section"
-          :class="{ hidden: !showFifthQuestion }"
-        >
-          <div
-            class="col-md-12 d-flex align-self-center justify-content-center"
-          >
+        <div ref="fifthQuestion" class="question-five container mb-5 text-section"
+          :class="{ hidden: !showFifthQuestion }">
+          <div class="col-md-12 d-flex align-self-center justify-content-center">
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div
-                    class="card"
-                    :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'"
-                    @click="
-                      onFifthCorrectClick();
-                      showContinue = true;
-                      scrollIntoContinue();
-                    "
-                    role="link"
-                  >
+                  <div class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                    onFifthCorrectClick();
+                  showContinue = true;
+                  scrollIntoContinue();
+                  " role="link">
                     <div class="card-body">
-                      <img
-                        class="img-b"
-                        :src="require(`@/assets/${realimg5FileName}`)"
-                        alt="Image"
-                        style="display: inline-block; border-radius: 5px"
-                      />
+                      <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Image"
+                        style="display: inline-block; border-radius: 5px" />
                     </div>
                   </div>
 
-                  <div
-                    class="correct"
-                    :class="{ hidden: !fifthQuestionShowCorrect }"
-                  >
+                  <div class="correct" :class="{ hidden: !fifthQuestionShowCorrect }">
                     <p style="display: block">
                       <span style="color: #6d0cff"> Correct! +1 point </span>
                       <br />
@@ -466,32 +314,19 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div
-                    class="card"
-                    :class="
-                      fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
-                    "
-                    @click="
-                      onFifthIncorrectClick();
-                      showContinue = true;
-                      scrollIntoContinue();
-                    "
-                    role="link"
-                  >
+                  <div class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                    " @click="
+    onFifthIncorrectClick();
+  showContinue = true;
+  scrollIntoContinue();
+  " role="link">
                     <div class="card-body">
-                      <img
-                        class="img-b"
-                        :src="require(`@/assets/${fakeimg5FileName}`)"
-                        alt="Image"
-                        style="display: inline-block; border-radius: 5px"
-                      />
+                      <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image"
+                        style="display: inline-block; border-radius: 5px" />
                     </div>
                   </div>
 
-                  <div
-                    class="incorrect"
-                    :class="{ hidden: !fifthQuestionShowIncorrect }"
-                  >
+                  <div class="incorrect" :class="{ hidden: !fifthQuestionShowIncorrect }">
                     <p style="display: block">
                       <span style="color: #707070">
                         Oops, you have misidentified this as human made!
@@ -508,11 +343,7 @@
             <div class="col-md-12 score-container">
               <span class="purple-text">
                 <p>
-                  <em
-                    ><u
-                      >You scored: {{ score }} / 5 correctly! Great work</u
-                    ></em
-                  >
+                  <em><u>You scored: {{ score }} / 5 correctly! Great work</u></em>
                 </p>
               </span>
             </div>
@@ -521,36 +352,24 @@
 
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-center">
-            <purple-btn
-              v-if="quizCompleted && !section2Completed && !redoQuiz"
-              :text="'Retry'"
-              @click="
-                showFirstQuestion = true;
-                redo();
-              "
-            />
+            <purple-btn v-if="quizCompleted && !section2Completed && !redoQuiz" :text="'Retry'" @click="
+              showFirstQuestion = true;
+            redo();
+            " />
           </div>
         </div>
 
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn
-              v-if="quizCompleted && !section2Completed"
-              :text="'Continue'"
-              @click="
-                showThirdSection = true;
-                scrollIntoThirdSection();
-                section2Completed = true;
-              "
-            />
+            <purple-btn v-if="quizCompleted && !section2Completed" :text="'Continue'" @click="
+              showThirdSection = true;
+            scrollIntoThirdSection();
+            section2Completed = true;
+            " />
           </div>
         </div>
 
-        <div
-          ref="thirdSection"
-          class="row h-30 mb-8 justify-content-center"
-          :class="{ hidden: !showThirdSection }"
-        >
+        <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showThirdSection }">
           <div class="row h-10 mb-5">
             <div class="col-md-12">
               <h3>How to identify AI-generated images?</h3>
@@ -558,14 +377,8 @@
           </div>
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
-              <a
-                href="https://www.androidpolice.com/identify-ai-generated-images-how-to"
-                target="_blank"
-              >
-                <img
-                  src="../../../assets//ai_article.png"
-                  alt="Image of AI artwork"
-                />
+              <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
+                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
               </a>
             </div>
             <h2 class="article-title">How to identify AI-generated images</h2>
@@ -578,12 +391,8 @@
               clues you can look for to identify these and potentially avoid
               being tricked into thinking you're looking at a real picture.
             </p>
-            <a
-              class="article-link"
-              href="https://www.androidpolice.com/identify-ai-generated-images-how-to/"
-              target="_blank"
-              >Read More</a
-            >
+            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/"
+              target="_blank">Read More</a>
             <br />
           </div>
 
@@ -596,17 +405,10 @@
             </p>
           </div>
 
-          <div
-            class="row h-20"
-            style="padding-bottom: 20px"
-            v-if="quizCompleted"
-          >
+          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
             <div class="col-md-12 d-flex justify-content-end">
               <router-link to="/dalle/the-complexities-of-copyright">
-                <purple-btn
-                  :text="'Continue'"
-                  @click="handlePageCompletionClick()"
-                />
+                <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
               </router-link>
             </div>
           </div>
