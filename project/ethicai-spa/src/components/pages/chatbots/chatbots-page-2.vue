@@ -230,4 +230,18 @@ export default defineComponent({
     height: 75vh;
     width: 80%;
 }
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-a,.img-b {
+    width: 60%;
+  }
+
+  .img-c, .img-d {
+    width: 90%;
+  }
+}
 </style>
