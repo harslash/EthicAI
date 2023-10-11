@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ModuleCompletion :moduleName="'The Age of Chatbots'" :buttonText="'Module Complete'" />
+        <ModuleCompletion :moduleTitle="'The Age of Chatbots'" :moduleName="'chatbots'" :buttonText="'Module Complete'" />
     </div>
 </template>
   
