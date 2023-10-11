@@ -5,7 +5,7 @@
     <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">The Age of Chatbots</h1>
+          <h1 class="tw-mt-24">The Age of Chatbots</h1>
         </div>
       </div>
       <div class="row h-30 mb-5">

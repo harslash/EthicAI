@@ -1,11 +1,11 @@
 <template>
     <nav-bar />
-    <module-navigation-bar :moduleName="'chatbots'"/>
+    <module-navigation-bar :moduleName="'chatbots'" />
     <div class="container-fluid page-container text-center">
         <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
-                    <h1 class="mt-5">Hallucination</h1>
+                    <h1 class="tw-mt-24">Hallucination</h1>
                 </div>
             </div>
             <div class="row h-30 mb-5">
