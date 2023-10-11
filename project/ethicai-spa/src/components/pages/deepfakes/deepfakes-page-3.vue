@@ -34,8 +34,8 @@
             <div class="tw-w-full tw-pt-10">
               <!-- First audio pair -->
               <div ref="firstAudio" class="tw-w-4/6 tw-m-auto tw-mb-10">
-                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Donald Trump</b>. Which
-                  one is real?</p>
+                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Donald Trump</b>.
+                  Which one is <em>real</em>?</p>
                 <div class="d-flex">
                   <div class="tw-m-auto">
                     <audio controls controlsList="nodownload">
@@ -73,9 +73,8 @@
               </div>
               <!-- Second audio pair -->
               <div ref="secondAudio" class="tw-w-4/6 tw-m-auto tw-mb-10" :class="{ hidden: !firstAudioAnswered }">
-                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Barrack Obama</b>. Which
-                  one
-                  is real?</p>
+                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Barrack Obama</b>.
+                  Which one is <em>real</em>?</p>
                 <div class="d-flex">
                   <div class="tw-m-auto">
                     <audio controls controlsList="nodownload">
@@ -113,8 +112,8 @@
               </div>
               <!-- Third audio pair -->
               <div ref="thirdAudio" class="tw-w-4/6 tw-m-auto" :class="{ hidden: !secondAudioAnswered }">
-                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Ben Shapiro</b>. Which
-                  one is real?</p>
+                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Ben Shapiro</b>.
+                  Which one is <em>real</em>?</p>
                 <div class="d-flex">
                   <div class="tw-m-auto">
                     <audio controls controlsList="nodownload">
@@ -162,9 +161,9 @@
         <div class="col-md-12 pb-5">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text">
-              Did you manage to distinguish the real audio from the fake? If you found it
-              challenging, you're not alone. Audio deepfake technology has evolved to a point where even seasoned
-              listeners can struggle to tell the difference.</p>
+              Did you manage to distinguish the real audio from the fake? If you found it challenging, you're not alone.
+              Audio deepfake technology has evolved to a point where even seasoned listeners can struggle to tell the
+              difference.</p>
             <p class="section-text">
               Staying informed and aware of these advancements is crucial. It's a reminder of the importance of critical
               thinking and digital literacy in today's world. By understanding the potential of audio deepfakes, we can
