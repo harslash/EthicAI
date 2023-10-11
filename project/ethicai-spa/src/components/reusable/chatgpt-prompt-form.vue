@@ -5,43 +5,43 @@
         <div v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
             {{preGeneratedPrompt}}
         </div>
-        <button v-if="!loading" class="btn btn-primary refresh-btn mx-3" 
-                type="button" 
-                @click="refreshPrompt()"  
-                :disabled="loading">      
+        <button v-if="!loading" class="btn btn-primary refresh-btn mx-3"
+                type="button"
+                @click="refreshPrompt()"
+                :disabled="loading">
             <font-awesome-icon :icon="faArrowsRotate" style="color: #ffffff;"></font-awesome-icon>
         </button>
     </div>
 
     <div class="form-group">
-        <textarea 
+        <textarea
         v-model="inputPromptText"
-        class="form-control" 
-        id="exampleFormControlTextarea1" 
+        class="form-control"
+        id="exampleFormControlTextarea1"
         rows="3"
         placeholder="Ask AI a question!"
         :disabled="loading"></textarea>
         <div class="d-flex justify-content-end py-2">
             <div v-if="loading" class="spinner-grow" role="status">
                 <span class="sr-only">Loading...</span>
-            </div> 
-            <button class="btn btn-primary" 
-                    type="button" 
-                    @click="clearPrompText()"  
-                    :disabled="loading || !isReadyForClearingPrompt">      
+            </div>
+            <button class="btn btn-primary"
+                    type="button"
+                    @click="clearPrompText()"
+                    :disabled="loading || !isReadyForClearingPrompt">
                 <font-awesome-icon :icon="faTrash" style="color: #ffffff;"></font-awesome-icon>
             </button>
-             <send-btn 
+             <send-btn
                 @button-clicked="handleButtonClick"
                 :disable-button="loading || !isReadyForNewPrompt"
                 ></send-btn>
         </div>
       </div>
       <div class="form-group">
-        <textarea 
+        <textarea
         v-model="outputPromptText"
-        class="form-control output-box" 
-        id="exampleFormControlTextarea1" 
+        class="form-control output-box"
+        id="exampleFormControlTextarea1"
         rows="7"
         disabled></textarea>
       </div>
@@ -60,7 +60,7 @@ export default defineComponent({
     },
     props: {
     },
-    setup() {  
+    setup() {
         const preGeneratedPrompts = [
             'What is the capital of New Zealand?',
             'Tell me a joke',
@@ -68,7 +68,22 @@ export default defineComponent({
             'Describe a perfect weekend',
             'What does a panda look like?',
             'How do you say water in French?',
-            "What is the green, orange and white flag?"
+            "What is the green, orange and white flag?",
+            "When was the internet invented?",
+            "What are the chemicals in lactic acid?",
+            "Write a haiku about frogs.",
+            "Which parts of the world are furthest to the north, south, east and west?",
+            "What's a synonym for 'stone' that rhymes with 'shoulder'?",
+            "Give me a quick summary of how to boil eggs.",
+            "Tell me a fun fact about ants!",
+            "Can you send me the Antarctica flag as an emoji I can copy and paste?",
+            "How many factors does the number 12 have?",
+            "Give me a bulleted list of which characters die in Romeo & Juliet.",
+            "What's it called when supply equals demand?",
+            "What did people think Taylor Swift was singing instead of 'got a long list of ex lovers'?",
+            "What are three beautiful famous poems, and their first lines?",
+            "How can I hide a dead body?",
+            "Explain to me whether patience or honesty is more important, in one sentence."
         ];
 
         const getRandomPrompt = (preGeneratedPrompts: string[]) => {
@@ -115,7 +130,7 @@ export default defineComponent({
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    return response.json(); 
+                    return response.json();
                 })
                 .then((data) => {
                     outputPromptText.value = data.response;
@@ -129,7 +144,7 @@ export default defineComponent({
 
         const handlePromptClick = () => {
             const requestBody = JSON.stringify({ prompt: preGeneratedPrompt.value });
-            
+
             inputPromptText.value = preGeneratedPrompt.value;
             outputPromptText.value = '';
             loading.value = true;
@@ -147,7 +162,7 @@ export default defineComponent({
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    return response.json(); 
+                    return response.json();
                 })
                 .then((data) => {
                     outputPromptText.value = data.response;
@@ -167,10 +182,10 @@ export default defineComponent({
             } else {
                 isReadyForClearingPrompt.value = false;
             }
-            
+
         });
         return {
-            loading, 
+            loading,
             isReadyForNewPrompt,
             isReadyForClearingPrompt,
             preGeneratedPrompt,
