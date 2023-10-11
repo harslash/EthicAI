@@ -14,6 +14,9 @@
                         with the support of Danielle Lottridge and Thomas Lacombe, who provided valuable feedback and
                         guidance.
                     </p>
+                    <p>
+                        For any inquiries, please <a href = "mailto: ethicai@gmail.com">email us</a> directly.
+                    </p>
                 </div>
             </div>
         </div>
@@ -21,6 +24,7 @@
         <section class="vh-50 gradient-custom mb-5">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
+                    <h3 class="our-team-title pb-3">Our team</h3>
                     <div class="col col-xl-10">
                         <div class="card">
                             <div class="card-body py-5">
@@ -251,6 +255,15 @@ export default defineComponent({
     font-size: 1rem;
 }
 
+.our-team-title {
+    text-align: center;
+    color: #ffffff;
+}
+
+.card {
+    height: 300px;
+}
+
 .gradient-custom {
     /* fallback for old browsers */
     background: #f6d365;
@@ -261,4 +274,10 @@ export default defineComponent({
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
+
+@media (max-width: 767.98px) {
+    .card   {
+      height: 600px;
+    }
+  }
 </style>
