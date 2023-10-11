@@ -35,4 +35,10 @@ export default defineComponent({
     height: 100vh;
     margin-top: 60px;
 }
+
+@media (max-width: 576px) {
+   .container-fluid.page-container{    
+        height: 120vh;
+    }
+}
 </style>
