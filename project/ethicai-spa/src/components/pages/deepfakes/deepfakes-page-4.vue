@@ -5,7 +5,7 @@
     <div class="container text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">Deepfakes in the Media</h1>
+          <h1 class="tw-mt-24">Deepfakes in the Media</h1>
         </div>
       </div>
       <div class="row h-30 mb-5">

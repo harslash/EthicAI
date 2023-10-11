@@ -5,7 +5,7 @@
     <div class="container mb-5 text-section">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">Judgement Day</h1>
+          <h1 class="tw-mt-24">Judgement Day</h1>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">

@@ -5,7 +5,7 @@
     <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <h1 class="mt-5">AI For Evil</h1>
+          <h1 class="tw-mt-24">AI For Evil</h1>
           <p><em>This case study may be distressing for some readers. Content warnings: threats of violence and sexual
               assault; emotional manipulation.</em></p>
         </div>
