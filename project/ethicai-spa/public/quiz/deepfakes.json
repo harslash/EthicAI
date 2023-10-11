@@ -1,24 +1,64 @@
 {
     "results": [
         {
-            "question": "Deepfakes Question 1.",
-            "correct_answer": "Correct Answer",
+            "question": "What is deepfake technology capable of creating?",
+            "correct_answer": "Hyper-realistic videos, audios and images",
             "incorrect_answers": [
-                "Incorrect Answer A",
-                "Incorrect Answer B",
-                "Incorrect Answer C"
+                "Long-form text content",
+                "Talking objects",
+                "Homework assignments"
             ],
-            "explanation": "Explanation"
+            "explanation": "Deepfake technology is used to make fake videos, images or audio about real individuals, which look and sound real."
         },
         {
-            "question": "Deepfakes Question 2.",
-            "correct_answer": "Correct Answer",
+            "question": "How can deepfake technology create content?",
+            "correct_answer": "With a generative adversarial network (GAN) that uses algorithms to train itself to recognize patterns",
             "incorrect_answers": [
-                "Incorrect Answer A",
-                "Incorrect Answer B",
-                "Incorrect Answer C"
+                "Editing together various audio or video clips",
+                "Using pen and paper",
+                "They can't"
             ],
-            "explanation": "Explanation"
+            "explanation": "While there are many algorithms that can be used for deepfakes, a GAN uses algorithms to train itself to recognize patterns, which helps it learn the real characteristics needed to produce fake media. After lots of training, GAN output can be very hard to distinguish from real media."
+        },
+        {
+            "question": "What is a positive application of deepfakes?",
+            "correct_answer": "Creating a synthesised voice for yourself if you have a speech disability",
+            "incorrect_answers": [
+                "Pretending to be an individual to gain access to their financial information",
+                "Generating a video of a famous celebrity behaving inappropriately",
+                "Blackmail"
+            ],
+            "explanation": "Remember, deepfake technologies should not be used to deceive people, but instead to inform people or express oneself."
+        },
+        {
+            "question": "What risks can deepfakes pose to society and/or individuals?",
+            "correct_answer": "All of the above",
+            "incorrect_answers": [
+                "Creation of fake news and disinformation",
+                "Extortion",
+                "Reputational damage, ridicule, intimidation and harassment"
+            ],
+            "explanation": "There is growing concern about deepfakes, especially as the technology becomes cheaper and easier to use. Deepfakes of politicians or elected officials can be used for fake news intended to lie to the public. Attackers can also use deepfakes for extortion to access money or confidential information. Deepfakes create a realistic likeness of a person, so they have also been used to ridicule, intimidate and harass others, and damage their reputation."
+        },
+        {
+            "question": "How can you identify if a piece of media is a deepfake?",
+            "correct_answer": "All of the above",
+            "incorrect_answers": [
+                "Observing if the age of the skin on the face is similar to that of the hair and eyes",
+                "If glare is not visible or there is too much glare when a person is wearing glasses",
+                "Lip movements of the person look unnatural"
+            ],
+            "explanation": "As deepfake technology continues to improve over time, discerning between real and fake media can become increasingly difficult — but the deepfake artefacts above are helpful to look out for."
+        },
+        {
+            "question": "What are the future implications of deepfakes?",
+            "correct_answer": "Trust in digital platforms and services could be undermined",
+            "incorrect_answers": [
+                "General levels of confusion and suspicion within society could decrease",
+                "Deepfake technology will prevent criminal acts and disinformation campaigns",
+                "There are no future implications"
+            ],
+            "explanation": "A combination of deepfakes and disinformation/misinformation can hurt the credibility of legitimate sources through reports of misrepresentation and/or deception. If we are aware of highly sophisticated fake versions of media,we can’t trust that a real-looking piece of media truly is real."
         }
     ]
 }
