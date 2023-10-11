@@ -32,7 +32,7 @@
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
                     <purple-btn v-if="!section1Completed" :text="'Continue'"
-                        @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;" />
+                        @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
                 </div>
             </div>
         </div>
@@ -59,18 +59,64 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <img class="img-a" src="../../../assets//chatbots_page_2_b.jpeg"
+                    <img class="img-b" src="../../../assets//chatbots_page_2_b.jpeg"
                         alt="2d illustration of a robot pulling messages from a box" />
                 </div>
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
                     <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
-                        @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;" />
+                        @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
                 </div>
             </div>
         </div>
-        <div ref="thirdSection" class="container text-section pb-5" :class="{ 'hidden': !showThirdSection }">
+        <div ref="thirdSection" class="section-three container mb-5 text-section" :class="{ 'hidden': !showThirdSection }">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <p class="section-text">
+                    Here's a glimpse into ChatGPT's inner workings. ChatGPT undergoes comprehensive training by drawing data
+                    from diverse sources on the internet, including Wikipedia, books, news articles, and scientific journals.
+                    After this immersive learning process, ChatGPT is primed for interaction. As showcased in our flowchart, you
+                    initiate interaction by sending ChatGPT a prompt or question. ChatGPT, armed with the knowledge it has
+                    acquired during training, then crafts a tailored response, promptly delivering it back to you, the user.
+                    </p>
+                </div>
+                </div>
+                <div class="col-md-12">
+                <img src="../../../assets//chatbots_page_2_c.png" class="img-c"
+                    alt="flowchat diagram explaing training process of ChatGPT" />
+                </div>
+            </div>
+            <div class="row h-20">
+                <div class="col-md-12 d-flex justify-content-end">
+                <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'"
+                    @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
+                </div>
+            </div>
+        </div>
+        <div ref="fourthSection" class="section-four container mb-5 text-section" :class="{ 'hidden': !showFourthSection }">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <p class="section-text">
+                  Markov chains, akin to ChatGPT, rely on statistical probabilities. Picture a Markov Chain consulting a corpus to calculate these probabilities, similar to how ChatGPT uses its training data. However, there are differences. Unlike ChatGPT, Markov chains operate without considering context as they lack conversation history. Their word predictions are solely based on preceding words, determined by probabilities. As you can see, Markov Chain doesn't rely on a traditional prompt. Instead, we initiate it with a starting word. In this case, the word is "How," prompting the system to generate a response.
+                    </p>
+                </div>
+                </div>
+                <div class="col-md-12">
+                <img src="../../../assets//chatbots_page_2_d.png" class="img-d"
+                    alt="flowchat diagram explaing training process of ChatGPT" />
+                </div>
+            </div>
+            <div class="row h-20">
+                <div class="col-md-12 d-flex justify-content-end">
+                <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
+                    @click="showfifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
+                </div>
+            </div>
+        </div>
+        <div ref="fifthSection" class="container text-section pb-5" :class="{ 'hidden': !showfifthSection }">
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex align-items-center flex-column">
@@ -114,25 +160,20 @@ export default defineComponent({
             showFirstSection: true,
             showSecondSection: false,
             showThirdSection: false,
+            showFourthSection: false,
+            showFifthSection: false,
             section1Completed: false,
             section2Completed: false,
             section3Completed: false,
+            section4Completed: false
         }
     },
     methods: {
-        scrollIntoSecondSection() {
+        scrollIntoSection(sectionName: string) {
             this.$nextTick(() => {
-                const element = this.$refs.secondSection as HTMLElement;
+                const element = this.$refs[sectionName] as HTMLElement;
                 if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
-                }
-            });
-        },
-        scrollIntoThirdSection() {
-            this.$nextTick(() => {
-                const element = this.$refs.thirdSection as HTMLElement;
-                if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+                element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
             });
         },
@@ -165,8 +206,12 @@ export default defineComponent({
     text-align: left;
 }
 
-.img-a {
+.img-a, .img-b {
     width: 30%;
+}
+
+.img-c,.img-d{
+    width: 50%;
 }
 
 .text-section {
