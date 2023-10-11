@@ -15,7 +15,7 @@ export default defineComponent({
     },
     methods: {
         handlePageCompletionClick() {
-            registerPageAsCompleted('chatbots', 'chatbot-quiz');
+            registerPageAsCompleted('chatbots', 'chatbots-quiz');
         },
     },
     created() {
