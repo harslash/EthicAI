@@ -2,8 +2,8 @@
     <form class="form-container d-flex flex-column justify-content-center align-items-center">
         <div class="container pb-3">
             <div class="row">
-                   <div class="col-md-12 d-flex">
-                    <div class="dropdown px-3">
+                   <div class="col-md-12 d-flex align-items-center">
+                    <div class="dropdown px-2">
                         <button
                             class="btn
                             btn-secondary
@@ -24,14 +24,45 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="dropdown px-2">
+                        <button
+                            class="btn
+                            btn-secondary
+                            dropdown-toggle
+                            demo-btn
+                            " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Adjust Biases
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item"
+                                    @click="handleAdjustBiasesDropdownClick('original')">{{biasedDropdownItemOneText}}</a>
+                            </li>
+                             <li>
+                                <a class="dropdown-item"
+                                    @click="handleAdjustBiasesDropdownClick('inverted')">{{biasedDropdownItemTwoText}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <button
-                        class="btn btn-primary demo-btn"
+                        class="btn btn-primary demo-btn mx-2"
                         @click="handleButtonClick"
                         :disabled="loading"
                         type="button">Train Model</button>
                     <div v-if="loading" class="spinner-grow" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
+
+                    <div 
+                        class='ms-auto'
+                        v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error' }">
+                        <font-awesome-icon 
+                        :icon="faCircleInfo" 
+                        style="color: #6D0CFF;" 
+                        id="infoIcon"></font-awesome-icon>
+                    </div>
+                  
                 </div>
             </div>
         </div>
@@ -40,6 +71,7 @@
                 <div class="col-md-12">
                     <h5 class="demo-title"> {{ corpusLabel }}</h5>
                     <p class="demo-subtitle">Bias Category: {{corpusCategory}}</p>
+                    <p class="demo-subtitle">Biased Training: {{biasedTrainingName}}</p>
                 </div>
                  <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
             </div>
@@ -59,8 +91,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
-
+import { defineComponent, ref, onMounted, computed} from 'vue';
+import { faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 function splitStringToArray(inputString: string, delimiters: string[]) {
     // Split after newlines and spaces
     inputString = inputString.replaceAll(" ", " ꙮ").replaceAll("\n", "\nꙮ");
@@ -124,7 +156,7 @@ export default defineComponent({
     },
     setup() {
         const wilsonCorpus = 'I have called the Congress into extraordinary session because there are serious, very serious, choices of policy to be made, and made immediately, which it was neither right nor constitutionally permissible that I should assume the responsibility of making. On the 3rd of February last, I officially laid before you the extraordinary announcement of the Imperial German government that on and after the 1st day of February it was its purpose to put aside all restraints of law or of humanity and use its submarines to sink every vessel that sought to approach either the ports of Great Britain and Ireland or the western coasts of Europe or any of the ports controlled by the enemies of Germany within the Mediterranean...\n\nWhen I addressed the Congress on the 26th of February last, I thought that it would suffice to assert our neutral rights with arms, our right to use the seas against unlawful interference, our right to keep our people safe against unlawful violence. But armed neutrality, it now appears, is impracticable... Armed neutrality is ineffectual enough at best; in such circumstances and in the face of such pretensions it is worse than ineffectual: it is likely only to produce what it was meant to prevent; it is practically certain to draw us into the war without either the rights or the effectiveness of belligerents. There is one choice we cannot make, we are incapable of making: we will not choose the path of submission and suffer the most sacred rights of our nation and our people to be ignored or violated. The wrongs against which we now array ourselves are no common wrongs; they cut to the very roots of human life.\n\nWith a profound sense of the solemn and even tragical character of the step I am taking and of the grave responsibilities which it involves, but in unhesitating obedience to what I deem my constitutional duty, I advise that the Congress declare the recent course of the Imperial German government to be in fact nothing less than war against the government and people of the United States; that it formally accept the status of belligerent which has thus been thrust upon it; and that it take immediate steps, not only to put the country in a more thorough state of defense but also to exert all its power and employ all its resources to bring the government of the German Empire to terms and end the war...\n\nThe world must be made safe for democracy. Its peace must be planted upon the tested foundations of political liberty. We have no selfish ends to serve. We desire no conquest, no dominion. We seek no indemnities for ourselves, no material compensation for the sacrifices we shall freely make. We are but one of the champions of the rights of mankind. We shall be satisfied when those rights have been made as secure as the faith and the freedom of nations can make them...';
-
+        
         const wilsonCorpusBiasedIndices = [69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 86, 87, 88, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 171, 172, 173, 174, 175, 176, 191, 192, 193, 194, 240, 241, 242, 243, 244, 245, 250, 251, 260, 262, 312, 313, 319, 320, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 389, 390, 391, 392, 399, 400, 401, 402, 403, 404, 405, 406, 407, 419, 420, 421, 422, 440, 441, 442, 443, 444, 445, 457, 458, 459, 460, 461, 468, 469, 470, 471, 472, 473];
 
         //eslint-disable-next-line
@@ -135,7 +167,6 @@ export default defineComponent({
 
         onMounted(() => {
             // Call updateMarkovDemo after the component is mounted
-            console.log(wilsonCorpusBiasedIndices)
             updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndices, 'inputTextarea', startingWords);
         });
 
@@ -143,6 +174,8 @@ export default defineComponent({
         let corpusId = 'wilson';
         const corpusLabel = ref('Woodrow Wilson’s 1917 Declaration of War');
         const corpusCategory = ref('Political');
+
+        const biasedTrainingName = ref('Biases towards Germany');
 
         const loading = ref(false);
 
@@ -159,6 +192,7 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Woodrow Wilson’s 1917 Declaration of War';
                     corpusCategory.value = "Political"
+                    biasedTrainingName.value = 'Biased towards Germany'
                     startingWords = "I";
                     updateMarkovDemo(wilsonCorpus, wilsonCorpusBiasedIndices, 'inputTextarea', startingWords);
 
@@ -167,11 +201,50 @@ export default defineComponent({
                     corpusId = itemId;
                     corpusLabel.value = 'Etiquette';
                     corpusCategory.value = "Gender"
+                    biasedTrainingName.value = 'Biased towards women'
                     startingWords = 'A';
                     updateMarkovDemo(etiquetteCorpus, etiquetteCorpusBiasedIndices, 'inputTextarea', startingWords);
                 }
             }
         };
+
+        const biasedDropdownItemOneText = computed(() => {
+            return corpusLabel.value === "Woodrow Wilson’s 1917 Declaration of War" ? "Biases towards Germany" : "Biases towards women";
+        });
+
+        const biasedDropdownItemTwoText = computed(() => {
+            return corpusLabel.value === "Woodrow Wilson’s 1917 Declaration of War" ? "Biases towards America" : "Biases towards men";
+        });        
+
+        const handleAdjustBiasesDropdownClick = (itemId: string) => {
+            let inputTextArea = document.getElementById('inputTextarea');
+
+            if (inputTextArea) {
+                if (corpusLabel.value === 'Woodrow Wilson’s 1917 Declaration of War') {
+                    if (itemId === 'original') {
+                        corpusId = 'wilson';
+                        biasedTrainingName.value = 'Biased towards Germany';
+                    }
+
+                    if (itemId === 'inverted') {
+                        corpusId = 'inverted-wilson';
+                        biasedTrainingName.value = 'Biased towards America';
+                    }
+                }
+                if (corpusLabel.value === 'Etiquette') {
+                    if (itemId === 'original') {
+                        corpusId = 'etiquette';
+                        biasedTrainingName.value = 'Biased towards women';
+                    }
+
+                    if (itemId === 'inverted') {
+                        corpusId = 'inverted-etiquette';
+                        biasedTrainingName.value = 'Biased towards men';
+                    }
+                    }
+                }
+            }
+        
 
          const handleButtonClick = () => {
             const requestBody = JSON.stringify(
@@ -204,12 +277,35 @@ export default defineComponent({
                 });
         };
 
+        const getTooltipContent = () => {
+
+            if (corpusLabel.value === 'Woodrow Wilson’s 1917 Declaration of War') {
+                return `
+                <p class='text-black'><b>Few things to note:</b></p>
+                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggests United States is the righteous country.</p>   
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'I'.</p>
+                `;
+            }
+
+            return `
+                <p class='text-black'><b>Few things to note:</b></p>
+                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggest what role a woman or man should have.</p>   
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'A'.</p>
+                `;
+        }
+
         return {
             loading,
             handleDropdownItemClick,
             handleButtonClick,
+            biasedDropdownItemOneText,
+            biasedDropdownItemTwoText,
+            handleAdjustBiasesDropdownClick,
             corpusLabel,
-            corpusCategory
+            corpusCategory,
+            biasedTrainingName,
+            getTooltipContent,
+            faCircleInfo
         }
     },
 });
@@ -223,6 +319,7 @@ export default defineComponent({
     border: 2px solid #E8E4E4;
     box-shadow: 5px 5px 5px #E8E4E4;
     border-radius: 20px;
+    height: 580px;
 }
 
 .form-group {
@@ -261,6 +358,7 @@ export default defineComponent({
 .demo-subtitle {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    margin-bottom: 0.25rem;
 }
 
 .spinner-grow {
@@ -282,7 +380,21 @@ export default defineComponent({
 .demo-textarea {
     border: 2px solid black;
     border-radius: 10px;
-    height: 20vh;
+    height: 180px;
     overflow-y: auto;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+#infoIcon {
+    cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+   .form-container {    
+        height: 650px;
+    }
 }
 </style>

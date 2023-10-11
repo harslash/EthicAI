@@ -58,7 +58,7 @@ export default defineComponent({
         "too-good-to-be-true",
         "hallucination",
         "misuses-and-plagiarism",
-        "chatbot-quiz",
+        "chatbots-quiz",
         "chatbots-complete",
       ],
       deepfakesModulePageRoutes: [

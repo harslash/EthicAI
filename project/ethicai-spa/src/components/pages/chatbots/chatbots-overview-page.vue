@@ -34,7 +34,7 @@ export default defineComponent({
             moduleDescription: 'In this module, you’ll learn about what chatbots are, the limitations of ChatGPT, and guidelines surrounding using ChatGPT.',
             moduleImgSrc: '../../../assets/chatbots_module.png',
             modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Hallucination','Misuse and Plagiarism', 'Module Quiz'],
-            modulePageRoutes: ['the-age-of-chatbots', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbot-quiz'],
+            modulePageRoutes: ['the-age-of-chatbots', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbots-quiz'],
             moduleName: 'chatbots',
             pageName: 'the-age-of-chatbots',
             moduleImgFilename: 'chatbots_module.png'

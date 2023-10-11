@@ -68,7 +68,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/chatbots/quiz",
-    name: "chatbot-quiz",
+    name: "chatbots-quiz",
     component: () =>
       import("../views/modules/chatbots/ChatbotsPageFiveView.vue"),
   },

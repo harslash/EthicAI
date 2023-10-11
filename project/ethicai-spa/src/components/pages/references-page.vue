@@ -38,7 +38,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="tooGoodToBeTrue">
         <h3 class="sub-heading">Too Good to be True?</h3>
     </div>
     <div class="row">

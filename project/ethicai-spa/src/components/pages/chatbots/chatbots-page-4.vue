@@ -1,5 +1,6 @@
 <template>
   <nav-bar />
+  <module-navigation-bar :moduleName="'chatbots'"/>
   <div class="container-fluid page-container text-center">
     <div class="row h-10 mb-5">
       <div class="col-md-12">
@@ -201,10 +202,7 @@
         </div>
       </div>
       <div class="row h-20 pb-5">
-        <div class="col-md-12 d-flex justify-content-between">
-          <router-link to="/chatbots/hallucination">
-            <purple-outline-btn :text="'Back'"></purple-outline-btn>
-          </router-link>
+        <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/chatbots/quiz">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
           </router-link>
@@ -218,6 +216,7 @@
 import { defineComponent, ref } from 'vue'; // Import ref
 
 import NavBar from '../../reusable/nav-bar.vue';
+import ModuleNavigationBar from '../../reusable/module-navigation-bar.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
 import PurpleOutlineBtn from '../../reusable-ui/purple-btn-outline.vue';
 import QuizUICard from '../../reusable/quiz-ui.vue';
@@ -291,6 +290,7 @@ export default defineComponent({
   },
   components: {
     'nav-bar': NavBar,
+    'module-navigation-bar': ModuleNavigationBar,
     'purple-btn': PurpleBtn,
     'purple-outline-btn': PurpleOutlineBtn,
     'quiz-ui-card': QuizUICard,

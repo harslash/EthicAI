@@ -209,7 +209,7 @@ export default defineComponent({
     border: 2px solid #E8E4E4;
     box-shadow: 5px 5px 5px #E8E4E4;
     border-radius: 20px;
-    height: 420px;
+    height: 450px;
 }
 
 .form-group {
@@ -240,7 +240,7 @@ export default defineComponent({
     color: #A6A6A6;
     cursor: pointer;
     text-align: left;
-    width: 60%;
+    width: 100%;
     padding: 6px 6px;
 }
 

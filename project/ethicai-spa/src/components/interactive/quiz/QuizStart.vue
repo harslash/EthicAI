@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center tw-flex">
+  <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center tw-flex quiz-start-container">
     <div class="row">
       <div class="col-sm px-md-5">
         <p class="tw-text-lg">QUIZ</p>
@@ -26,8 +26,14 @@ export default {
 </template>
 
 <style scoped>
-.image img {
-  width: auto;
-  height: 475px;
-}
+  .image img {
+    width: auto;
+    height: 475px;
+  }
+
+  @media (max-width: 767.98px) {
+    .image img {
+      height: 300px;
+    }
+  }
 </style>

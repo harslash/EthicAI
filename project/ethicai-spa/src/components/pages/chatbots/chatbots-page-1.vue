@@ -1,5 +1,6 @@
 <template>
   <nav-bar />
+  <module-navigation-bar :moduleName="'chatbots'"/>
   <div class="container-fluid page-container text-center">
     <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
@@ -119,10 +120,7 @@
         <div class="col-md-2"></div>
       </div>
       <div class="row h-20">
-        <div class="col-md-12 d-flex justify-content-between">
-          <router-link to="/chatbots">
-            <purple-btn-outline :text="'Back'"></purple-btn-outline>
-          </router-link>
+        <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/chatbots/too-good-to-be-true">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
           </router-link>
@@ -135,9 +133,9 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
+import ModuleNavigationBar from '../../reusable/module-navigation-bar.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
-import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 import ChatgptPromptForm from '../../reusable/chatgpt-prompt-form.vue';
 
 export default defineComponent({
@@ -200,9 +198,9 @@ export default defineComponent({
   },
   components: {
     'nav-bar': NavBar,
+    'module-navigation-bar': ModuleNavigationBar,
     'important-terms-card': ImportantTermsCard,
     'purple-btn': PurpleBtn,
-    'purple-btn-outline': PurpleBtnOutline,
     'chatgpt-prompt-form': ChatgptPromptForm,
   },
 });
