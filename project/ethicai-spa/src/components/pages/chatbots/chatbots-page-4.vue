@@ -202,10 +202,7 @@
         </div>
       </div>
       <div class="row h-20 pb-5">
-        <div class="col-md-12 d-flex justify-content-between">
-          <router-link to="/chatbots/hallucination">
-            <purple-outline-btn :text="'Back'"></purple-outline-btn>
-          </router-link>
+        <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/chatbots/quiz">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
           </router-link>
