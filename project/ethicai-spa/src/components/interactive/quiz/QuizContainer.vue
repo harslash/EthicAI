@@ -15,6 +15,10 @@ const props = defineProps({
     category: {
         type: String,
         required: true
+    },
+    module_name: {
+        type: String,
+        required: true
     }
 })
 
@@ -23,6 +27,9 @@ const result = ref({})
 const bindData = computed(() => ({
     'questioning': {
         category: props.category
+    },
+    'quiz-start': {
+        module_name: props.module_name
     },
     'result': {
         category: props.category,

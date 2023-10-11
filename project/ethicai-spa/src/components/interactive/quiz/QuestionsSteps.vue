@@ -31,7 +31,6 @@ async function fetchQuestions() {
     const response = await fetch(`/quiz/${props.category}.json`);
     const results = await response.json();
     state.questions = results.results;
-    console.log
     state.step = 0;
   } catch (e) {
     console.error(e);

@@ -5,6 +5,7 @@ import router from './router'
 
 //styling
 import './index.css'
+import './global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'primevue/resources/themes/saga-blue/theme.css'; // Choose a theme
@@ -17,6 +18,11 @@ const app = createApp(App).use(router);
 
 app.use(PrimeVue);
 app.use(router)
+
+//global methods
+import { registerPageAsCompleted } from './helpers';
+
+app.config.globalProperties.$registerPageAsCompleted = registerPageAsCompleted;
 
 //Vue components
 import Button from "primevue/button"

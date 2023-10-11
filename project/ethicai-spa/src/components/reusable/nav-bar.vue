@@ -29,19 +29,16 @@
                     </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Resources</a>
+                    <router-link class="nav-link" to="/resources">
+                        Resources
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About us</a>
+                     <router-link class="nav-link" to="/about-us">
+                           About Us
+                    </router-link>
                 </li>  
             </ul>
-
-            <form class="d-flex" role="search">
-                <router-link to="/login">
-                     <button class="btn btn-primary" type="submit">Login</button>
-                </router-link>
-            </form>
-           
           </div>
         </div>
       </nav>

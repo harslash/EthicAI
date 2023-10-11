@@ -4,11 +4,11 @@
     <div class="hero">
         <div class="body">
 
-            <div class="title" style="width: 50%; padding-top: 1%; padding-bottom: 1%;">
+            <div class="title" style="padding-top: 1%; padding-bottom: 1%;">
                 <h1 style="font-size: 35px;">The best way to learn AI ethics</h1>
             </div>
 
-            <div class="subtitle" style="width: 50%; padding-bottom: 1%;">
+            <div class="subtitle" style="padding-bottom: 1%;">
                 <p style="font-size: x-large; line-height: 1.5;">
                     Explore the latest AI technologies and learn how we can use them responsibly.
                 </p>
@@ -102,13 +102,21 @@ p {
     font-weight: 400;
 }
 
+.subtitle {
+    width: 50%;
+}
+
+.title {
+    width: 50%;
+}
+
 .hero {
     background: url('@/assets/overlaybg.png');
     background-repeat: no-repeat;
     background: cover;
     background-size: cover;
     min-height: 480px;
-    max-height: 480px;
+    max-height: 600px;
     justify-content: center;
     justify-items: center;
     margin-top: 60px;
@@ -218,5 +226,15 @@ h2 {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
+}
+
+
+@media (max-width: 576px) {
+    .body {
+        align-items: center;
+    }
+    .subtitle, .title {
+        width: 90%;
+    }
 }
 </style>

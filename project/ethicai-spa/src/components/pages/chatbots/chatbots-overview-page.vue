@@ -8,6 +8,7 @@
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
                     :module-page-names="modulePageNames"
+                    :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
                     :page-name="pageName"
                     ></module-overview>
@@ -32,7 +33,8 @@ export default defineComponent({
             moduleTitle: 'The Age of Chatbots',
             moduleDescription: 'In this module, you’ll learn about what chatbots are, the limitations of ChatGPT, and guidelines surrounding using ChatGPT.',
             moduleImgSrc: '../../../assets/chatbots_module.png',
-            modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Misuse and Plagiarism', 'Module Quiz'],
+            modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Hallucination','Misuse and Plagiarism', 'Module Quiz'],
+            modulePageRoutes: ['the-age-of-chatbots', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbots-quiz'],
             moduleName: 'chatbots',
             pageName: 'the-age-of-chatbots',
             moduleImgFilename: 'chatbots_module.png'
@@ -56,8 +58,15 @@ export default defineComponent({
     height: 100vh;
     margin-top: 60px;
 }
+@media (min-width: 767.98px) {
+    .module-overview-container {
+        height: 75%;
+    }
+}
 
-.module-overview-container {
-    height: 75%;
+@media (max-width: 767.98px) {
+   .container-fluid.page-container {
+        height: 120vh       
+    }
 }
 </style>

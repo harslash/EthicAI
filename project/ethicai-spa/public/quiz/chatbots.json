@@ -7,15 +7,8 @@
                 "Ask ChatGPT again to confirm",
                 "Google it",
                 "Feel the vibes"
-            ]
-        },
-        {
-            "question": "Which of these was the first chatbot?",
-            "correct_answer": "ELIZA",
-            "incorrect_answers": [
-                "ChatGPT",
-                "Siri"
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but it's not always accurate. It's best to verify its output with credible sources."
         },
         {
             "question": "Where do Large Language Models <em>NOT</em> get their information?",
@@ -24,7 +17,18 @@
                 "The internet",
                 "User interactions with them",
                 "Digitised books"
-            ]
+            ],
+            "explanation": "Large Language Models are trained on text from the internet, books, and their interactions with users."
+        },
+        {
+            "question": "In what situations do you need to check if ChatGPT is hallucinating?",
+            "correct_answer": "All of the other options",
+            "incorrect_answers": [
+                "Finding legal information",
+                "Seeking medical advice",
+                "None of the other options"
+            ],
+            "explanation": "In any high-stakes situation, you need to make sure you have the right information."
         },
         {
             "question": "Compared to ChatGPT, Markov chains...",
@@ -33,22 +37,26 @@
                 "...take longer to train",
                 "...understand more of the 'structure' of their prompt",
                 "...expend more energy to run"
-            ]
+            ],
+            "explanation": "Markov chains are a simpler model than ChatGPT, and can be trained on less data. ChatGPT was trained on three hundred billion of words of text."
         },
         {
             "question": "Which of these is a problem with Large Language Models?",
             "correct_answer": "Their output can contain harmful biases",
             "incorrect_answers": [
                 "They can only complete logical/mathematical tasks",
+                "They cannot follow instructions",
                 "They can only process input that's in a specific format"
-            ]
+            ],
+            "explanation": "Large Language Models are trained on text from the internet, books, and user interactions with them. This means that they can reflect harmful biases from all that text."
         },
         {
             "question": "Why does ChatGPT produce biased outputs?",
             "correct_answer": "It was trained on biased text from the internet",
             "incorrect_answers": [
                 "It reflects the bias in the questions humans prompt it with"
-            ]
+            ],
+            "explanation": "ChatGPT can reflect the biases in the text it was trained on."
         },
         {
             "question": "When is it acceptable to use ChatGPT for academic work?",
@@ -57,14 +65,16 @@
                 "Never",
                 "To provide facts, but not to brainstorm ideas",
                 "To write sections of text, as long as you cite ChatGPT"
-            ]
+            ],
+            "explanation": "ChatGPT is a powerful tool, but should not be trusted in settings where accuracy is important. It should also not be used for tasks that require you to submit your own writing."
         },
         {
-            "question": "Which prompt is most likely to lead to hallucinations from ChatGPT?",
+            "question": "Which prompt is most likely to lead to hallucinated facts from ChatGPT?",
             "correct_answer": "\"When was the Kate Edger Information Commons opened?\"",
             "incorrect_answers": [
                 "\"Write me a sonnet about frogs.\""
-            ]
+            ],
+            "explanation": "Sonnets about frogs don't exist, so ChatGPT will have to make them up. Even though you could call the sonnet 'hallucinated', it's not a hallucinated fact."
         },
         {
             "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",
@@ -73,15 +83,18 @@
                 "Giving a clear task",
                 "Adding examples",
                 "Defining a role for the AI tool to fill"
-            ]
+            ],
+            "explanation": "Repeating the prompt multiple times will not improve the quality of the output."
         },
         {
-            "question": "Which of these is <em>NOT</em> a Large Language Model?",
-            "correct_answer": "Apple's Siri",
+            "question": "Which of these is a reason to use ChatGPT to generate content for academic work?",
+            "correct_answer": "You are studying ChatGPT itself and need example responses",
             "incorrect_answers": [
-                "Google's Bard",
-                "OpenAI's ChatGPT"
-            ]
+                "ChatGPT gave you permission to quote it when you asked it",
+                "The assignment isn't testing your writing skills",
+                "Your lecturer said you don't need to cite sources"
+            ],
+            "explanation": "Content created by ChatGPT is not your own work. For academic integrity, you can use content from ChatGPT when if you have clearly marked that it's not your own work."
         }
     ]
 }

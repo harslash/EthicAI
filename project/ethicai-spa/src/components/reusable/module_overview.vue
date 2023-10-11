@@ -1,54 +1,57 @@
 <template>
   <div class="container module-overview-container">
-    <div class="left-container">
-      <div class="image">
-        <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
-      </div>
-      <div>
-        <p class="module-name">{{ moduleTitle }}</p>
-        <p class="module-desc">{{ moduleDescription }}</p>
-      </div>
-    </div>
-    <div class="right-container">
-      <div class="top-child">
-        <!-- Content for the top child container (70% height) -->
-        <div class="module-structure">Module Structure</div>
-        <ul class="contents">
-          <li
-            v-for="(item, index) in modulePageNames"
-            :key="item"
-          >
-            <div class="list-item">
-              <span
-                :class="{ 'strikethrough': index < 2, 'non-strikethrough': index >= 2 }"
-              >{{ item }}</span>
-              <i
-                v-if="index < 2"
-                class="fas fa-check-circle"
-                :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
-              ></i>
-              <i
-                v-else
-                class="far fa-circle"
-                :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
-              ></i>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="bottom-child">
-        <!-- Content for the bottom child container (30% height) -->
-        <div class="continue-button">
-          <router-link :to="generateRoute(moduleName, pageName)">
-             <button @click="continueClicked">Continue</button>
-          </router-link>
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
+          <div class="image">
+            <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
+          </div>
+          <div>
+            <p class="module-name">{{ moduleTitle }}</p>
+            <p class="module-desc">{{ moduleDescription }}</p>
+          </div>
         </div>
-      </div>
+        <div class="col-md-6 d-flex flex-column">
+          <div class="top-child">
+        <!-- Content for the top child container (70% height) -->
+            <div class="module-structure">Module Structure</div>
+            <ul class="contents">
+              <li
+                v-for="(item, index) in modulePageNames"
+                :key="item"
+              >
+                <div class="list-item" @click="handleListItemClick(index)">
+                  <span
+                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
+                  >{{ item }}</span>
+                  <i
+                    v-if="isPageVisted(index)"
+                    class="fas fa-check-circle"
+                    :style="{ color: '#6d0cff', transform: 'scale(1.2)' }"
+                  ></i>
+                  <i
+                    v-else
+                    class="far fa-circle"
+                    :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
+                  ></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-child">
+            <!-- Content for the bottom child container (30% height) -->
+            <div class="continue-button">
+              <router-link :to="generateRoute(moduleName, pageName)">
+                <button @click="continueClicked">Continue</button>
+              </router-link>
+            </div>
+          </div>
+        </div>
     </div>
+   
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'ModuleOverview',
@@ -57,8 +60,14 @@ export default defineComponent({
     moduleDescription: String,
     moduleImgFilename: String,
     modulePageNames: Array as () => string[],
+    modulePageRoutes: Array as () => string[],
     moduleName: String,
     pageName: String,
+  },
+  data () {
+    return {
+      modulePageStates: [false]
+    }
   },
   methods: {
     continueClicked() {
@@ -70,8 +79,55 @@ export default defineComponent({
       // For example, you can append the routePath to an existing route
       return `/${moduleName}/${pageName}`;
     },
+    handleListItemClick(index: number) {
+      if (this.modulePageRoutes) {
+          const pageName = this.modulePageRoutes[index]
+          this.$router.push({ name: pageName });
+      }
+    },
+    isPageVisted(index: number): boolean {
+      return this.modulePageStates[index];
+    },
+    setModulePageStates() {
+      if (this.modulePageRoutes) {
+        const cookieValue = document.cookie
+          .split('; ')
+          .find((row) => row.startsWith(`${this.moduleName}ModuleState=`));
 
+        if (cookieValue) {
+          const storedArrayString = cookieValue.split('=')[1];
+          const storedArray: object[] = JSON.parse(storedArrayString);
+
+          //set the pages states accordingly
+          storedArray.forEach((pageState, index) => {
+            const pageStateKey = Object.keys(pageState)[0];
+            const pageStateValue = Object.values(pageState)[0]
+            this.modulePageStates[index] = pageStateValue
+          })
+        } else {
+          //initialise all pages to be unvisted from the start
+          this.modulePageStates = Array.from({ length: this.modulePageRoutes.length }, () => false);
+
+          const moduleState: object[] = [];
+
+          this.modulePageRoutes.forEach(route => {
+            const stateObject: { [key: string]: boolean } = {};
+            stateObject[route] = false;
+            moduleState.push(stateObject);
+          })
+
+          const moduleStateString = JSON.stringify(moduleState);
+
+          const expires = new Date();
+          expires.setTime(expires.getTime() + 7 * 24 * 60 * 60 * 1000); // Cookie will expire in 7 days
+          document.cookie = `${this.moduleName}ModuleState=${moduleStateString};expires=${expires.toUTCString()};path=/`;
+        }
+      }
+    }
   },
+   mounted() {
+    this.setModulePageStates();
+  }
 });
 </script>
 
@@ -127,6 +183,7 @@ body {
 .module-name {
   font-weight: bold;
   font-size: 30px;
+  text-align: center;
 }
 
 .module-structure {
@@ -190,6 +247,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px; /* Add padding to create space between text and icons */
+  cursor: pointer;
+}
+.list-item:hover {
+  background-color: #E5D1FF;
 }
 
 .list-item i {

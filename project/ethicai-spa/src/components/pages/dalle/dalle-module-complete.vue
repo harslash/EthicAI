@@ -1,18 +1,29 @@
 <template>
   <div>
     <ModuleCompletion
-      :moduleName="'The Rise of DALL·E'"
+      :moduleTitle="'The Rise of DALL·E'"
+      :moduleName="'dalle'"
       :buttonText="'Module Complete'"
     />
   </div>
 </template>
 
 <script>
-import ModuleCompletion from '../../../components/reusable/module_completion.vue';
+import { registerPageAsCompleted } from "@/helpers";
+import ModuleCompletion from "../../../components/reusable/module_completion.vue";
+import { defineComponent } from "vue"; // Import defineComponent from Vue 3
 
-export default {
+export default defineComponent({
   components: {
-    ModuleCompletion
-  }
-};
+    ModuleCompletion,
+  },
+  methods: {
+    handlePageCompletionClick() {
+      registerPageAsCompleted("dalle", "dalle-quiz");
+    },
+  },
+  created() {
+    this.handlePageCompletionClick();
+  },
+});
 </script>

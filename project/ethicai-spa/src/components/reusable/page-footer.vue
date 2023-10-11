@@ -5,20 +5,23 @@
         <img class src="../../assets/logo-bland.png" width="220"/>
       </div>
       <div class="col-md-2 p-5">
-        <h4 class="mb-3">Company</h4>
+        <h4 class="mb-3">Product</h4>
         <ul class="footer-list">
           <li class="mb-2">
             <router-link to="/references">
                 <a href="#">References</a>
             </router-link>
           </li>
-          <li class="mb-2"><a href="#">Our team</a></li>
         </ul>
       </div>
       <div class="col-md-2 p-5">
-         <h4 class="mb-3">Product</h4>
-          <ul class="footer-list">
-            <li class="mb-2"><a href="#">T&C</a></li>
+           <h4 class="mb-3">Company</h4>
+           <ul class="footer-list">
+              <li class="mb-2">
+                  <router-link to="/about-us">
+                    <a href="#">About Us</a>
+                  </router-link>
+              </li>
           </ul>
       </div>
     </div>
@@ -60,5 +63,11 @@ export default defineComponent({
    .footer-list a:hover {
     text-decoration: none;
     color: #b3b4b5;
+  }
+
+  @media (max-width: 767.98px) {
+    .container-fluid  {
+      height: 510px;
+    }
   }
 </style>

@@ -1,183 +1,385 @@
 <template>
-    <nav-bar/>
-    <div class="container-fluid page-container text-center">
-        <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection}">
-            <div class="row h-10 mb-5">
-                <div class="col-md-12">
-                    <h1 class="mt-5">Copyright and Copywrong</h1>
-                </div>
-            </div>
-
-            <div class="row h-30">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 d-flex align-items-center">
-                    <figure>
-                        <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="display: inline-block;  margin: 12.5px 5px; border-radius: 5px;"/>
-                        <figcaption> <b>AI Image Generation of Pope Francis (Cartter, 2023)</b> </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-
-            <div class="row h-30">
-                <div class="col-md-12 d-flex align-items-center">
-                    <div class="d-flex justify-content-center flex-wrap">
-                        <p class="text-left section-text">
-                            Image generation has exciting potential that comes from the creativity of input prompts used to create them. But alas, there are ethical dilemmas that cannot be ignored. AI art poses a risk to artists and their ability to earn a living. Training AI algorithms on their art without their knowledge or consent can lead to blatant copyright violation and disrespects the effort put into creating those works. Images resembling copyrighted material can be created in an instant — capitalising on this means the vision and skill of artists is ultimately devalued without compensation.
-                        </p>
-
-                        <p class="text-left section-text">
-                            Current models like DALL-E also allow rendering public figures in offensive or inappropriate contexts. While a careful eye may be able to tell current AI images apart from real ones, it is easy to be tricked by images that look like they show those public figures in events which are not real. These artificial pictures (dubbed “deepfakes”) can damage individuals’ reputation; furthermore, politicians and leaders have reason to fear their implications for national security (Parra & Shroud, 2023). To learn more about deepfakes, visit our module here.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row h-20">
-                <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn 
-                        :text="'Continue'" 
-                        @click="showSecondSection = true;
-                        scrollIntoSecondSection()"
-                        ></purple-btn>
-                </div>
-            </div>
+  <nav-bar />
+  <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
+  <div class="container-fluid page-container text-center">
+    <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
+      <div class="row h-10 mb-5">
+        <div class="col-md-12">
+          <h1 class="tw-mt-24">The Complexities of Copyright</h1>
         </div>
-        <div ref="secondSection" class="section-two container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
-            <div class="row h-10 mb-5">
-                <div class="col-md-12">
-                    <h3>What have we learnt?</h3>
-                </div>
-            </div>
+      </div>
 
-            <div class="row h-30">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 d-flex align-items-center justify-content-center">
-                    <figure>
-                        <img class="img-a" src="../../../assets//copyright-copywrong-happykid.png" alt="a happy kid infront of a laptop" style="display: inline-block;  margin: 12.5px 5px; border-radius: 5px;"/>
-                    </figure>
-                </div>
-                <div class="col-md-1"></div>
+      <div ref="firstSection" class="row h-30 mb-8 justify-content-center">
+        <div class="col-md-8 text-center">
+          <p>
+            Now you know the copyright issues that humans face and the
+            impressive nature of AI image generation, I want you to answer a
+            question...
+          </p>
+          <br />
+          <p>
+            <b>Do you think that AI should have rights to the artwork it
+              produces?</b>
+          </p>
+          <div class="radio-div d-flex justify-content-around">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Yes
+              </label>
             </div>
-
-            <div class="row h-30">
-                <div class="col-md-12 d-flex align-items-center justify-content-center">          
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                <h5 class="card-title">Use AI Thoughtfully</h5>
-                                <p class="card-text">AI image generators are powerful, so it's important to understand their strengths (efficiency and replication) and their flaws (plagiarism and accreditation).</p>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                <h5 class="card-title">Respect Copyright</h5>
-                                <p class="card-text">If it's not your image and you do not have permission to use it, then don't use it! Alternatively, if you do have permission, then credit the original source.</p>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                <h5 class="card-title">Stay Vigilant</h5>
-                                <p class="card-text">This is probably not the first time you've heard this, but to reiterate it, do not trust everything you see on the internet.</p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+              <label class="form-check-label" for="flexRadioDefault2">
+                No
+              </label>
             </div>
-
-            <div class="row h-20">
-                <div class="col-md-12 d-flex justify-content-between">
-                    <router-link to="/dalle/ai-generated-vs-human-art">
-                            <purple-btn-outline :text="'Back'"></purple-btn-outline>
-                    </router-link>
-                    <router-link to="/dalle/module-complete" custom v-slot="{navigate}">
-                        <purple-btn :text="'Continue'" @click="navigate" role="link"> </purple-btn>
-                    </router-link>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <div class="row h-20">
+        <div class="col-md-12 d-flex justify-content-end">
+          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+            showSecondSection = true;
+          scrollIntoSecondSection();
+          section1Completed = true;
+          " />
+        </div>
+      </div>
     </div>
+
+    <div ref="secondSection" class="mb-5 justify-content-center text-section section-one container"
+      :class="{ hidden: !showSecondSection }">
+      <div class="row justify-content-center">
+        <!-- Center the content -->
+        <div class="col-md-8 text-center">
+          <p>Interesting answer...</p>
+          <br />
+          <p>
+            AI do create the artwork but they aren’t technically human so do
+            they actually own it? Additionally, they cannot produce artwork
+            without user input directing them what to create so some would
+            consider that a joint collaboration between human and robot, making
+            both the owners. Or is the owner the AI image generator’s creator,
+            as they enabled the AI to produce work in the first place?
+          </p>
+          <p>
+            Clearly, intellectual property vs AI is a complex ethical and legal
+            topic. If you would like to find out more, check out the article
+            below.
+          </p>
+          <p class="text-center justify-content-center">&darr; &darr;</p>
+          <div class="article-snippet text-center align-items-center mx-auto">
+            <div class="article-image">
+              <a href="https://archive.ph/604QJ" target="_blank">
+                <img src="../../../assets//nyt_article.png" alt="New York Times article snippet" />
+              </a>
+            </div>
+            <h2 class="article-title">
+              As Fight Over A.I. Artwork Unfolds, Judge Rejects Copyright Claim
+            </h2>
+            <p class="article-meta">
+              Published on August 21, 2023 by Zachary Small
+            </p>
+            <p class="article-excerpt">
+              A federal judge rejected an attempt to copyright an artwork
+              generated by artificial intelligence in a decision last week that
+              provided insight into the broader legal war over authorship and
+              intellectual property.
+            </p>
+            <a class="article-link" href="https://archive.ph/604QJ" target="_blank">Read More</a>
+            <br />
+          </div>
+        </div>
+      </div>
+
+      <div class="row h-20">
+        <div class="col-md-12 d-flex justify-content-end">
+          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+            showThirdSection = true;
+          scrollIntoThirdSection();
+          section2Completed = true;
+          " />
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-12"></div>
+
+    <div ref="thirdSection" class="section-two container mb-5 text-section" :class="{ hidden: !showThirdSection }">
+      <div class="row h-30">
+        <div class="row h-10 mb-5">
+          <div class="col-md-12">
+            <br />
+            <h3 class="text-center">Copyright and Copywrong</h3>
+            <!-- Center align the heading -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row h-30">
+        <div class="col-md-12 d-flex align-items-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="text-left section-text">
+              Image generation has exciting potential that comes from the
+              creativity of input prompts used to create them. But alas, there
+              are ethical dilemmas that cannot be ignored. AI art poses a risk
+              to artists and their ability to earn a living. Training AI
+              algorithms on their art without their knowledge or consent can
+              lead to blatant copyright violation and disrespects the effort put
+              into creating those works. Images resembling copyrighted material
+              can be created in an instant — capitalizing on this means the
+              vision and skill of artists is ultimately devalued without
+              compensation.
+            </p>
+            <br />
+            <div class="col-md-10 d-flex align-items-center justify-content-center">
+              <figure>
+                <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="
+                    display: inline-block;
+                    margin: 12.5px 5px;
+                    border-radius: 5px;
+                  " />
+                <figcaption>
+                  <b>AI Image Generation of Pope Francis
+                    <span class="reference-link" @click="handleReferenceClick('copyright')">(Cartter, 2023)</span></b>
+                </figcaption>
+              </figure>
+            </div>
+            <br />
+
+            <p class="text-left section-text">
+              Current models like DALL-E also allow rendering public figures in
+              offensive or inappropriate contexts. While a careful eye may be
+              able to tell current AI images apart from real ones, it is easy to
+              be tricked by images that look like they show those public figures
+              in events which are not real. These artificial pictures (dubbed
+              “deepfakes”) can damage individuals’ reputation; furthermore,
+              politicians and leaders have reason to fear their implications for
+              national security
+              <span class="reference-link" @click="handleReferenceClick('copyright')">(Parra & Shroud, 2023)</span>. To
+              learn more about deepfakes, visit our module here.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row h-20">
+        <div class="col-md-12 d-flex justify-content-end">
+          <!-- Center align the "Continue" button -->
+          <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+            showFourthSection = true;
+          scrollIntoFourthSection();
+          section3Completed = true;
+          " />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ref="fourthSection" class="section-two container mb-5" :class="{ hidden: !showFourthSection }">
+    <div class="row h-10 mb-5">
+      <div class="col-md-12">
+        <h3 class="text-center">What have we learned?</h3>
+        <!-- Center align the heading -->
+      </div>
+    </div>
+
+    <div class="row h-30">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 d-flex align-items-center justify-content-center text-center">
+        <figure>
+          <img class="img-a mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
+            alt="a happy kid in front of a laptop" style="
+              display: inline-block;
+              margin: 12.5px 5px;
+              border-radius: 5px;
+            " />
+        </figure>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+
+    <div class="row h-30">
+      <div class="col-md-12 d-flex justify-content-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Use AI Thoughtfully</h5>
+                  <p class="card-text">
+                    AI image generators are powerful, so it's important to
+                    understand their strengths (efficiency and replication) and
+                    their flaws (plagiarism and accreditation).
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Respect Copyright</h5>
+                  <p class="card-text">
+                    If it's not your image and you do not have permission to use
+                    it, then don't use it! Alternatively, if you do have
+                    permission, then credit the original source.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Stay Vigilant</h5>
+                  <p class="card-text">
+                    This is probably not the first time you've heard this, but
+                    to reiterate it, do not trust everything you see on the
+                    internet.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row h-20">
+      <div class="col-md-12 d-flex justify-content-end">
+        <router-link to="/dalle/quiz">
+          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import NavBar from '../../reusable/nav-bar.vue';
-import PurpleBtn from '../../reusable-ui/purple-btn.vue';
-import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue'
+import { defineComponent } from "vue";
+import NavBar from "../../reusable/nav-bar.vue";
+import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
+import PurpleBtn from "../../reusable-ui/purple-btn.vue";
 
 export default defineComponent({
-    name: 'DallePage3',
-    data() {
-        return {
-            value: null,
-            showFirstSection: true,
-            showSecondSection: false,
+  name: "DallePage3",
+  data() {
+    return {
+      value: null,
+      showFirstSection: true,
+      showSecondSection: false,
+      showThirdSection: false,
+      showFourthSection: false,
+      showFifthSection: false,
+      section1Completed: false,
+      section2Completed: false,
+      section3Completed: false,
+      section4Completed: false,
+      section5Completed: false,
+    };
+  },
+  methods: {
+    scrollIntoSecondSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.secondSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+          });
         }
+      });
     },
-    methods: {
-        scrollIntoSecondSection() 
-        {   
-            this.$nextTick(() => {
-                const element = this.$refs.secondSection as HTMLElement;
-                if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
-                }
-            }); 
-        },
+    scrollIntoThirdSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.thirdSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+          });
+        }
+      });
     },
-    components: {
-        'nav-bar': NavBar,
-        'purple-btn': PurpleBtn,
-        'purple-btn-outline': PurpleBtnOutline,
-    }
+    scrollIntoFourthSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.fourthSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+          });
+        }
+      });
+    },
+    scrollIntoFifthSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.fifthSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "start",
+          });
+        }
+      });
+    },
+    handleReferenceClick(referenceSectionId: string) {
+      const hash = `#${referenceSectionId}`;
+      this.$router.push({ name: "references", hash });
+    },
+    handlePageCompletionClick(this: any) {
+      this.$registerPageAsCompleted("dalle", "the-complexities-of-copyright");
+    },
+  },
+  components: {
+    "nav-bar": NavBar,
+    "module-navigation-bar": ModuleNavigationBar,
+    "purple-btn": PurpleBtn,
+  },
 });
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 .container-fluid.page-container {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .img-a {
-    width: 50%;
-    height: 50%;
+  width: 50%;
+  height: 50%;
 }
 
 .section-text {
-    width: 75%;
-    text-align: left;
+  width: 75%;
+  text-align: left;
 }
 
 .form {
-    height: 30vh;
+  height: 30vh;
 }
 
-.slider-container{
-    width: 50%;
+.slider-container {
+  width: 50%;
 }
 
 .slider-container :deep(.p-slider-range) {
-    background: #454545;
+  background: #454545;
 }
 
 .slider-container :deep(.p-slider-handle) {
-    background: #696969;
-    border: 2px solid #696969;
+  background: #696969;
+  border: 2px solid #696969;
 }
 
 .radio-div .form-check-input:checked {
-    background-color: #696969;
-    border-color: #696969;
+  background-color: #696969;
+  border-color: #696969;
 }
 
 .text-section {
@@ -193,16 +395,84 @@ export default defineComponent({
 }
 
 .card {
-    border: 0;
+  border: 0;
+  text-align: center;
 }
 
 .card-title {
-    font-weight: 700;
-    color: #6D0CFF;
+  font-weight: 700;
+  color: #6d0cff;
+  text-align: center;
 }
 
 .card-text {
-    padding-top: 5%;
+  padding-top: 5%;
+  text-align: center;
 }
 
+.radio-div .form-check-input:checked {
+  background-color: #696969;
+  border-color: #696969;
+}
+
+/* CSS for the article snippet */
+.article-snippet {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  /* Decreased margin-top to create space */
+  max-width: 1000px;
+  /* Decreased max-width to make it narrower */
+}
+
+.article-title {
+  font-size: 18px;
+  /* Decreased font size for the title */
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  font-size: 14px;
+  color: #888;
+}
+
+.article-excerpt {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.article-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.article-link:hover {
+  text-decoration: underline;
+}
+
+.article-image {
+  text-align: center;
+  /* Center align the image */
+  margin-bottom: 20px;
+  /* Add some spacing between the image and the snippet */
+}
+
+.article-image img {
+  max-width: 100%;
+  /* Ensure the image fits within its container */
+}
+
+/* CSS for the article snippet (previously provided) */
+.article-snippet {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+}
 </style>
