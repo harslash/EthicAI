@@ -5,20 +5,22 @@
         <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
-                    <h1 class="mt-5">Too Good to be True?</h1>
+                    <h1 class="mt-5">Too Good To Be True</h1>
                 </div>
             </div>
             <div class="row h-30 mb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            These new AI chatbots may be impressive, but their use can lead to many problems. The users like
-                            yourself need to understand how they function and their implications.
+                           While the capabilities of new AI chatbots like ChatGPT are undeniably impressive, it's essential for users like you to grasp how they work and their potential drawbacks.
                         </p>
                         <p class="section-text">
-                            The current most popular chatbot, ChatGPT, works by attempting to understand your prompt and
-                            spitting out strings of words that it predicts will be the best response based on the data used
-                            to train it (<router-link :to="{ name: 'references' }">Guinness, 2023</router-link>).
+                            The current frontrunner in the world of chatbots, ChatGPT, operates by striving to comprehend your prompt and generating responses it predicts to be the most fitting, based on the vast dataset used for its training   
+                            <span
+                                class="reference-link"
+                                @click="handleReferenceClick('tooGoodToBeTrue')"
+                                >(Guinness, 2023)
+                            </span>.
                         </p>
                     </div>
                 </div>
@@ -39,17 +41,20 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            The creators of ChatGPT have trained the model on an extensive collection of textual data
-                            containing over 570 GB of data (<router-link :to="{ name: 'references' }">Ruby,
-                                2023</router-link>). That's over 1.3 million novels worth of information! The source of this
-                            data includes books, articles, and web pages.
+                           The minds behind ChatGPT have honed this model by exposing it to an extensive repository of textual data, exceeding a staggering 570 GB 
+                            <span
+                                class="reference-link"
+                                @click="handleReferenceClick('tooGoodToBeTrue')"
+                                >(Ruby, 2023)
+                            </span>. To put it in perspective, that's equivalent to more than 1.3 million novels' worth of information! This data amalgamation includes a myriad of sources like books, articles, and web pages.
                         </p>
                         <p class="section-text">
-                            If you’ve been on the internet for very long, you might expect some of those sources of data to
-                            contain biases, stereotypes, and prejudiced language. ChatGPT unintentionally learns these
-                            biases and may produce offensive responses or reinforce harmful stereotypes when it replies to
-                            prompts. The training data used to create ChatGPT and other LLMs, can at times result in biassed
-                            or inappropriate responses (<router-link :to="{ name: 'references' }">Ray, 2023</router-link>).
+                            If you've been navigating the online realm for some time, you might already suspect that some of these data sources can harbor biases, stereotypes, and prejudiced language. It's an unintended consequence that ChatGPT and similar Language Models (LLMs) may inherit these biases, potentially leading to offensive responses or the reinforcement of harmful stereotypes in their replies. This phenomenon arises from the training data, and it's a critical aspect to be aware of when utilizing ChatGPT and similar LLMs  
+                            <span
+                                class="reference-link"
+                                @click="handleReferenceClick('tooGoodToBeTrue')"
+                                >(Ray, 2023)
+                            </span>.
                         </p>
                     </div>
                 </div>
@@ -68,39 +73,19 @@
         <div ref="thirdSection" class="container text-section pb-5" :class="{ 'hidden': !showThirdSection }">
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
-                    <div class="d-flex justify-content-center flex-wrap">
-                        <p class="section-text">
-                            Let's see how biases in a text can influence how language models response. The demo below allows
-                            you to train a ‘Markov chain’ model on some training data, then see the kind of output it
-                            produces. Just like ChatGPT, Markov chains can generate sentences. They both learn statistical
-                            relationships between words from their training data, then they can complete sentences by
-                            predicting the most likely next word in the text. However, Markov chains are much simpler than
-                            the system behind ChatGPT, and you’ll see a direct correspondence between the training corpus
-                            and what the Markov chain generates.
-                        </p>
-                        <p class="section-text">
-                            Pay attention to the red highlighting: it shows biassed phrases that can be carried through into
-                            the output of the model. This is similar to what goes on when ChatGPT repeats biassed ideas it
-                            learnt from the internet.
-                        </p>
-                        <p class="section-text">
-                            Experiment for yourself, by training the Markov chain model on each corpus of training data, and
-                            consider the relationship between biases in the input and output.
-                        </p>
+                    <div class="d-flex align-items-center flex-column">
+                        <h5>Exploring Biases in ChatGPT</h5>
+                        <p class="section-text">Welcome to our Bias Exploration feature. Here's how you can engage with our Markov chain powered demo:</p>
+                        <p class="section-text px-3">• Train Model: Click "Train Model" to observe the Markov Chain learning word probabilities from the corpus, mirroring ChatGPT's training process. The generated output will resemble ChatGPT's responses, with highlighted biased phrases reflecting ChatGPT's learned biases from the internet.</p>
+                        <p class="section-text px-3">• Experimentation: You have the freedom to experiment by:
+                        Adjusting Biases: Explore different bias levels to understand their impact.
+                        Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's training data.</p>
+
+                        <p class="section-text">Dive in and uncover the intricacies of biases in ChatGPT's responses.!</p>
                     </div>
                 </div>
                 <div class="col-md-12 d-flex justify-content-center pb-5">
                     <markov-demo class="demo"></markov-demo>
-                </div>
-                <div class="col-md-12 d-flex justify-content-center flex-wrap">
-                    <p class="section-text">
-                        As you can see from the demo, biases in ChatGPT's training data can cause it to produce harmful
-                        responses. Some are obvious, such as overt racial prejudices, and some are less visible, such as
-                        morality biases (<router-link :to="{ name: 'references' }">Cousins, 2023</router-link>).
-                    </p>
-                    <p class="section-text">
-                        <b>Lesson of the day: </b>ChatGPT would be a lousy lawmaker.
-                    </p>
                 </div>
             </div>
             <div class="row h-20 pb-5">
@@ -153,6 +138,10 @@ export default defineComponent({
         },
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'too-good-to-be-true');
+        },
+        handleReferenceClick(referenceSectionId: string) {
+            const hash = `#${referenceSectionId}`;
+            this.$router.push({ name: "references", hash });
         },
     },
     components: {
