@@ -100,7 +100,7 @@
                 <div class="col-md-12">
                 <div class="d-flex justify-content-center">
                     <p class="section-text">
-                  Markov chains, akin to ChatGPT, rely on statistical probabilities. Picture a Markov Chain consulting a corpus to calculate these probabilities, similar to how ChatGPT uses its training data. However, there are differences. Unlike ChatGPT, Markov chains operate without considering context as they lack conversation history. Their word predictions are solely based on preceding words, determined by probabilities. As you can see, Markov Chain doesn't rely on a traditional prompt. Instead, we initiate it with a starting word. In this case, the word is "How," prompting the system to generate a response.
+                  Markov chains, akin to ChatGPT, rely on statistical probabilities. Picture a Markov Chain consulting a corpus to calculate these probabilities, similar to how ChatGPT uses its training data. However, there are differences. Unlike ChatGPT, Markov chains operate without considering context as they lack conversation history. Their word predictions are solely based on preceding words, determined by probabilities. As you can see, Markov Chain doesn't rely on a traditional prompt. Instead, we initiate it with a starting word. In this case, the word is "How," prompting the system to generate a response. This text-generation process is similar to the auto-completion feature we use to type words in a Google search bar. 
                     </p>
                 </div>
                 </div>
@@ -122,17 +122,23 @@
                     <div class="d-flex align-items-center flex-column">
                         <h5>Exploring Biases in ChatGPT</h5>
                         <p class="section-text">Welcome to our Bias Exploration feature. Here's how you can engage with our Markov chain powered demo:</p>
-                        <p class="section-text px-3">• Train Model: Click "Train Model" to observe the Markov Chain learning word probabilities from the corpus, mirroring ChatGPT's training process. The generated output will resemble ChatGPT's responses, with highlighted biased phrases reflecting ChatGPT's learned biases from the internet.</p>
-                        <p class="section-text px-3">• Experimentation: You have the freedom to experiment by:
-                        Adjusting Biases: Explore different bias levels to understand their impact.
-                        Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's training data.</p>
+                        <p class="section-text px-3">• <b>Train Model:</b> Click "Train Model" to observe the Markov Chain learning word probabilities from the corpus, mirroring ChatGPT's training process. The generated output will resemble ChatGPT's responses, with highlighted biased phrases reflecting ChatGPT's learned biases from the internet.</p>
+                        <p class="section-text px-3">• <b>Experimentation:</b> You have the freedom to experiment by:</p>
 
-                        <p class="section-text">Dive in and uncover the intricacies of biases in ChatGPT's responses.!</p>
+                        <p class="section-text px-5">
+                            •Adjusting biases: See how biases can look different for the same corpus if we use another type of biased training.
+                         </p>
+                        <p class="section-text px-5">
+                            •Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's training data.
+                        </p>
+                        <p class="section-text">Dive in and uncover the intricacies of biases in ChatGPT's responses!</p>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex justify-content-center pb-5">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 d-flex justify-content-center pb-5">
                     <markov-demo class="demo"></markov-demo>
                 </div>
+                <div class="col-md-2"></div>
             </div>
             <div class="row h-20 pb-5">
                 <div class="col-md-12 d-flex justify-content-end">
@@ -226,10 +232,10 @@ export default defineComponent({
     overflow: hidden;
 }
 
-.demo {
+/* .demo {
     height: 75vh;
     width: 80%;
-}
+} */
 
 @media (max-width: 767.98px) {
   .section-text {
