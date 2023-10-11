@@ -2,7 +2,7 @@
     <form class="form-container d-flex flex-column justify-content-center align-items-center">
         <div class="container pb-3">
             <div class="row">
-                   <div class="col-md-12 d-flex">
+                   <div class="col-md-12 d-flex align-items-center">
                     <div class="dropdown px-2">
                         <button
                             class="btn
@@ -53,6 +53,16 @@
                     <div v-if="loading" class="spinner-grow" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
+
+                    <div 
+                        class='ms-auto'
+                        v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error' }">
+                        <font-awesome-icon 
+                        :icon="faCircleInfo" 
+                        style="color: #6D0CFF;" 
+                        id="infoIcon"></font-awesome-icon>
+                    </div>
+                  
                 </div>
             </div>
         </div>
@@ -82,7 +92,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, computed} from 'vue';
-
+import { faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 function splitStringToArray(inputString: string, delimiters: string[]) {
     // Split after newlines and spaces
     inputString = inputString.replaceAll(" ", " ꙮ").replaceAll("\n", "\nꙮ");
@@ -267,6 +277,23 @@ export default defineComponent({
                 });
         };
 
+        const getTooltipContent = () => {
+
+            if (corpusLabel.value === 'Woodrow Wilson’s 1917 Declaration of War') {
+                return `
+                <p class='text-black'><b>Few things to note:</b></p>
+                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggests United States is the righteous country.</p>   
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'I'.</p>
+                `;
+            }
+
+            return `
+                <p class='text-black'><b>Few things to note:</b></p>
+                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggest what role a woman or man should have.</p>   
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'A'.</p>
+                `;
+        }
+
         return {
             loading,
             handleDropdownItemClick,
@@ -276,7 +303,9 @@ export default defineComponent({
             handleAdjustBiasesDropdownClick,
             corpusLabel,
             corpusCategory,
-            biasedTrainingName
+            biasedTrainingName,
+            getTooltipContent,
+            faCircleInfo
         }
     },
 });
@@ -356,6 +385,10 @@ export default defineComponent({
 }
 
 .dropdown-item {
+    cursor: pointer;
+}
+
+#infoIcon {
     cursor: pointer;
 }
 
