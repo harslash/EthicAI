@@ -223,6 +223,7 @@ export default defineComponent({
     border: 2px solid #E8E4E4;
     box-shadow: 5px 5px 5px #E8E4E4;
     border-radius: 20px;
+    height: 600px;
 }
 
 .form-group {
@@ -282,7 +283,7 @@ export default defineComponent({
 .demo-textarea {
     border: 2px solid black;
     border-radius: 10px;
-    height: 20vh;
+    height: 150px;
     overflow-y: auto;
 }
 </style>
