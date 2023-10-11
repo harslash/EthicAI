@@ -118,9 +118,7 @@
                                                         <blockquote class="blockquote mb-4">
                                                         <p>
                                                             <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">At vero eos et accusamus et iusto odio dignissimos
-                                                            qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-                                                            et quas molestias excepturi sint amet dolore.</span>
+                                                            <span class="font-italic">I have really enjoyed increasing my front end development abilities through EthicAI. I’ve only ever designed for the front end before this project, so it was awesome to be able to go from designing a website to actually having it fully implemented. I have really enjoyed the whole (full-on) process and was lucky to have had such a hardworking and passionate team.</span>
                                                         </p>
                                                         </blockquote>
                                                         <figcaption class="blockquote-footer">
@@ -176,9 +174,7 @@
                                                         <blockquote class="blockquote mb-4">
                                                         <p>
                                                             <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">At vero eos et accusamus et iusto odio dignissimos
-                                                            qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
-                                                            et quas molestias excepturi sint amet dolore.</span>
+                                                            <span class="font-italic">EthicAI allowed me to explore my passion for the overlap between ethics and technology. This project was a joy to research and to write content for.</span>
                                                         </p>
                                                         </blockquote>
                                                         <figcaption class="blockquote-footer">
@@ -249,6 +245,10 @@ export default defineComponent({
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     text-align: center;
+}
+
+.blockquote {
+    font-size: 1rem;
 }
 
 .gradient-custom {
