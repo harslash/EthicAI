@@ -45,7 +45,9 @@
                             textual data, exceeding a staggering 570 GB
                             <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Ruby, 2023)
                             </span>. To put it in perspective, that's equivalent to more than 1.3 million novels' worth of
-                            information! This data amalgamation includes a myriad of sources like books, articles, and web
+                            information
+                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Gupta, 2023)
+                            </span>! This data amalgamation includes a myriad of sources like books, articles, and web
                             pages.
                         </p>
                         <p class="section-text">
