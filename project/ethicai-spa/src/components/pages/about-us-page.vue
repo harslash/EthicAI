@@ -54,7 +54,7 @@
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
                                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
+                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
                                                         height="90">
                                                     </div>
                                                     <div class="flex-grow-1 ms-4 ps-3">
@@ -113,7 +113,7 @@
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
-                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                                                    <img src="../../assets/georgia_avatar.jpg"
                                                         class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
                                                         height="90">
                                                     </div>
@@ -142,7 +142,7 @@
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
                                                     <img src="../../assets/matthew_avatar.jpeg"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
+                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
                                                         height="90">
                                                     </div>
                                                     <div class="flex-grow-1 ms-4 ps-3">
@@ -170,7 +170,7 @@
                                                 <div class="d-flex">
                                                     <div class="flex-shrink-0">
                                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
+                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
                                                         height="90">
                                                     </div>
                                                     <div class="flex-grow-1 ms-4 ps-3">
