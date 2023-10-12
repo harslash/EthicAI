@@ -250,7 +250,7 @@
           </p>
         </div>
         <div class="col pb-5">
-          <img class="img-b mx-4" src="../../../assets/chatbots_page_4_e.jpeg"
+          <img class="img-e mx-4" src="../../../assets/chatbots_page_4_e.jpeg"
             alt="2d illustration of a laptop behind a giant lock" />
         </div>
       </div>
@@ -401,12 +401,12 @@ export default defineComponent({
   /* Ensure the image doesn't exceed its container width */
 }
 
-.img-b {
+.img-b, .img-c, .img-e {
   width: 30%;
 }
 
 .img-d {
-  height: 430px;
+    width: 22%;
 }
 
 h2 {
@@ -429,12 +429,12 @@ h2 {
         width: 90%;
     }
 
-    .img-a, .img-b, .img-c{
-        width: 60%;
+    .img-a, .img-b, .img-c, .img-e{
+        width: 80%;
     }
 
     .img-d {
-      height: 320px;
+        width: 80%;
     }
 }
 
