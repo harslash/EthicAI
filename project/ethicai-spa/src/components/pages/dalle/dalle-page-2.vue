@@ -118,7 +118,7 @@
                   <div class="incorrect" :class="{ hidden: !firstQuestionShowIncorrect }">
                     <p style="display: block">
                       <span style="color: #707070">
-                        Oops, you have misidentified this as human made!
+                        Oops, this was made by an AI!
                       </span>
                       <br />
                       {{ teachableMsg1 }}
@@ -172,7 +172,7 @@
                 <div class="incorrect" :class="{ hidden: !secondQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
+                      Oops, this was made by an AI!
                     </span>
                     <br />
                     {{ teachableMsg2 }}
@@ -204,7 +204,7 @@
                 <div class="incorrect" :class="{ hidden: !thirdQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
+                      Oops, this was made by an AI!
                     </span>
                     <br />
                     {{ teachableMsg3 }}
@@ -258,7 +258,7 @@
                 <div class="incorrect" :class="{ hidden: !fourthQuestionShowIncorrect }">
                   <p style="display: block">
                     <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
+                      Oops, this was made by an AI!
                     </span>
                     <br />
                     {{ teachableMsg4 }}
@@ -333,7 +333,7 @@
                   <div class="incorrect" :class="{ hidden: !fifthQuestionShowIncorrect }">
                     <p style="display: block">
                       <span style="color: #707070">
-                        Oops, you have misidentified this as human made!
+                        Oops, this was made by an AI!
                       </span>
                       <br />
                       {{ teachableMsg5 }}
