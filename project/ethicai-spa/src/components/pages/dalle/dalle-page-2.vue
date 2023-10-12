@@ -320,10 +320,10 @@
                 <div class="col-md-6 mb-3">
                   <div class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
-    onFifthIncorrectClick();
-  showContinue = true;
-  scrollIntoContinue();
-  " role="link">
+                    onFifthIncorrectClick();
+                  showContinue = true;
+                  scrollIntoContinue();
+                  " role="link">
                     <div class="card-body">
                       <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image"
                         style="display: inline-block; border-radius: 5px" />
@@ -374,62 +374,57 @@
         </div>
 
         <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showThirdSection }">
-          <div class="row h-10 mb-5">
-            <div class="col-md-12">
-              <h3>How to identify AI-generated images?</h3>
-            </div>
+        <div class="row h-10 mb-5">
+          <div class="col-md-12">
+            <h3>How to identify AI-generated images?</h3>
           </div>
-          <div class="article-snippet text-center align-items-center mx-auto">
-            <div class="article-image">
-              <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
-                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
-              </a>
-            </div>
-            <h2 class="article-title">How to identify AI-generated images</h2>
-            <p class="article-meta">
-              Published on June 22, 2023 by Hagop Kavafian
-            </p>
-            <p class="article-excerpt">
-              AI art generators are sometimes so powerful that it is hard to
-              tell AI-generated images from actual pictures. There are some
-              clues you can look for to identify these and potentially avoid
-              being tricked into thinking you're looking at a real picture.
-            </p>
-            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/"
-              target="_blank">Read More</a>
-            <br />
+        </div>
+        <div class="article-snippet text-center align-items-center mx-auto">
+          <div class="article-image">
+            <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
+              <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+            </a>
           </div>
+          <h2 class="article-title">How to identify AI-generated images</h2>
+          <p class="article-meta">
+            Published on June 22, 2023 by Hagop Kavafian
+          </p>
+          <p class="article-excerpt">
+            AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
+          </p>
+          <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
+          <br />
+        </div>
 
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="d-flex justify-content-center flex-wrap">
-                            <h3>How to identify AI-generated Images</h3>
-                            <br><br><br><br><br><br>
-                            <p class="text-left section-text">
-                                Ultimately, some of these images are challenging to differentiate, even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
-                            </p>
-                            <br>
-                            <p class="text-left section-text">
-                                To find out what more about what clues to look out for, check out this article.
-                            </p>
-                            <br>
-                            <p class="text-left section-text">
-                                &larr; &larr;
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted && section2Completed">
-            <div class="col-md-12 d-flex justify-content-end">
-              <router-link to="/dalle/the-complexities-of-copyright">
-                <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
-              </router-link>
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="d-flex justify-content-center flex-wrap">
+            <h3>How to identify AI-generated Images</h3>
+            <br><br><br><br><br><br>
+            <p class="text-left section-text">
+              Ultimately, some of these images are challenging to differentiate, even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
+            </p>
+            <br>
+            <p class="text-left section-text">
+              To find out what more about what clues to look out for, check out this article.
+            </p>
+            <br>
+            <p class="text-left section-text">
+              &larr; &larr;
+            </p>
+          </div>
+        </div>
+        <br>
+            <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
+              <div class="col-md-12 d-flex justify-content-end">
+                <router-link to="/dalle/the-complexities-of-copyright">
+                  <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
+  </div>
 </template>
 
 <script lang="ts">

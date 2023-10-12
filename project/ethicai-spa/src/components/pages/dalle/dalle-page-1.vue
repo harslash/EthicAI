@@ -2,8 +2,8 @@
   <div>
     <nav-bar />
     <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-    <div class="container-fluid page-container text-center">
-      <div class="row h-25">
+    <div class="container-fluid page-container text-center mb-5">
+      <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h1 class="tw-mt-24">The Rise of DALL·E</h1>
         </div>
@@ -47,12 +47,9 @@
         </div>
 
         <div class="row h-20">
-          <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
-              showSecondSection = true;
-            scrollIntoSecondSection();
-            section1Completed = true;
-            " />
+          <div class="col-md-12 d-flex justify-content-end" >
+            <purple-btn v-if="!section1Completed" :text="'Continue'"
+              @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;" style="margin-right: 35px;" />
           </div>
         </div>
       </div>
@@ -80,7 +77,7 @@
               showThirdSection = true;
             scrollIntoThirdSection();
             section2Completed = true;
-            " />
+            " style="margin-right: 35px;" />
           </div>
         </div>
       </div>
@@ -105,7 +102,7 @@
               showFourthSection = true;
             scrollIntoFourthSection();
             section3Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
@@ -134,7 +131,7 @@
               showFifthSection = true;
             scrollIntoFifthSection();
             section4Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
@@ -164,7 +161,7 @@
               showSixthSection = true;
             scrollIntoSixthSection();
             section5Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
@@ -213,9 +210,9 @@
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end align-items-center">
             <div class="mr-10">
-              <p style="margin-bottom: 0"><b>How does this happen?</b></p>
+              <p style="margin-right: 20px; margin-bottom: 0px;"><b>How does this happen?</b></p>
             </div>
-            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-left: 20px">
+            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-right: 35px;">
               <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
             </router-link>
           </div>
