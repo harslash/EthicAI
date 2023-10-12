@@ -121,4 +121,11 @@ export default defineComponent({
             max-width: 100%;
             max-height: 100%;
         }
+
+
+    @media (max-width: 767.98px) {
+        .card {
+            width: 360px;
+        }
+    }
     </style>

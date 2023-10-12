@@ -33,7 +33,7 @@
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <p class="section-text">
                         OpenAI, the company behind ChatGPT, has been forthright in cautioning users about this peculiar behavior exhibited by the model. They acknowledge that addressing hallucination is a complex challenge that they are actively working to overcome  
-                        <span class="reference-link" @click="handleReferenceClick('hallucination')">(Guinness, 2023)
+                        <span class="reference-link" @click="handleReferenceClick('hallucination')">OpenAI. (n.d.)
                         </span>. Understanding these quirks is crucial for using ChatGPT effectively and responsibly.
                     </p>
                     <div class="section-text">
@@ -75,9 +75,9 @@
         <div ref="lastSection" class="container text-section" :class="{ 'hidden': !showLastSection }">
             <div class="row">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
-                    <div class="section-text">
-                        <b>Lesson of the day:</b> Don’t ask ChatGPT to do your maths homework.
-                    </div>
+                    <p class="section-text">
+                        As evident from the above demonstration, distinguishing whether a generated response is factually accurate or not can be a daunting task, given ChatGPT's consistent ability to produce coherent and fluent responses. Therefore, as a student, relying solely on the generated output could potentially result in misinformation and a misinterpretation of various topics.
+                    </p>
                 </div>
                 <div class="row h-20 pb-5">
                     <div class="col-md-12 d-flex justify-content-end">
@@ -181,7 +181,7 @@ export default defineComponent({
 
 .text-section {
     opacity: 1;
-    max-height: 1000px;
+    max-height: 1100px;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -189,5 +189,15 @@ export default defineComponent({
     opacity: 0;
     max-height: 0;
     overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+    .section-text {
+        width: 90%;
+    }
+
+    .img-a{
+        width: 60%;
+    }
 }
 </style>
