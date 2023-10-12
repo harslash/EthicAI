@@ -107,6 +107,7 @@
                     " @click="
     onFirstIncorrectClick();
   showSecondQuestion = true;
+  scrollIntoSecondQuestion();
   " role="link">
                     <div class="card-body">
                       <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image"
@@ -160,6 +161,7 @@
                   " @click="
     onSecondIncorrectClick();
   showThirdQuestion = true;
+  scrollIntoThirdQuestion();
   " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image"
@@ -189,7 +191,8 @@
             <div class="row">
               <div class="col-md-6 mb-3">
                 <div class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
-                  onThirdIncorrectClick();
+                  onThirdIncorrectClick()
+                  scrollIntoFourthQuestion();
                 showFourthQuestion = true;
                 " role="link">
                   <div class="card-body">
@@ -243,6 +246,7 @@
                 <div class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onFourthIncorrectClick();
+    scrollIntoFifthQuestion();
   showFifthQuestion = true;
   " role="link">
                   <div class="card-body">
@@ -359,7 +363,7 @@
           </div>
         </div>
 
-        <div class="row h-20">
+        <div class="row h-20 pb-5" ref="continueButton">
           <div class="col-md-12 d-flex justify-content-end">
             <purple-btn v-if="quizCompleted && !section2Completed" :text="'Continue'" @click="
               showThirdSection = true;
@@ -416,7 +420,7 @@
                     </div>
                 </div>
 
-          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
+          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted && section2Completed">
             <div class="col-md-12 d-flex justify-content-end">
               <router-link to="/dalle/the-complexities-of-copyright">
                 <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
