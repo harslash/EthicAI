@@ -136,7 +136,7 @@
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex align-items-center flex-column">
-                        <h5>Exploring Biases in ChatGPT</h5>
+                        <h5>Exploring Potential Biases in ChatGPT</h5>
                         <p class="section-text">Welcome to our Bias Exploration feature. Here's how you can engage with our
                             Markov chain powered demo:</p>
                         <p class="section-text px-3">• <b>Train Model:</b> Click "Train Model" to observe the Markov Chain
@@ -153,7 +153,7 @@
                             •Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's
                             training data.
                         </p>
-                        <p class="section-text">Dive in and uncover the intricacies of biases in ChatGPT's responses!</p>
+                        <p class="section-text">Dive in and discover the intricacies of LLM biases, such as ChatGPT's biases.</p>
                     </div>
                 </div>
                 <div class="col-md-2"></div>

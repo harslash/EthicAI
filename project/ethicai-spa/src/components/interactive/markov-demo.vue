@@ -282,7 +282,7 @@ export default defineComponent({
             if (corpusLabel.value === 'Woodrow Wilson’s 1917 Declaration of War') {
                 return `
                 <p class='text-black'><b>Few things to note:</b></p>
-                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggests United States is a friendly country.</p>   
+                <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggests United States is the righteous country.</p>   
                 <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'I'.</p>
                 `;
             }
