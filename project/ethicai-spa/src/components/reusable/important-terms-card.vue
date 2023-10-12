@@ -1,5 +1,5 @@
 <template>
-   <div class="card terms-card" style="width: 18rem;">
+   <div class="card terms-card" :style="{width: '18rem', height: `${cardHeight}px`}">
       <div class="card-header terms-card-header">
         <p class="terms-card-header-title mb-0">Important terms</p>
         <span class="terms-card-header-subtitle">Hover to learn more</span>
@@ -27,6 +27,10 @@ export default defineComponent({
     name: 'ImportantTermsCard',
     props: {
         'termsAndDefinitions': Array as () => TermObject[],
+        'cardHeight': {
+          type: [String, Number],
+          default: 200
+        }
     },
     methods: {
         getTooltipContent(item: TermObject) {
