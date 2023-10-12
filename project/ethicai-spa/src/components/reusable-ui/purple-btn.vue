@@ -34,4 +34,4 @@ export default defineComponent({
 .btn:hover {
     background-color: #8638fc;
 }
-</style>>
+</style>

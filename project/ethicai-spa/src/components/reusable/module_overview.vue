@@ -39,10 +39,12 @@
           </div>
           <div class="bottom-child">
             <!-- Content for the bottom child container (30% height) -->
-            <div class="continue-button">
+            <div class="row h-20">
+              <div class="col-md-12 d-flex justify-content-end">
               <router-link :to="generateRoute(moduleName, pageName)">
-                <button @click="continueClicked">Continue</button>
+                <purple-btn :text="'Continue'" @click="continueClicked" />
               </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -52,6 +54,7 @@
 </template>
 <script lang="ts">
 import { defineComponent} from 'vue';
+import PurpleBtn from "../reusable-ui/purple-btn.vue";
 
 export default defineComponent({
   name: 'ModuleOverview',
@@ -125,6 +128,9 @@ export default defineComponent({
       }
     }
   },
+  components: {
+    "purple-btn": PurpleBtn,
+  },
    mounted() {
     this.setModulePageStates();
   }
@@ -172,7 +178,6 @@ body {
 }
 
 .bottom-child {
-  flex: 5; /* 30% height */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Align content to the bottom */
@@ -197,7 +202,7 @@ body {
 .contents {
   margin: 20px;
   padding: 0;
-  text-align: left;
+  text-align: center;
   font-size: 15px;
 }
 
@@ -217,14 +222,6 @@ body {
   font-weight: bold;
 }
 
-.continue-button button {
-  background-color: #6d0cff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 .strikethrough {
   text-decoration: line-through;
