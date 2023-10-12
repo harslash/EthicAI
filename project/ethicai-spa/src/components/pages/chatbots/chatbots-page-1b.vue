@@ -12,21 +12,16 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            While the capabilities of new AI chatbots like ChatGPT are undeniably impressive, it's essential
-                            for users like you to grasp how they work and their potential drawbacks.
+                            Welcome to the eye-opening world of ChatGPT and the common pitfalls that students sometimes stumble upon. It's no secret that ChatGPT is a powerful tool, often tempting students to lean on it for assistance with their assignments. While it can be a handy companion, it's essential to tread carefully, as ChatGPT comes with two notable limitations that can lead you astray.
                         </p>
                         <p class="section-text">
-                            The current frontrunner in the world of chatbots, ChatGPT, operates by striving to comprehend
-                            your prompt and generating responses it predicts to be the most fitting, based on the vast
-                            dataset used for its training
-                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Guinness, 2023)
-                            </span>.
+                           First, ChatGPT's knowledge is rooted in the vast sea of text it was trained on, and just like any ocean, it carries its own currents. This means it can unintentionally perpetuate biases and misconceptions found in its training data. Trusting it blindly might lead you down a path of misinformation.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <img class="img-a" src="../../../assets//chatbots_page_2_a.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                    <img class="img-a" src="../../../assets/chatbots_page_1b_a.jpeg"
+                        alt="2d illustration of a robot sleeping om a pile of books" />
                 </div>
             </div>
             <div class="row h-20">
@@ -41,36 +36,27 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            The minds behind ChatGPT have honed this model by exposing it to an extensive repository of
-                            textual data, exceeding a staggering 570 GB
-                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Ruby, 2023)
-                            </span>. To put it in perspective, that's equivalent to more than 1.3 million novels' worth of
-                            information
-                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Gupta, 2023)
-                            </span>! This data amalgamation includes a myriad of sources like books, articles, and web
-                            pages.
-                        </p>
-                        <p class="section-text">
-                            If you've been navigating the online realm for some time, you might already suspect that some of
-                            these data sources can harbor biases, stereotypes, and prejudiced language. It's an unintended
-                            consequence that ChatGPT and similar Language Models (LLMs) may inherit these biases,
-                            potentially leading to offensive responses or the reinforcement of harmful stereotypes in their
-                            replies. This phenomenon arises from the training data, and it's a critical aspect to be aware
-                            of when utilizing ChatGPT and similar LLMs
-                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Ray, 2023)
-                            </span>.
+                          Second, ChatGPT is known to exhibit a phenomenon called "hallucination." In simple terms, it can sometimes generate content that sounds convincing but isn't entirely accurate. Relying on it too heavily might have your assignments drifting into the realm of fiction rather than fact.
                         </p>
                     </div>
                 </div>
+                <div class="col-md-12 pb-5">
+                    <img class="img-b" src="../../../assets/chatbots_page_1b_b.jpeg"
+                        alt="2d illustration of a robot hallucinating"/>
+                </div>
                 <div class="col-md-12">
-                    <img class="img-b" src="../../../assets//chatbots_page_2_b.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <p class="section-text">
+                            But don't worry, we're here to guide you through these potential pitfalls and help you harness ChatGPT's incredible capabilities effectively. In the next section, we'll dive deeper into these limitations so you can better understand how to navigate the ChatGPT landscape and make the most out of this powerful tool without falling into these common traps.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="row h-20">
+            <div class="row h-20 pb-5">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
-                        @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
+                    <router-link to="/chatbots/too-good-to-be-true">
+                        <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -90,13 +76,8 @@ export default defineComponent({
         return {
             showFirstSection: true,
             showSecondSection: false,
-            showThirdSection: false,
-            showFourthSection: false,
-            showFifthSection: false,
             section1Completed: false,
             section2Completed: false,
-            section3Completed: false,
-            section4Completed: false
         }
     },
     methods: {
@@ -159,11 +140,6 @@ export default defineComponent({
     overflow: hidden;
 }
 
-/* .demo {
-    height: 75vh;
-    width: 80%;
-} */
-
 @media (max-width: 767.98px) {
     .section-text {
         width: 90%;
@@ -171,12 +147,7 @@ export default defineComponent({
 
     .img-a,
     .img-b {
-        width: 60%;
-    }
-
-    .img-c,
-    .img-d {
-        width: 90%;
+        width: 80%;
     }
 }
 </style>
