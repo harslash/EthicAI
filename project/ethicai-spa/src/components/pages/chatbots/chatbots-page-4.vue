@@ -83,7 +83,7 @@
               Defining a character and/or role for the AI tool
             </p>
 
-            <div class="d-flex justify-content-between pb-3">
+            <div class="d-flex justify-content-between pb-3 flex-md-row flex-column">
               <quiz-ui-card
                 :card-text="'Pretend you\'re an experienced short film director. Do you have any tips for going viral on tiktok ?'"
                 :isNormal="false"></quiz-ui-card>
@@ -99,7 +99,7 @@
             <p class="section-text pb-1 purple-text">
               Giving a clear and unambiguous task
             </p>
-            <div class="d-flex justify-content-between pb-3">
+            <div class="d-flex justify-content-between pb-3 flex-md-row flex-column">
               <quiz-ui-card
                 :card-text="'Give me a unit conversion chart between the most common measures of length, from 10m to 100m in increments of 5m.'"
                 :isNormal="false"></quiz-ui-card>
@@ -114,7 +114,7 @@
             <p class="section-text pb-1 purple-text">
               Providing examples and additional guidelines
             </p>
-            <div class="d-flex justify-content-between pb-3">
+            <div class="d-flex justify-content-between pb-3 flex-md-row flex-column">
               <quiz-ui-card
                 :card-text="'Can I have a meal plan for the next week? Should have nutritious but quick-to-prepare dinners e.g. omelette.'"
                 :isNormal="false">
@@ -132,7 +132,7 @@
               Specifying the output type
             </p>
 
-            <div class="d-flex justify-content-between pb-3">
+            <div class="d-flex justify-content-between pb-3 flex-md-row flex-column">
               <quiz-ui-card :card-text="'What happened leading up to WWII? Bulleted list.'"
                 :isNormal="false"></quiz-ui-card>
               <quiz-ui-card :card-text="`What happened leading up to WWII?`" :isNormal="false"
@@ -148,7 +148,7 @@
               And being as elaborate as possible to improve the prompt
             </p>
 
-            <div class="d-flex justify-content-between pb-3">
+            <div class="d-flex justify-content-between pb-3 flex-md-row flex-column align-items-center">
               <quiz-ui-card
                 :card-text="`What's a synonym for 'dilate', but is like when a flower opens up? In the sense of getting wider or more expansive.?`"
                 :isNormal="false"></quiz-ui-card>

@@ -91,4 +91,10 @@ export default defineComponent({
 .icon-stack-2x {
   font-size: 1.5em;
 }
+
+@media (max-width: 767.98px) {
+   .quiz-ui-card{
+        width: 320px; 
+    }
+}
 </style>
