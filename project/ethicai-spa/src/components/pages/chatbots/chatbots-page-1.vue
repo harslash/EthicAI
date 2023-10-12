@@ -39,7 +39,7 @@
       </div>
       <div class="row h-30 mb-3">
         <div class="col-md-5 d-flex justify-content-center justify-content-md-end pb-5">
-          <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
+          <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="300"></important-terms-card>
         </div>
         <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
