@@ -9,7 +9,6 @@
             <div class="col-md-12 d-flex justify-content-around pb-5">
                 <purple-btn-outline v-if="isReadyForAnswer" :text="'Hallucination'" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
                 <purple-btn-outline v-if="isReadyForAnswer" :text="'Correct'" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
-                <purple-btn-outline v-if="!isReadyForAnswer" :text="'Next'" @click="handleNextBtnClick()"> </purple-btn-outline>
             </div>
             <div class="col-md-2"></div>
             <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
@@ -21,6 +20,8 @@
                     <p v-else class="h6">The response is factually correct</p>
 
                     <p>{{ explanationText }}</p>
+
+                    <purple-btn-outline v-if="isQuizStarted" :text="'Next'" @click="handleNextBtnClick()"> </purple-btn-outline>
                 </div>
             </div>
             <div class="col-md-2"></div>
