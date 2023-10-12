@@ -99,9 +99,9 @@
           <div class="d-flex align-items-center flex-column">
             <h5>Engage with LLM</h5>
             <p class="section-text">Welcome to our LLM interaction feature. You can interact in two ways:</p>
-            <p class="section-text px-3">1. Your Questions: Enter your questions or prompts in the text box and
+            <p class="section-text px-3">1. <b>Your Questions:</b> Enter your questions or prompts in the text box and
               receive responses from an LLM.</p>
-            <p class="section-text px-3">2. Pre-Generated Prompts: Choose from pre-made prompts to start a
+            <p class="section-text px-3">2. <b>Pre-Generated Prompts:</b> Choose from pre-made prompts to start a
               conversation.</p>
 
             <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
