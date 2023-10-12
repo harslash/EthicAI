@@ -12,18 +12,13 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            Can an AI hallucinate? Yes, but not in the way we normally think of that word. ChatGPT often
-                            generates confident, plausible-sounding responses that are just blatantly incorrect or
-                            nonsensical. This behaviour is called hallucination, a critical flaw in existing
-                            publicly-available LLMs. OpenAI, the company that developed ChatGPT, have repeatedly warned
-                            users about ChatGPT’s hallucinations, which they admit are a challenging issue to overcome
-                            (<router-link :to="{ name: 'references' }">OpenAI, n.d.</router-link>).
+                         You might wonder if AI can "hallucinate." Well, it can, but not in the way we typically associate with the term. ChatGPT, for instance, has a tendency to produce responses that sound confident and plausible, yet they are often blatantly incorrect or downright nonsensical. This phenomenon is known as "hallucination," and it's a significant drawback in publicly available Large Language Models (LLMs) like ChatGPT.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <img class="img-a" src="../../../assets/chatbots_page_3_a.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                        alt="2d illustration of a robot acting confused" />
                 </div>
             </div>
             <div class="row h-20">
@@ -36,6 +31,11 @@
         <div ref="secondSection" class="container mb-5 text-section" :class="{ 'hidden': !showSecondSection }">
             <div class="row h-30 mb-5">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
+                    <p class="section-text">
+                        OpenAI, the company behind ChatGPT, has been forthright in cautioning users about this peculiar behavior exhibited by the model. They acknowledge that addressing hallucination is a complex challenge that they are actively working to overcome  
+                        <span class="reference-link" @click="handleReferenceClick('hallucination')">(Guinness, 2023)
+                        </span>. Understanding these quirks is crucial for using ChatGPT effectively and responsibly.
+                    </p>
                     <div class="section-text">
                         An example can be seen below:
                     </div>
@@ -45,12 +45,7 @@
                 </div>
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <div class="section-text">
-                        In fact, all months have four Tuesdays. However, with reasoning that seems convincing, ChatGPT could
-                        fool trusting users into accepting false information. As a user of the chatbot, you are responsible
-                        for confirming the accuracy of ChatGPT's responses. This is especially important when dealing with
-                        information on sensitive topics such as legal knowledge, medical treatments and industry compliance
-                        requirements. If users unquestioningly trust information from ChatGPT in those areas, there may be
-                        severe real-world consequences.
+                      In reality, every month naturally contains four Tuesdays. However, ChatGPT, with its persuasive arguments, can potentially mislead trusting users into accepting inaccurate information. As a user of this chatbot, the responsibility lies with you to verify the accuracy of ChatGPT's responses. This diligence becomes particularly crucial when dealing with information in sensitive areas such as legal matters, medical advice, and industry compliance requirements. Blindly relying on ChatGPT's responses in these contexts could lead to significant real-world repercussions.
                     </div>
                 </div>
                 <div class="row h-20">
@@ -65,8 +60,10 @@
             <div class="row h-30 mb-5">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <div class="section-text">
-                        Do you have what it takes to judge ChatGPT's responses for accuracy? Look at each generated response
-                        from ChatGPT, and see if the response is factually correct.
+                       <b>Telling apart hallucination and facts:</b>
+                    </div>
+                    <div class="section-text">
+                        Picture yourself as a student, navigating uncharted territory and turning to ChatGPT for answers to your questions on unfamiliar subjects. As you explore generated responses, each paired with a typical student's prompt, challenge yourself to determine whether ChatGPT offers a legitimate answer.
                     </div>
                 </div>
                 <div class="col-md-12 pb-5">
@@ -149,6 +146,10 @@ export default defineComponent({
         },
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'hallucination');
+        },
+        handleReferenceClick(referenceSectionId: string) {
+            const hash = `#${referenceSectionId}`;
+            this.$router.push({ name: "references", hash });
         },
     },
     components: {
