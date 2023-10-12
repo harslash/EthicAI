@@ -97,6 +97,10 @@
           <b>Cousins, B.</b> (2023, March 31). <b>Uncovering The Different Types Of ChatGPT Bias.</b> Forbes.<br>
           <a href="https://www.forbes.com/sites/forbestechcouncil/2023/03/31/uncovering-the-different-types-of-chatgpt-bias/" target="_blank">https://www.forbes.com/sites/forbestechcouncil/2023/03/31/uncovering-the-different-types-of-chatgpt-bias/</a>
         </p>
+         <p>
+          <b>OpenAI Help Center.</b> (n.d.). <b>How your data is used to improve model performance.</b><br>
+          <a href="https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance" target="_blank">https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance</a>
+        </p>
         <p>
           <b>NSW Education.</b> (2023, June 1). <b>Guidelines regarding use of generative AI (ChatGPT).</b><br>
           <a href="https://education.nsw.gov.au/teaching-and-learning/education-for-a-changing-world/guidelines-regarding-use-of-generative-ai-chatgpt" target="_blank">https://education.nsw.gov.au/teaching-and-learning/education-for-a-changing-world/guidelines-regarding-use-of-generative-ai-chatgpt</a>
@@ -104,6 +108,10 @@
         <p>
           <b>OpenAI.</b> (2023, July 23). <b>Privacy policy.</b><br>
           <a href="https://openai.com/policies/privacy-policy" target="_blank">https://openai.com/policies/privacy-policy</a>
+        </p>
+        <p>
+          <b>The University of Auckland.</b> (n.d.). <b>Advice for students on using Generative Artificial Intelligence in coursework.</b><br>
+          <a href="https://www.auckland.ac.nz/en/students/forms-policies-and-guidelines/student-policies-and-guidelines/academic-integrity-copyright/advice-for-student-on-using-generative-ai.html" target="_blank">https://www.auckland.ac.nz/en/students/forms-policies-and-guidelines/student-policies-and-guidelines/academic-integrity-copyright/advice-for-student-on-using-generative-ai.html</a>
         </p>
         <p>
           <b>ZeroGPT.</b> (2023). <b>GPT-4, ChatGPT & AI Detector by ZeroGPT: detect OpenAI text.</b><br>

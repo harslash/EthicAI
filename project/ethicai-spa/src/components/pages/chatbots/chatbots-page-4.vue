@@ -47,8 +47,8 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img class="img-a" src="../../../assets/chatbots_page_4_a.jpeg" alt="an art piece depicting a purple swirl" />
+        <div class="col-md-4 d-flex align-items-center justify-content-center pb-5">
+          <img class="img-a" src="../../../assets/chatbots_page_4_a.jpeg" alt="a purple pop art depicting two students looking at their laptops"/>
         </div>
 
       </div>
@@ -201,14 +201,20 @@
                 (ZeroGPT, 2023)
               </span>.
             </p>
-          <p class="section-text">This one is hopefully self-explanatory. Remember that most publicly available AI models
-            are still under development. AI models such as ChatGPT store and process your user data, including your
-            conversations, location, and IP address. This information is collected to improve the AI and human trainers
-            may access it. Don’t enter any data that is sensitive, personal, or confidential.</p>
+          <p class="section-text">
+            This one is hopefully self-explanatory. Remember that most publicly available AI models are still under development. AI models such as ChatGPT store and process your user data, including your conversations, location, and IP address. 
+
+          As you can see on the diagram, your prompts, part of your user data, may be collected to improve ChatGPT by adding it to its training data  
+          <span class="reference-link" @click="handleReferenceClick('misusesAndPlagrism')">
+                (OpenAI Help Center, n.d.)
+                </span>. Human trainers can access all your user data. Don't enter any data that is sensitive, personal, or confidential. 
+        </p>
         </div>
         <div class="col pb-5">
-          <img class="img-b" src="../../../assets/chatbots_page_4_c.jpeg"
+          <img class="img-b mx-4" src="../../../assets/chatbots_page_4_c.jpeg"
             alt="2d illustration of a laptop behind a giant lock" />
+          <img class="img-d mx-4" src="../../../assets/chatbots_page_4_d.png"
+            alt="A flowchart diagram explaining the interaction between a user, ChatGPT and it's training data" />
         </div>
       </div>
       <div class="row h-20 pb-5">
@@ -348,6 +354,10 @@ export default defineComponent({
   width: 30%;
 }
 
+.img-d {
+  height: 430px;
+}
+
 h2 {
   font-size: 25px;
 }
@@ -370,6 +380,10 @@ h2 {
 
     .img-a, .img-b, .img-c{
         width: 60%;
+    }
+
+    .img-d {
+      height: 320px;
     }
 }
 
