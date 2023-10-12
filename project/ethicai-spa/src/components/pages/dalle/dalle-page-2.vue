@@ -396,14 +396,25 @@
             <br />
           </div>
 
-          <div class="col-md-8 text-center">
-            <br />
-            <p>
-              Some of these are quite tricky to decide, even for the savviest of
-              quiz-takers. It just goes to show how important it is to pay
-              attention to details.
-            </p>
-          </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <h3>How to identify AI-generated Images</h3>
+                            <br><br><br><br><br><br>
+                            <p class="text-left section-text">
+                                Ultimately, some of these images are challenging to differentiate, even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
+                            </p>
+                            <br>
+                            <p class="text-left section-text">
+                                To find out what more about what clues to look out for, check out this article.
+                            </p>
+                            <br>
+                            <p class="text-left section-text">
+                                &larr; &larr;
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
 
           <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
             <div class="col-md-12 d-flex justify-content-end">
