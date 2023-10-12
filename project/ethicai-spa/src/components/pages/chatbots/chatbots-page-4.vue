@@ -45,7 +45,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a" src="../../../assets/chatbots_page_4_a.jpeg" alt="an art piece depicting a purple swirl" />
         </div>
 
@@ -155,7 +155,7 @@
               <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false"
                 :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn :text="'Next'"
+            <purple-outline-btn v-if="!showThirdSection" :text="'Next'"
               @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"></purple-outline-btn>
           </div>
         </div>
@@ -172,9 +172,9 @@
             good your prompt is. So, whether you’re writing code, solving problems, or researching, take the time to
             verify each and every output.</p>
         </div>
-        <div class="col">
+        <div class="col pb-5">
           <img class="img-b" src="../../../assets/chatbots_page_4_b.jpeg"
-            alt="2d illustration of a robot pulling messages from a box" />
+            alt="2d illustration of students inspecting a book with magnifying glasses" />
         </div>
       </div>
       <div class="row h-20">
@@ -196,9 +196,9 @@
             conversations, location, and IP address. This information is collected to improve the AI and human trainers
             may access it. Don’t enter any data that is sensitive, personal, or confidential.</p>
         </div>
-        <div class="col">
+        <div class="col pb-5">
           <img class="img-b" src="../../../assets/chatbots_page_4_c.jpeg"
-            alt="2d illustration of a robot pulling messages from a box" />
+            alt="2d illustration of a laptop behind a giant lock" />
         </div>
       </div>
       <div class="row h-20 pb-5">
@@ -348,4 +348,15 @@ h2 {
   color: #6D0CFF;
   font-weight: 600;
 }
+
+@media (max-width: 767.98px) {
+    .section-text {
+        width: 90%;
+    }
+
+    .img-a, .img-b, .img-c{
+        width: 60%;
+    }
+}
+
 </style>
