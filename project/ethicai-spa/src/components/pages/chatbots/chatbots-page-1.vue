@@ -97,17 +97,17 @@
       <div class="row h-40">
         <div class="col-md-12 pb-2">
           <div class="d-flex align-items-center flex-column">
-            <h5>Engage with ChatGPT</h5>
-            <p class="section-text">Welcome to our ChatGPT interaction feature. You can interact in two ways:</p>
-            <p class="section-text px-3">1. Your Questions: Enter your own questions or prompts in the text box and
-              receive responses from ChatGPT.</p>
-            <p class="section-text px-3">2. Pre-Generated Prompts: Choose from a selection of pre-made prompts to start a
+            <h5>Engage with LLM</h5>
+            <p class="section-text">Welcome to our LLM interaction feature. You can interact in two ways:</p>
+            <p class="section-text px-3">1. Your Questions: Enter your questions or prompts in the text box and
+              receive responses from an LLM.</p>
+            <p class="section-text px-3">2. Pre-Generated Prompts: Choose from pre-made prompts to start a
               conversation.</p>
 
             <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
-              ChatGPT's capabilities. Enjoy the interaction!</p>
-            <span class="gpt-prompt-note">Note: This demo is powered by the OpenAssistant model from Hugging Face. Visit
-              https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
+              the capability of LLMs. Enjoy the interaction!</p>
+            <span class="gpt-prompt-note">Note: This demo is powered by <a href="https://github.com/Soulter/hugging-chat-api" target="_blank">huggin-chat-api</a>. 
+              Visit <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a> to experiment with the official ChatGPT model.</span>
           </div>
 
         </div>
