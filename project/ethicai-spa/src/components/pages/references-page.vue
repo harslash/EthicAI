@@ -84,7 +84,7 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="misusesAndPlagrism">
         <h3 class="sub-heading">Misuses and Plagiarism</h3>
     </div>
     <div class="row">

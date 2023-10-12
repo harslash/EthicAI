@@ -33,7 +33,7 @@
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <p class="section-text">
                         OpenAI, the company behind ChatGPT, has been forthright in cautioning users about this peculiar behavior exhibited by the model. They acknowledge that addressing hallucination is a complex challenge that they are actively working to overcome  
-                        <span class="reference-link" @click="handleReferenceClick('hallucination')">OpenAI. (n.d.)
+                        <span class="reference-link" @click="handleReferenceClick('hallucination')">(OpenAI, n.d.)
                         </span>. Understanding these quirks is crucial for using ChatGPT effectively and responsibly.
                     </p>
                     <div class="section-text">
