@@ -219,6 +219,43 @@
       </div>
       <div class="row h-20 pb-5">
         <div class="col-md-12 d-flex justify-content-end">
+          <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
+            @click="showFifthSection = true; scrollIntoFifthSection(); section4Completed = true;" />
+        </div>
+      </div>
+    </div>
+
+     <div ref="fifthSection" class="container mb-5" :class="{ 'hidden': !showFifthSection }">
+      <div class="row">
+        <div class="col-md-12 pb-5 d-flex justify-content-center flex-wrap">
+          <p class="section-text purple-text">Guideline 4: Treat it as your tutor
+            <span class="reference-link" @click="handleReferenceClick('misusesAndPlagrism')">
+                (The University of Auckland, n.d.)
+              </span>.
+            </p>
+          <p class="section-text">
+          Once you have checked with your course directors that ChatGPT is allowed, here are some ways you can use ChatGPT to support your studies.<br>
+          </p>
+          <p class="section-text px-3">
+            • Before you begin proper research, ask for an overview of your topic of interest.
+          </p>
+          <p class="section-text px-3">
+            • Use it to break down solutions to problems in a way that helps you understand the thought process behind arriving at an answer.
+          </p>
+          <p class="section-text px-3">
+            • Ask it to provide tips to improve your writing skills, including grammar, use of vocabulary, and sentence structure.
+          </p>
+          <p class="section-text">
+            Treat ChatGPT as your tutor! The tutor assists students in solving problems but never gives them a direct solution. This analogy is helpful to remember if you use ChatGPT in your studies. Use ChatGPT to guide you to the solution with your input, just like how a tutor helps a student.
+          </p>
+        </div>
+        <div class="col pb-5">
+          <img class="img-b mx-4" src="../../../assets/chatbots_page_4_e.jpeg"
+            alt="2d illustration of a laptop behind a giant lock" />
+        </div>
+      </div>
+      <div class="row h-20 pb-5">
+        <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/chatbots/quiz">
             <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
           </router-link>
@@ -245,6 +282,7 @@ export default defineComponent({
       showSecondSection: false,
       showThirdSection: false,
       showFourthSection: false,
+      showFifthSection: false,
       showSecondPromptCard: false,
       showThirdPromptCard: false,
       showFourthPromptCard: false,
@@ -252,6 +290,7 @@ export default defineComponent({
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
+      section4Completed: false
     };
   },
   methods: {
@@ -282,6 +321,18 @@ export default defineComponent({
     scrollIntoFourthSection() {
       this.$nextTick(() => {
         const element = this.$refs.fourthSection as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'start',
+          });
+        }
+      });
+    },
+    scrollIntoFifthSection() {
+      this.$nextTick(() => {
+        const element = this.$refs.fifthSection as HTMLElement;
         if (element) {
           element.scrollIntoView({
             behavior: 'smooth',
