@@ -276,13 +276,16 @@ export default defineComponent({
       });
     },
     scrollPage(ref: string) {
-      const element = document.getElementById(ref);
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop,
-          behavior: 'smooth',
-        });
-      }
+      this.$nextTick(() => {
+        const element = this.$refs[ref] as HTMLElement;
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'start',
+          });
+        }
+      });
     },
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('chatbots', 'misuses-and-plagiarism');

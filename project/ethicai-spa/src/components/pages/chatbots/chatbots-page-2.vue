@@ -128,11 +128,11 @@
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
                     <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
-                        @click="showfifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
+                        @click="showFifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
                 </div>
             </div>
         </div>
-        <div ref="fifthSection" class="container text-section pb-5" :class="{ 'hidden': !showfifthSection }">
+        <div ref="fifthSection" class="container text-section pb-5" :class="{ 'hidden': !showFifthSection }">
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex align-items-center flex-column">
@@ -201,6 +201,7 @@ export default defineComponent({
             this.$nextTick(() => {
                 const element = this.$refs[sectionName] as HTMLElement;
                 if (element) {
+                    console.log(element)
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
             });
