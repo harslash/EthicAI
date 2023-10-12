@@ -269,12 +269,12 @@ export default defineComponent({
 
     .img-a,
     .img-b {
-        width: 60%;
+        width: 80%;
     }
 
     .img-c,
     .img-d {
-        width: 90%;
+        width: 100%;
     }
 }
 </style>
