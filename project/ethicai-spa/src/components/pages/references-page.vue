@@ -73,15 +73,11 @@
         </p>
       </div>
     </div>
-    <div class="row">
+    <div class="row" id="hallucination">
         <h3 class="sub-heading">Hallucination</h3>
     </div>
     <div class="row">
       <div class="gray-rectangle">
-        <p>
-          <b>Gupta, N.</b> (2023). <b>The Astonishing Amount of Data Analyzed by ChatGPT: Story Told By ChatGPT.</b> www.linkedin.com.<br>
-          <a href="https://www.linkedin.com/pulse/astonishing-amount-data-analyzed-chatgpt-story-told-nimit-gupta/" target="_blank">https://www.linkedin.com/pulse/astonishing-amount-data-analyzed-chatgpt-story-told-nimit-gupta/</a>
-        </p>
         <p>
           <b>OpenAI.</b> (n.d.). <b>Introducing ChatGPT.</b><br>
           <a href="https://openai.com/blog/chatgpt" target="_blank">https://openai.com/blog/chatgpt</a>
