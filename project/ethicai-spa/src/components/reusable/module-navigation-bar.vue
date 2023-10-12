@@ -55,6 +55,7 @@ export default defineComponent({
       ],
       chatbotsModulePageRoutes: [
         "the-age-of-chatbots",
+        'chatgpt-101',
         "too-good-to-be-true",
         "hallucination",
         "misuses-and-plagiarism",

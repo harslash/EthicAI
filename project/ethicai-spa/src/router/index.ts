@@ -48,6 +48,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../views/AllModulesView.vue"),
   },
   {
+    path: "/chatbots/chatgpt-101",
+    name: "chatgpt-101",
+    component: () =>
+      import("../views/modules/chatbots/ChatbotsPageOnebView.vue"),
+  },
+  {
     path: "/chatbots/too-good-to-be-true",
     name: "too-good-to-be-true",
     component: () =>
