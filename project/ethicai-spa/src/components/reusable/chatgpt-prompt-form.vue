@@ -2,9 +2,9 @@
   <form class="form-container d-flex justify-content-around align-items-center flex-column">
 
     <div class="form-group d-flex">
-        <div v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
+        <button v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
             {{preGeneratedPrompt}}
-        </div>
+        </button>
         <button v-if="!loading" class="btn btn-primary refresh-btn mx-3"
                 type="button"
                 @click="refreshPrompt()"
