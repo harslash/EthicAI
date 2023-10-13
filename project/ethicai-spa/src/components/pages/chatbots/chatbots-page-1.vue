@@ -66,8 +66,8 @@
         </div>
       </div>
     </div>
-    <div ref="secondSection" class="section-two 
-      container mb-5 
+    <div ref="secondSection" class="section-two
+      container mb-5
       text-section" :class="{ 'hidden': !showSecondSection }">
       <div class="row">
         <div class="col-md-12">
@@ -106,7 +106,7 @@
 
             <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
               the capability of LLMs. Enjoy the interaction!</p>
-            <span class="gpt-prompt-note">Note: This demo is powered by <a href="https://github.com/Soulter/hugging-chat-api" target="_blank">huggin-chat-api</a>. 
+            <span class="gpt-prompt-note">Note: This demo is powered by <a href="https://github.com/Soulter/hugging-chat-api" target="_blank">huggin-chat-api</a>.
               Visit <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a> to experiment with the official ChatGPT model.</span>
           </div>
 
@@ -243,6 +243,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;

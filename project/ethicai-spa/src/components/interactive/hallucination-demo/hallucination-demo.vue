@@ -78,7 +78,7 @@ export default defineComponent({
                 isReadyForAnswer.value = false;
             }
 
-            if (questionId.value < 5) { 
+            if (questionId.value < 5) {
                 if (value == jsonData.data[questionId.value].isHallucination) {
                     isUserCorrect.value = true;
                     isHallucination.value = false;
@@ -87,8 +87,8 @@ export default defineComponent({
                     isHallucination.value = true;
                 }
                 questionId.value += 1;
-             }  
-             
+             }
+
         }
 
         const handleNextBtnClick = () => {
@@ -96,7 +96,7 @@ export default defineComponent({
                 context.emit('end-of-demo-event');
                 showButtons.value = false;
             }
-            
+
             isReadyForAnswer.value = true;
             isQuizStarted.value = false;
             refreshCard();
@@ -107,7 +107,7 @@ export default defineComponent({
                 questionText.value = jsonData.data[questionId.value].prompt;
                 answerText.value = jsonData.data[questionId.value].response;
                 explanationText.value = jsonData.data[questionId.value].explanation;
-            }  
+            }
         }
 
         const questionText = ref('');
@@ -146,6 +146,7 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;

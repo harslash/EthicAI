@@ -16,7 +16,7 @@
     </div>
   </div>
 </template>
-  
+
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
@@ -42,7 +42,7 @@ export default defineComponent({
   }
 });
 </script>
-  
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
@@ -62,6 +62,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -73,4 +74,3 @@ export default defineComponent({
   }
 }
 </style>
-  

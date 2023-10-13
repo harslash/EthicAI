@@ -32,7 +32,7 @@
             <div class="row h-30 mb-5">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center pb-5">
                     <p class="section-text">
-                        OpenAI, the company behind ChatGPT, has been forthright in cautioning users about this peculiar behavior exhibited by the model. They acknowledge that addressing hallucination is a complex challenge that they are actively working to overcome  
+                        OpenAI, the company behind ChatGPT, has been forthright in cautioning users about this peculiar behavior exhibited by the model. They acknowledge that addressing hallucination is a complex challenge that they are actively working to overcome
                         <span class="reference-link" @click="handleReferenceClick('hallucination')">(OpenAI, n.d.)
                         </span>. Understanding these quirks is crucial for using ChatGPT effectively and responsibly.
                     </p>
@@ -186,6 +186,7 @@ export default defineComponent({
 }
 
 .hidden {
+    display: none;
     opacity: 0;
     max-height: 0;
     overflow: hidden;

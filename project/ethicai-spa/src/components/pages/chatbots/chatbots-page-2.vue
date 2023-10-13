@@ -252,6 +252,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
