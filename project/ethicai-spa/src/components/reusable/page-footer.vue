@@ -9,7 +9,7 @@
         <ul class="footer-list">
           <li class="mb-2">
             <router-link to="/references">
-                <a href="#">References</a>
+                References
             </router-link>
           </li>
         </ul>
@@ -19,7 +19,7 @@
            <ul class="footer-list">
               <li class="mb-2">
                   <router-link to="/about-us">
-                    <a href="#">About Us</a>
+                    About Us
                   </router-link>
               </li>
           </ul>
