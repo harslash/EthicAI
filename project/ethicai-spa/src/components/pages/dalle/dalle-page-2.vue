@@ -83,7 +83,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="#" class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFirstCorrectClick();
                   showSecondQuestion = true;
                   scrollIntoSecondQuestion();
@@ -92,7 +92,7 @@
                       <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Image"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="correct" :class="{ hidden: !firstQuestionShowCorrect }">
                     <p style="display: block">
@@ -103,7 +103,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="#" class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
     onFirstIncorrectClick();
   showSecondQuestion = true;
@@ -113,7 +113,7 @@
                       <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="incorrect" :class="{ hidden: !firstQuestionShowIncorrect }">
                     <p style="display: block">
@@ -137,7 +137,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="#" class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onSecondCorrectClick();
                 showThirdQuestion = true;
                 scrollIntoThirdQuestion();
@@ -146,7 +146,7 @@
                     <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !secondQuestionShowCorrect }">
                   <p style="display: block">
@@ -157,7 +157,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="#" class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onSecondIncorrectClick();
   showThirdQuestion = true;
@@ -167,7 +167,7 @@
                     <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !secondQuestionShowIncorrect }">
                   <p style="display: block">
@@ -190,16 +190,16 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
+                <a href="#" class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
                   onThirdIncorrectClick()
-                  scrollIntoFourthQuestion();
+                scrollIntoFourthQuestion();
                 showFourthQuestion = true;
                 " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !thirdQuestionShowIncorrect }">
                   <p style="display: block">
@@ -212,7 +212,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="#" class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onThirdCorrectClick();
                 showFourthQuestion = true;
                 scrollIntoFourthQuestion();
@@ -221,7 +221,7 @@
                     <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !thirdQuestionShowCorrect }">
                   <p style="display: block">
@@ -243,17 +243,17 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="#" class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onFourthIncorrectClick();
-    scrollIntoFifthQuestion();
+  scrollIntoFifthQuestion();
   showFifthQuestion = true;
   " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !fourthQuestionShowIncorrect }">
                   <p style="display: block">
@@ -266,7 +266,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="#" class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onFourthCorrectClick();
                 showFifthQuestion = true;
                 scrollIntoFifthQuestion();
@@ -275,7 +275,7 @@
                     <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Image"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !fourthQuestionShowCorrect }">
                   <p style="display: block">
@@ -298,7 +298,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="#" class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFifthCorrectClick();
                   showContinue = true;
                   scrollIntoContinue();
@@ -307,7 +307,7 @@
                       <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Image"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="correct" :class="{ hidden: !fifthQuestionShowCorrect }">
                     <p style="display: block">
@@ -318,17 +318,17 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="#" class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
-                    onFifthIncorrectClick();
-                  showContinue = true;
-                  scrollIntoContinue();
-                  " role="link">
+    onFifthIncorrectClick();
+  showContinue = true;
+  scrollIntoContinue();
+  " role="link">
                     <div class="card-body">
                       <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="incorrect" :class="{ hidden: !fifthQuestionShowIncorrect }">
                     <p style="display: block">
@@ -374,55 +374,63 @@
         </div>
 
         <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showThirdSection }">
-        <div class="row h-10 mb-5">
-          <div class="col-md-12">
-            <h3>How to identify AI-generated images?</h3>
+          <div class="row h-10 mb-5">
+            <div class="col-md-12">
+              <h3>How to identify AI-generated images?</h3>
+            </div>
           </div>
-        </div>
-        <div class="article-snippet text-center align-items-center mx-auto">
-          <div class="article-image">
-            <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
-              <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
-            </a>
+          <div class="article-snippet text-center align-items-center mx-auto">
+            <div class="article-image">
+              <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
+                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+              </a>
+            </div>
+            <h2 class="article-title">How to identify AI-generated images</h2>
+            <p class="article-meta">
+              Published on June 22, 2023 by Hagop Kavafian
+            </p>
+            <p class="article-excerpt">
+              AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual
+              pictures.
+              There are some clues you can look for to identify these and potentially avoid being tricked into thinking
+              you're
+              looking at a real picture.
+            </p>
+            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/"
+              target="_blank">Read More</a>
+            <br />
           </div>
-          <h2 class="article-title">How to identify AI-generated images</h2>
-          <p class="article-meta">
-            Published on June 22, 2023 by Hagop Kavafian
-          </p>
-          <p class="article-excerpt">
-            AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
-          </p>
-          <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
-          <br />
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="d-flex justify-content-center flex-wrap">
-            <h3>How to identify AI-generated Images</h3>
-            <br><br><br><br><br><br>
-            <p class="text-left section-text">
-              Ultimately, some of these images are challenging to differentiate, even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
-            </p>
-            <br>
-            <p class="text-left section-text">
-              To find out what more about what clues to look out for, check out this article.
-            </p>
-            <br>
-            <p class="text-left section-text">
-              &larr; &larr;
-            </p>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="d-flex justify-content-center flex-wrap">
+              <h3>How to identify AI-generated Images</h3>
+              <br><br><br><br><br><br>
+              <p class="text-left section-text">
+                Ultimately, some of these images are challenging to differentiate, even for the savviest of quiz-takers.
+                It
+                just
+                goes to show how advanced AI technologies have become and how important it is to educate ourselves.
+              </p>
+              <br>
+              <p class="text-left section-text">
+                To find out what more about what clues to look out for, check out this article.
+              </p>
+              <br>
+              <p class="text-left section-text">
+                &larr; &larr;
+              </p>
+            </div>
           </div>
-        </div>
-        <br>
-            <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
-              <div class="col-md-12 d-flex justify-content-end">
-                <router-link to="/dalle/the-complexities-of-copyright">
-                  <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
-                </router-link>
-              </div>
+          <br>
+          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
+            <div class="col-md-12 d-flex justify-content-end">
+              <router-link to="/dalle/the-complexities-of-copyright">
+                <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+              </router-link>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -592,14 +600,19 @@ export default defineComponent({
       // Resetting all pointer events
       const firstElement = this.$refs.firstQuestion as HTMLElement;
       firstElement.style.pointerEvents = "auto";
+      firstElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const secondElement = this.$refs.secondQuestion as HTMLElement;
       secondElement.style.pointerEvents = "auto";
+      secondElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const thirdElement = this.$refs.thirdQuestion as HTMLElement;
       thirdElement.style.pointerEvents = "auto";
+      thirdElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const fourthElement = this.$refs.fourthQuestion as HTMLElement;
       fourthElement.style.pointerEvents = "auto";
+      fourthElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const fifthElement = this.$refs.fifthQuestion as HTMLElement;
       fifthElement.style.pointerEvents = "auto";
+      fifthElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
 
       // Resetting questions
       (this.firstQuestionShowCorrect = false),
@@ -691,60 +704,70 @@ export default defineComponent({
       this.firstQuestionShowCorrect = true;
       const element = this.$refs.firstQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFirstIncorrectClick() {
       this.firstQuestionShowIncorrect = true;
       const element = this.$refs.firstQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onSecondCorrectClick() {
       this.secondQuestionShowCorrect = true;
       const element = this.$refs.secondQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onSecondIncorrectClick() {
       this.secondQuestionShowIncorrect = true;
       const element = this.$refs.secondQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onThirdCorrectClick() {
       this.thirdQuestionShowCorrect = true;
       const element = this.$refs.thirdQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onThirdIncorrectClick() {
       this.thirdQuestionShowIncorrect = true;
       const element = this.$refs.thirdQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onFourthCorrectClick() {
       this.fourthQuestionShowCorrect = true;
       const element = this.$refs.fourthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFourthIncorrectClick() {
       this.fourthQuestionShowIncorrect = true;
       const element = this.$refs.fourthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onFifthCorrectClick() {
       this.fifthQuestionShowCorrect = true;
       const element = this.$refs.fifthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFifthIncorrectClick() {
       this.fifthQuestionShowIncorrect = true;
       const element = this.$refs.fifthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     handleReferenceClick(referenceSectionId: string) {
