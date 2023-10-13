@@ -43,12 +43,12 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: firstAudioAnswered }"
+                      <button :class="{ hidden: firstAudioAnswered }"
                         @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Left clip is real</p>
-                      </div>
+                      </button>
                     </div>
                   </div>
                   <div class="tw-m-auto">
@@ -57,12 +57,12 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: firstAudioAnswered }"
+                      <button :class="{ hidden: firstAudioAnswered }"
                         @click="onFirstIncorrectClick(); scrollIntoSection('secondAudio');"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -82,12 +82,12 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: secondAudioAnswered }"
+                      <button :class="{ hidden: secondAudioAnswered }"
                         @click="onSecondIncorrectClick(); scrollIntoSection('thirdAudio');"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Left clip is real</p>
-                      </div>
+                      </button>
                     </div>
                   </div>
                   <div class="tw-m-auto">
@@ -96,12 +96,12 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: secondAudioAnswered }"
+                      <button :class="{ hidden: secondAudioAnswered }"
                         @click="onSecondCorrectClick(); scrollIntoSection('thirdAudio');"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -121,12 +121,12 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: thirdAudioAnswered }" @click="onThirdCorrectClick();"
+                      <button :class="{ hidden: thirdAudioAnswered }" @click="onThirdCorrectClick();"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Left clip is real</p>
+                      </button>
                       </div>
-                    </div>
                   </div>
                   <div class="tw-m-auto">
                     <audio controls controlsList="nodownload">
@@ -134,11 +134,11 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <div :class="{ hidden: thirdAudioAnswered }" @click="onThirdIncorrectClick();"
+                      <button :class="{ hidden: thirdAudioAnswered }" @click="onThirdIncorrectClick();"
                         class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
                         style="backgroundColor: #6D0CFF;">
                         <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </div>
+                      </button>
                     </div>
                   </div>
                 </div>
