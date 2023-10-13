@@ -186,8 +186,9 @@
             </span>.
           </p>
           <p class="section-text">Remember that AI models still have the critical flaw of hallucinations, no matter how
-            good your prompt is. So, whether you’re writing code, solving problems, or researching, take the time to
-            verify each and every output.</p>
+            good your prompt is. So, whether you're asking about factual information, writing code, solving problems, or
+            researching, take the time to verify each and every output. This issue is less prevalant in creative uses,
+            such as writing a song, where the goal is to generate imaginative content rather than factual information.</p>
         </div>
         <div class="col pb-5">
           <img class="img-b" src="../../../assets/chatbots_page_4_b.jpeg"
