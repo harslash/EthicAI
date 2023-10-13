@@ -46,7 +46,7 @@ let pass = grade >= 50;
       </div>
       <div class="tw-flex tw-justify-center tw-items-center tw-mt-20">
         <button v-if="!pass" onclick="location.reload()" :style="{ backgroundColor: '#6D0CFF' }"
-          class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150">
+          class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150 tw-border-none">
           <p class="tw-text-xl tw-text-center tw-text-white">Retry</p>
         </button>
         <router-link class="tw-no-underline tw-ml-5" :to="`/${category}/module-complete`">
