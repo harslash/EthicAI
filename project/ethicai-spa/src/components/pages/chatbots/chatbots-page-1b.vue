@@ -26,7 +26,7 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="!section1Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
                         @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
                 </div>
             </div>

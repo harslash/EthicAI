@@ -40,7 +40,7 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'" @click="
             showSecondSection = true;
           scrollIntoSecondSection();
           section1Completed = true;
@@ -96,7 +96,7 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
             showThirdSection = true;
           scrollIntoThirdSection();
           section2Completed = true;
@@ -167,7 +167,7 @@
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <!-- Center align the "Continue" button -->
-          <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
             showFourthSection = true;
           scrollIntoFourthSection();
           section3Completed = true;

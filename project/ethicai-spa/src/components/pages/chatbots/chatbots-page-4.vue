@@ -54,7 +54,7 @@
       </div>
       <div class="row h-10">
         <div class="col-md-8 offset-md-4 d-flex justify-content-end align-items-left">
-          <purple-btn v-if="!section1Completed" :text="'Continue'"
+          <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
             @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;" />
         </div>
       </div>
@@ -186,7 +186,7 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'"
+          <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'"
             @click="showFourthSection = true; scrollIntoFourthSection(); section3Completed = true;" />
         </div>
       </div>
@@ -219,7 +219,7 @@
       </div>
       <div class="row h-20 pb-5">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
+          <purple-btn :tag="'button'" v-if="section3Completed && !section4Completed" :text="'Continue'"
             @click="showFifthSection = true; scrollIntoFifthSection(); section4Completed = true;" />
         </div>
       </div>

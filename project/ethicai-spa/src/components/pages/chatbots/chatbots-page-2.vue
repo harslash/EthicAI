@@ -31,7 +31,7 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="!section1Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
                         @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
                 </div>
             </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'"
                         @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
                 </div>
             </div>
@@ -99,7 +99,7 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'"
                         @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
                 </div>
             </div>
@@ -127,7 +127,7 @@
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="section3Completed && !section4Completed" :text="'Continue'"
                         @click="showFifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
                 </div>
             </div>

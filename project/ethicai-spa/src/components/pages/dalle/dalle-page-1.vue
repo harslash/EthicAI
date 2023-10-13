@@ -48,7 +48,7 @@
 
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end" >
-            <purple-btn v-if="!section1Completed" :text="'Continue'"
+            <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
               @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;" style="margin-right: 35px;" />
           </div>
         </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
               showThirdSection = true;
             scrollIntoThirdSection();
             section2Completed = true;
@@ -98,7 +98,7 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
               showFourthSection = true;
             scrollIntoFourthSection();
             section3Completed = true;
@@ -127,7 +127,7 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section3Completed && !section4Completed" :text="'Continue'" @click="
               showFifthSection = true;
             scrollIntoFifthSection();
             section4Completed = true;
@@ -157,7 +157,7 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section4Completed && !section5Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section4Completed && !section5Completed" :text="'Continue'" @click="
               showSixthSection = true;
             scrollIntoSixthSection();
             section5Completed = true;
