@@ -19,7 +19,7 @@
                 v-for="(item, index) in modulePageNames"
                 :key="item"
               >
-                <div tabindex="0" role="button" class="list-item" @click="handleListItemClick(index)">
+                <a href="#" class="list-item" @click="handleListItemClick(index)" style="text-decoration: none;">
                   <span
                     :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
                   >{{ item }}</span>
@@ -33,7 +33,7 @@
                     class="far fa-circle"
                     :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
                   ></i>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
