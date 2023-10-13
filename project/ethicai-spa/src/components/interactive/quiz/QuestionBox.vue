@@ -67,23 +67,23 @@ function parsedExplanation(explanation) {
     <h1 :class="{ 'tw-text-gray-400': resultVisible }"
       class="tw-text-3xl tw-transition-colors tw-duration-150 tw-select-none" v-html="props.question.question" />
     <div class="tw-mt-10 tw-flex tw-justify-between tw-items-center">
-      <div v-for="answer in answers" :key="answer.value" :style="{ backgroundColor: color }" @click="solve(answer)"
+      <button v-for="answer in answers" :key="answer.value" :style="{ backgroundColor: color }" @click="solve(answer)"
         :class="{ 'hover-scale tw-cursor-pointer': !resultVisible }"
         class="tw-rounded-xl tw-min-h-[150px] tw-w-full tw-mx-3 tw-p-3 tw-transition-all tw-duration-150 tw-text-white tw-flex tw-justify-around tw-items-center">
         <p :class="answer.value.length > 16 ? 'tw-text-md' : 'tw-text-3xl tw-text-center' + (answer.value.length > 16 ? ' tw-max-w-[150px]' : '')"
           v-html="answer.value" />
         <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct1' : 'wrong1'}.svg`"
           :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
-      </div>
+      </button>
     </div>
     <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
       <p class="explanation-text" v-html="parsedExplanation(props.question.explanation)"></p>
     </div>
     <div v-if="resultVisible" class="tw-text-center">
-      <div @click="resultVisible = false; nextQuestion();" :style="{ backgroundColor: '#6D0CFF' }"
+      <button @click="resultVisible = false; nextQuestion();" :style="{ backgroundColor: '#6D0CFF' }"
         class="tw-m-auto tw-py-2 tw-px-5 tw-mt-5 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150">
         <p class="tw-text-xl tw-text-center tw-text-white">Next</p>
-      </div>
+      </button>
     </div>
   </div>
 </template>
