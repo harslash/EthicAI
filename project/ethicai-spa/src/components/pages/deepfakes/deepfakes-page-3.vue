@@ -43,12 +43,8 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: firstAudioAnswered }"
-                        @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Left clip is real</p>
-                      </button>
+                      <purple-btn :class="{ hidden: firstAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
+                        @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');" />
                     </div>
                   </div>
                   <div class="tw-m-auto">
@@ -57,18 +53,14 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: firstAudioAnswered }"
-                        @click="onFirstIncorrectClick(); scrollIntoSection('secondAudio');"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </button>
+                      <purple-btn :class="{ hidden: firstAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                        @click="onFirstIncorrectClick(); scrollIntoSection('secondAudio');" />
                     </div>
                   </div>
                 </div>
                 <div :class="{ hidden: !firstAudioAnswered }">
-                  <p class="tw-text-center" :class="firstAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">{{
-                    firstAudioExplanation }}</p>
+                  <p class="tw-text-center tw-mt-5" :class="firstAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                    {{ firstAudioExplanation }}</p>
                 </div>
               </div>
               <!-- Second audio pair -->
@@ -82,12 +74,8 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: secondAudioAnswered }"
-                        @click="onSecondIncorrectClick(); scrollIntoSection('thirdAudio');"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Left clip is real</p>
-                      </button>
+                      <purple-btn :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
+                        @click="onSecondIncorrectClick(); scrollIntoSection('thirdAudio');" />
                     </div>
                   </div>
                   <div class="tw-m-auto">
@@ -96,18 +84,14 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: secondAudioAnswered }"
-                        @click="onSecondCorrectClick(); scrollIntoSection('thirdAudio');"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </button>
+                      <purple-btn :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                        @click="onSecondCorrectClick(); scrollIntoSection('thirdAudio');" />
                     </div>
                   </div>
                 </div>
                 <div :class="{ hidden: !secondAudioAnswered }">
-                  <p class="tw-text-center" :class="secondAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">{{
-                    secondAudioExplanation }}</p>
+                  <p class="tw-text-center tw-mt-5" :class="secondAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                    {{ secondAudioExplanation }}</p>
                 </div>
               </div>
               <!-- Third audio pair -->
@@ -121,12 +105,9 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: thirdAudioAnswered }" @click="onThirdCorrectClick();"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Left clip is real</p>
-                      </button>
-                      </div>
+                      <purple-btn :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
+                        @click="onThirdCorrectClick();" />
+                    </div>
                   </div>
                   <div class="tw-m-auto">
                     <audio controls controlsList="nodownload">
@@ -143,8 +124,8 @@
                   </div>
                 </div>
                 <div :class="{ hidden: !thirdAudioAnswered }">
-                  <p class="tw-text-center" :class="thirdAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">{{
-                    thirdAudioExplanation }}</p>
+                  <p class="tw-text-center tw-mt-5" :class="thirdAudioCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                    {{ thirdAudioExplanation }}</p>
                 </div>
               </div>
             </div>
