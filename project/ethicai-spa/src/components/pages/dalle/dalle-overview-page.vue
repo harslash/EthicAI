@@ -1,6 +1,6 @@
 <template>
     <nav-bar/>
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview
@@ -67,7 +67,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
    .container-fluid.page-container {
-        height: 120vh       
+        height: 120vh
     }
 }
 </style>

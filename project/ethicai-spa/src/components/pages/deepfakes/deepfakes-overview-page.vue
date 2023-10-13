@@ -1,6 +1,6 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview :module-title="moduleTitle" :module-description="moduleDescription"

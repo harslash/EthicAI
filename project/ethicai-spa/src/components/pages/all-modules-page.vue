@@ -1,6 +1,6 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container text-center big-wrapper">
+    <div id="main" class="container-fluid page-container text-center big-wrapper">
 
         <div class="title">
             <h1>All Modules </h1>

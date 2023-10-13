@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-  <div class="container-fluid page-container">
+  <div id="main" class="container-fluid page-container">
     <div class="row h-100">
       <div class="col-md-12 d-flex align-items-center">
         <quiz-container category="dalle" module_name="The Rise of DALL·E"></quiz-container>

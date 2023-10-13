@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">

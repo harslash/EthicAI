@@ -1,6 +1,6 @@
 <template>
   <nav-bar />
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="row h-25">
       <h1 class="main-heading"><u> References </u> </h1>
     </div>

@@ -2,7 +2,7 @@
   <div>
     <nav-bar />
     <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-    <div class="container-fluid page-container text-center mb-5">
+    <div id="main" class="container-fluid page-container text-center mb-5">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h1 class="tw-mt-24">The Rise of DALL·E</h1>

@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Third navbar example">
             <div class="container-fluid">
-
+                <a href="#main" class="skiplink">Skip to main content</a>
                 <router-link to="/" class="navbar-brand">
                     <img src="../../assets/logo.png" alt="Company Logo" width="130">
                 </router-link>
@@ -90,4 +90,20 @@ li.nav-item {
     border: 2px solid #6D0CFF;
     color: #6D0CFF;
 }
+
+.skiplink {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skiplink:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
 </style>
+

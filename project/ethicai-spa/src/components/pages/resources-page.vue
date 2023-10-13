@@ -1,6 +1,6 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-10 mb-5">
             <div class="col-md-12">
                 <h1 class="mt-5 heading">Resources</h1>
@@ -36,7 +36,7 @@
                         <a href="https://detectfakes.media.mit.edu/"  target="_blank" class="btn btn-primary">Navigate</a>
                     </div>
                 </div>
-            </div>     
+            </div>
             <div class="col-md-2"></div>
         </div>
 
@@ -140,7 +140,7 @@ export default defineComponent({
     transition: all 0.2s ease;
     cursor: pointer;
   }
-    
+
 .card:hover{
     box-shadow: 5px 6px 6px 2px #e9ecef;
     transform: scale(1.1);

@@ -1,6 +1,6 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-10 mb-5">
             <div class="col-md-12">
                 <h1 class="mt-5 heading">About Us</h1>
