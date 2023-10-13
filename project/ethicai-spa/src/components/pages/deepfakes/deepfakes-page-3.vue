@@ -115,11 +115,8 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <button :class="{ hidden: thirdAudioAnswered }" @click="onThirdIncorrectClick();"
-                        class="tw-m-auto tw-w-32 tw-h-10 tw-p-2 tw-cursor-pointer tw-rounded-lg"
-                        style="backgroundColor: #6D0CFF;">
-                        <p class="tw-text-center tw-text-white">Right clip is real</p>
-                      </button>
+                      <purple-btn :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                        @click="onThirdIncorrectClick();" />
                     </div>
                   </div>
                 </div>
