@@ -14,23 +14,23 @@
         <div id="wrapper" class="d-flex flex-md-row flex-column">
 
             <router-link to="/chatbots" custom v-slot="{ navigate }">
-                <div class="card" @click="navigate" role="link">
+                <button class="card" @click="navigate" role="link">
                     <img :src="require('@/assets/chatbots_Thumbnail.png')" alt="Chatbots" style="width:100%;">
                     <div class="container">
                         <h4>The Age of Chatbots</h4>
                         <p>Chatbots are now everywhere. Find out how privacy battles bias, and learn how to protect yourself
                             from misinformation!</p>
                     </div>
-                </div>
+                </button>
             </router-link>
 
-            <div id="copilotCard" class="card" style="visibility: hidden;">
+            <button id="copilotCard" class="card" style="visibility: hidden;">
                 <img :src="require('@/assets/copilot_Thumbnail.png')" alt="Copilot" style="width:100%">
                 <div class="container">
                     <h4>Understanding Copilot</h4>
                     <p>Coming soon!</p>
                 </div>
-            </div>
+            </button>
 
 
 
@@ -45,24 +45,24 @@
         <div id="wrapper" style="padding-bottom: 5%;" class="d-flex flex-md-row flex-column">
 
             <router-link to="/dalle" custom v-slot="{ navigate }">
-                <div class="card" @click="navigate" role="link">
+                <button class="card" @click="navigate" role="link">
                     <img :src="require('@/assets/dalle_Thumbnail.png')" alt="DALL E" style="width:100%;">
                     <div class="container">
                         <h4>The Rise of DALL·E</h4>
                         <p> Did you know that AI can create art? In this module you will learn the highs and lows of AI
                             image generation and will get to test your AI spotting skills!</p>
                     </div>
-                </div>
+                </button>
             </router-link>
 
             <router-link to="/deepfakes" custom v-slot="{ navigate }">
-                <div class="card" @click="navigate" role="link">
+                <button class="card" @click="navigate" role="link">
                     <img :src="require('@/assets/deepfakes_Thumbnail.png')" alt="Deepfakes" style="width:100%">
                     <div class="container">
                         <h4>The Depths of Deepfakes</h4>
                         <p>Unmask the dangers of deepfakes and learn to spot digital deception.</p>
                     </div>
-                </div>
+                </button>
             </router-link>
         </div>
 
