@@ -19,7 +19,7 @@
                 v-for="(item, index) in modulePageNames"
                 :key="item"
               >
-                <div class="list-item" @click="handleListItemClick(index)">
+                <div tabindex="0" role="button" class="list-item" @click="handleListItemClick(index)">
                   <span
                     :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
                   >{{ item }}</span>
@@ -49,7 +49,7 @@
           </div>
         </div>
     </div>
-   
+
   </div>
 </template>
 <script lang="ts">
