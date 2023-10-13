@@ -36,7 +36,7 @@
             </p>
             <div>
               <iframe width="560" height="315" class="mb-5"
-                src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo?si=06eqD0yiQuZhzHNy" title="YouTube video player"
+                src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
