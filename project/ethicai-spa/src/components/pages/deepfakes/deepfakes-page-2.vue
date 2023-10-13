@@ -7,7 +7,7 @@
         <div class="col-md-12">
           <h1 class="tw-mt-24">AI For Evil</h1>
           <p><em>This case study may be distressing for some readers. Content warnings: threats of violence and sexual
-              assault; emotional manipulation.</em></p>
+              assault; emotional manipulation. <router-link :to="'/deepfakes/real-or-not-real'">Click here to skip.</router-link></em></p>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
