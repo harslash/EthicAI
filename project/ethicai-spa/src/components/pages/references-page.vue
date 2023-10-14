@@ -132,6 +132,10 @@
           AWS.Amazon.com. <a href="https://aws.amazon.com/what-is/gpt/" target="_blank">https://aws.amazon.com/what-is/gpt/</a>
         </p>
         <p>
+          <b>Copyright Licensing NZ</b> (2023). <b>What is copyright?</b><br>
+          <a href="https://www.copyright.co.nz/understanding-copyright/what-is-copyright" target="_blank">https://www.copyright.co.nz/understanding-copyright/what-is-copyright</a>
+        </p>
+        <p>
           <b>OpenAI.</b> (2023). <b>ChatGPT. (GPT-3.5). [Large Language Model].</b><br>
           <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a>
         </p>
