@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
-          <img width="400" alt="illustration of a generator and discriminator fighting"
+          <img width="400" alt="illustration of a generator and discriminator fighting" class="img-a"
             src="../../../assets//deepfakes_page_1.png">
         </div>
       </div>
@@ -143,9 +143,6 @@ export default defineComponent({
   transition: color 2s ease-in-out;
 }
 
-.img-a {
-  width: 25%;
-}
 
 @media (max-width: 767.98px) {
   .section-text {
