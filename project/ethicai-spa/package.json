@@ -20,7 +20,8 @@
     "primeicons": "^6.0.1",
     "primevue": "^3.34.0",
     "vue": "^3.2.13",
-    "vue-router": "^4.2.4"
+    "vue-router": "^4.2.4",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
