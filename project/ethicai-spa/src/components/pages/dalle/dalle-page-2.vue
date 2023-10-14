@@ -394,7 +394,7 @@
         <div class="col-md-6 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <h3>The Lesson</h3>
-            <br><br><br><br><br><br>
+            <br><br><br><br>
             <p class="text-left section-text">
               You may have found that some of the images were challenging to differentiate, which is true even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
             </p>
