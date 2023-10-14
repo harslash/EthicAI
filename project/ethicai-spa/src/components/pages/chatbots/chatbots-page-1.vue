@@ -81,9 +81,12 @@
             </p>
           </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 d-flex flex-column align-items-center">
           <img src="../../../assets//chatbots_page_1_a.png" class="img-a"
             alt="flowchat diagram explaing the interaction between a user and ChatGPT" />
+             <p class="section-text">
+            In the training process of LLMs like ChatGPT, human trainers instruct the model in tasks such as completing sentences with the most fitting words. As the LLM becomes adept at this, it develops a nuanced understanding of the statistical relationships between words in a language, comprehending which words are likely to appear together. When you send a prompt to ChatGPT, it leverages this acquired knowledge and interprets your specific context to produce responses. Unlike a static database lookup, ChatGPT dynamically generates responses, ensuring they are not only contextually accurate but also coherent and relevant to your input.
+            </p>
         </div>
       </div>
       <div class="row h-20">
