@@ -34,7 +34,7 @@
       </div>
       <div class="row h-30 mb-10 justify-content-center">
         <div class="col-md-6 d-flex justify-content-center">
-          <important-terms-card :terms-and-definitions="termsAndDefinitions" />
+          <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="240"></important-terms-card>
         </div>
         <div class="col-md-6 d-flex align-items-center">
           <p class="text-right section-text">
@@ -248,6 +248,11 @@ export default defineComponent({
           term: "Deepfake",
           definition:
             "A deepfake is a computer-made imitation video, image, or audio, mimicking reality and often impersonating individuals (Seon, n.d.).",
+        },
+        {
+          term: "Copyright",
+          definition:
+            "Copyright is a form of intellectual property right. It gives the person who creates an original work exclusive rights to copy, publish, publicly perform, transmit and adapt their material (Copyright Licensing NZ, 2023)",
         },
       ],
       showFirstSection: true,
