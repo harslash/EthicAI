@@ -12,10 +12,11 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            Welcome to the eye-opening world of ChatGPT and the common pitfalls that students sometimes stumble upon. It's no secret that ChatGPT is a powerful tool, often tempting students to lean on it for assistance with their assignments. While it can be a handy companion, it's essential to tread carefully, as ChatGPT comes with two notable limitations that can lead you astray.
+                          Now that you have gained some understanding of ChatGPT and interacted with an LLM, you're beginning to grasp the capabilities of LLMs. It's no secret that ChatGPT is a powerful tool. Many students rely on it for assignment assistance. According to a recent survey of 1,000 U.S. college students, almost a third had utilized ChatGPT to complete written homework assignments, with nearly 60% using it for more than half of their assignments. While ChatGPT can be helpful, it's crucial to recognize two significant limitations:
+
                         </p>
                         <p class="section-text">
-                           First, ChatGPT's knowledge is rooted in the vast sea of text it was trained on, and just like any ocean, it carries its own currents. This means it can unintentionally perpetuate biases and misconceptions found in its training data. Trusting it blindly might lead you down a path of misinformation.
+                            Firstly, ChatGPT builds its knowledge from a vast dataset sourced from the internet. However, this data can often contain harmful biases and stereotypes. Consequently, ChatGPT might inadvertently perpetuate these biases to its users. Unquestioningly trusting ChatGPT can lead to misinformation and reinforce dangerous misconceptions.
                         </p>
                     </div>
                 </div>
@@ -36,7 +37,8 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                          Second, ChatGPT is known to exhibit a phenomenon called "hallucination." In simple terms, it can sometimes generate content that sounds convincing but isn't entirely accurate. Relying on it too heavily might have your assignments drifting into the realm of fiction rather than fact.
+                        Secondly, ChatGPT often exhibits a phenomenon known as "hallucination." In simple terms, it confidently generates responses that sound convincing but can lack factual accuracy. Unaware of this trait, students might be impressed by ChatGPT's apparent omniscience. However, their submitted work could inadvertently stray into fiction rather than fact.
+
                         </p>
                     </div>
                 </div>
@@ -47,7 +49,7 @@
                 <div class="col-md-12">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                            But don't worry, we're here to guide you through these potential pitfalls and help you harness ChatGPT's incredible capabilities effectively. In the next section, we'll dive deeper into these limitations so you can better understand how to navigate the ChatGPT landscape and make the most out of this powerful tool without falling into these common traps.
+                          In the upcoming sections, we'll delve deeper into these limitations through interactive demos, fostering a sense of awareness and cautiousness in students like yourself to use ChatGPT effectively. We will also explore practical strategies to overcome the ChatGPT's shortcomings.
                         </p>
                     </div>
                 </div>
