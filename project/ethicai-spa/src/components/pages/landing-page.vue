@@ -29,7 +29,7 @@
         <div id="first">
             <h2>Variety of AI technology</h2>
             <div id="image-div">
-                <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')">
+                <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')" style="height: 229px; width: auto;">
             </div>
 
             <div id="text">
@@ -42,7 +42,7 @@
             <h2>Interactive learning</h2>
             <div id="image-div">
                 <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')"
-                    style="height: 225px; width: 189px;">
+                    style="height: 229px; width: auto;">
             </div>
 
             <div id="text">
@@ -55,7 +55,7 @@
             <h2>All in one place</h2>
             <div id="image-div">
                 <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')"
-                    style="height: 229px; width: 247px;">
+                    style="height: 229px; width: auto;">
             </div>
 
             <div id="text">
@@ -147,7 +147,7 @@ p {
     background-color: #6d0cff;
     color: white;
     font-family: "Open Sans", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
     border: none;
