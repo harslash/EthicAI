@@ -8,7 +8,7 @@
           <h1 class="tw-mt-24">The Rise of DALL·E</h1>
         </div>
       </div>
-      <div ref="firstSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFirstSection }">
+      <div ref="firstSection" class="row h-30 mb-5" :class="{ hidden: !showFirstSection }">
         <div class="col-md-8 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
@@ -28,7 +28,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
           <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
         </div>
       </div>
@@ -59,7 +59,7 @@
           <h1 class="mt-5" style="font-size: 28px">Imagine ...</h1>
           <br />
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a-small" src="../../../assets//artist.png" alt="a female artist holding a paintbrush" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
@@ -93,7 +93,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a-large" src="../../../assets//haters.png" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
@@ -107,7 +107,7 @@
         </div>
       </div>
       <div ref="fourthSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFourthSection }">
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces that look identical" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
@@ -152,7 +152,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
@@ -442,5 +442,21 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-a, .img-a-medium, .img-a-small{
+    width: 60%;
+  }
+
+  .img-a-large {
+    width: 80%;
+  }
+
 }
 </style>
