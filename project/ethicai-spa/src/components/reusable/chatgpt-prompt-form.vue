@@ -1,7 +1,7 @@
 <template>
   <form class="form-container d-flex justify-content-around align-items-center flex-column">
 
-    <div class="form-group d-flex">
+    <div class="form-group d-flex align-items-center">
         <button v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
             {{preGeneratedPrompt}}
         </button>
@@ -13,7 +13,8 @@
         </button>
     </div>
 
-    <div class="form-group">
+    <div class="form-group d-flex flex-column">
+        <span class="demo-explanation">Type your question here!</span>      
         <textarea
         v-model="inputPromptText"
         class="form-control"
@@ -37,7 +38,8 @@
                 ></send-btn>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group d-flex flex-column">
+        <span class="demo-explanation">The LLM will reply here!</span>       
         <textarea
         v-model="outputPromptText"
         class="form-control output-box"
@@ -251,6 +253,14 @@ export default defineComponent({
 .refresh-btn {
     height: 40px;
     width: 40px;
+}
+
+.demo-explanation {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #C324FF;
+    font-weight: 600;
+    font-style: italic;
 }
 
 

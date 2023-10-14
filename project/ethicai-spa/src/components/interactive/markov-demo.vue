@@ -404,8 +404,10 @@ export default defineComponent({
 }
 
 .info-text {
-    font-size: 0.9rem;
     color: #C324FF;
+    font-weight: 0.9rem;
+    font-weight: 600;
+    font-style: italic;
 }
 
 @media (max-width: 767.98px) {
