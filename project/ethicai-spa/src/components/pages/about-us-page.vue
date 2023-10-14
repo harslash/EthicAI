@@ -3,7 +3,7 @@
     <div id="main" class="container-fluid page-container">
         <div class="row h-10 mb-5">
             <div class="col-md-12">
-                <h1 class="mt-5 heading">About Us</h1>
+                <h1 class="mt-5 heading" style="color: #6d0cff">About Us</h1>
                 <div class="tw-w-3/5 tw-m-auto tw-mt-10">
                     <p>
                         The EthicAI team is a quintet of passionate, competent computer science students in our final year
@@ -122,11 +122,11 @@
                                                         <blockquote class="blockquote mb-4">
                                                         <p>
                                                             <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">I have really enjoyed increasing my front end development abilities through EthicAI. I’ve only ever designed for the front end before this project, so it was awesome to be able to go from designing a website to actually having it fully implemented. I have really enjoyed the whole (full-on) process and was lucky to have had such a hardworking and passionate team.</span>
+                                                            <span class="font-italic">I have really enjoyed increasing my front end development abilities through EthicAI. It was awesome to be able to go from designing a website to actually having it fully implemented. I have really enjoyed the whole (full-on) process and was lucky to have had such a hardworking and passionate team.</span>
                                                         </p>
                                                         </blockquote>
                                                         <figcaption class="blockquote-footer">
-                                                        Georgia Purkiss (UI Designer)
+                                                        Georgia Purkiss (UI Designer/ Front End Developer)
                                                         </figcaption>
                                                     </figure>
                                                     </div>
@@ -154,7 +154,7 @@
                                                         </p>
                                                         </blockquote>
                                                         <figcaption class="blockquote-footer">
-                                                            Matthew Kwok (Front End Developer)
+                                                            Matthew Kwok (Front End Developer/ UI Designer)
                                                         </figcaption>
                                                     </figure>
                                                     </div>
@@ -269,10 +269,10 @@ export default defineComponent({
     background: #f6d365;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(109,12,255,1) 0%, rgb(255, 110, 245) 50%, rgb(255,255,255));
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background: linear-gradient(90deg, rgba(109,12,255,1) 0%, rgb(255, 110, 245) 50%, rgb(255,255,255));
 }
 
 @media (max-width: 767.98px) {
