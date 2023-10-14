@@ -118,6 +118,7 @@ export default defineComponent({
 
 .btn {
     background-color: #6D0CFF;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .img-container{
