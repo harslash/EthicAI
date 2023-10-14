@@ -189,7 +189,7 @@
       <div class="col-md-1"></div>
       <div class="col-md-10 d-flex align-items-center justify-content-center text-center">
         <figure>
-          <img class="img-a mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
+          <img class="img-b mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
             alt="a happy kid in front of a laptop" style="
               display: inline-block;
               margin: 12.5px 5px;
@@ -384,7 +384,7 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 1200px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -475,5 +475,19 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-a {
+    width: 70%;
+  }
+
+  .img-b {
+    width: 60%;
+  }
 }
 </style>
