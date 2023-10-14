@@ -36,8 +36,8 @@
               <div ref="firstAudio" class="tw-w-4/6 tw-m-auto tw-mb-10">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Donald Trump</b>.
                   Which one is <em>real</em>?</p>
-                <div class="d-flex">
-                  <div class="tw-m-auto">
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/1_real.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
@@ -47,7 +47,7 @@
                         @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');" />
                     </div>
                   </div>
-                  <div class="tw-m-auto">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/1_fake.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
@@ -67,8 +67,8 @@
               <div ref="secondAudio" class="tw-w-4/6 tw-m-auto tw-mb-10" :class="{ hidden: !firstAudioAnswered }">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Barrack Obama</b>.
                   Which one is <em>real</em>?</p>
-                <div class="d-flex">
-                  <div class="tw-m-auto">
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/2_fake.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
@@ -78,7 +78,7 @@
                         @click="onSecondIncorrectClick(); scrollIntoSection('thirdAudio');" />
                     </div>
                   </div>
-                  <div class="tw-m-auto">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/2_real.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
@@ -98,8 +98,8 @@
               <div ref="thirdAudio" class="tw-w-4/6 tw-m-auto" :class="{ hidden: !secondAudioAnswered }">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Ben Shapiro</b>.
                   Which one is <em>real</em>?</p>
-                <div class="d-flex">
-                  <div class="tw-m-auto">
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/3_real.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
@@ -109,7 +109,7 @@
                         @click="onThirdCorrectClick();" />
                     </div>
                   </div>
-                  <div class="tw-m-auto">
+                  <div class="tw-m-auto py-2">
                     <audio controls controlsList="nodownload">
                       <source src="../../../assets/deepfake_audio/3_fake.mp3" type="audio/mpeg">
                       Your browser does not support the audio element.
