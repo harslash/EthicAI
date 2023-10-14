@@ -75,7 +75,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Kevin Wong (Backend Developer)
+                                                                    Kevin Wong
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -108,7 +108,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Harlean Hansra (Front End Developer)
+                                                                    Harlean Hansra
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -144,7 +144,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Georgia Purkiss (UI Designer/ Front End Developer)
+                                                                    Georgia Purkiss
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -178,7 +178,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Matthew Kwok (Front End Developer/ UI Designer)
+                                                                    Matthew Kwok
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -210,7 +210,7 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Gali Mortimer-Webster (Content creator)
+                                                                    Gali Mortimer-Webster
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
