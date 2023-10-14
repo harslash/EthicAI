@@ -264,9 +264,7 @@
             structure.
           </p>
           <p class="section-text">
-            Treat ChatGPT as your tutor! The tutor assists students in solving problems but never gives them a direct
-            solution. This analogy is helpful to remember if you use ChatGPT in your studies. Use ChatGPT to guide you to
-            the solution with your input, just like how a tutor helps a student.
+          Treat ChatGPT as your tutor! The tutor assists students in solving problems but never gives them a direct solution. This analogy is helpful to remember if you use ChatGPT in your studies. Utilize ChatGPT to assist you in finding the solution, employing your effort just as you would when seeking guidance from a personal tutor.
           </p>
         </div>
         <div class="col pb-5">
