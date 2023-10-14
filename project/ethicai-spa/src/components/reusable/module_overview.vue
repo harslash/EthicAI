@@ -140,7 +140,7 @@ export default defineComponent({
 <style scoped>
 
 @import "~@fortawesome/fontawesome-free/css/all.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 /* Add your CSS styles here, scoped to this component */
 body {
   font-family: Arial, sans-serif;
@@ -186,13 +186,15 @@ body {
 }
 
 .module-name {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   text-align: center;
 }
 
 .module-structure {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
