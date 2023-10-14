@@ -83,7 +83,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <a href="#" class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="javascript:void(0);" class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFirstCorrectClick();
                   showSecondQuestion = true;
                   scrollIntoSecondQuestion();
@@ -102,7 +102,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <a href="#" class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="javascript:void(0);" class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
     onFirstIncorrectClick();
   showSecondQuestion = true;
@@ -133,7 +133,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onSecondCorrectClick();
                 showThirdQuestion = true;
                 scrollIntoThirdQuestion();
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="javascript:void(0);" class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onSecondIncorrectClick();
   showThirdQuestion = true;
@@ -182,7 +182,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
                   onThirdIncorrectClick()
                 scrollIntoFourthQuestion();
                 showFourthQuestion = true;
@@ -201,7 +201,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onThirdCorrectClick();
                 showFourthQuestion = true;
                 scrollIntoFourthQuestion();
@@ -231,7 +231,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="javascript:void(0);" class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onFourthIncorrectClick();
   scrollIntoFifthQuestion();
@@ -251,7 +251,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <a href="#" class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onFourthCorrectClick();
                 showFifthQuestion = true;
                 scrollIntoFifthQuestion();
@@ -282,7 +282,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <a href="#" class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="javascript:void(0);" class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFifthCorrectClick();
                   showContinue = true;
                   scrollIntoContinue();
@@ -301,7 +301,7 @@
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <a href="#" class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="javascript:void(0);" class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
     onFifthIncorrectClick();
   showContinue = true;
