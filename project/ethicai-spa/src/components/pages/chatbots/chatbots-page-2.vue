@@ -5,7 +5,7 @@
         <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
-                    <h1 class="tw-mt-24">Too Good To Be True</h1>
+                    <h1 class="tw-mt-24">Too Good To Be True?</h1>
                 </div>
             </div>
             <div class="row h-30 mb-5">
