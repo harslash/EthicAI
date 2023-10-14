@@ -14,11 +14,11 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" class="dropdown-item"
+                                <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleDropdownItemClick('wilson')">Woodrow Wilson's declaration of war</a>
                             </li>
                              <li>
-                                <a href="#" class="dropdown-item"
+                                <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleDropdownItemClick('etiquette')">Etiquette
                                 </a>
                             </li>
@@ -35,11 +35,11 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="#" class="dropdown-item"
+                                <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleAdjustBiasesDropdownClick('original')">{{biasedDropdownItemOneText}}</a>
                             </li>
                              <li>
-                                <a href="#" class="dropdown-item"
+                                <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleAdjustBiasesDropdownClick('inverted')">{{biasedDropdownItemTwoText}}
                                 </a>
                             </li>

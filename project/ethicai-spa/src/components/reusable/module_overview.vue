@@ -19,7 +19,7 @@
                 v-for="(item, index) in modulePageNames"
                 :key="item"
               >
-                <a href="#" class="list-item" @click="handleListItemClick(index)" style="text-decoration: none;">
+                <a href="javascript:void(0);" class="list-item" @click="handleListItemClick(index)" style="text-decoration: none;">
                   <span
                     :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
                   >{{ item }}</span>

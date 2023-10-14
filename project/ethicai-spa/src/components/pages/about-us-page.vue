@@ -15,7 +15,7 @@
                         guidance.
                     </p>
                     <p>
-                        For any inquiries, please <a href = "mailto: ethicai@gmail.com">email us</a> directly.
+                        For any inquiries, please <a href="mailto: ethicai@gmail.com">email us</a> directly.
                     </p>
                 </div>
             </div>
@@ -31,18 +31,18 @@
 
                                 <!-- Carousel wrapper -->
                                 <div id="carouselDarkVariant" class="carousel slide carousel-dark">
-                                <!-- Indicators -->
+                                    <!-- Indicators -->
                                     <div class="carousel-indicators mb-0">
                                         <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active"
-                                        aria-current="true" aria-label="Slide 1"></button>
+                                            aria-current="true" aria-label="Slide 1"></button>
                                         <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1"
-                                        aria-label="Slide 2"></button>
+                                            aria-label="Slide 2"></button>
                                         <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2"
-                                        aria-label="Slide 3"></button>
-                                         <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3"
-                                        aria-label="Slide 4"></button>
-                                         <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="4"
-                                        aria-label="Slide 5"></button>
+                                            aria-label="Slide 3"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3"
+                                            aria-label="Slide 4"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="4"
+                                            aria-label="Slide 5"></button>
                                     </div>
 
                                     <!-- Inner -->
@@ -51,28 +51,35 @@
                                         <div class="carousel-item active">
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0">
-                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
-                                                        height="90">
+                                                    <div class="d-flex">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                                                                class="rounded-circle mb-4 mb-lg-0 shadow-2"
+                                                                alt="man avatar" width="90" height="90">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-4 ps-3">
+                                                            <figure>
+                                                                <blockquote class="blockquote mb-4">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                        <span class="font-italic">
+                                                                            I've had the unique opportunity to wear many
+                                                                            hats in this project. This journey has been a
+                                                                            fantastic learning experience, and I have
+                                                                            genuinely enjoyed every aspect. I am proud to
+                                                                            have contributed to an initiative that fosters
+                                                                            ethical and responsible AI use alongside an
+                                                                            amazing group of people.
+                                                                        </span>
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption class="blockquote-footer">
+                                                                    Kevin Wong
+                                                                </figcaption>
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-grow-1 ms-4 ps-3">
-                                                    <figure>
-                                                        <blockquote class="blockquote mb-4">
-                                                        <p>
-                                                            <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                            elit. Pariatur sint nesciunt ad itaque aperiam expedita officiis incidunt
-                                                            minus facere, molestias quisquam impedit inventore.</span>
-                                                        </p>
-                                                        </blockquote>
-                                                        <figcaption class="blockquote-footer">
-                                                            Kevin Wong (Backend Developer)
-                                                        </figcaption>
-                                                    </figure>
-                                                    </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -81,28 +88,31 @@
                                         <div class="carousel-item">
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0">
-                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
-                                                        height="90">
+                                                    <div class="d-flex">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                                                                class="rounded-circle mb-4 mb-lg-0 shadow-2"
+                                                                alt="woman avatar" width="90" height="90">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-4 ps-3">
+                                                            <figure>
+                                                                <blockquote class="blockquote mb-4">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                        <span class="font-italic">Sed ut perspiciatis unde
+                                                                            omnis iste natus error sit
+                                                                            voluptatem accusantium doloremque laudantium,
+                                                                            totam rem aperiam, eaque ipsa
+                                                                            quae ab illo inventore veritatis.</span>
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption class="blockquote-footer">
+                                                                    Harlean Hansra
+                                                                </figcaption>
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-grow-1 ms-4 ps-3">
-                                                    <figure>
-                                                        <blockquote class="blockquote mb-4">
-                                                        <p>
-                                                            <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">Sed ut perspiciatis unde omnis iste natus error sit
-                                                            voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                                                            quae ab illo inventore veritatis.</span>
-                                                        </p>
-                                                        </blockquote>
-                                                        <figcaption class="blockquote-footer">
-                                                            Harlean Hansra (Front End Developer)
-                                                        </figcaption>
-                                                    </figure>
-                                                    </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -111,82 +121,100 @@
                                         <div class="carousel-item">
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0">
-                                                    <img src="../../assets/georgia_avatar.jpg"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="woman avatar" width="90"
-                                                        height="90">
+                                                    <div class="d-flex">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="../../assets/georgia_avatar.jpg"
+                                                                class="rounded-circle mb-4 mb-lg-0 shadow-2"
+                                                                alt="woman avatar" width="90" height="90">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-4 ps-3">
+                                                            <figure>
+                                                                <blockquote class="blockquote mb-4">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                        <span class="font-italic">I have really enjoyed
+                                                                            increasing my front end development abilities
+                                                                            through EthicAI. It was awesome to be able to go
+                                                                            from designing a website to actually having it
+                                                                            fully implemented. I have really enjoyed the
+                                                                            whole (full-on) process and was lucky to have
+                                                                            had such a hardworking and passionate
+                                                                            team.</span>
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption class="blockquote-footer">
+                                                                    Georgia Purkiss
+                                                                </figcaption>
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-grow-1 ms-4 ps-3">
-                                                    <figure>
-                                                        <blockquote class="blockquote mb-4">
-                                                        <p>
-                                                            <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">I have really enjoyed increasing my front end development abilities through EthicAI. It was awesome to be able to go from designing a website to actually having it fully implemented. I have really enjoyed the whole (full-on) process and was lucky to have had such a hardworking and passionate team.</span>
-                                                        </p>
-                                                        </blockquote>
-                                                        <figcaption class="blockquote-footer">
-                                                        Georgia Purkiss (UI Designer/ Front End Developer)
-                                                        </figcaption>
-                                                    </figure>
-                                                    </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                         <!-- Single item -->
+                                        <!-- Single item -->
                                         <div class="carousel-item">
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0">
-                                                    <img src="../../assets/matthew_avatar.jpeg"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
-                                                        height="90">
+                                                    <div class="d-flex">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="../../assets/matthew_avatar.jpeg"
+                                                                class="rounded-circle mb-4 mb-lg-0 shadow-2"
+                                                                alt="man avatar" width="90" height="90">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-4 ps-3">
+                                                            <figure>
+                                                                <blockquote class="blockquote mb-4">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                        <span class="font-italic">I have the privilege to
+                                                                            lead the front-end development effort of
+                                                                            EthicAI. The most satisfying moment for me in
+                                                                            the project was seeing how EthicAI transformed
+                                                                            from an initial ideation to a fully functional
+                                                                            product.</span>
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption class="blockquote-footer">
+                                                                    Matthew Kwok
+                                                                </figcaption>
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-grow-1 ms-4 ps-3">
-                                                    <figure>
-                                                        <blockquote class="blockquote mb-4">
-                                                        <p>
-                                                            <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">I have the privilege to lead the front-end development effort of EthicAI. The most satisfying moment for me in the project was seeing how EthicAI transformed from an initial ideation to a fully functional product.</span>
-                                                        </p>
-                                                        </blockquote>
-                                                        <figcaption class="blockquote-footer">
-                                                            Matthew Kwok (Front End Developer/ UI Designer)
-                                                        </figcaption>
-                                                    </figure>
-                                                    </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                         <!-- Single item -->
+                                        <!-- Single item -->
                                         <div class="carousel-item">
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
-                                                <div class="d-flex">
-                                                    <div class="flex-shrink-0">
-                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
-                                                        class="rounded-circle mb-4 mb-lg-0 shadow-2" alt="man avatar" width="90"
-                                                        height="90">
+                                                    <div class="d-flex">
+                                                        <div class="flex-shrink-0">
+                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                                                                class="rounded-circle mb-4 mb-lg-0 shadow-2"
+                                                                alt="man avatar" width="90" height="90">
+                                                        </div>
+                                                        <div class="flex-grow-1 ms-4 ps-3">
+                                                            <figure>
+                                                                <blockquote class="blockquote mb-4">
+                                                                    <p>
+                                                                        <i
+                                                                            class="fas fa-quote-left fa-lg text-warning me-2"></i>
+                                                                        <span class="font-italic">EthicAI allowed me to
+                                                                            explore my passion for the overlap between
+                                                                            ethics and technology. This project was a joy to
+                                                                            research and to write content for.</span>
+                                                                    </p>
+                                                                </blockquote>
+                                                                <figcaption class="blockquote-footer">
+                                                                    Gali Mortimer-Webster
+                                                                </figcaption>
+                                                            </figure>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex-grow-1 ms-4 ps-3">
-                                                    <figure>
-                                                        <blockquote class="blockquote mb-4">
-                                                        <p>
-                                                            <i class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                            <span class="font-italic">EthicAI allowed me to explore my passion for the overlap between ethics and technology. This project was a joy to research and to write content for.</span>
-                                                        </p>
-                                                        </blockquote>
-                                                        <figcaption class="blockquote-footer">
-                                                            Gali Mortimer-Webster (Content creator)
-                                                        </figcaption>
-                                                    </figure>
-                                                    </div>
-                                                </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,13 +222,13 @@
                                     <!-- Inner -->
 
                                     <!-- Controls -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDarkVariant"
-                                        data-bs-slide="prev">
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselDarkVariant" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDarkVariant"
-                                        data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselDarkVariant" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
@@ -216,7 +244,6 @@
 
         <page-footer />
     </div>
-
 </template>
 
 <script lang="ts">
@@ -269,15 +296,15 @@ export default defineComponent({
     background: #f6d365;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(90deg, rgba(109,12,255,1) 0%, rgb(255, 110, 245) 50%, rgb(255,255,255));
+    background: -webkit-linear-gradient(90deg, rgba(109, 12, 255, 1) 0%, rgb(255, 110, 245) 50%, rgb(255, 255, 255));
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(90deg, rgba(109,12,255,1) 0%, rgb(255, 110, 245) 50%, rgb(255,255,255));
+    background: linear-gradient(90deg, rgba(109, 12, 255, 1) 0%, rgb(255, 110, 245) 50%, rgb(255, 255, 255));
 }
 
 @media (max-width: 767.98px) {
-    .card   {
-      height: 600px;
+    .card {
+        height: 600px;
     }
-  }
+}
 </style>
