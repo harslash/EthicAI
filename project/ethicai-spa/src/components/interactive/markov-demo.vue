@@ -53,13 +53,17 @@
                     <div v-if="loading" class="spinner-grow" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
+                    
+                    <span class="ms-auto info-text">
+                        Hover here for more info on biases!
+                    </span>
 
                     <div
-                        class='ms-auto'
-                        v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error' }">
+                        class='px-2'
+                        v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error'}" type="text">
                         <font-awesome-icon
                         :icon="faCircleInfo"
-                        style="color: #6D0CFF;"
+                        style="color: #6D0CFF; font-size: 28px;"
                         id="infoIcon"></font-awesome-icon>
                     </div>
 
@@ -88,9 +92,15 @@
 
         </div>
     </form>
+
+    <!-- Temporary fix to get hover styling at line 59 working -->
+    <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="300" style="display: none"></important-terms-card>
+
 </template>
 
 <script lang="ts">
+import ImportantTermsCard from '../reusable/important-terms-card.vue';
+
 import { defineComponent, ref, onMounted, computed} from 'vue';
 import { faCircleInfo} from '@fortawesome/free-solid-svg-icons';
 function splitStringToArray(inputString: string, delimiters: string[]) {
@@ -151,6 +161,7 @@ function updateMarkovDemo(generated: string, biasedIndices: number[], textAreaId
 export default defineComponent({
     name: 'MarkovDemo',
     components: {
+        'important-terms-card': ImportantTermsCard,
     },
     props: {
     },
@@ -392,9 +403,19 @@ export default defineComponent({
     cursor: pointer;
 }
 
+.info-text {
+    font-size: 0.9rem;
+    color: #C324FF;
+}
+
 @media (max-width: 767.98px) {
    .form-container {
         height: 650px;
     }
+
+    .info-text {
+        display: none;
+    }
 }
+
 </style>
