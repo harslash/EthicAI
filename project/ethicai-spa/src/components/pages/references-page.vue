@@ -38,6 +38,17 @@
         </p>
       </div>
     </div>
+      <div class="row" id="chatgpt101">
+        <h3 class="sub-heading">ChatGPT 101</h3>
+    </div>
+    <div class="row">
+      <div class="gray-rectangle">
+        <p>
+          <b>News Staff.</b> (2023). <b>Study: 30% of college students have used ChatGPT for essays.</b> GovTech.<br>
+          <a href="https://www.govtech.com/education/higher-ed/study-30-of-college-students-have-used-chatgpt-for-essays" target="_blank">https://www.govtech.com/education/higher-ed/study-30-of-college-students-have-used-chatgpt-for-essays</a>
+        </p>
+      </div>
+    </div>
     <div class="row" id="tooGoodToBeTrue">
         <h3 class="sub-heading">Too Good to be True?</h3>
     </div>

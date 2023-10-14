@@ -12,7 +12,10 @@
                 <div class="col-md-12 pb-5">
                     <div class="d-flex justify-content-center flex-wrap">
                         <p class="section-text">
-                          Now that you have gained some understanding of ChatGPT and interacted with an LLM, you're beginning to grasp the capabilities of LLMs. It's no secret that ChatGPT is a powerful tool. Many students rely on it for assignment assistance. According to a recent survey of 1,000 U.S. college students, almost a third had utilized ChatGPT to complete written homework assignments, with nearly 60% using it for more than half of their assignments. While ChatGPT can be helpful, it's crucial to recognize two significant limitations:
+                          Now that you have gained some understanding of ChatGPT and interacted with an LLM, you're beginning to grasp the capabilities of LLMs. It's no secret that ChatGPT is a powerful tool. Many students rely on it for assignment assistance. According to a recent survey of 1,000 U.S. college students, almost a third had utilized ChatGPT to complete written homework assignments, with nearly 60% using it for more than half of their assignments
+                          <span class="reference-link" @click="handleReferenceClick('chatgpt101')">
+                            (News Staff, 2023)
+                          </span>. While ChatGPT can be helpful, it's crucial to recognize two significant limitations:
 
                         </p>
                         <p class="section-text">
