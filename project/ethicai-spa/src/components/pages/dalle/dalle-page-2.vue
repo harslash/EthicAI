@@ -95,11 +95,10 @@
                   </a>
 
                   <div class="correct" :class="{ hidden: !firstQuestionShowCorrect }">
-                    <p style="display: block">
-                      <span style="color: #6d0cff"> Correct! +1 point </span>
-                      <br />
-                      You successfully identified the work of a human.
-                    </p>
+                    <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg1 }}
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -116,13 +115,10 @@
                   </a>
 
                   <div class="incorrect" :class="{ hidden: !firstQuestionShowIncorrect }">
-                    <p style="display: block">
-                      <span style="color: #707070">
+                      <p style="color: #707070">
                         Oops, this was made by an AI!
-                      </span>
-                      <br />
+                      </p>
                       {{ teachableMsg1 }}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -149,11 +145,10 @@
                 </a>
 
                 <div class="correct" :class="{ hidden: !secondQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg2 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
@@ -170,13 +165,10 @@
                 </a>
 
                 <div class="incorrect" :class="{ hidden: !secondQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, this was made by an AI!
-                    </span>
-                    <br />
-                    {{ teachableMsg2 }}
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
                   </p>
+                  {{ teachableMsg2 }}
                 </div>
               </div>
             </div>
@@ -202,13 +194,10 @@
                 </a>
 
                 <div class="incorrect" :class="{ hidden: !thirdQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, this was made by an AI!
-                    </span>
-                    <br />
-                    {{ teachableMsg3 }}
-                  </p>
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
+                  {{ teachableMsg3 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
@@ -224,11 +213,10 @@
                 </a>
 
                 <div class="correct" :class="{ hidden: !thirdQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg3 }}
                 </div>
               </div>
             </div>
@@ -256,13 +244,10 @@
                 </a>
 
                 <div class="incorrect" :class="{ hidden: !fourthQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, this was made by an AI!
-                    </span>
-                    <br />
-                    {{ teachableMsg4 }}
-                  </p>
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
+                  {{ teachableMsg4 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
@@ -278,11 +263,10 @@
                 </a>
 
                 <div class="correct" :class="{ hidden: !fourthQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg4 }}
                 </div>
               </div>
             </div>
@@ -310,11 +294,10 @@
                   </a>
 
                   <div class="correct" :class="{ hidden: !fifthQuestionShowCorrect }">
-                    <p style="display: block">
-                      <span style="color: #6d0cff"> Correct! +1 point </span>
-                      <br />
-                      You successfully identified the work of a human.
-                    </p>
+                    <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg5 }}
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -331,13 +314,10 @@
                   </a>
 
                   <div class="incorrect" :class="{ hidden: !fifthQuestionShowIncorrect }">
-                    <p style="display: block">
-                      <span style="color: #707070">
+                    <p style="color: #707070">
                         Oops, this was made by an AI!
-                      </span>
-                      <br />
-                      {{ teachableMsg5 }}
-                    </p>
+                      </p>
+                  {{ teachableMsg5 }}
                   </div>
                 </div>
               </div>
