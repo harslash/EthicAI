@@ -354,45 +354,40 @@
         </div>
 
         <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showThirdSection }">
-        <div class="article-snippet text-center align-items-center mx-auto">
-          <div class="article-image">
-            <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
-              <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
-            </a>
+          <div class="article-snippet text-center align-items-center mx-auto">
+            <div class="article-image">
+              <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
+                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+              </a>
+            </div>
+            <h2 class="article-title">How to identify AI-generated images</h2>
+            <p class="article-meta">
+              Published on June 22, 2023 by Hagop Kavafian
+            </p>
+            <p class="article-excerpt">
+              AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
+            </p>
+            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
+            <br />
           </div>
-          <h2 class="article-title">How to identify AI-generated images</h2>
-          <p class="article-meta">
-            Published on June 22, 2023 by Hagop Kavafian
-          </p>
-          <p class="article-excerpt">
-            AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
-          </p>
-          <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
-          <br />
-        </div>
 
-        <div class="col-md-6 d-flex align-items-center">
-          <div class="d-flex justify-content-center flex-wrap">
-            <h3>The Lesson</h3>
-            <br><br><br><br>
-            <p class="text-left section-text">
-              You may have found that some of the images were challenging to differentiate, which is true even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
-            </p>
-            <br>
-            <p class="text-left section-text">
-              To find out what more about what clues to look out for, check out this article.
-            </p>
-            <br>
-            <p class="text-left section-text">
-              &larr; &larr;
-            </p>
-            <p class ="text-left section-text">
-              Ultimately though, as these technologies advance, these tells may no longer be relevant and even with them in consideration, it can be <b> impossible to tell </b> depending on the type and complexity of the generator. Therefore, it's important to stay savvy and always check your sources.
-            </p>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="d-flex flex-column align-items-center ">
+              <h3 class="py-3">The Lesson</h3>
+              <p class="text-left section-text">
+                You may have found that some of the images were challenging to differentiate, which is true even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
+              </p>
+              <br>
+              <p class="text-left section-text">
+                To find out what more about what clues to look out for, check out this article.
+              </p>
+              <p class ="text-left section-text">
+                Ultimately though, as these technologies advance, these tells may no longer be relevant and even with them in consideration, it can be <b> impossible to tell </b> depending on the type and complexity of the generator. Therefore, it's important to stay savvy and always check your sources.
+              </p>
+            </div>
           </div>
-        </div>
         <br>
-            <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
+            <div class="row h-20 pt-4" style="padding-bottom: 20px" v-if="quizCompleted">
               <div class="col-md-12 d-flex justify-content-end">
                 <router-link to="/dalle/the-complexities-of-copyright">
                   <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
@@ -795,7 +790,7 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 1200px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -906,5 +901,20 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+#upArrowText {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-b {
+    width: 260px;
+    height: 200px;
+  }
 }
 </style>
