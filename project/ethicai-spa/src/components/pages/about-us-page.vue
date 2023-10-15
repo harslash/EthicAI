@@ -90,7 +90,7 @@
                                                 <div class="col-md-8 col-lg-9 col-xl-8">
                                                     <div class="d-flex">
                                                         <div class="flex-shrink-0">
-                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                                                            <img src="../../assets/harlean_avatar.jpg"
                                                                 class="rounded-circle mb-4 mb-lg-0 shadow-2"
                                                                 alt="woman avatar" width="90" height="90">
                                                         </div>
@@ -100,11 +100,14 @@
                                                                     <p>
                                                                         <i
                                                                             class="fas fa-quote-left fa-lg text-warning me-2"></i>
-                                                                        <span class="font-italic">Sed ut perspiciatis unde
-                                                                            omnis iste natus error sit
-                                                                            voluptatem accusantium doloremque laudantium,
-                                                                            totam rem aperiam, eaque ipsa
-                                                                            quae ab illo inventore veritatis.</span>
+                                                                        <span class="font-italic">
+                                                                            Witnessing the interactive aspects of EthicAI
+                                                                            come to life has been exciting, and developing
+                                                                            on the front-end was really fulfilling -
+                                                                            especially when observing the outcome. I greatly
+                                                                            appreciate the support and drive of the team all
+                                                                            the way through to the end.
+                                                                        </span>
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
