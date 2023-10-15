@@ -4,7 +4,9 @@
       <div
         class="prev-icon-container d-flex align-items-center justify-content-center"
         @click="handlePrevIconClick()"
+        @keypress="handleNextIconClick()"
         title="Previous Page"
+        tabindex="0"
       >
         <i
           class="fas fa-solid fa-chevron-left prev-icon"
@@ -24,7 +26,9 @@
       <div
         class="next-icon-container d-flex align-items-center justify-content-center"
         @click="handleNextIconClick()"
+        @keypress="handleNextIconClick()"
         title="Next Page"
+        tabindex="0"
       >
         <i
           class="fas fa-solid fa-chevron-right next-icon"
