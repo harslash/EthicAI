@@ -1,15 +1,15 @@
 <template>
   <div class="quiz-ui-card">
     <!-- Icon in the upper left corner -->
-    <i v-if="isHappy" class="fas fa-smile" style="font-size: 1.5em;" :style="{color: isNormal? '#6D0CFF': '#55E86D'}"></i>
+    <i v-if="isHappy" class="fas fa-smile" style="font-size: 1.5em;" :style="{color: isNormal? '#6D0CFF': '#55E86D'}" title="Recommended"></i>
 
-    <i v-if="!isHappy" class="fas fa-frown" style="font-size: 1.5em;" :style="{ color: isNormal ? '#6D0CFF' : '#FF0000'}"></i>
-    
+    <i v-if="!isHappy" class="fas fa-frown" style="font-size: 1.5em;" :style="{ color: isNormal ? '#6D0CFF' : '#FF0000'}" title="Not recommended"></i>
+
     <!-- Text input via props -->
     <div class="content">
       {{ cardText }}
     </div>
-    
+
     <!-- Icon and circle in the bottom right corner -->
     <div class="icon-container">
       <span class="icon-stack">
@@ -26,7 +26,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'QuizUICard',
   props: {
-    cardText: String, 
+    cardText: String,
     isHappy: {
       type: Boolean,
       default: true
@@ -42,8 +42,8 @@ export default defineComponent({
 
 <style scoped>
 .quiz-ui-card {
-  width: 400px; 
-  height: 100px; 
+  width: 400px;
+  height: 100px;
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -94,7 +94,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
    .quiz-ui-card{
-        width: 320px; 
+        width: 320px;
     }
 }
 </style>
