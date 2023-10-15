@@ -24,46 +24,43 @@
       </div>
     </div>
 
-    <div ref="secondSection" class="container row m-auto" :class="{ 'hidden': !showSecondSection }">
-      <div class="row h-30">
-        <div class="col-md-12 pb-1">
-          <div class="d-flex justify-content-center flex-wrap">
-            <p class="section-text text-center">
-              Boris Johnson discusses Peppa Pig world.
-            </p>
-            <div class="video-wrapper">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/8zHURhs0DbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
+    <div class="container row m-auto" :class="{ 'hidden': !showSecondSection }">
+    <div class="row h-30">
+      <div class="col-md-12 pb-1">
+        <div class="d-flex justify-content-center flex-wrap">
+          <p class="section-text text-center">{{ videoTitles[currentVideoIndex] }}</p>
+          <div class="video-wrapper">
+            <iframe width="560" height="315" :src="videoURLs[currentVideoIndex]" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-          <br>
-          <div class="d-flex justify-content-center flex-wrap">
-            <div class="d-flex flex-column flex-md-row">
+        </div>
+        <br>
+        <div class="d-flex justify-content-center flex-wrap">
+          <div class="d-flex flex-column flex-md-row">
             <div class="tw-m-auto py-2 real-button">
               <div class="tw-w-full">
-              <purple-btn :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Real Video'"
-                @click="onFirstCorrectClick(); section2Completed = true;" />
+                <purple-btn :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Real Video'"
+                  @click="onCorrectClick(true); section2Completed = true;" />
               </div>
             </div>
             <div class="tw-m-auto py-2 deepfake-button">
               <div class="tw-w-full">
                 <purple-btn-outline :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Deepfake'"
-                @click="onFirstIncorrectClick(); section2Completed = true;" />
-                </div>
+                  @click="onCorrectClick(false); section2Completed = true;" />
               </div>
-              <div :class="{ hidden: !firstVideoAnswered }">
-                  <p class="tw-text-center" :class="firstVideoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
-                    {{ firstVideoExplanation }}</p>
-                </div>
+            </div>
+            <div :class="{ hidden: !firstVideoAnswered }">
+              <p class="tw-text-center" :class="firstVideoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                {{ firstVideoExplanation }}</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-9 d-flex justify-content-end">
-        <purple-btn :tag="'button'" :text="'Next Video'"
-          @click="showThirdSection = true; scrollIntoSection('thirdSection');" />
+        <div class="col-md-9 d-flex justify-content-end">
+          <purple-btn :tag="'button'" :text="'Next Video'" @click="showNextVideo()" />
+        </div>
       </div>
     </div>
     <br>
+  </div>
 
     <div class="container text-section" :class="{ 'hidden': !showThirdSection }">
       <div class="row h-30 mb-5">
@@ -107,13 +104,38 @@ export default defineComponent({
       videoDemoComplete: false,
       firstVideoAnswered: false,
       firstVideoCorrect: false,
-      firstVideoExplanation: "",
+      firstVideoExplanation: "The video is real.",
       secondVideoAnswered: false,
       secondVideoCorrect: false,
-      secondVideoExplanation: "",
+      secondVideoExplanation: "The video is a deepfake.",
       thirdVideoAnswered: false,
       thirdVideoCorrect: false,
-      thirdVideoExplanation: "",
+      thirdVideoExplanation: "The video is a deepfake.",
+      fourthVideoAnswered: false,
+      fourthVideoCorrect: false,
+      fourthVideoExplanation: "The video is real.",
+      videoURLs: [
+        "https://www.youtube.com/embed/8zHURhs0DbM",
+        "https://www.youtube.com/embed/cQ54GDm1eL0",
+        "https://www.youtube.com/embed/qcJ4buwMPTE",
+        "https://www.youtube.com/embed/L-xm_9zjNwI",
+
+        // Add more video URLs as needed
+      ],
+      videoTitles: [
+        "Boris Johnson discusses Peppa Pig world.",
+        "Barack Obama warns about the dangers of deepfakes",
+        "Tom Cruise singing",
+        "Fury as Donald Trump says immigrants poison blood of US"
+        // Add more video titles as needed
+      ],
+      correctAnswers: [
+        true, // Set correct answer for the first video (true for real, false for deepfake)
+        false, 
+        false,
+        true,// Set correct answer for the second video // Set correct answer for the third video
+      ],
+      currentVideoIndex: 0,
     };
   },
   methods: {
@@ -131,38 +153,66 @@ export default defineComponent({
     onFirstCorrectClick() {
       this.firstVideoAnswered = true;
       this.firstVideoCorrect = true;
-      this.firstVideoExplanation = "Correct! The video is real.";
+      this.firstVideoExplanation = "Correct!";
 
     },
     onFirstIncorrectClick() {
       this.firstVideoAnswered = true;
       this.firstVideoCorrect = false;
-      this.firstVideoExplanation = "Incorrect! The video is a deepfake.";
+      this.firstVideoExplanation = "Incorrect!";
     },
     onSecondCorrectClick() {
       this.secondVideoAnswered = true;
       this.secondVideoCorrect = true;
-      this.secondVideoExplanation = "Correct! The right Video clip is real.";
+      this.secondVideoExplanation = "Correct!";
 
     },
     onSecondIncorrectClick() {
       this.secondVideoAnswered = true;
       this.secondVideoCorrect = false;
-      this.secondVideoExplanation = "Incorrect! The right Video clip is real.";
+      this.secondVideoExplanation = "Incorrect!";
     },
     onThirdCorrectClick() {
       this.thirdVideoAnswered = true;
       this.videoDemoComplete = true;
       this.thirdVideoCorrect = true;
-      this.thirdVideoExplanation = "Correct! The left Video clip is real.";
+      this.thirdVideoExplanation = "Correct!";
 
     },
     onThirdIncorrectClick() {
       this.thirdVideoAnswered = true;
       this.videoDemoComplete = true;
       this.thirdVideoCorrect = false;
-      this.thirdVideoExplanation = "Incorrect! The left Video clip is real.";
+      this.thirdVideoExplanation = "Incorrect!";
     },
+    onFourthCorrectClick() {
+      this.thirdVideoAnswered = true;
+      this.videoDemoComplete = true;
+      this.thirdVideoCorrect = true;
+      this.thirdVideoExplanation = "Correct!";
+
+    },
+    onFourthIncorrectClick() {
+      this.thirdVideoAnswered = true;
+      this.videoDemoComplete = true;
+      this.thirdVideoCorrect = false;
+      this.thirdVideoExplanation = "Incorrect!";
+    },
+    showNextVideo() {
+      if (this.currentVideoIndex < this.videoURLs.length - 1) {
+        this.currentVideoIndex++;
+        this.firstVideoAnswered = false;
+        this.firstVideoCorrect = false;
+        this.firstVideoExplanation = "";
+      }
+    },
+    onCorrectClick(isReal: boolean) {
+
+      this.firstVideoAnswered = true;
+      this.firstVideoCorrect = this.correctAnswers[this.currentVideoIndex] === isReal;
+      this.firstVideoExplanation = this.firstVideoCorrect ? "Correct! The video is real." : "Incorrect! The video is a deepfake.";
+    },
+
   },
   components: {
     'nav-bar': NavBar,
