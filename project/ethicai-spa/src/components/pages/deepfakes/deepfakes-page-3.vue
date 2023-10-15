@@ -141,7 +141,7 @@
             <p class="section-text">
               Did you manage to distinguish the real audio from the fake? If you found it challenging, you're not alone.
               Audio deepfake technology has evolved to a point where even seasoned listeners can struggle to tell the
-              difference.</p>
+              difference. With the current advancements in deepfake technology, there is no true 'tell' of a deepfake.</p>
             <p class="section-text">
               Staying informed and aware of these advancements is crucial. It's a reminder of the importance of critical
               thinking and digital literacy in today's world. By understanding the potential of audio deepfakes, we can
