@@ -19,7 +19,7 @@
       </div>
 
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Start Now'"
+        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Start Game'"
           @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
       </div>
     </div>
