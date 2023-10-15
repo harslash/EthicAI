@@ -2,12 +2,13 @@
   <form class="form-container d-flex justify-content-around align-items-center flex-column">
 
     <div class="form-group d-flex align-items-center">
-        <button v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
+        <button v-if="!loading" class="pre-generated-prompt" title="Use example prompt" @click="handlePromptClick()">
             Example: {{preGeneratedPrompt}}
         </button>
         <button v-if="!loading" class="btn btn-primary refresh-btn mx-3"
                 type="button"
                 @click="refreshPrompt()"
+                title="Refresh example prompt"
                 :disabled="loading">
             <font-awesome-icon :icon="faArrowsRotate" style="color: #ffffff;"></font-awesome-icon>
         </button>
@@ -28,12 +29,14 @@
             </div>
             <button class="btn btn-primary"
                     type="button"
-                    @click="clearPrompText()"
+                    @click="clearPromptText()"
+                    title="Clear prompt text"
                     :disabled="loading || !isReadyForClearingPrompt">
                 <font-awesome-icon :icon="faTrash" style="color: #ffffff;"></font-awesome-icon>
             </button>
              <send-btn
                 @button-clicked="handleButtonClick"
+                title="Submit prompt"
                 :disable-button="loading || !isReadyForNewPrompt"
                 ></send-btn>
         </div>
@@ -102,7 +105,7 @@ export default defineComponent({
         let isReadyForClearingPrompt = ref(false);
 
 
-        const clearPrompText = () => {
+        const clearPromptText = () => {
             inputPromptText.value = '';
             outputPromptText.value = ''
             isReadyForNewPrompt.value = true;
@@ -193,7 +196,7 @@ export default defineComponent({
             preGeneratedPrompt,
             handleButtonClick,
             handlePromptClick,
-            clearPrompText,
+            clearPromptText,
             inputPromptText,
             refreshPrompt,
             outputPromptText,
