@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Third navbar example">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Navigation bar">
             <div class="container-fluid">
                 <a href="#main" class="skiplink">Skip to main content</a>
                 <router-link to="/" class="navbar-brand">
