@@ -74,11 +74,11 @@
             </p>
           </div>
         </div>
-        <div class="col-md-12 d-flex justify-content-end mb-12"> 
+        <div class="col-md-12 d-flex justify-content-end mb-12">
         <router-link to="/deepfakes/quiz">
-          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
         </router-link>
-      </div> 
+      </div>
       </div>
     </div>
   </div>
@@ -131,7 +131,7 @@ export default defineComponent({
       ],
       correctAnswers: [
         true, // Set correct answer for the first video (true for real, false for deepfake)
-        false, 
+        false,
         false,
         true,// Set correct answer for the second video // Set correct answer for the third video
       ],

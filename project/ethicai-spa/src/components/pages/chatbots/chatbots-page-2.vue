@@ -165,7 +165,7 @@
             <div class="row h-20 pb-5">
                 <div class="col-md-12 d-flex justify-content-end">
                     <router-link to="/chatbots/hallucination">
-                        <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+                        <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
                     </router-link>
                 </div>
             </div>

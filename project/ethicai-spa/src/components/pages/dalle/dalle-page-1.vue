@@ -213,7 +213,7 @@
               <p style="margin-right: 20px; margin-bottom: 0px;"><b>How does this happen?</b></p>
             </div>
             <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-right: 35px;">
-              <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+              <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
             </router-link>
           </div>
         </div>

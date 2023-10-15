@@ -390,7 +390,7 @@
             <div class="row h-20 pt-4" style="padding-bottom: 20px" v-if="quizCompleted">
               <div class="col-md-12 d-flex justify-content-end">
                 <router-link to="/dalle/the-complexities-of-copyright">
-                  <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+                  <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
                 </router-link>
               </div>
             </div>

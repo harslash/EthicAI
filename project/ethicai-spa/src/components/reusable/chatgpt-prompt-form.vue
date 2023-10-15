@@ -14,7 +14,7 @@
     </div>
 
     <div class="form-group d-flex flex-column">
-        <span class="demo-explanation">Type your question here!</span>      
+        <span class="demo-explanation">Type your question here!</span>
         <textarea
         v-model="inputPromptText"
         class="form-control"
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="form-group d-flex flex-column">
-        <span class="demo-explanation">The LLM will reply here!</span>       
+        <span class="demo-explanation">The LLM will reply here!</span>
         <textarea
         v-model="outputPromptText"
         class="form-control output-box"

@@ -107,7 +107,7 @@
       <div class="row h-20 mt-5">
         <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/deepfakes/real-or-not-real">
-            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+            <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
           </router-link>
         </div>
       </div>

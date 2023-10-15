@@ -248,7 +248,7 @@
     <div class="row h-20">
       <div class="col-md-12 d-flex justify-content-end">
         <router-link to="/dalle/quiz">
-          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
+          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" role="link"></purple-btn>
         </router-link>
       </div>
     </div>

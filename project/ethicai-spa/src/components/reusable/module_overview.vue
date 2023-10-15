@@ -42,7 +42,7 @@
             <div class="row h-20">
               <div class="col-md-12 d-flex justify-content-end">
               <router-link :to="generateRoute(moduleName, pageName)">
-                <purple-btn :text="'Continue'" @click="continueClicked" />
+                <purple-btn :text="'Start Module'" @click="continueClicked" />
               </router-link>
               </div>
             </div>

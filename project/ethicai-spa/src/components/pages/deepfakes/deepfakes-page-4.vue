@@ -100,7 +100,7 @@
       </div>
       <div class="col-md-12 d-flex justify-content-end mb-2">
         <router-link to="/deepfakes/judgement-day">
-          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
         </router-link>
       </div>
     </div>
