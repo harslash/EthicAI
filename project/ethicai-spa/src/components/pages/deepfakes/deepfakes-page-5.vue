@@ -204,6 +204,11 @@ export default defineComponent({
         this.firstVideoAnswered = false;
         this.firstVideoCorrect = false;
         this.firstVideoExplanation = "";
+      } else {
+        this.handlePageCompletionClick();
+         this.$router.push({
+          name: "deepfakes-quiz",
+        });
       }
     },
     onCorrectClick(isReal: boolean) {
