@@ -73,7 +73,7 @@ function parsedExplanation(explanation) {
         <p :class="answer.value.length > 16 ? 'tw-text-md' : 'tw-text-3xl tw-text-center' + (answer.value.length > 16 ? ' tw-max-w-[150px]' : '')"
           v-html="answer.value" />
         <img v-if="resultVisible" :src="`/quiz/${answer.isCorrect ? 'correct1' : 'wrong1'}.svg`"
-          :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" />
+          :class="'tw-w-[35px] tw-h-[35px]'" :alt="`${answer.isCorrect ? 'correct' : 'wrong'} answer`" :title="`${answer.isCorrect ? 'Correct' : 'Wrong'} answer`" />
       </button>
     </div>
     <div v-if="resultVisible" class="tw-text-lg tw-text-center tw-p-5 tw-mt-5 tw-rounded-lg explanation-bg">
