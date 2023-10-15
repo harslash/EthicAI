@@ -24,50 +24,56 @@
       </div>
 
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Start Game'"
+        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
           @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
       </div>
     </div>
 
-    <div class="container row m-auto" :class="{ 'hidden': !showSecondSection }">
-    <div class="row h-30">
-      <div class="col-md-12 pb-1">
-        <div class="d-flex justify-content-center flex-wrap">
-          <p class="section-text text-center">{{ videoTitles[currentVideoIndex] }}</p>
-          <div class="video-wrapper">
-            <iframe width="560" height="315" :src="videoURLs[currentVideoIndex]" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-        <br>
-        <div class="d-flex justify-content-center flex-wrap">
-          <div class="d-flex flex-column flex-md-row">
-            <div class="tw-m-auto py-2 real-button">
-              <div class="tw-w-full">
-                <purple-btn :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Real Video'"
-                  @click="onCorrectClick(true); section2Completed = true;" />
-              </div>
-            </div>
-            <div class="tw-m-auto py-2 deepfake-button">
-              <div class="tw-w-full">
-                <purple-btn-outline :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Deepfake'"
-                  @click="onCorrectClick(false); section2Completed = true;" />
-              </div>
-            </div>
-            <div :class="{ hidden: !firstVideoAnswered }">
-              <p class="tw-text-center" :class="firstVideoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
-                {{ firstVideoExplanation }}</p>
+    <div ref="secondSection" class="container row m-auto" :class="{ 'hidden': !showSecondSection }">
+      <div class="row h-30">
+        <div class="col-md-12 pb-1">
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="section-text text-center tw-font-bold">{{ videoTitles[currentVideoIndex] }}</p>
+            <div class="video-wrapper">
+              <iframe width="560" height="315" :src="videoURLs[currentVideoIndex]" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             </div>
           </div>
-        </div>
-        <div class="col-md-9 d-flex justify-content-end">
-          <purple-btn :tag="'button'" :text="'Next Video'" @click="showNextVideo()" />
+          <br>
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="d-flex flex-column flex-md-row">
+              <div class="tw-m-auto py-2 real-button">
+                <div class="tw-w-full">
+                  <purple-btn :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Real Video'"
+                    @click="onAnswer(true);" />
+                </div>
+              </div>
+              <div class="tw-m-auto py-2 deepfake-button">
+                <div class="tw-w-full">
+                  <purple-btn-outline :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Deepfake'"
+                    @click="onAnswer(false);" />
+                </div>
+              </div>
+              <div :class="{ hidden: !videoAnswered }">
+                <p class="tw-text-center" :class="videoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                  {{ videoExplanation }}</p>
+              </div>
+            </div>
+          </div>
+          <div v-if="videoAnswered && !videoDemoComplete" class="col-md-9 d-flex justify-content-end">
+            <purple-btn :tag="'button'" :text="'Next Video'" @click="showNextVideo()" />
+          </div>
         </div>
       </div>
+      <div class="col-md-12 d-flex justify-content-end">
+        <purple-btn :tag="'button'" v-if="videoDemoComplete && !section2Completed" :text="'Continue'"
+          @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
+      </div>
     </div>
-    <br>
-  </div>
 
-    <div class="container text-section" :class="{ 'hidden': !showThirdSection }">
+    <div ref="thirdSection" class="container text-section" :class="{ 'hidden': !showThirdSection }">
       <div class="row h-30 mb-5">
         <div class="col-md-12">
           <div class="d-flex justify-content-center flex-wrap">
@@ -75,15 +81,17 @@
               Was that challenging?
             </p>
             <p class="section-text">
-              Ultimately, even when considering the previous page’s guidelines, finding deepfakes is no easy feat. Deepfake video technology is very advanced and as it advances further, it will  continue to become harder and harder to distinguish the difference between reality and fiction.
+              Ultimately, even when considering the previous page's guidelines, determining whether a video is a deepfake
+              or not is no easy feat. Deepfake video technology is very advanced and as it advances further, it will
+              continue to become harder and harder to distinguish the difference between reality and fiction.
             </p>
           </div>
         </div>
         <div class="col-md-12 d-flex justify-content-end mb-12">
-        <router-link to="/deepfakes/quiz">
-          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
-        </router-link>
-      </div>
+          <router-link to="/deepfakes/quiz">
+            <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -117,17 +125,16 @@ export default defineComponent({
         "https://www.youtube.com/embed/L-xm_9zjNwI",
       ],
       videoTitles: [
-        "Boris Johnson discusses Peppa Pig world.",
-        "Barack Obama warns about the dangers of deepfakes",
-        "Tom Cruise singing",
-        "Fury as Donald Trump says immigrants poison blood of US"
-        // Add more video titles as needed
+        "Boris Johnson Discusses Peppa Pig World",
+        "Barack Obama Warns About the Dangers of Deepfakes",
+        "Tom Cruise Singing",
+        "Fury as Donald Trump Says Immigrants Poison Blood of US"
       ],
       correctAnswers: [
-        true, // Set correct answer for the first video (true for real, false for deepfake)
+        true,
         false,
         false,
-        true,// Set correct answer for the second video // Set correct answer for the third video
+        true,
       ],
       currentVideoIndex: 0,
     };
@@ -145,25 +152,19 @@ export default defineComponent({
       this.$registerPageAsCompleted('deepfakes', 'judgement-day');
     },
     showNextVideo() {
-      if (this.currentVideoIndex < this.videoURLs.length - 1) {
-        this.currentVideoIndex++;
-        this.firstVideoAnswered = false;
-        this.firstVideoCorrect = false;
-        this.firstVideoExplanation = "";
+      this.currentVideoIndex++;
+      this.videoAnswered = false;
+    },
+    onAnswer(isReal: boolean) {
+      this.videoAnswered = true;
+      this.videoCorrect = this.correctAnswers[this.currentVideoIndex] === isReal;
+      if (isReal) {
+        this.videoExplanation = this.videoCorrect ? "Correct! The video is real." : "Incorrect! The video is a deepfake.";
       } else {
-        this.handlePageCompletionClick();
-         this.$router.push({
-          name: "deepfakes-quiz",
-        });
+        this.videoExplanation = this.videoCorrect ? "Correct! The video is a deepfake." : "Incorrect! The video is real.";
       }
+      this.videoDemoComplete = this.currentVideoIndex === this.videoURLs.length - 1;
     },
-    onCorrectClick(isReal: boolean) {
-
-      this.firstVideoAnswered = true;
-      this.firstVideoCorrect = this.correctAnswers[this.currentVideoIndex] === isReal;
-      this.firstVideoExplanation = this.firstVideoCorrect ? "Correct! The video is real." : "Incorrect! The video is a deepfake.";
-    },
-
   },
   components: {
     'nav-bar': NavBar,
@@ -206,10 +207,12 @@ export default defineComponent({
 }
 
 .real-button {
-  padding-right: 30px; /* Adjust the value as needed for spacing */
+  padding-right: 30px;
+  /* Adjust the value as needed for spacing */
 }
 
 .deepfake-button {
-  padding-left: 30px; /* Adjust the value as needed for spacing */
+  padding-left: 30px;
+  /* Adjust the value as needed for spacing */
 }
 </style>
