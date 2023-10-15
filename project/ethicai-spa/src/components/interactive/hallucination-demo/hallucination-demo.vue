@@ -7,21 +7,21 @@
         </div>
         <div class="row" :class="{ 'hidden': !showButtons}">
             <div class="col-md-12 d-flex justify-content-around pb-5">
-                <purple-btn-outline v-if="isReadyForAnswer" :text="'Hallucination'" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
-                <purple-btn-outline v-if="isReadyForAnswer" :text="'Correct'" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Guess \'Hallucination\''" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Guess \'Correct\''" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
             </div>
             <div class="col-md-2"></div>
             <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
                 <div class="explanation-container" :class="isUserCorrect ? 'alert alert-success' : 'alert alert-danger'">
                     <p v-if="isUserCorrect" class="h5">Well done!</p>
-                    <p v-else class="h5">Try again!</p>
+                    <p v-else class="h5">Sorry, that guess wasn't right...</p>
 
                     <p v-if="isHallucination" class="h6">ChatGPT produces hallucination here</p>
                     <p v-else class="h6">The response is factually correct</p>
 
                     <p>{{ explanationText }}</p>
 
-                    <purple-btn-outline v-if="isQuizStarted" :text="'Next'" @click="handleNextBtnClick()"> </purple-btn-outline>
+                    <purple-btn-outline v-if="isQuizStarted" :text="'Next Question'" @click="handleNextBtnClick()"> </purple-btn-outline>
                 </div>
             </div>
             <div class="col-md-2"></div>

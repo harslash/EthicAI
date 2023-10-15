@@ -104,7 +104,7 @@
               <quiz-ui-card :isNormal="false" :isHappy="false"
                 :card-text="'Do you have any tips for going viral on tiktok?'"></quiz-ui-card>
             </div>
-            <purple-outline-btn v-if="!showSecondPromptCard" :text="'Next'"
+            <purple-outline-btn v-if="!showSecondPromptCard" :text="'Next Tip'"
               @click="showSecondPromptCard = true; scrollPage('secondPromptCard')"></purple-outline-btn>
           </div>
 
@@ -120,7 +120,7 @@
               <quiz-ui-card :isNormal="false" :isHappy="false"
                 :card-text="'Give me a unit conversion chart.'"></quiz-ui-card>
             </div>
-            <purple-outline-btn v-if="!showThirdPromptCard" :text="'Next'"
+            <purple-outline-btn v-if="!showThirdPromptCard" :text="'Next Tip'"
               @click="showThirdPromptCard = true; scrollPage('thirdPromptCard')"></purple-outline-btn>
           </div>
 
@@ -136,7 +136,7 @@
               <quiz-ui-card :card-text="`Can I have a meal plan for the next week?`" :isNormal="false"
                 :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn v-if="!showFourthPromptCard" :text="'Next'"
+            <purple-outline-btn v-if="!showFourthPromptCard" :text="'Next Tip'"
               @click="showFourthPromptCard = true; scrollPage('fourthPromptCard')"></purple-outline-btn>
           </div>
 
@@ -152,7 +152,7 @@
               <quiz-ui-card :card-text="`What happened leading up to WWII?`" :isNormal="false"
                 :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn v-if="!showFifthPromptCard" :text="'Next'"
+            <purple-outline-btn v-if="!showFifthPromptCard" :text="'Next Tip'"
               @click="showFifthPromptCard = true; scrollPage('fifthPromptCard')"></purple-outline-btn>
           </div>
 
@@ -169,7 +169,7 @@
               <quiz-ui-card :card-text="`What's a synonym for 'dilate'?`" :isNormal="false"
                 :isHappy="false"></quiz-ui-card>
             </div>
-            <purple-outline-btn v-if="!showThirdSection" :text="'Next'"
+            <purple-outline-btn v-if="!showThirdSection" :text="'Continue'"
               @click="showThirdSection = true; scrollIntoThirdSection(); section2Completed = true;"></purple-outline-btn>
           </div>
         </div>
