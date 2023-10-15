@@ -110,7 +110,7 @@
             <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
               the capability of LLMs. Enjoy the interaction!</p>
             <span class="gpt-prompt-note">Note: This demo is powered by <a href="https://github.com/Soulter/hugging-chat-api" target="_blank">hugging-chat-api</a>.
-              Visit <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a> to experiment with the official ChatGPT model.</span>
+              You can also experiment with more powerful models, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.</span>
           </div>
 
         </div>
