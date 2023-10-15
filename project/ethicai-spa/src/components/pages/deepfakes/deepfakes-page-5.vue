@@ -12,7 +12,7 @@
         <div class="col-md-12">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text">
-              Given a series of videos, you are going to have to judge whether they are a deepfake or not. We recommend you watch at least a minute of the video before making your judgement. Good luck!
+              Given a series of videos, you are going to have to judge whether they are a deepfake or not. We recommend you watch at least a minute of the video before making your judgment. Good luck!
             </p>
           </div>
         </div>
@@ -31,28 +31,45 @@
             <p class="section-text text-center">
               Boris Johnson discusses Peppa Pig world.
             </p>
-            <div>
-              <iframe width="560" height="315" class="mb-5"
-                src="https://www.youtube.com/embed/8zHURhs0DbM" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/8zHURhs0DbM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+          <br>
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="d-flex flex-column flex-md-row">
+            <div class="tw-m-auto py-2 real-button">
+              <div class="tw-w-full">
+              <purple-btn :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Real Video'"
+                @click="onFirstCorrectClick(); section2Completed = true;" />
+              </div>
+            </div>
+            <div class="tw-m-auto py-2 deepfake-button">
+              <div class="tw-w-full">
+                <purple-btn-outline :class="{ hidden: firstVideoAnswered }" :tag="'button'" :text="'Deepfake'"
+                @click="onFirstIncorrectClick(); section2Completed = true;" />
+                </div>
+              </div>
+              <div :class="{ hidden: !firstVideoAnswered }">
+                  <p class="tw-text-center" :class="firstVideoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                    {{ firstVideoExplanation }}</p>
+                </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn :tag="'button'" v-if="!section2Completed" :text="'Continue'"
-          @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
+      <div class="col-md-9 d-flex justify-content-end">
+        <purple-btn :tag="'button'" :text="'Next Video'"
+          @click="showSecondSection = true; scrollIntoSection('secondSection');" />
       </div>
     </div>
 
-
-    <div class="col-md-12 d-flex justify-content-end mb-12">
+    <!--
+     <div class="col-md-12 d-flex justify-content-end mb-12"> 
       <router-link to="/deepfakes/quiz">
         <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
       </router-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -73,6 +90,16 @@ export default defineComponent({
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
+      videoDemoComplete: false,
+      firstVideoAnswered: false,
+      firstVideoCorrect: false,
+      firstVideoExplanation: "",
+      secondVideoAnswered: false,
+      secondVideoCorrect: false,
+      secondVideoExplanation: "",
+      thirdVideoAnswered: false,
+      thirdVideoCorrect: false,
+      thirdVideoExplanation: "",
     };
   },
   methods: {
@@ -86,12 +113,48 @@ export default defineComponent({
     },
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'judgement-day');
-    }
+    },
+    onFirstCorrectClick() {
+      this.firstVideoAnswered = true;
+      this.firstVideoCorrect = true;
+      this.firstVideoExplanation = "Correct! The video is real.";
+
+    },
+    onFirstIncorrectClick() {
+      this.firstVideoAnswered = true;
+      this.firstVideoCorrect = false;
+      this.firstVideoExplanation = "Incorrect! The video is a deepfake.";
+    },
+    onSecondCorrectClick() {
+      this.secondVideoAnswered = true;
+      this.secondVideoCorrect = true;
+      this.secondVideoExplanation = "Correct! The right Video clip is real.";
+
+    },
+    onSecondIncorrectClick() {
+      this.secondVideoAnswered = true;
+      this.secondVideoCorrect = false;
+      this.secondVideoExplanation = "Incorrect! The right Video clip is real.";
+    },
+    onThirdCorrectClick() {
+      this.thirdVideoAnswered = true;
+      this.videoDemoComplete = true;
+      this.thirdVideoCorrect = true;
+      this.thirdVideoExplanation = "Correct! The left Video clip is real.";
+
+    },
+    onThirdIncorrectClick() {
+      this.thirdVideoAnswered = true;
+      this.videoDemoComplete = true;
+      this.thirdVideoCorrect = false;
+      this.thirdVideoExplanation = "Incorrect! The left Video clip is real.";
+    },
   },
   components: {
     'nav-bar': NavBar,
     "module-navigation-bar": ModuleNavigationBar,
-    'purple-btn': PurpleBtn
+    'purple-btn': PurpleBtn,
+    'purple-btn-outline': PurpleBtnOutline
   }
 });
 </script>
@@ -125,5 +188,13 @@ export default defineComponent({
   .section-text {
     width: 90%;
   }
+}
+
+.real-button {
+  padding-right: 30px; /* Adjust the value as needed for spacing */
+}
+
+.deepfake-button {
+  padding-left: 30px; /* Adjust the value as needed for spacing */
 }
 </style>
