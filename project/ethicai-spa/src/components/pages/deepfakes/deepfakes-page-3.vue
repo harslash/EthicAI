@@ -43,8 +43,8 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: firstAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
-                        @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');" />
+                      <purple-btn-outline :class="{ hidden: firstAudioAnswered }" :tag="'button'"
+                        :text="'Left clip is real'" @click="onFirstCorrectClick(); scrollIntoSection('secondAudio');" />
                     </div>
                   </div>
                   <div class="tw-m-auto py-2">
@@ -53,7 +53,7 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: firstAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                      <purple-btn-outline :class="{ hidden: firstAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
                         @click="onFirstIncorrectClick(); scrollIntoSection('secondAudio');" />
                     </div>
                   </div>
@@ -74,7 +74,7 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
+                      <purple-btn-outline :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
                         @click="onSecondIncorrectClick(); scrollIntoSection('thirdAudio');" />
                     </div>
                   </div>
@@ -84,7 +84,7 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                      <purple-btn-outline :class="{ hidden: secondAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
                         @click="onSecondCorrectClick(); scrollIntoSection('thirdAudio');" />
                     </div>
                   </div>
@@ -105,7 +105,7 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
+                      <purple-btn-outline :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Left clip is real'"
                         @click="onThirdCorrectClick();" />
                     </div>
                   </div>
@@ -115,7 +115,7 @@
                       Your browser does not support the audio element.
                     </audio>
                     <div class="tw-w-full">
-                      <purple-btn :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
+                      <purple-btn-outline :class="{ hidden: thirdAudioAnswered }" :tag="'button'" :text="'Right clip is real'"
                         @click="onThirdIncorrectClick();" />
                     </div>
                   </div>
@@ -164,6 +164,7 @@ import { defineComponent, ref } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
+import PurpleBtnOutline from '../../reusable-ui/purple-btn-outline.vue';
 
 export default defineComponent({
   name: 'DeepfakesPage3',
@@ -238,7 +239,8 @@ export default defineComponent({
   components: {
     'nav-bar': NavBar,
     "module-navigation-bar": ModuleNavigationBar,
-    'purple-btn': PurpleBtn
+    'purple-btn': PurpleBtn,
+    'purple-btn-outline': PurpleBtnOutline
   }
 });
 </script>
