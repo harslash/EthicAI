@@ -15,7 +15,7 @@
     </div>
 
     <div class="form-group d-flex flex-column">
-        <span class="demo-explanation">Type your question here!</span>
+        <span class="demo-explanation">Your question:</span>
         <textarea
         v-model="inputPromptText"
         class="form-control"
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="form-group d-flex flex-column">
-        <span class="demo-explanation">The LLM will reply here!</span>
+        <span class="demo-explanation">LLM's reply:</span>
         <textarea
         v-model="outputPromptText"
         class="form-control output-box"
@@ -263,7 +263,7 @@ export default defineComponent({
     text-align: left;
     color: #C324FF;
     font-weight: 600;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 
