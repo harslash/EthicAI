@@ -116,9 +116,9 @@
         <div class="col-md-12">
           <p class="tw-text-left tw-mx-20">
             In what is seemingly an era of technological deception, families and friends can safeguard themselves from
-            situations like the above by establishing confidential safe words. There unique words should only be known to
-            trusted family and friends and serve as a means of verifications for suspicious situations. This simple, yet
-            effective practice can quickly expose scams or deception and help ensure the safety of loved ones.
+            situations like the above by establishing confidential safe words. Their unique words should only be known to
+            trusted family and friends, serving as a means of verification during suspicious situations. This simple, yet
+            effective practice can quickly expose scams or deception and help ensure your loved ones' the safety.
           </p>
         </div>
       </div>
