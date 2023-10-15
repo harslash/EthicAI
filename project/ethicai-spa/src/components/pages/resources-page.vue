@@ -7,15 +7,15 @@
             </div>
         </div>
          <div class="row mb-2">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 d-flex justify-content-md-start justify-content-center">
-                <h3 class="card-category-heading">Interactive</h3>
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start justify-content-center">
+                <h3 class="card-category-heading">General</h3>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
         </div>
         <div class="row mb-5">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
                         <img class="card-img-top" src="http://moralmachine.mit.edu/images/teaser.jpg" alt="Two cars both heading towards zebra crossing, one crashing, one swerving into pedestrians">
@@ -36,21 +36,90 @@
                         <a href="https://detectfakes.media.mit.edu/"  target="_blank" class="btn btn-primary">Navigate</a>
                     </div>
                 </div>
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top"  alt="Card image cap" src="https://gandalf.lakera.ai/meta-image.jpeg">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Gandalf</h6>
+                        <p class="card-text">A game showing how effective security measures are at preventing a LLM like ChatGPT from revealing passwords.</p>
+                        <a href="https://gandalf.lakera.ai/"  target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2"></div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 d-flex justify-content-md-start justify-content-center">
-                <h3 class="card-category-heading">Academic</h3>
-            </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
         </div>
 
          <div class="row mb-5">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top img-stretch"  alt="Card image cap" src="https://img.itch.zone/aW1nLzQ5MjE5MjUucG5n/original/DPOMiO.png">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Shell Song</h6>
+                        <p class="card-text">An interactive art piece about deep-fake voice generation by Everest Pipkin.</p>
+                        <a href="https://everestpipkin.itch.io/shell-song"  target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top img-stretch" alt="Card image cap" src="http://playground.tensorflow.org/preview.png">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">A Neural Network Playground</h6>
+                        <p class="card-text">An interactive demo of machine learning/neural networks for categorising data points, allowing you to change parameters of the neural networks and compare their goal output to their actual output.
+
+                        </p>
+                        <a href="https://playground.tensorflow.org"  target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top img-stretch" alt="Card image cap" src="https://www.bellingcat.com/app/uploads/2021/10/Screenshot-2021-10-27-at-11.37.28.png">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">A Beginner's Guide to Social Media Verification</h6>
+                        <p class="card-text">A guide for investigating whether social media posts are true.
+                        </p>
+                        <a href="https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/"  target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top  img-stretch" alt="Card image cap" src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/other/ul/g/60/67/6067fb8d-a935-4e35-945a0d14b1a256ac.png/_jcr_content/renditions/cq5dam.medium.1584.1584.png">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">IBM AI Ethics</h6>
+                        <p class="card-text">An overview of AI ethical principles from the perspective of tech company IBM.
+                        </p>
+                        <a href="https://www.ibm.com/topics/ai-ethics"  target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+          
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start justify-content-center">
+                <h3 class="card-category-heading">Academic</h3>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+         <div class="row mb-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
                         <img class="card-img-top" src="https://dl.acm.org/cms/asset/2d78c0fc-794b-4611-bd35-188ebc503257/3313831.cover.jpg" alt="Cover page of a conference proceedings document for CHI 2020, flower logo">
@@ -71,8 +140,47 @@
                         <a href="https://www.coursera.org/learn/introduction-to-responsible-ai" target="_blank" class="btn btn-primary">Navigate</a>
                     </div>
                 </div>
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">Multimodal datasets (Birhane, Prabhu and Kahembwe 2021)</h6>
+                        <p class="card-text">An academic preprint highlighting problems like violence and bias in the LAION-400M image dataset and entrenched into OpenAI's CLIP model, which are based on data curated from the internet.</p>
+                        <a href="https://arxiv.org/abs/2110.01963" target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-1"></div>
+        </div>
+
+           <div class="row mb-5">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top" src="https://dl.acm.org/cms/asset/f613b715-71c7-4b74-a11e-eb0e5881ff37/3442188.cover.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">On the Dangers of Stochastic Parrots (Gebru, Bender et al. 2021)</h6>
+                        <p class="card-text">Influential conference paper challenging a 'bigger is better' view about language models, especially for large models that reinforce problems in their training data.</p>
+                        <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+                <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
+                    <div class="img-container">
+                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">The political ideology of conversational AI (Hartmann, Schwenzow, Witte 2023)</h6>
+                        <p class="card-text">An academic preprint detailing potential political biases in the output of ChatGPT by giving it a variety of questionnaires.</p>
+                        <a href="https://arxiv.org/abs/2301.01768
+
+" target="_blank" class="btn btn-primary">Navigate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
         </div>
 
         <page-footer />
@@ -119,6 +227,10 @@ export default defineComponent({
 .btn {
     background-color: #6D0CFF;
     font-family: 'Open Sans', sans-serif;
+}
+
+.img-stretch {
+    height: 200px;
 }
 
 .img-container{
