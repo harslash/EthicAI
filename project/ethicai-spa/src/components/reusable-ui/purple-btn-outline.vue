@@ -38,4 +38,4 @@ export default defineComponent({
     background-color: #6D0CFF;
     color: white;
 }
-</style>>
+</style>

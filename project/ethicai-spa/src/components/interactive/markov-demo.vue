@@ -8,6 +8,7 @@
                             btn-secondary
                             dropdown-toggle
                             demo-btn
+                            extra-btn
                             " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Change Corpus
                         </button>
@@ -28,6 +29,7 @@
                             btn-secondary
                             dropdown-toggle
                             demo-btn
+                            extra-btn
                             " type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Adjust Biases
                         </button>
@@ -43,7 +45,7 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn btn-primary demo-btn mx-2" @click="handleButtonClick" :disabled="loading"
+                    <button class="btn btn-primary demo-btn main-btn mx-2" @click="handleButtonClick" :disabled="loading"
                         type="button">Train Model</button>
                     <div v-if="loading" class="spinner-grow" role="status">
                         <span class="sr-only">Loading...</span>
@@ -342,15 +344,36 @@ export default defineComponent({
     background-color: #BF8FFE;
 }
 
-.demo-btn {
-    background-color: #6D0CFF;
+.demo-btn.extra-btn {
+    border: 2px solid #6D0CFF;
+    color: #6D0CFF;
+    /* background-color: #6D0CFF; */
+    background-color: #FFF;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
 
-.demo-btn:hover {
+.demo-btn:hover.extra-btn {
+    background-color: #6D0CFF;
+    color: white;
+    /* background-color: #8638fc; */
+}
+
+.demo-btn.main-btn {
+    /* border: 2px solid  #6D0CFF;
+    color: #6D0CFF; */
+    background-color: #6D0CFF;
+    /* background-color: #FFF; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.demo-btn:hover.main-btn {
+    /* background-color: #6D0CFF;
+    color: white; */
     background-color: #8638fc;
 }
+
 
 .demo-title,
 .demo-subtitle {
