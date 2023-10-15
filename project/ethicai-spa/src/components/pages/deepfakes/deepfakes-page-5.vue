@@ -60,16 +60,30 @@
       </div>
       <div class="col-md-9 d-flex justify-content-end">
         <purple-btn :tag="'button'" :text="'Next Video'"
-          @click="showSecondSection = true; scrollIntoSection('secondSection');" />
+          @click="showThirdSection = true; scrollIntoSection('thirdSection');" />
       </div>
     </div>
+    <br>
 
-    <!--
-     <div class="col-md-12 d-flex justify-content-end mb-12"> 
-      <router-link to="/deepfakes/quiz">
-        <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
-      </router-link>
-    </div> -->
+    <div class="container text-section" :class="{ 'hidden': !showThirdSection }">
+      <div class="row h-30 mb-5">
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="section-text">
+              Was that challenging?
+            </p>
+            <p class="section-text">
+              Ultimately, even when considering the previous page’s guidelines, finding deepfakes is no easy feat. Deepfake video technology is very advanced and as it advances further, it will  continue to become harder and harder to distinguish the difference between reality and fiction.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12 d-flex justify-content-end mb-12"> 
+        <router-link to="/deepfakes/quiz">
+          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+        </router-link>
+      </div> 
+      </div>
+    </div>
   </div>
 </template>
 
