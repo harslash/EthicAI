@@ -139,54 +139,6 @@ export default defineComponent({
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'judgement-day');
     },
-    onFirstCorrectClick() {
-      this.firstVideoAnswered = true;
-      this.firstVideoCorrect = true;
-      this.firstVideoExplanation = "Correct!";
-
-    },
-    onFirstIncorrectClick() {
-      this.firstVideoAnswered = true;
-      this.firstVideoCorrect = false;
-      this.firstVideoExplanation = "Incorrect!";
-    },
-    onSecondCorrectClick() {
-      this.secondVideoAnswered = true;
-      this.secondVideoCorrect = true;
-      this.secondVideoExplanation = "Correct!";
-
-    },
-    onSecondIncorrectClick() {
-      this.secondVideoAnswered = true;
-      this.secondVideoCorrect = false;
-      this.secondVideoExplanation = "Incorrect!";
-    },
-    onThirdCorrectClick() {
-      this.thirdVideoAnswered = true;
-      this.videoDemoComplete = true;
-      this.thirdVideoCorrect = true;
-      this.thirdVideoExplanation = "Correct!";
-
-    },
-    onThirdIncorrectClick() {
-      this.thirdVideoAnswered = true;
-      this.videoDemoComplete = true;
-      this.thirdVideoCorrect = false;
-      this.thirdVideoExplanation = "Incorrect!";
-    },
-    onFourthCorrectClick() {
-      this.thirdVideoAnswered = true;
-      this.videoDemoComplete = true;
-      this.thirdVideoCorrect = true;
-      this.thirdVideoExplanation = "Correct!";
-
-    },
-    onFourthIncorrectClick() {
-      this.thirdVideoAnswered = true;
-      this.videoDemoComplete = true;
-      this.thirdVideoCorrect = false;
-      this.thirdVideoExplanation = "Incorrect!";
-    },
     showNextVideo() {
       if (this.currentVideoIndex < this.videoURLs.length - 1) {
         this.currentVideoIndex++;
