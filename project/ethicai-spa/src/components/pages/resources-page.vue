@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Moral Machine</h6>
                         <p class="card-text">A platform that allows you to gain perspective into the ethical dilemmas behind the moral decisions made by machine intelligence, such as self-driving cars.</p>
-                        <a href="https://www.moralmachine.net/"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://www.moralmachine.net/"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -33,7 +33,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Detect Fakes</h6>
                         <p class="card-text">A platform that allows you to practise trying to detect deepfakes.</p>
-                        <a href="https://detectfakes.media.mit.edu/"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://detectfakes.media.mit.edu/"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -43,7 +43,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Gandalf</h6>
                         <p class="card-text">A game showing how effective security measures are at preventing a LLM like ChatGPT from revealing passwords.</p>
-                        <a href="https://gandalf.lakera.ai/"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://gandalf.lakera.ai/"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Shell Song</h6>
                         <p class="card-text">An interactive art piece about deep-fake voice generation by Everest Pipkin.</p>
-                        <a href="https://everestpipkin.itch.io/shell-song"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://everestpipkin.itch.io/shell-song"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -72,7 +72,7 @@
                         <p class="card-text">An interactive demo of machine learning/neural networks for categorising data points, allowing you to change parameters of the neural networks and compare their goal output to their actual output.
 
                         </p>
-                        <a href="https://playground.tensorflow.org"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://playground.tensorflow.org"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -83,7 +83,7 @@
                         <h6 class="card-title">A Beginner's Guide to Social Media Verification</h6>
                         <p class="card-text">A guide for investigating whether social media posts are true.
                         </p>
-                        <a href="https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://www.bellingcat.com/resources/2021/11/01/a-beginners-guide-to-social-media-verification/"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
             </div>
@@ -101,10 +101,10 @@
                         <h6 class="card-title">IBM AI Ethics</h6>
                         <p class="card-text">An overview of AI ethical principles from the perspective of tech company IBM.
                         </p>
-                        <a href="https://www.ibm.com/topics/ai-ethics"  target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://www.ibm.com/topics/ai-ethics"  target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
-          
+
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -127,7 +127,7 @@
                     <div class="card-body">
                         <h6 class="card-title">AI Literacy</h6>
                         <p class="card-text">This publication addresses the necessity of understanding user competencies for AI interaction and offers insights into designing AI technologies that promote AI literacy, providing a definitive AI literacy definition.</p>
-                        <a href="https://dl.acm.org/doi/10.1145/3313831.3376727" target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3313831.3376727" target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -137,7 +137,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Introduction to Responsible AI</h6>
                         <p class="card-text">This beginner-level online course from Google Cloud aims to explain what responsive AI is, why it's important and how Google incorporates responsive AI into their products.</p>
-                        <a href="https://www.coursera.org/learn/introduction-to-responsible-ai" target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://www.coursera.org/learn/introduction-to-responsible-ai" target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -147,7 +147,7 @@
                     <div class="card-body">
                         <h6 class="card-title">Multimodal datasets (Birhane, Prabhu and Kahembwe 2021)</h6>
                         <p class="card-text">An academic preprint highlighting problems like violence and bias in the LAION-400M image dataset and entrenched into OpenAI's CLIP model, which are based on data curated from the internet.</p>
-                        <a href="https://arxiv.org/abs/2110.01963" target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://arxiv.org/abs/2110.01963" target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@
                     <div class="card-body">
                         <h6 class="card-title">On the Dangers of Stochastic Parrots (Gebru, Bender et al. 2021)</h6>
                         <p class="card-text">Influential conference paper challenging a 'bigger is better' view about language models, especially for large models that reinforce problems in their training data.</p>
-                        <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank" class="btn btn-primary">Navigate</a>
+                        <a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
@@ -176,7 +176,7 @@
                         <p class="card-text">An academic preprint detailing potential political biases in the output of ChatGPT by giving it a variety of questionnaires.</p>
                         <a href="https://arxiv.org/abs/2301.01768
 
-" target="_blank" class="btn btn-primary">Navigate</a>
+" target="_blank" class="btn btn-primary">Open Site</a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
                 <purple-btn-outline v-if="isReadyForAnswer" :text="'Guess \'Correct\''" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
             </div>
             <div class="col-md-2"></div>
-            <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
+            <div v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
                 <div class="explanation-container" :class="isUserCorrect ? 'alert alert-success' : 'alert alert-danger'">
                     <p v-if="isUserCorrect" class="h5">Well done!</p>
                     <p v-else class="h5">Sorry, that guess wasn't right...</p>
