@@ -9,7 +9,7 @@
                             dropdown-toggle
                             demo-btn
                             " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select Corpus
+                            Change Corpus
                         </button>
                         <ul class="dropdown-menu">
                             <li>
