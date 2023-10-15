@@ -7,7 +7,8 @@
         <div class="col-md-12">
           <h1 class="tw-mt-24">AI For Evil</h1>
           <p><em>This case study may be distressing for some readers. Content warnings: threats of violence and sexual
-              assault; emotional manipulation. <router-link :to="'/deepfakes/real-or-not-real'">Click here to skip.</router-link></em></p>
+              assault; emotional manipulation. <router-link :to="'/deepfakes/real-or-not-real'">Click here to
+                skip.</router-link></em></p>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
@@ -70,7 +71,8 @@
       </div>
       <div class="d-flex col-md-5 align-items-center justify-content-md-start">
         <div>
-          <img width="440" alt="Jennifer DeStefano sits before a microphone in a courtroom" src="../../../assets//deepfakes_page_2_a.png" class="img-a">
+          <img width="440" alt="Jennifer DeStefano sits before a microphone in a courtroom"
+            src="../../../assets//deepfakes_page_2_a.png" class="img-a">
           <p>Jennifer DeStefano shares her story at a U.S. Senate Hearing (Image from C-SPAN)</p>
         </div>
       </div>
@@ -104,7 +106,23 @@
           </p>
         </div>
       </div>
-      <div class="row h-20 mt-5">
+      <div class="col-md-12 d-flex justify-content-end">
+        <purple-btn :tag="'button'" v-if="!section4Completed" :text="'Continue'"
+          @click="showFifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
+      </div>
+    </div>
+    <div ref="fifthSection" class="container row m-auto mb-5" :class="{ 'hidden': !showFifthSection }">
+      <div class="row h-10 mb-5">
+        <div class="col-md-12">
+          <p class="tw-text-left tw-mx-20">
+            In what is seemingly an era of technological deception, families and friends can safeguard themselves from
+            situations like the above by establishing confidential safe words. There unique words should only be known to
+            trusted family and friends and serve as a means of verifications for suspicious situations. This simple, yet
+            effective practice can quickly expose scams or deception and help ensure the safety of loved ones.
+          </p>
+        </div>
+      </div>
+      <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/deepfakes/real-or-not-real">
             <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
@@ -130,10 +148,12 @@ export default defineComponent({
       showSecondSection: false,
       showThirdSection: false,
       showFourthSection: false,
+      showFifthSection: false,
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
       section4Completed: false,
+      section5Completed: false,
     };
   },
   methods: {
