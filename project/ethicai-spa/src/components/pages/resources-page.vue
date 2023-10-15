@@ -38,7 +38,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top"  alt="Card image cap" src="https://gandalf.lakera.ai/meta-image.jpeg">
+                        <img class="card-img-top"  alt="The interface for the Gandalf game, on level 2" src="https://gandalf.lakera.ai/meta-image.jpeg">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Gandalf</h6>
@@ -55,7 +55,7 @@
             <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top img-stretch"  alt="Card image cap" src="https://img.itch.zone/aW1nLzQ5MjE5MjUucG5n/original/DPOMiO.png">
+                        <img class="card-img-top img-stretch"  alt="The words 'Shell Song', in small messy capital letters, on a plain background" src="https://img.itch.zone/aW1nLzQ5MjE5MjUucG5n/original/DPOMiO.png">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Shell Song</h6>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top img-stretch" alt="Card image cap" src="http://playground.tensorflow.org/preview.png">
+                        <img class="card-img-top img-stretch" alt="A network of coloured squares representing neurons, connected by colour-coded lines" src="http://playground.tensorflow.org/preview.png">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">A Neural Network Playground</h6>
@@ -77,7 +77,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top img-stretch" alt="Card image cap" src="https://www.bellingcat.com/app/uploads/2021/10/Screenshot-2021-10-27-at-11.37.28.png">
+                        <img class="card-img-top img-stretch" alt="A screenshot of the Bing Images interface, showing photos of a crowd outside an Aldi supermarket" src="https://www.bellingcat.com/app/uploads/2021/10/Screenshot-2021-10-27-at-11.37.28.png">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">A Beginner's Guide to Social Media Verification</h6>
@@ -95,7 +95,7 @@
             <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top  img-stretch" alt="Card image cap" src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/other/ul/g/60/67/6067fb8d-a935-4e35-945a0d14b1a256ac.png/_jcr_content/renditions/cq5dam.medium.1584.1584.png">
+                        <img class="card-img-top  img-stretch" alt="A dark minimalist logo" src="https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/other/ul/g/60/67/6067fb8d-a935-4e35-945a0d14b1a256ac.png/_jcr_content/renditions/cq5dam.medium.1584.1584.png">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">IBM AI Ethics</h6>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="Card image cap">
+                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="The arXiv logo">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Multimodal datasets (Birhane, Prabhu and Kahembwe 2021)</h6>
@@ -159,7 +159,7 @@
             <div class="col-md-10 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top" src="https://dl.acm.org/cms/asset/f613b715-71c7-4b74-a11e-eb0e5881ff37/3442188.cover.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="https://dl.acm.org/cms/asset/f613b715-71c7-4b74-a11e-eb0e5881ff37/3442188.cover.jpg" alt="The front cover of the FAccT 2021 Conference Proceedings">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">On the Dangers of Stochastic Parrots (Gebru, Bender et al. 2021)</h6>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="Card image cap">
+                        <img class="card-img-top img-stretch" src="https://static.arxiv.org/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="The arXiv logo">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">The political ideology of conversational AI (Hartmann, Schwenzow, Witte 2023)</h6>
