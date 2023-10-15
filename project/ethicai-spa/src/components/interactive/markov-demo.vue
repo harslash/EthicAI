@@ -71,6 +71,7 @@
                 <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
                 <details class="demo-subtitle" style="color: #000;">
                     <summary><em>Show Bias Info</em></summary>
+                    <p></p>
                     <div v-html="getTooltipContent()"></div>
                 </details>
             </div>
