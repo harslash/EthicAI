@@ -2,10 +2,9 @@
     <form class="form-container d-flex flex-column justify-content-center align-items-center">
         <div class="container pb-3">
             <div class="row">
-                   <div class="col-md-12 d-flex align-items-center">
+                <div class="col-md-12 d-flex align-items-center">
                     <div class="dropdown px-2">
-                        <button
-                            class="btn
+                        <button class="btn
                             btn-secondary
                             dropdown-toggle
                             demo-btn
@@ -17,7 +16,7 @@
                                 <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleDropdownItemClick('wilson')">Woodrow Wilson's declaration of war</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="javascript:void(0);" class="dropdown-item"
                                     @click="handleDropdownItemClick('etiquette')">Etiquette
                                 </a>
@@ -25,8 +24,7 @@
                         </ul>
                     </div>
                     <div class="dropdown px-2">
-                        <button
-                            class="btn
+                        <button class="btn
                             btn-secondary
                             dropdown-toggle
                             demo-btn
@@ -36,37 +34,30 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="javascript:void(0);" class="dropdown-item"
-                                    @click="handleAdjustBiasesDropdownClick('original')">{{biasedDropdownItemOneText}}</a>
+                                    @click="handleAdjustBiasesDropdownClick('original')">{{ biasedDropdownItemOneText }}</a>
                             </li>
-                             <li>
+                            <li>
                                 <a href="javascript:void(0);" class="dropdown-item"
-                                    @click="handleAdjustBiasesDropdownClick('inverted')">{{biasedDropdownItemTwoText}}
+                                    @click="handleAdjustBiasesDropdownClick('inverted')">{{ biasedDropdownItemTwoText }}
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    <button
-                        class="btn btn-primary demo-btn mx-2"
-                        @click="handleButtonClick"
-                        :disabled="loading"
+                    <button class="btn btn-primary demo-btn mx-2" @click="handleButtonClick" :disabled="loading"
                         type="button">Train Model</button>
                     <div v-if="loading" class="spinner-grow" role="status">
                         <span class="sr-only">Loading...</span>
                     </div>
-                    
-                    <span class="ms-auto info-text">
+
+                    <!-- <span class="ms-auto info-text">
                         Hover here for more info on biases!
-                    </span>
+                    </span> -->
 
-                    <div
-                        class='px-2'
-                        v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error'}" type="text">
-                        <font-awesome-icon
-                        :icon="faCircleInfo"
-                        style="color: #6D0CFF; font-size: 28px;"
-                        id="infoIcon"></font-awesome-icon>
-                    </div>
-
+                    <!-- <div class='px-2' v-tooltip.right="{ value: getTooltipContent(), escape: true, class: 'custom-error' }"
+                        type="text">
+                        <font-awesome-icon :icon="faCircleInfo" style="color: #6D0CFF; font-size: 28px;"
+                            id="infoIcon"></font-awesome-icon>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -74,10 +65,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="demo-title"> {{ corpusLabel }}</h5>
-                    <p class="demo-subtitle">Bias Category: {{corpusCategory}}</p>
-                    <p class="demo-subtitle">Biased Training: {{biasedTrainingName}}</p>
+                    <p class="demo-subtitle">Bias Category: {{ corpusCategory }}</p>
+                    <p class="demo-subtitle">Biased Training: {{ biasedTrainingName }}</p>
                 </div>
-                 <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
+                <div class="col-md-12 demo-textarea" id="inputTextarea"></div>
+                <details class="demo-subtitle" style="color: #000;">
+                    <summary><em>Show Bias Info</em></summary>
+                    <div v-html="getTooltipContent()"></div>
+                </details>
             </div>
         </div>
         <div class="form-group">
@@ -94,15 +89,15 @@
     </form>
 
     <!-- Temporary fix to get hover styling at line 59 working -->
-    <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="300" style="display: none"></important-terms-card>
-
+    <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="300"
+        style="display: none"></important-terms-card>
 </template>
 
 <script lang="ts">
 import ImportantTermsCard from '../reusable/important-terms-card.vue';
 
-import { defineComponent, ref, onMounted, computed} from 'vue';
-import { faCircleInfo} from '@fortawesome/free-solid-svg-icons';
+import { defineComponent, ref, onMounted, computed } from 'vue';
+import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
 function splitStringToArray(inputString: string, delimiters: string[]) {
     // Split after newlines and spaces
     inputString = inputString.replaceAll(" ", " ꙮ").replaceAll("\n", "\nꙮ");
@@ -135,8 +130,7 @@ function generateHTMLParagraph(
 
     // Create the final HTML string with a <p> element
     let htmlString = `<p class="markov-text">${joinedHTML}</p>`;
-    if (isMarkovOutput)
-    {
+    if (isMarkovOutput) {
         // prepend initial/prompt words to output
         htmlString = `<p class="markov-text">${startingWords} ${joinedHTML}</p>`;
     }
@@ -252,15 +246,15 @@ export default defineComponent({
                         corpusId = 'inverted-etiquette';
                         biasedTrainingName.value = 'Biased towards men';
                     }
-                    }
                 }
             }
+        }
 
 
-         const handleButtonClick = () => {
+        const handleButtonClick = () => {
             const requestBody = JSON.stringify(
-                { corpus: corpusId, context_size: 1, words_to_generate: 100, input: startingWords}
-                );
+                { corpus: corpusId, context_size: 1, words_to_generate: 100, input: startingWords }
+            );
 
             loading.value = true;
 
@@ -294,14 +288,14 @@ export default defineComponent({
                 return `
                 <p class='text-black'><b>Few things to note:</b></p>
                 <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggests United States is the righteous country.</p>
-                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'I'.</p>
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'I'. The model will auto-complete the rest of each sentence with random words that follow from the previous word.</p>
                 `;
             }
 
             return `
                 <p class='text-black'><b>Few things to note:</b></p>
                 <p class="text-black">There's no objective way to detect bias. For this corpus, we highlight words that suggest what role a woman or man should have.</p>
-                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'A'.</p>
+                <p class="text-black">Unlike ChatGPT, the Markov Chain model doesn't rely on prompts. Instead, we provide it with a starting word. We have initiated the starting word for this corpus to be 'A'. The model will auto-complete the rest of each sentence with random words that follow from the previous word.</p>
                 `;
         }
 
@@ -330,7 +324,8 @@ export default defineComponent({
     border: 2px solid #E8E4E4;
     box-shadow: 5px 5px 5px #E8E4E4;
     border-radius: 20px;
-    height: 580px;
+    /* height: 580px; */
+    padding: 20px;
 }
 
 .form-group {
@@ -356,7 +351,8 @@ export default defineComponent({
     background-color: #8638fc;
 }
 
-.demo-title,.demo-subtitle {
+.demo-title,
+.demo-subtitle {
     color: #6D0CFF;
     text-align: left;
 }
@@ -376,7 +372,7 @@ export default defineComponent({
     background-color: #BF8FFE;
 }
 
-.demo-textarea  :deep(.highlight) {
+.demo-textarea :deep(.highlight) {
     display: inline-block;
     padding: .25em 0;
     background: #ff6257;
@@ -384,8 +380,8 @@ export default defineComponent({
 }
 
 .demo-textarea :deep(.markov-text) {
-   text-align: left;
-   white-space: pre-line;
+    text-align: left;
+    white-space: pre-line;
 }
 
 .demo-textarea {
@@ -404,20 +400,19 @@ export default defineComponent({
 }
 
 .info-text {
-    color: #C324FF;
+    /* color: #C324FF; */
     font-weight: 0.9rem;
     font-weight: 600;
     font-style: italic;
 }
 
 @media (max-width: 767.98px) {
-   .form-container {
+    /* .form-container {
         height: 650px;
-    }
+    } */
 
     .info-text {
         display: none;
     }
 }
-
 </style>
