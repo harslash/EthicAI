@@ -146,11 +146,11 @@
                         <p class="section-text px-3">• <b>Experimentation:</b> You have the freedom to experiment by:</p>
 
                         <p class="section-text px-5">
-                            •Adjusting biases: See how biases can look different for the same corpus if we use another type
+                            • Adjusting biases: See how biases can look different for the same corpus if we use another type
                             of biased training.
                         </p>
                         <p class="section-text px-5">
-                            •Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's
+                            • Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's
                             training data.
                         </p>
                         <p class="section-text">Dive in and discover the intricacies of LLM biases, such as ChatGPT's biases.</p>
