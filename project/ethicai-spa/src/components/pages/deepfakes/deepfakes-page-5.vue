@@ -12,7 +12,12 @@
         <div class="col-md-12">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text">
-              Given a series of videos, you are going to have to judge whether they are a deepfake or not. We recommend you watch at least a minute of the video before making your judgment. Good luck!
+              Remember those guidelines from the last page? Given a series of videos, you are going to have to judge
+              whether they are a deepfake or a real video. We recommend you watch at least a minute of the video before
+              making your judgment.
+            </p>
+            <p class="section-text">
+              Do you think you could tell the difference between a real and a deepfake video? <b>Let's find out!</b>
             </p>
           </div>
         </div>
