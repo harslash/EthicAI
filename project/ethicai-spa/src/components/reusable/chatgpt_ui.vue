@@ -14,7 +14,7 @@
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img :src="require('@/assets/robot_icon.png')" alt="robot icon">
+                        <img :src="require('@/assets/robot_icon.png')" alt="robot head icon">
                     </div>
                 </div>
                 <div class="text-container">
@@ -115,7 +115,7 @@ export default defineComponent({
             color: #fff;
             font-weight: bold;
         }
-        
+
         /* Style for the images inside circles */
         .circle img {
             max-width: 100%;

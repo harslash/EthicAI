@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-a" src="../../../assets/chatbots_page_3_a.jpeg"
-                        alt="2d illustration of a robot acting confused" />
+                        alt="2d illustration of a robot acting confused, AI generated art" />
                 </div>
             </div>
             <div class="row h-20">

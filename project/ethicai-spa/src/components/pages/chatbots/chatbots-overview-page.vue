@@ -7,6 +7,7 @@
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
+                    :module-img-alt-text ="moduleImgAltText"
                     :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
@@ -37,7 +38,8 @@ export default defineComponent({
             modulePageRoutes: ['the-age-of-chatbots', 'chatgpt-101', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbots-quiz'],
             moduleName: 'chatbots',
             pageName: 'the-age-of-chatbots',
-            moduleImgFilename: 'chatbots_module.png'
+            moduleImgFilename: 'chatbots_module.png',
+            moduleImgAltText: 'happy robots speak to each other'
         }
     },
     methods: {

@@ -29,7 +29,7 @@
         <div id="first">
             <h2>Variety of AI technology</h2>
             <div id="image-div">
-                <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')" style="height: 229px; width: auto;">
+                <img id="image" :src="require('@/assets/undraw_developer_activity_re_39tg 1.png')" style="height: 229px; width: auto;" alt="Person with headphones at desktop computer, stylised Corporate Memphis design">
             </div>
 
             <div id="text">
@@ -42,7 +42,7 @@
             <h2>Interactive learning</h2>
             <div id="image-div">
                 <img id="image" :src="require('@/assets/undraw_active_options_re_8rj3 1.png')"
-                    style="height: 229px; width: auto;">
+                    style="height: 229px; width: auto;" alt="Person in director's chair looking in direction of spotlights, stylised Corporate Memphis design">
             </div>
 
             <div id="text">
@@ -55,7 +55,7 @@
             <h2>All in one place</h2>
             <div id="image-div">
                 <img id="image" :src="require('@/assets/undraw_knowledge_re_5v9l 1.png')"
-                    style="height: 229px; width: auto;">
+                    style="height: 229px; width: auto;" alt="Woman looks at whiteboard, stylised Corporate Memphis design">
             </div>
 
             <div id="text">
@@ -66,7 +66,7 @@
     </div>
     <page-footer />
 </template>
-  
+
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import NavBar from '../reusable/nav-bar.vue';
@@ -87,7 +87,7 @@ export default defineComponent({
     }
 });
 </script>
-  
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 

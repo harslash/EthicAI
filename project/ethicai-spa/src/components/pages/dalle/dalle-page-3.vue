@@ -73,7 +73,7 @@
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
               <a href="https://archive.ph/604QJ" target="_blank">
-                <img src="../../../assets//nyt_article.png" alt="New York Times article snippet" />
+                <img src="../../../assets//nyt_article.png" alt="Noisy speckled image of a train tunnel entrance" />
               </a>
             </div>
             <h2 class="article-title">
@@ -136,7 +136,7 @@
             <br />
             <div class="col-md-10 d-flex align-items-center justify-content-center">
               <figure>
-                <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="
+                <img class="img-a" src="../../../assets//pope.png" alt="Pope Francis wearing a large puffer jacket coat" style="
                     display: inline-block;
                     margin: 12.5px 5px;
                     border-radius: 5px;
@@ -190,7 +190,7 @@
       <div class="col-md-10 d-flex align-items-center justify-content-center text-center">
         <figure>
           <img class="img-b mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
-            alt="a happy kid in front of a laptop" style="
+            alt="a happy kid in front of a laptop, cartoon image" style="
               display: inline-block;
               margin: 12.5px 5px;
               border-radius: 5px;

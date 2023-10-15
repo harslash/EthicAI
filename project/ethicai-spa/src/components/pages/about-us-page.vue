@@ -128,7 +128,7 @@
                                                         <div class="flex-shrink-0">
                                                             <img src="../../assets/georgia_avatar.jpg"
                                                                 class="rounded-circle mb-4 mb-lg-0 shadow-2"
-                                                                alt="woman avatar" width="90" height="90">
+                                                                alt="head-and-shoulders photo of Georgia smiling on beach" width="90" height="90">
                                                         </div>
                                                         <div class="flex-grow-1 ms-4 ps-3">
                                                             <figure>
@@ -164,7 +164,7 @@
                                                         <div class="flex-shrink-0">
                                                             <img src="../../assets/matthew_avatar.jpeg"
                                                                 class="rounded-circle mb-4 mb-lg-0 shadow-2"
-                                                                alt="man avatar" width="90" height="90">
+                                                                alt="close-up of Matthew against an outside wall" width="90" height="90">
                                                         </div>
                                                         <div class="flex-grow-1 ms-4 ps-3">
                                                             <figure>
@@ -198,7 +198,7 @@
                                                         <div class="flex-shrink-0">
                                                             <img src="../../assets/gali_avatar.png"
                                                                 class="rounded-circle mb-4 mb-lg-0 shadow-2"
-                                                                alt="man avatar" width="90" height="90">
+                                                                alt="AI recreation of Gali's head and shoulders, without colour, with distorted face" width="90" height="90">
                                                         </div>
                                                         <div class="flex-grow-1 ms-4 ps-3">
                                                             <figure>

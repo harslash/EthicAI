@@ -2,7 +2,7 @@
   <div class="container-fluid">
      <div class="row">
       <div class="col-md-8 p-5">
-        <img class src="../../assets/logo-bland.png" width="220"/>
+        <img class src="../../assets/logo-bland.png" width="220" alt="EthicAI logo, no colour"/>
       </div>
       <div class="col-md-2 p-5">
         <h4 class="mb-3">Product</h4>

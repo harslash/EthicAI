@@ -229,7 +229,7 @@
           <img class="img-b mx-4" src="../../../assets/chatbots_page_4_c.jpeg"
             alt="2d illustration of a laptop behind a giant lock" />
           <img class="img-d mx-4" src="../../../assets/chatbots_page_4_d.png"
-            alt="A flowchart diagram explaining the interaction between a user, ChatGPT and it's training data" />
+            alt="A flowchart diagram showing prompts augment the training data. The training data trains ChatGPT, which responds to prompts from user" />
         </div>
       </div>
       <div class="row h-20 pb-5">
@@ -269,7 +269,7 @@
         </div>
         <div class="col pb-5">
           <img class="img-e mx-4" src="../../../assets/chatbots_page_4_e.jpeg"
-            alt="2d illustration of a laptop behind a giant lock" />
+            alt="colourful drawing of a woman holding notebooks, AI generated art" />
         </div>
       </div>
       <div class="row h-20 pb-5">

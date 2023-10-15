@@ -7,6 +7,7 @@
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
+                    :module-img-alt-text ="moduleImgAltText"
                     :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
@@ -37,7 +38,8 @@ export default defineComponent({
             modulePageRoutes: ['the-rise-of-dalle', 'ai-generated-vs-human-art', 'the-complexities-of-copyright', 'dalle-quiz'],
             moduleName: 'dalle',
             pageName: 'the-rise-of-dalle',
-            moduleImgFilename: 'purple_robot.jpeg'
+            moduleImgFilename: 'purple_robot.jpeg',
+            moduleImgAltText: 'Small robot smiling holding paintbrush and picture in frame'
         }
     },
     methods: {

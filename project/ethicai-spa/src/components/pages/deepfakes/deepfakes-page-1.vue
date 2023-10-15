@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
-          <img width="400" alt="illustration of a generator and discriminator fighting" class="img-a"
+          <img width="400" alt="generator versus discriminator, illustration of two messy organic machines" class="img-a"
             src="../../../assets//deepfakes_page_1.png">
         </div>
       </div>

@@ -60,7 +60,7 @@
           <br />
         </div>
         <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img class="img-a-small" src="../../../assets//artist.png" alt="a female artist holding a paintbrush" />
+          <img class="img-a-small" src="../../../assets//artist.png" alt="a girlish artist holding palette and paintbrush, stylised design" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -108,7 +108,7 @@
       </div>
       <div ref="fourthSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFourthSection }">
         <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces that look identical" />
+          <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces with identical linework, but in different colours" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -153,7 +153,7 @@
           </div>
         </div>
         <div class="col-md-4 d-flex align-items-center justify-content-center">
-          <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="mean Instagram comments section" />
+          <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="piggy bank with coins, with messed up text that almost looks like 'Bank'. AI generated artwork" />
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
@@ -185,7 +185,7 @@
           <div class="article-image">
             <a href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart"
               target="_blank">
-              <img src="../../../assets//artist_article.webp" alt="Artist at Work" />
+              <img src="../../../assets//artist_article.webp" alt="Many pieces of AI generated art, astronaut, distorted witch with multiple mouths, castle" />
             </a>
           </div>
           <h2 class="article-title">

@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-a" src="../../../assets//chatbots_page_2_a.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                        alt="2d illustration of a robot pulling messages from a box, AI generated image" />
                 </div>
             </div>
             <div class="row h-20">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-b" src="../../../assets//chatbots_page_2_b.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                        alt="two baby robots sit on the ground, and share a speech bubble, AI generated image" />
                 </div>
             </div>
             <div class="row h-20">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-md-12">
                     <img src="../../../assets//chatbots_page_2_c.png" class="img-c"
-                        alt="flowchat diagram explaing training process of ChatGPT" />
+                        alt="flowchart diagram, training data and user prompt (asking 'what does it look like') go to ChatGPT, which reads conversational context of a cat. ChatGPT looks at most likely words ('claws, tail, fur') and unlikely words ('wings, beak, tall'). Then ChatGPT gives user a sentence about a typical cat having claws and a long tail" />
                 </div>
             </div>
             <div class="row h-20">
@@ -122,7 +122,7 @@
                 </div>
                 <div class="col-md-12">
                     <img src="../../../assets//chatbots_page_2_d.png" class="img-d"
-                        alt="flowchat diagram explaing training process of ChatGPT" />
+                        alt="flowchart diagram, Markov chain takes input from user and corpus. User sends a sentence word by word, and Markov chain calculates probabilities for the next word in the sequence" />
                 </div>
             </div>
             <div class="row h-20">

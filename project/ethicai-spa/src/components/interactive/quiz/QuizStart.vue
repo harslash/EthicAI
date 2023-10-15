@@ -18,7 +18,7 @@ export default {
       </div>
       <div class="col-sm px-md-5">
         <div class="image tw-float-right">
-          <img class="tw-rounded-xl" :src="require(`@/assets/module_quiz.png`)" alt="image">
+          <img class="tw-rounded-xl" :src="require(`@/assets/module_quiz.png`)" alt="Person reaches casually for cards with numbers and question marks, stylised Corporate Memphis art style">
         </div>
       </div>
     </div>

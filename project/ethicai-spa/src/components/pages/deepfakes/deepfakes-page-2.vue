@@ -70,8 +70,8 @@
       </div>
       <div class="d-flex col-md-5 align-items-center justify-content-md-start">
         <div>
-          <img width="440" alt="" src="../../../assets//deepfakes_page_2_a.png" class="img-a">
-          <p>Caption: Jennifer DeStefano shares her story at a U.S. Senate Hearing (Image from C-SPAN)</p>
+          <img width="440" alt="Jennifer DeStefano sits before a microphone in a courtroom" src="../../../assets//deepfakes_page_2_a.png" class="img-a">
+          <p>Jennifer DeStefano shares her story at a U.S. Senate Hearing (Image from C-SPAN)</p>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
@@ -85,7 +85,7 @@
       </div>
       <div class="d-flex col-md-6 text-end align-items-center justify-content-md-center mb-3">
         <div class="d-flex justify-content-center">
-          <img width="440" alt="" src="../../../assets//deepfakes_page_2_b.png" class="img-a">
+          <img width="440" alt="Person skiing down a slope" src="../../../assets//deepfakes_page_2_b.png" class="img-a">
         </div>
       </div>
       <div class="col-md-6 d-flex text-end align-items-center justify-content-md-end">

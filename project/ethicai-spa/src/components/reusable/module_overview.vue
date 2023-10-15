@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
           <div class="image">
-            <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
+            <img :src="require(`@/assets/${moduleImgFilename}`)" :alt="moduleImgAltText">
           </div>
           <div>
             <p class="module-name">{{ moduleTitle }}</p>
@@ -62,6 +62,7 @@ export default defineComponent({
     moduleTitle: String,
     moduleDescription: String,
     moduleImgFilename: String,
+    moduleImgAltText: String,
     modulePageNames: Array as () => string[],
     modulePageRoutes: Array as () => string[],
     moduleName: String,

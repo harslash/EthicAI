@@ -18,7 +18,7 @@
             <div class="col-md-8 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top" src="http://moralmachine.mit.edu/images/teaser.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="http://moralmachine.mit.edu/images/teaser.jpg" alt="Two cars both heading towards zebra crossing, one crashing, one swerving into pedestrians">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Moral Machine</h6>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top"  alt="Card image cap" src="https://dam-prod2.media.mit.edu/thumb/2023/06/23/IMG_1353-jonathan-williams-edited.jpg.1400x1400.jpg">
+                        <img class="card-img-top" alt="Lab with five scientists and 3d printers" src="https://dam-prod2.media.mit.edu/thumb/2023/06/23/IMG_1353-jonathan-williams-edited.jpg.1400x1400.jpg">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Detect Fakes</h6>
@@ -53,7 +53,7 @@
             <div class="col-md-8 d-flex justify-content-md-start align-items-center align-items-md-start flex-md-row flex-column">
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top" src="https://dl.acm.org/cms/asset/2d78c0fc-794b-4611-bd35-188ebc503257/3313831.cover.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="https://dl.acm.org/cms/asset/2d78c0fc-794b-4611-bd35-188ebc503257/3313831.cover.jpg" alt="Cover page of a conference proceedings document for CHI 2020, flower logo">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">AI Literacy</h6>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="card mx-md-5 my-5 my-md-0" style="width: 18rem;">
                     <div class="img-container">
-                        <img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~introduction-to-responsible-ai/XDP~COURSE!~introduction-to-responsible-ai.jpeg" alt="Card image cap">
+                        <img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~introduction-to-responsible-ai/XDP~COURSE!~introduction-to-responsible-ai.jpeg" alt="Slide for Introduction to Responsible AI">
                     </div>
                     <div class="card-body">
                         <h6 class="card-title">Introduction to Responsible AI</h6>

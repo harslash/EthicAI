@@ -12,7 +12,7 @@
       <div class="row h-30">
         <div class="col-md-4 d-flex align-items-center">
           <figure>
-            <img class="img-a" src="../../../assets//Robot_Head_by_DALL-E_2.jpg" alt="Escher Robot Head by DALL-E 2"
+            <img class="img-a" src="../../../assets//Robot_Head_by_DALL-E_2.jpg" alt="Escher Robot Head sprouts flowers, by DALL-E 2"
               style="
                 display: inline-block;
                 margin: 25px 10px;
@@ -89,7 +89,7 @@
                   scrollIntoSecondQuestion();
                   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Dog looks at birds"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
                   </a>
@@ -109,7 +109,7 @@
   scrollIntoSecondQuestion();
   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Dog with birds above"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
                   </a>
@@ -139,7 +139,7 @@
                 scrollIntoThirdQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Illustration of a lithography factory"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -159,7 +159,7 @@
   scrollIntoThirdQuestion();
   " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Illustration of a flowering cactus"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -188,7 +188,7 @@
                 showFourthQuestion = true;
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Elk cross a river with mountains in background, painting"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -207,7 +207,7 @@
                 scrollIntoFourthQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Idyllic countryside landscape painting with mountains"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -238,7 +238,7 @@
   showFifthQuestion = true;
   " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Old black-and-white photo of many small fishing boats"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -257,7 +257,7 @@
                 scrollIntoFifthQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Old sepia photo of large family in scruffy clothes"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
                 </a>
@@ -288,7 +288,7 @@
                   scrollIntoContinue();
                   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Statue of a hand"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
                   </a>
@@ -308,7 +308,7 @@
   scrollIntoContinue();
   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Statue of hands merging into each other"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
                   </a>
@@ -357,7 +357,7 @@
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
               <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
-                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+                <img src="../../../assets//ai_article.png" alt="Geometric image with two stars, each having four points" />
               </a>
             </div>
             <h2 class="article-title">How to identify AI-generated images</h2>

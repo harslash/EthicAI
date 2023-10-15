@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-a" src="../../../assets/chatbots_page_1b_a.jpeg"
-                        alt="2d illustration of a robot sleeping om a pile of books" />
+                        alt="2d illustration of a robot sleeping on a pile of books" />
                 </div>
             </div>
             <div class="row h-20">

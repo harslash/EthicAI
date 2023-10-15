@@ -4,7 +4,7 @@
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview :module-title="moduleTitle" :module-description="moduleDescription"
-                    :module-img-filename="moduleImgFilename" :module-page-names="modulePageNames"
+                    :module-img-filename="moduleImgFilename" :module-img-alt-text ="moduleImgAltText" :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes" :module-name="moduleName"
                     :page-name="pageName"></module-overview>
             </div>
@@ -31,7 +31,8 @@ export default defineComponent({
             modulePageRoutes: ['the-depth-of-deepfakes', 'ai-for-evil', 'real-or-not-real', 'deepfakes-in-media', 'judgement-day', 'deepfakes-quiz'],
             moduleName: 'deepfakes',
             pageName: 'the-depth-of-deepfakes',
-            moduleImgFilename: 'deepfakes_module.png'
+            moduleImgFilename: 'deepfakes_module.png',
+            moduleImgAltText: 'Illustration of face, one half human, one half robotic'
         }
     },
     methods: {

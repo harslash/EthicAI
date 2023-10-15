@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <a href="#main" class="skiplink">Skip to main content</a>
                 <router-link to="/" class="navbar-brand">
-                    <img src="../../assets/logo.png" alt="Company Logo" width="130">
+                    <img src="../../assets/logo.png" alt="EthicAI Logo with swirl" width="130">
                 </router-link>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
