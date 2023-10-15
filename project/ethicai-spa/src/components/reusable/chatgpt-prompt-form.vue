@@ -3,7 +3,7 @@
 
     <div class="form-group d-flex align-items-center">
         <button v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
-            {{preGeneratedPrompt}}
+            Example: {{preGeneratedPrompt}}
         </button>
         <button v-if="!loading" class="btn btn-primary refresh-btn mx-3"
                 type="button"
