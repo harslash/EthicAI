@@ -46,7 +46,7 @@
             <div class="d-flex flex-column flex-md-row">
               <div class="tw-m-auto py-2 real-button">
                 <div class="tw-w-full">
-                  <purple-btn :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Real Video'"
+                  <purple-btn-outline :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Real Video'"
                     @click="onAnswer(true);" />
                 </div>
               </div>
