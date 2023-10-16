@@ -68,11 +68,14 @@ export default defineComponent({
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     color: #4d4d4d;
+    border-radius: 3px;
+
 }
 
 a.nav-link:hover {
     color: white;
     background-color: #6D0CFF;
+    border-radius: 3px;
 }
 
 li.nav-item {
