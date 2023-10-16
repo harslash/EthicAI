@@ -24,7 +24,7 @@
         <section class="vh-50 gradient-custom mb-5">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
-                    <h3 class="our-team-title pb-3">Our team</h3>
+                    <h3 class="our-team-title pb-3">Our Team</h3>
                     <div class="col col-xl-10">
                         <div class="card">
                             <div class="card-body py-5">
