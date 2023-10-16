@@ -123,10 +123,10 @@ export default defineComponent({
       videoCorrect: false,
       videoDemoComplete: false,
       videoURLs: [
-        "https://www.youtube.com/embed/8zHURhs0DbM",
-        "https://www.youtube.com/embed/cQ54GDm1eL0",
-        "https://www.youtube.com/embed/qcJ4buwMPTE",
-        "https://www.youtube.com/embed/L-xm_9zjNwI",
+        "https://www.youtube-nocookie.com/embed/8zHURhs0DbM?si=A62_ibqNWU-oENEt",
+        "https://www.youtube-nocookie.com/embed/cQ54GDm1eL0?si=eRXzfPdCJo3ULYum",
+        "https://www.youtube-nocookie.com/embed/qcJ4buwMPTE?si=joYpmagltPfOZREp",
+        "https://www.youtube-nocookie.com/embed/L-xm_9zjNwI?si=pwIjnstVYGUp6XOy",
       ],
       videoTitles: [
         "Boris Johnson Discusses Peppa Pig World",
