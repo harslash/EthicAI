@@ -49,27 +49,32 @@
                   <purple-btn-outline :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Real Video'"
                     @click="onAnswer(true);" />
                 </div>
+                <br>
               </div>
               <div class="tw-m-auto py-2 deepfake-button">
                 <div class="tw-w-full">
                   <purple-btn-outline :class="{ hidden: videoAnswered }" :tag="'button'" :text="'Deepfake'"
                     @click="onAnswer(false);" />
                 </div>
+                <br>
               </div>
               <div :class="{ hidden: !videoAnswered }">
-                <p class="tw-text-center" :class="videoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
-                  {{ videoExplanation }}</p>
+                <p class="tw-text-center" style="margin-top: 10px;" :class="videoCorrect ? 'tw-text-green-500' : 'tw-text-red-500'">
+                  {{ videoExplanation }}
+                </p>
               </div>
             </div>
           </div>
           <div v-if="videoAnswered && !videoDemoComplete" class="col-md-9 d-flex justify-content-end">
             <purple-btn :tag="'button'" :text="'Next Video'" @click="showNextVideo()" />
           </div>
+          <br>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
         <purple-btn :tag="'button'" v-if="videoDemoComplete && !section2Completed" :text="'Continue'"
           @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
+          <br>
       </div>
     </div>
 
@@ -88,6 +93,32 @@
             <p class="section-text">
               It's important to acknowledge that you won't always be able to tell, making it imperative to remain
               vigilant, exercise critical thinking, and don't believe everything you see (or hear!).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 d-flex justify-content-end mb-12">
+          <purple-btn :tag="'button'" v-if="!section3Completed" :text="'Continue'"
+          @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
+          <br>
+        </div>
+    </div>
+
+    <div ref="fourthSection" class="container text-section" :class="{ 'hidden': !showFourthSection }">
+      <div class="row h-30 mb-5">
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center flex-wrap">
+            <div class="col-md-12">
+              <h3> What have we learnt?</h3>
+              <br>
+            </div>
+            <p class="section-text">
+              <span style="color: #6D0CFF;"><b> No Deception </b></span><br />
+              Deepfake technologies should not be used to deceive people. Instead, they should be used to inform people or to express oneself. For example, people with acquired speech disabilities can use voice generators trained on their speech, allowing them to continue expressing their identity when they lose their old voice.
+            </p>
+            <p class="section-text">
+              <span style="color: #6D0CFF;"><b> Consent </b></span><br />
+              You should also only create deepfakes based on training data if you have consent from the people in that data to use it. A person’s likeness is a valuable part of their identity, and only they have the right to it. So if you’re creating a deepfake of yourself that’s all hunky-dory, but you shouldn’t use it to mimic someone else without their permission.
             </p>
           </div>
         </div>
@@ -115,9 +146,11 @@ export default defineComponent({
       showFirstSection: true,
       showSecondSection: false,
       showThirdSection: false,
+      showFourthSection: false,
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
+      section4Completed: false,
       videoExplanation: "",
       videoAnswered: false,
       videoCorrect: false,
@@ -219,4 +252,5 @@ export default defineComponent({
   padding-left: 30px;
   /* Adjust the value as needed for spacing */
 }
+
 </style>
