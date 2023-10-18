@@ -1,25 +1,30 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-10 p-5">
+      <div class="col-md-8 p-5">
         <img class src="../../assets/logo-bland.png" width="220" alt="EthicAI logo, no colour" />
       </div>
       <div class="col-md-2 p-5">
-        <h4 class="mb-3">Project</h4>
+        <h4 class="mb-3">Team</h4>
         <ul class="footer-list">
-          <li class="mb-2">
-            <router-link to="/references">
-              References
-            </router-link>
-          </li>
           <li class="mb-2">
             <router-link to="/about-us">
               About Us
             </router-link>
           </li>
+        </ul>
+      </div>
+      <div class="col-md-2 p-5">
+        <h4 class="mb-3">Project</h4>
+        <ul class="footer-list">
           <li class="mb-2">
             <router-link to="/resources">
               Resources
+            </router-link>
+          </li>
+          <li class="mb-2">
+            <router-link to="/references">
+              References
             </router-link>
           </li>
         </ul>
