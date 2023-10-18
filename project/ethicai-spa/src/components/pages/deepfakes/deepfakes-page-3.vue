@@ -96,7 +96,7 @@
               </div>
               <!-- Third audio pair -->
               <div ref="thirdAudio" class="tw-w-4/6 tw-m-auto" :class="{ hidden: !secondAudioAnswered }">
-                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Ben Shapiro</b>.
+                <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Joe Biden</b>.
                   Which one is <em>real</em>?</p>
                 <div class="d-flex flex-column flex-md-row">
                   <div class="tw-m-auto py-2">
