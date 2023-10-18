@@ -76,7 +76,9 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Kevin Wong
+                                                                    <a class="tw-no-underline"
+                                                                        href="https://www.linkedin.com/in/kevinxhwong/"
+                                                                        target="_blank">Kevin Wong</a>
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -113,7 +115,9 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Harlean Hansra
+                                                                    <a class="tw-no-underline"
+                                                                        href="https://www.linkedin.com/in/harlean-hansra/"
+                                                                        target="_blank">Harlean Hansra</a>
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -150,7 +154,9 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Georgia Purkiss
+                                                                    <a class="tw-no-underline"
+                                                                        href="https://www.linkedin.com/in/georgia-purkiss/"
+                                                                        target="_blank">Georgia Purkiss</a>
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -185,7 +191,9 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Matthew Kwok
+                                                                    <a class="tw-no-underline"
+                                                                        href="https://www.linkedin.com/in/matthew-kwok-8476291bb/"
+                                                                        target="_blank">Matthew Kwok</a>
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
@@ -218,7 +226,9 @@
                                                                     </p>
                                                                 </blockquote>
                                                                 <figcaption class="blockquote-footer">
-                                                                    Gali Mortimer-Webster
+                                                                    <a class="tw-no-underline"
+                                                                        href="https://www.linkedin.com/in/gali-m-w/"
+                                                                        target="_blank">Gali Mortimer-Webster</a>
                                                                 </figcaption>
                                                             </figure>
                                                         </div>
