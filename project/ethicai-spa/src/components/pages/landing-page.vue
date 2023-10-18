@@ -34,7 +34,7 @@
 
             <div id="text">
                 Learn AI ethics through real-world use cases of the latest AI technologies, such as ChatGPT, DALL-E and
-                Whisper AI.
+                GANs.
             </div>
         </div>
 
