@@ -17,6 +17,11 @@
               About Us
             </router-link>
           </li>
+          <li class="mb-2">
+            <router-link to="/resources">
+              Resources
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
