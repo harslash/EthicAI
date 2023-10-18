@@ -31,19 +31,7 @@
 
                                 <!-- Carousel wrapper -->
                                 <div id="carouselDarkVariant" class="carousel slide carousel-dark">
-                                    <!-- Indicators -->
-                                    <div class="carousel-indicators mb-0">
-                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active"
-                                            aria-current="true" aria-label="Slide 1"></button>
-                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1"
-                                            aria-label="Slide 2"></button>
-                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2"
-                                            aria-label="Slide 3"></button>
-                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3"
-                                            aria-label="Slide 4"></button>
-                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="4"
-                                            aria-label="Slide 5"></button>
-                                    </div>
+
 
                                     <!-- Inner -->
                                     <div class="carousel-inner pt-2 pb-5">
@@ -238,6 +226,20 @@
                                         </div>
                                     </div>
                                     <!-- Inner -->
+
+                                    <!-- Indicators -->
+                                    <div class="carousel-indicators mb-0">
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" class="active"
+                                            aria-current="true" aria-label="Slide 1"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1"
+                                            aria-label="Slide 2"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2"
+                                            aria-label="Slide 3"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3"
+                                            aria-label="Slide 4"></button>
+                                        <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="4"
+                                            aria-label="Slide 5"></button>
+                                    </div>
 
                                     <!-- Controls -->
                                     <button class="carousel-control-prev" type="button"
