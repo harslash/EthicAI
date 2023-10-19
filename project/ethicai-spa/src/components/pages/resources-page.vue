@@ -251,7 +251,6 @@ export default defineComponent({
 
 .card{
     transition: all 0.2s ease;
-    cursor: pointer;
   }
 
 .card:hover{
