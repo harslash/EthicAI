@@ -34,9 +34,9 @@
             <p class="section-text text-center">
               Take a look at this video of Morgan Freeman:
             </p>
-            <div>
-              <iframe width="560" height="315" class="mb-3" src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo"
-                title="YouTube video player" frameborder="0"
+            <div class="tw-mb-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo"
+                title="YouTube video player" frameborder="0" class="md:tw-w-full md:tw-h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </div>
@@ -64,10 +64,10 @@
               More commonly on the internet, you will find deepfakes that look something like this video of Volodymyr
               Zelenskyy:
             </p>
-            <div>
-              <iframe width="560" height="315" class="mb-3"
+            <div class="tw-mb-5">
+              <iframe width="560" height="315"
                 src="https://www.youtube-nocookie.com/embed/X17yrEV5sl4?si=lNWGRhDQvixDBqvy" title="YouTube video player"
-                frameborder="0"
+                frameborder="0" class="md:tw-w-full md:tw-h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </div>
