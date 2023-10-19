@@ -55,7 +55,7 @@ function nextQuestion(result) {
 
 <template>
   <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center">
-    <div class="tw-mx-auto tw-p-16 tw-h-full">
+    <div class="tw-mx-auto tw-p-16 tw-h-full md:tw-p-1">
       <p v-if="state.isLoading">Loading, please wait...</p>
       <div v-else>
         <p class="tw-pl-2 tw-text-lg tw-mb-16">QUESTION {{ state.step + 1 }}.</p>
