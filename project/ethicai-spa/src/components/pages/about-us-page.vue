@@ -15,7 +15,7 @@
                         guidance.
                     </p>
                     <p>
-                        For any inquiries, please <a href="mailto: ethicai@gmail.com">email us</a> directly.
+                        For any inquiries, please <a href="mailto:contact@ethicai.co.nz">email us</a> directly.
                     </p>
                 </div>
             </div>
