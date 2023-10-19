@@ -86,7 +86,6 @@
                   <a href="javascript:void(0);" class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFirstCorrectClick();
                   showSecondQuestion = true;
-                  scrollIntoSecondQuestion();
                   " role="link">
                     <div class="card-body">
                       <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Dog looks at birds"
@@ -106,7 +105,6 @@
                     " @click="
     onFirstIncorrectClick();
   showSecondQuestion = true;
-  scrollIntoSecondQuestion();
   " role="link">
                     <div class="card-body">
                       <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Dog with birds above"
@@ -136,7 +134,6 @@
                 <a href="javascript:void(0);" class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onSecondCorrectClick();
                 showThirdQuestion = true;
-                scrollIntoThirdQuestion();
                 " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Illustration of a lithography factory"
@@ -156,7 +153,6 @@
                   " @click="
     onSecondIncorrectClick();
   showThirdQuestion = true;
-  scrollIntoThirdQuestion();
   " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Illustration of a flowering cactus"
@@ -184,7 +180,6 @@
               <div class="col-md-6 mb-3">
                 <a href="javascript:void(0);" class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
                   onThirdIncorrectClick()
-                scrollIntoFourthQuestion();
                 showFourthQuestion = true;
                 " role="link">
                   <div class="card-body">
@@ -204,7 +199,6 @@
                 <a href="javascript:void(0);" class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onThirdCorrectClick();
                 showFourthQuestion = true;
-                scrollIntoFourthQuestion();
                 " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Idyllic countryside landscape painting with mountains"
@@ -234,7 +228,6 @@
                 <a href="javascript:void(0);" class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onFourthIncorrectClick();
-  scrollIntoFifthQuestion();
   showFifthQuestion = true;
   " role="link">
                   <div class="card-body">
@@ -254,7 +247,6 @@
                 <a href="javascript:void(0);" class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onFourthCorrectClick();
                 showFifthQuestion = true;
-                scrollIntoFifthQuestion();
                 " role="link">
                   <div class="card-body">
                     <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Old sepia photo of large family in scruffy clothes"
