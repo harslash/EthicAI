@@ -114,7 +114,7 @@
     <div ref="fifthSection" class="container row m-auto mb-5" :class="{ 'hidden': !showFifthSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
-          <p class="tw-text-left tw-mx-20">
+          <p class="tw-text-left tw-mx-20 md:tw-mx-10">
             In what is seemingly an era of technological deception, families and friends can safeguard themselves from
             situations like the above by establishing confidential safe words. Their unique words should only be known to
             trusted family and friends, serving as a means of verification during suspicious situations. This simple, yet
