@@ -33,7 +33,7 @@
             <h3>Which audio clip is <em>real</em>?</h3>
             <div class="tw-w-full tw-pt-10">
               <!-- First audio pair -->
-              <div ref="firstAudio" class="tw-w-4/6 tw-m-auto tw-mb-10">
+              <div ref="firstAudio" class="tw-w-4/6 tw-m-auto tw-mb-10 md:tw-w-full">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Donald Trump</b>.
                   Which one is <em>real</em>?</p>
                 <div class="d-flex flex-column flex-md-row">
@@ -64,7 +64,7 @@
                 </div>
               </div>
               <!-- Second audio pair -->
-              <div ref="secondAudio" class="tw-w-4/6 tw-m-auto tw-mb-10" :class="{ hidden: !firstAudioAnswered }">
+              <div ref="secondAudio" class="tw-w-4/6 tw-m-auto tw-mb-10 md:tw-w-full" :class="{ hidden: !firstAudioAnswered }">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Barrack Obama</b>.
                   Which one is <em>real</em>?</p>
                 <div class="d-flex flex-column flex-md-row">
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <!-- Third audio pair -->
-              <div ref="thirdAudio" class="tw-w-4/6 tw-m-auto" :class="{ hidden: !secondAudioAnswered }">
+              <div ref="thirdAudio" class="tw-w-4/6 tw-m-auto md:tw-w-full" :class="{ hidden: !secondAudioAnswered }">
                 <p class="tw-w-full tw-mb-5 tw-text-lg">Carefully listen to each audio clip of <b>Joe Biden</b>.
                   Which one is <em>real</em>?</p>
                 <div class="d-flex flex-column flex-md-row">
