@@ -18,13 +18,13 @@
         <h4 class="mb-3">Project</h4>
         <ul class="footer-list">
           <li class="mb-2">
-            <router-link to="/resources">
-              Resources
+            <router-link to="/references">
+              References
             </router-link>
           </li>
           <li class="mb-2">
-            <router-link to="/references">
-              References
+            <router-link to="/resources">
+              Resources
             </router-link>
           </li>
         </ul>
