@@ -30,10 +30,4 @@ export default {
   width: auto;
   height: 475px;
 }
-
-@media (max-width: 767.98px) {
-  .image img {
-    height: 300px;
-  }
-}
 </style>
