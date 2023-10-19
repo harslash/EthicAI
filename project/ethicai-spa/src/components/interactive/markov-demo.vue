@@ -101,7 +101,7 @@ import ImportantTermsCard from '../reusable/important-terms-card.vue';
 
 import { defineComponent, ref, onMounted, computed } from 'vue';
 import { faCircleInfo } from '@fortawesome/free-solid-svg-icons';
-function splitStringToArray(inputString: string, delimiters: string[]) {
+function splitStringToArray(inputString: string) {
     // Split after newlines and spaces
     inputString = inputString.replace(/ /g, " ꙮ").replace(/\n/g, "\nꙮ");
     return inputString.split("ꙮ").filter(string => string !== "");
@@ -146,8 +146,7 @@ function updateMarkovDemo(generated: string, biasedIndices: number[], textAreaId
     const textarea = document.getElementById(textAreaId);
 
     if (textarea) {
-        const delimiters = ['\n', '.', ',', '...', ' '];
-        const result = splitStringToArray(generated, delimiters);
+        const result = splitStringToArray(generated);
         const isMarkovOutput = textAreaId === 'outputTextarea' ? true : false;
 
         const resultHTML = generateHTMLParagraph(result, biasedIndices, startingWords, isMarkovOutput);
@@ -298,7 +297,7 @@ export default defineComponent({
                     loading.value = false;
                     updateMarkovDemo(data.generated, data.biased_indices, 'outputTextarea', startingWords);
                 })
-                .catch((error) => {
+                .catch(() => {
                     loading.value = false;
                 });
         };

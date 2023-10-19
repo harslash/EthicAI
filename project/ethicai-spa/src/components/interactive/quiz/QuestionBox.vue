@@ -1,5 +1,5 @@
 <script setup>
-import { shuffleArray, asyncTimeout } from "../../../../utils"
+import { shuffleArray } from "../../../../utils"
 import { defineProps, computed, ref, watch } from "vue"
 
 const emit = defineEmits(['result'])

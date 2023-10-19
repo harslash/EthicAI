@@ -68,7 +68,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../reusable/nav-bar.vue';
 import PageFooter from '../reusable/page-footer.vue';
 

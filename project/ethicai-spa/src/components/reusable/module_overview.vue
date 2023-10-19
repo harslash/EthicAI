@@ -104,7 +104,6 @@ export default defineComponent({
 
           //set the pages states accordingly
           storedArray.forEach((pageState, index) => {
-            const pageStateKey = Object.keys(pageState)[0];
             const pageStateValue = Object.values(pageState)[0]
             this.modulePageStates[index] = pageStateValue
           })

@@ -90,7 +90,6 @@ export default defineComponent({
             this.$nextTick(() => {
                 const element = this.$refs[sectionName] as HTMLElement;
                 if (element) {
-                    console.log(element)
                     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
                 }
             });

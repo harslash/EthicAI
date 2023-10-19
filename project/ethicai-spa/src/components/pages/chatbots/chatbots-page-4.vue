@@ -284,7 +284,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'; // Import ref
+import { defineComponent } from 'vue'; // Import ref
 
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from '../../reusable/module-navigation-bar.vue';

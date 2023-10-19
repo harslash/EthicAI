@@ -11,7 +11,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { faPaperPlane } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 
 export default defineComponent({

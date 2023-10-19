@@ -160,7 +160,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
