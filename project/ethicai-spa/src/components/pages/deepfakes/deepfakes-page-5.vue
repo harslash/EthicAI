@@ -83,8 +83,8 @@
             </p>
             <p class="section-text">
               Ultimately, even when considering the previous page's guidelines, determining whether a video is a deepfake
-              or not is no easy feat. Deepfake video technology is rapidly advancing, and disginguishing between reality
-              and fiction will be an incrasingly challenging task.
+              or not is no easy feat. Deepfake video technology is rapidly advancing, and distinguishing between reality
+              and fiction will be an increasingly challenging task.
             </p>
             <p class="section-text">
               It's important to acknowledge that you won't always be able to tell, making it imperative to remain
