@@ -124,7 +124,7 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <router-link to="/chatbots/too-good-to-be-true">
+          <router-link to="/chatbots/chatgpt-101">
             <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
           </router-link>
         </div>
