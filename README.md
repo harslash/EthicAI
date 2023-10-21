@@ -1,23 +1,23 @@
 # EthicAI #
 ![EthicAI Logo](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/logo_trim.png?token=GHSAT0AAAAAACIYFKKP3QURYJONZSNGOFNSZJTZYMQ)
 
-EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics fun and easily accessible for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos. 
+EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics fun and easily accessible for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos.
 
-Access EthicAI here [https://ethicai.co.nz/](https://ethicai.co.nz/).
+Access EthicAI here: [https://ethicai.co.nz/](https://ethicai.co.nz/)
 
 ### Our team 😎
 ***
-We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development. 
+We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development.
 
 * Georgia Purkiss - Front End Developer and UI/UX Designer
 * Kevin Wong - Frontend Developer and Backend Developer
-* Matthew Kwok  - Frontend Developer and UI/UX Designer
+* Matthew Kwok - Frontend Developer and UI/UX Designer
 * Gali Mortimer-Webster - Content Writer and Frontend Developer
 * Harlean Hansra - Frontend Developer
 
 ### Project Management Tool 🛠️ ###
 ***
-Our team used [Trello](https://trello.com/home) as our primary project management tool. For all other project-related files, such as API specifications and meeting notes, we used [Google Drive](https://drive.google.com). 
+Our team used [Trello](https://trello.com/home) as our primary project management tool. For all other project-related files, such as API specifications and meeting notes, we used [Google Drive](https://drive.google.com).
 
 ### Technologies  👨‍💻
 ***
@@ -49,7 +49,7 @@ Name | Version
 
 ### Installation 📖
 ***
-
+EthicAI is available freely in the browser, with no additional installations.
 
 ### Usage Examples 🔍
 ***
@@ -80,26 +80,17 @@ Access EthicAI via [https://ethicai.co.nz/](https://ethicai.co.nz/).
 ### Future Plans 🚀
 ***
 * **Reward System**\
-We're exploring the possibility of introducing a reward system. This system aims to incentivize users and enrich their learning journey. Users can earn points and badges upon completing modules and answering questions correctly.
+We're exploring the possibility of introducing a reward system. This system aims to incentivise users and enrich their learning journey. Users can earn points and badges upon completing modules and answering questions correctly.
 * **Expanded Modules**\
-We're considering the addition of new modules geared towards software developers. One potential topic is GitHub CoPilot, delving into its features and addressing common misuses. 
+We're considering the addition of new modules geared towards software developers. One potential topic is GitHub CoPilot, delving into its features and addressing common misuses.
 * **UI Enhancement**\
-A sleeker, more user-friendly interface might be on the horizon. We're contemplating UI improvements to create a visually appealing and consistent experience. 
+A sleeker, more user-friendly interface might be on the horizon. We're contemplating UI improvements to create a visually appealing and consistent experience.
 * **Diverse User Profiles**\
 Instructors may gain access to insightful analytics, offering valuable data on student engagement. We are also considering introducing community discussion to EthicAI to foster engagement between users.
 * **Interactive Upgrades**\
 Potential enhancements include custom animations and engaging visual feedback, enhancing the interactive learning experience.
 
-### Achknowledgements 😊
+### Acknowledgements 😊
 ***
 A sincere thank you to Danielle Lottridge and Thomas Lacombe, our esteemed clients, for their invaluable contributions in shaping EthicAI with their insights and feedback.
-
-
-
-
-
-
-
-
-
 
