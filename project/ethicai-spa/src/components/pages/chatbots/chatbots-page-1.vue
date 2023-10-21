@@ -242,7 +242,7 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 2000px;
+  max-height: 2100px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
