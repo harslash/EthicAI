@@ -5,7 +5,7 @@ EthicAI is an interactive learning platform designed to make Artificial Intellig
 
 Access EthicAI here: [https://ethicai.co.nz/](https://ethicai.co.nz/)
 
-### Our team 😎
+### Our Team 😎
 ***
 We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development.
 
