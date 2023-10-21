@@ -5,7 +5,7 @@ EthicAI is an interactive learning platform designed to make Artificial Intellig
 
 Access EthicAI here [https://ethicai.co.nz/](https://ethicai.co.nz/).
 
-### Our team
+### Our team 😎
 ***
 We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development. 
 
@@ -79,6 +79,16 @@ Access EthicAI via [https://ethicai.co.nz/](https://ethicai.co.nz/).
 
 ### Future Plans 🚀
 ***
+* **Reward System**\
+We're exploring the possibility of introducing a reward system. This system aims to incentivize users and enrich their learning journey. Users can earn points and badges upon completing modules and answering questions correctly.
+* **Expanded Modules**\
+We're considering the addition of new modules geared towards software developers. One potential topic is GitHub CoPilot, delving into its features and addressing common misuses. 
+* **UI Enhancement**\
+A sleeker, more user-friendly interface might be on the horizon. We're contemplating UI improvements to create a visually appealing and consistent experience. 
+* **Diverse User Profiles**\
+Instructors may gain access to insightful analytics, offering valuable data on student engagement. We are also considering introducing community discussion to EthicAI to foster engagement between users.
+* **Interactive Upgrades**\
+Potential enhancements include custom animations and engaging visual feedback, enhancing the interactive learning experience.
 
 ### Achknowledgements 😊
 ***
