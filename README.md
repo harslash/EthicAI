@@ -1,5 +1,5 @@
 # EthicAI #
-[EthicAI Logo](https://github.com/[uoa-tkwo629]/[capstone-project-team-28]/blob/[dev]/image.jpg?raw=true)](https://github.com/uoa-compsci399-s2-2023/capstone-project-team-28/blob/dev/markdown/logo.png)
+[EthicAI Logo](https://github.com/[uoa-tkwo629]/[capstone-project-team-28]/blob/[dev]/image.jpg?raw=true)
 
 EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics accessible and fun for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos. 
 
