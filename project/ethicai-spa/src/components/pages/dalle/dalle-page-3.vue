@@ -331,6 +331,7 @@ export default defineComponent({
       const hash = `#${referenceSectionId}`;
       this.$router.push({ name: "references", hash });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted("dalle", "the-complexities-of-copyright");
     },

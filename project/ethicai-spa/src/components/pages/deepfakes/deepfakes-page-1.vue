@@ -96,6 +96,7 @@ export default defineComponent({
     };
   },
   methods: {
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'the-depth-of-deepfakes');
     }

@@ -106,6 +106,7 @@ export default defineComponent({
                 }
             });
         },
+        // eslint-disable-next-line 
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'chatgpt-101');
         },

@@ -536,6 +536,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted("dalle", "ai-generated-vs-human-art");
     },

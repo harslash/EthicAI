@@ -144,6 +144,7 @@ export default defineComponent({
             this.showLastSection = true;
             this.scrollIntoLastSection();
         },
+        // eslint-disable-next-line 
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'hallucination');
         },

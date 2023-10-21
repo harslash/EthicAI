@@ -195,6 +195,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('chatbots', 'the-age-of-chatbots');
     },

@@ -197,6 +197,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'real-or-not-real');
     },

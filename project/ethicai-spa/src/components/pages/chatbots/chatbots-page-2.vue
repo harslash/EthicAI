@@ -205,6 +205,7 @@ export default defineComponent({
                 }
             });
         },
+        // eslint-disable-next-line 
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'too-good-to-be-true');
         },
