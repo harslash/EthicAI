@@ -21,7 +21,7 @@
               >
                 <a href="javascript:void(0);" class="list-item" @click="handleListItemClick(index)" style="text-decoration: none;">
                   <span
-                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
+                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index)}"
                   >{{ item }}</span>
                   <i
                     v-if="isPageVisted(index)"
@@ -226,12 +226,14 @@ body {
 
 
 .strikethrough {
+  text-align: left;
   text-decoration: line-through;
   color: #6D0CFF;
 }
 
 .non-strikethrough {
   color: #C324FF;
+  text-align: left;
 }
 
 .contents li {
