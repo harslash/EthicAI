@@ -1,5 +1,5 @@
 # EthicAI #
-![EthicAI Logo](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/logo_trim.png?token=GHSAT0AAAAAACIYFKKP3QURYJONZSNGOFNSZJTZYMQ)
+![EthicAI Logo](./markdown/logo_trim.png)
 
 EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics fun and easily accessible for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos.
 
@@ -55,26 +55,26 @@ EthicAI is available freely in the browser, with no additional installations.
 ***
 Access EthicAI via [https://ethicai.co.nz/](https://ethicai.co.nz/).
 * This page serves as EthicAI's landing, introducing users to our website
-![EthicAI Home Page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/home.png?token=GHSAT0AAAAAACIYFKKO4IHXNN4HBCP73HXCZJTZZZQ)
+![EthicAI Home Page](./markdown/home.png)
 
 * Users can choose any module to begin their AI ethics learning journey
-![EthicAI All Modules Page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/all-modules.png?token=GHSAT0AAAAAACIYFKKPYSP625YZM76Y27DGZJTZ3MQ)
+![EthicAI All Modules Page](./markdown/all-modules.png)
 
 * Users can easily navigate modules, swiftly accessing specific sections
-![EthicAI Module Overview Page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/module-overview.png?token=GHSAT0AAAAAACIYFKKPQMJIF4JJ2LVMEX5QZJTZ34A)
+![EthicAI Module Overview Page](./markdown/module-overview.png)
 
 * Interactive demo where users have to distinguish between human vs. generated arts
-![EthicAI interactive demo page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/deepfakes-demo.png?token=GHSAT0AAAAAACIYFKKP2COUC2CD5GXUPHX4ZJTZ4SA)
+![EthicAI interactive demo page](./markdown/deepfakes-demo.png)
 
 * Interactive demo where users have to distinguish between real vs deep fake audio
-![EthicAI interactive demo page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/deepfakes-demo.png?token=GHSAT0AAAAAACIYFKKO66KAQEMHUUOAVBGKZJTYDDA)
+![EthicAI interactive demo page](./markdown/deepfakes-demo.png)
 
 * Users have the opportunity to assess their learning progress through an interactive quiz
-![EthicAI quiz start page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/quiz-start.png?token=GHSAT0AAAAAACIYFKKO3H25MGIP2MKNDFVKZJTYD4Q)
-![EthicAI quiz page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/quiz-example.png?token=GHSAT0AAAAAACIYFKKPOFYCAP3H2MTZPLDMZJTYLPA)
+![EthicAI quiz start page](./markdown/quiz-start.png)
+![EthicAI quiz page](./markdown/quiz-example.png)
 
 * A curated collection of diverse external AI ethics resources tailored for both general and academic audiences
-![EthicAI resources page](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/resources.png?token=GHSAT0AAAAAACIYFKKPVE4UVU532ZBJJVM6ZJTYPIA)
+![EthicAI resources page](./markdown/resources.png)
 
 
 ### Future Plans 🚀
