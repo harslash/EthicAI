@@ -381,6 +381,7 @@ export default defineComponent({
   margin: 5px 0;
   text-align: left;
   font-size: 15px;
+  word-wrap: break-word;
 }
 
 a {
