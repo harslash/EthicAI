@@ -69,7 +69,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
    .container-fluid.page-container {
-        height: 120vh
+        height: 1200px;
     }
 }
 </style>
