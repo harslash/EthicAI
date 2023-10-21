@@ -1,19 +1,21 @@
 # EthicAI #
 ![EthicAI Logo](https://raw.githubusercontent.com/uoa-compsci399-s2-2023/capstone-project-team-28/dev/markdown/logo.png?token=GHSAT0AAAAAACIYFKKPK7PSBLIARLOBQOGWZJTWZQA)
 
-EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics accessible and fun for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos. 
+EthicAI is an interactive learning platform designed to make Artificial Intelligence (AI) ethics fun and easily accessible for university students. EthicAI offers modules-based learning, where students explore the core ethical principles behind AI use. Each module dives into real-world scenarios of AI misuse, supplemented with interactive demos. 
+
+Access EthicAI here [https://ethicai.co.nz/](https://ethicai.co.nz/).
 
 ### Our team
 ***
 We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development. 
 
-Georgia Purkiss - Front End Developer and UI/UX Designer
-Kevin Wong - Frontend Developer and Backend Developer
-Matthew Kwok  - Frontend Developer and UI/UX Designer
-Gali Mortimer-Webster - Content Writer and Frontend Developer
-Harlean Hansra - Frontend Developer
+* Georgia Purkiss - Front End Developer and UI/UX Designer
+* Kevin Wong - Frontend Developer and Backend Developer
+* Matthew Kwok  - Frontend Developer and UI/UX Designer
+* Gali Mortimer-Webster - Content Writer and Frontend Developer
+* Harlean Hansra - Frontend Developer
 
-### Project Mangement Tool 🛠️
+### Project Management Tool 🛠️ ###
 ***
 Our team used [Trello](https://trello.com/home) as our primary project management tool. For all other project-related files, such as API specifications and meeting notes, we used [Google Drive](https://drive.google.com). 
 
