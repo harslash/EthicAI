@@ -81,6 +81,9 @@ To build the project, run the following command in the terminal (in the `project
 npm run build
 ```
 
+The AWS Lambda functions used in the project are located in the `project/aws-lambda-functions` directory. They are actively deployed on AWS Lambda and are not required to run the project locally.
+These functions cannot be run locally due to the nature of AWS Lambda (needs the appropriate security roles, permissions, etc.), as well as environmental variables that are not defined in the project.
+
 ### Usage Examples 🔍
 
 ***
