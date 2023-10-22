@@ -50,7 +50,7 @@
                     <div class="container">
                         <h4>The Rise of DALL·E</h4>
                         <p> Did you know that AI can create art? In this module you will learn the highs and lows of AI
-                            image generation and will get to test your AI spotting skills!</p>
+                            image generation and test your AI spotting skills!</p>
                     </div>
                 </button>
             </router-link>
