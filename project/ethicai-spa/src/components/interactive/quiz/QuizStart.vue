@@ -9,7 +9,7 @@ export default {
     <div class="row">
       <div class="col-sm px-md-5">
         <p class="tw-text-lg">QUIZ</p>
-        <h2 class="tw-text-4xl tw-leading-relaxed tw-font-bold">You have completed "{{ module_name }}". Take this quick
+        <h2 class="tw-text-4xl tw-leading-relaxed tw-font-bold">You have completed “{{ module_name }}”. Take this quick
           quiz to check your understanding.</h2>
         <button :style="{ backgroundColor: '#6D0CFF' }" @click="$emit('quiz-started')"
           class="tw-justify-center tw-mt-8 tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-border-none">
