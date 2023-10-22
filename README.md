@@ -56,8 +56,27 @@ Name | Version
 This is a list of the main technologies used in the project. For a full list of dependencies, please refer to the `package.json` file in the project directory.
 
 ### Installation 📖
+
 ***
-EthicAI is available freely in the browser, with no additional installations.
+Clone the repository in a terminal, ensuring you have [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/) installed.
+
+```bash
+git clone https://github.com/uoa-compsci399-s2-2023/capstone-project-team-28
+cd project/ethicai-spa
+npm install
+```
+
+To run the project locally, run the following command in the terminal:
+
+```bash
+npm run serve
+```
+
+To build the project, run the following command in the terminal:
+
+```bash
+npm run build
+```
 
 ### Usage Examples 🔍
 ***
