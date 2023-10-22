@@ -1,17 +1,18 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'deepfakes'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h1 class="tw-mt-24">AI For Evil</h1>
           <p><em>This case study may be distressing for some readers. Content warnings: threats of violence and sexual
-              assault; emotional manipulation.</em></p>
+              assault; emotional manipulation. <router-link :to="'/deepfakes/real-or-not-real'">Click here to
+                skip.</router-link></em></p>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn v-if="!section1Completed" :text="'Continue'"
+        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
           @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
       </div>
     </div>
@@ -43,7 +44,7 @@
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn v-if="!section2Completed" :text="'Continue'"
+        <purple-btn :tag="'button'" v-if="!section2Completed" :text="'Continue'"
           @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
       </div>
     </div>
@@ -70,12 +71,13 @@
       </div>
       <div class="d-flex col-md-5 align-items-center justify-content-md-start">
         <div>
-          <img width="440" alt="" src="../../../assets//deepfakes_page_2_a.png">
-          <p>Caption: Jennifer DeStefano shares her story at a U.S. Senate Hearing (Image from C-SPAN)</p>
+          <img width="440" alt="Jennifer DeStefano sits before a microphone in a courtroom"
+            src="../../../assets//deepfakes_page_2_a.png" class="img-a">
+          <p>Jennifer DeStefano shares her story at a U.S. Senate Hearing (Image from C-SPAN)</p>
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn v-if="!section3Completed" :text="'Continue'"
+        <purple-btn :tag="'button'" v-if="!section3Completed" :text="'Continue'"
           @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
       </div>
     </div>
@@ -83,9 +85,9 @@
       <div class="col-md-12 tw-mb-10">
         <h2>The Reveal</h2>
       </div>
-      <div class="d-flex col-md-6 text-end align-items-center justify-content-md-center">
-        <div>
-          <img width="440" alt="" src="../../../assets//deepfakes_page_2_b.png">
+      <div class="d-flex col-md-6 text-end align-items-center justify-content-md-center mb-3">
+        <div class="d-flex justify-content-center">
+          <img width="440" alt="Person skiing down a slope" src="../../../assets//deepfakes_page_2_b.png" class="img-a">
         </div>
       </div>
       <div class="col-md-6 d-flex text-end align-items-center justify-content-md-end">
@@ -104,10 +106,26 @@
           </p>
         </div>
       </div>
-      <div class="row h-20 mt-5">
+      <div class="col-md-12 d-flex justify-content-end">
+        <purple-btn :tag="'button'" v-if="!section4Completed" :text="'Continue'"
+          @click="showFifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
+      </div>
+    </div>
+    <div ref="fifthSection" class="container row m-auto mb-5" :class="{ 'hidden': !showFifthSection }">
+      <div class="row h-10 mb-5">
+        <div class="col-md-12">
+          <p class="tw-text-left tw-mx-20 md:tw-mx-10">
+            In what is seemingly an era of technological deception, families and friends can safeguard themselves from
+            situations like the above by establishing confidential safe words. Their unique words should only be known to
+            trusted family and friends, serving as a means of verification during suspicious situations. This simple, yet
+            effective practice can quickly expose scams or deception and help ensure your loved ones' the safety.
+          </p>
+        </div>
+      </div>
+      <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/deepfakes/real-or-not-real">
-            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+            <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
           </router-link>
         </div>
       </div>
@@ -130,10 +148,12 @@ export default defineComponent({
       showSecondSection: false,
       showThirdSection: false,
       showFourthSection: false,
+      showFifthSection: false,
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
       section4Completed: false,
+      section5Completed: false,
     };
   },
   methods: {
@@ -145,6 +165,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'ai-for-evil');
     },
@@ -181,6 +202,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -193,6 +215,10 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
   .section-text {
+    width: 90%;
+  }
+
+  .img-a {
     width: 90%;
   }
 }

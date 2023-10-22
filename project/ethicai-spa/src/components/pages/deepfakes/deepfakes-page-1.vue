@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'deepfakes'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="container mb-5 text-section">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
-          <img width="400" alt="illustration of a generator and discriminator fighting"
+          <img width="400" alt="generator versus discriminator, illustration of two messy organic machines" class="img-a"
             src="../../../assets//deepfakes_page_1.png">
         </div>
       </div>
@@ -60,7 +60,7 @@
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <router-link to="/deepfakes/ai-for-evil">
-            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+            <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
           </router-link>
         </div>
       </div>
@@ -69,7 +69,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
@@ -96,6 +96,7 @@ export default defineComponent({
     };
   },
   methods: {
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'the-depth-of-deepfakes');
     }
@@ -128,6 +129,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -142,9 +144,6 @@ export default defineComponent({
   transition: color 2s ease-in-out;
 }
 
-.img-a {
-  width: 25%;
-}
 
 @media (max-width: 767.98px) {
   .section-text {

@@ -14,7 +14,7 @@
             <div class="rectangle">
                 <div class="icon-container">
                     <div class="circle">
-                        <img :src="require('@/assets/robot_icon.png')" alt="robot icon">
+                        <img :src="require('@/assets/robot_icon.png')" alt="robot head icon">
                     </div>
                 </div>
                 <div class="text-container">
@@ -25,7 +25,7 @@
     </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
 
 interface TermObject {
     term: string;
@@ -49,7 +49,7 @@ export default defineComponent({
 <style scoped>
         /* Styles for the card container */
         .card {
-            width: 600px; /* Adjusted width to be 4 times the height (150px * 4 = 600px) */
+            width: 700px; /* Adjusted width to be 4 times the height (150px * 4 = 600px) */
             background-color: #fff;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             border-radius: 5px;
@@ -79,10 +79,12 @@ export default defineComponent({
         /* Style for the bottom rectangle */
         .rectangle:nth-child(2) {
             background-color: #fff;
+            height: 200px;
         }
 
         /* Styles for the child containers */
         .text-container {
+            font-size: 1rem;
             flex: 85; /* Equal width for both child containers within a rectangle */
             display: flex;
             flex-direction: column; /* Arrange child items vertically within the child container */
@@ -113,10 +115,17 @@ export default defineComponent({
             color: #fff;
             font-weight: bold;
         }
-        
+
         /* Style for the images inside circles */
         .circle img {
             max-width: 100%;
             max-height: 100%;
         }
+
+
+    @media (max-width: 767.98px) {
+        .card {
+            width: 360px;
+        }
+    }
     </style>

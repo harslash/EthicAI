@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
@@ -12,7 +12,7 @@
       <div class="row h-30">
         <div class="col-md-4 d-flex align-items-center">
           <figure>
-            <img class="img-a" src="../../../assets//Robot_Head_by_DALL-E_2.jpg" alt="Escher Robot Head by DALL-E 2"
+            <img class="img-a" src="../../../assets//Robot_Head_by_DALL-E_2.jpg" alt="Escher Robot Head sprouts flowers, by DALL-E 2"
               style="
                 display: inline-block;
                 margin: 25px 10px;
@@ -58,7 +58,7 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'" @click="
             showSecondSection = true;
           scrollIntoSecondSection();
           section1Completed = true;
@@ -83,45 +83,40 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="javascript:void(0);" class="card" :class="firstQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFirstCorrectClick();
                   showSecondQuestion = true;
-                  scrollIntoSecondQuestion();
                   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${realimg1FileName}`)" alt="Dog looks at birds"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="correct" :class="{ hidden: !firstQuestionShowCorrect }">
-                    <p style="display: block">
-                      <span style="color: #6d0cff"> Correct! +1 point </span>
-                      <br />
-                      You successfully identified the work of a human.
-                    </p>
+                    <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg1 }}
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="javascript:void(0);" class="card" :class="firstQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
     onFirstIncorrectClick();
   showSecondQuestion = true;
   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${fakeimg1FileName}`)" alt="Dog with birds above"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="incorrect" :class="{ hidden: !firstQuestionShowIncorrect }">
-                    <p style="display: block">
-                      <span style="color: #707070">
-                        Oops, you have misidentified this as human made!
-                      </span>
-                      <br />
+                      <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
                       {{ teachableMsg1 }}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -136,45 +131,40 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="secondQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onSecondCorrectClick();
                 showThirdQuestion = true;
-                scrollIntoThirdQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg2FileName}`)" alt="Illustration of a lithography factory"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !secondQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg2 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="javascript:void(0);" class="card" :class="secondQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onSecondIncorrectClick();
   showThirdQuestion = true;
   " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg2FileName}`)" alt="Illustration of a flowering cactus"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !secondQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
-                    </span>
-                    <br />
-                    {{ teachableMsg2 }}
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
                   </p>
+                  {{ teachableMsg2 }}
                 </div>
               </div>
             </div>
@@ -188,44 +178,39 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
-                  onThirdIncorrectClick();
+                <a href="javascript:void(0);" class="card" :class="thirdQuestionShowIncorrect ? 'grey' : 'non-purp-grey'" @click="
+                  onThirdIncorrectClick()
                 showFourthQuestion = true;
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg3FileName}`)" alt="Elk cross a river with mountains in background, painting"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !thirdQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
-                    </span>
-                    <br />
-                    {{ teachableMsg3 }}
-                  </p>
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
+                  {{ teachableMsg3 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="thirdQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onThirdCorrectClick();
                 showFourthQuestion = true;
-                scrollIntoFourthQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg3FileName}`)" alt="Idyllic countryside landscape painting with mountains"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !thirdQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg3 }}
                 </div>
               </div>
             </div>
@@ -240,45 +225,40 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <div class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                <a href="javascript:void(0);" class="card" :class="fourthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                   " @click="
     onFourthIncorrectClick();
   showFifthQuestion = true;
   " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${fakeimg4FileName}`)" alt="Old black-and-white photo of many small fishing boats"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="incorrect" :class="{ hidden: !fourthQuestionShowIncorrect }">
-                  <p style="display: block">
-                    <span style="color: #707070">
-                      Oops, you have misidentified this as human made!
-                    </span>
-                    <br />
-                    {{ teachableMsg4 }}
-                  </p>
+                  <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
+                  {{ teachableMsg4 }}
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <div class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                <a href="javascript:void(0);" class="card" :class="fourthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                   onFourthCorrectClick();
                 showFifthQuestion = true;
-                scrollIntoFifthQuestion();
                 " role="link">
                   <div class="card-body">
-                    <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Image"
+                    <img class="img-b" :src="require(`@/assets/${realimg4FileName}`)" alt="Old sepia photo of large family in scruffy clothes"
                       style="display: inline-block; border-radius: 5px" />
                   </div>
-                </div>
+                </a>
 
                 <div class="correct" :class="{ hidden: !fourthQuestionShowCorrect }">
-                  <p style="display: block">
-                    <span style="color: #6d0cff"> Correct! +1 point </span>
-                    <br />
-                    You successfully identified the work of a human.
-                  </p>
+                  <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg4 }}
                 </div>
               </div>
             </div>
@@ -294,46 +274,42 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
+                  <a href="javascript:void(0);" class="card" :class="fifthQuestionShowCorrect ? 'purp' : 'non-purp-grey'" @click="
                     onFifthCorrectClick();
                   showContinue = true;
                   scrollIntoContinue();
                   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${realimg5FileName}`)" alt="Statue of a hand"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="correct" :class="{ hidden: !fifthQuestionShowCorrect }">
-                    <p style="display: block">
-                      <span style="color: #6d0cff"> Correct! +1 point </span>
-                      <br />
-                      You successfully identified the work of a human.
-                    </p>
+                    <span style="color: #6d0cff"> Correct! +1 point </span>
+                    <br>
+                    <p style="color: #6d0cff"> You successfully identified the work of a human. </p>
+                    {{ teachableMsg5 }}
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <div class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
+                  <a href="javascript:void(0);" class="card" :class="fifthQuestionShowIncorrect ? 'grey' : 'non-purp-grey'
                     " @click="
     onFifthIncorrectClick();
   showContinue = true;
   scrollIntoContinue();
   " role="link">
                     <div class="card-body">
-                      <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Image"
+                      <img class="img-b" :src="require(`@/assets/${fakeimg5FileName}`)" alt="Statue of hands merging into each other"
                         style="display: inline-block; border-radius: 5px" />
                     </div>
-                  </div>
+                  </a>
 
                   <div class="incorrect" :class="{ hidden: !fifthQuestionShowIncorrect }">
-                    <p style="display: block">
-                      <span style="color: #707070">
-                        Oops, you have misidentified this as human made!
-                      </span>
-                      <br />
-                      {{ teachableMsg5 }}
-                    </p>
+                    <p style="color: #707070">
+                        Oops, this was made by an AI!
+                      </p>
+                  {{ teachableMsg5 }}
                   </div>
                 </div>
               </div>
@@ -352,16 +328,16 @@
 
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-center">
-            <purple-btn v-if="quizCompleted && !section2Completed && !redoQuiz" :text="'Retry'" @click="
+            <purple-btn :tag="'button'" v-if="quizCompleted && !section2Completed && !redoQuiz" :text="'Retry'" @click="
               showFirstQuestion = true;
             redo();
             " />
           </div>
         </div>
 
-        <div class="row h-20">
+        <div class="row h-20 pb-5" ref="continueButton">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="quizCompleted && !section2Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="quizCompleted && !section2Completed" :text="'Continue'" @click="
               showThirdSection = true;
             scrollIntoThirdSection();
             section2Completed = true;
@@ -370,15 +346,10 @@
         </div>
 
         <div ref="thirdSection" class="row h-30 mb-8 justify-content-center" :class="{ hidden: !showThirdSection }">
-          <div class="row h-10 mb-5">
-            <div class="col-md-12">
-              <h3>How to identify AI-generated images?</h3>
-            </div>
-          </div>
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
               <a href="https://www.androidpolice.com/identify-ai-generated-images-how-to" target="_blank">
-                <img src="../../../assets//ai_article.png" alt="Image of AI artwork" />
+                <img src="../../../assets//ai_article.png" alt="Geometric image with two stars, each having four points" />
               </a>
             </div>
             <h2 class="article-title">How to identify AI-generated images</h2>
@@ -386,40 +357,43 @@
               Published on June 22, 2023 by Hagop Kavafian
             </p>
             <p class="article-excerpt">
-              AI art generators are sometimes so powerful that it is hard to
-              tell AI-generated images from actual pictures. There are some
-              clues you can look for to identify these and potentially avoid
-              being tricked into thinking you're looking at a real picture.
+              AI art generators are sometimes so powerful that it is hard to tell AI-generated images from actual pictures. There are some clues you can look for to identify these and potentially avoid being tricked into thinking you're looking at a real picture.
             </p>
-            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/"
-              target="_blank">Read More</a>
+            <a class="article-link" href="https://www.androidpolice.com/identify-ai-generated-images-how-to/" target="_blank">Read More</a>
             <br />
           </div>
 
-          <div class="col-md-8 text-center">
-            <br />
-            <p>
-              Some of these are quite tricky to decide, even for the savviest of
-              quiz-takers. It just goes to show how important it is to pay
-              attention to details.
-            </p>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="d-flex flex-column align-items-center ">
+              <h3 class="py-3">The Lesson</h3>
+              <p class="text-left section-text">
+                You may have found that some of the images were challenging to differentiate, which is true even for the savviest of quiz-takers. It just goes to show how advanced AI technologies have become and how important it is to educate ourselves.
+              </p>
+              <br>
+              <p class="text-left section-text">
+                To find out what more about what clues to look out for, check out this article.
+              </p>
+              <p class ="text-left section-text">
+                Ultimately though, as these technologies advance, these tells may no longer be relevant and even with them in consideration, it can be <b> impossible to tell </b> depending on the type and complexity of the generator. Therefore, it's important to stay savvy and always check your sources.
+              </p>
+            </div>
           </div>
-
-          <div class="row h-20" style="padding-bottom: 20px" v-if="quizCompleted">
-            <div class="col-md-12 d-flex justify-content-end">
-              <router-link to="/dalle/the-complexities-of-copyright">
-                <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
-              </router-link>
+        <br>
+            <div class="row h-20 pt-4" style="padding-bottom: 20px" v-if="quizCompleted">
+              <div class="col-md-12 d-flex justify-content-end">
+                <router-link to="/dalle/the-complexities-of-copyright">
+                  <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, toHandlers } from "vue";
+import { defineComponent } from "vue";
 import NavBar from "../../reusable/nav-bar.vue";
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from "../../reusable-ui/purple-btn.vue";
@@ -562,6 +536,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted("dalle", "ai-generated-vs-human-art");
     },
@@ -583,14 +558,19 @@ export default defineComponent({
       // Resetting all pointer events
       const firstElement = this.$refs.firstQuestion as HTMLElement;
       firstElement.style.pointerEvents = "auto";
+      firstElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const secondElement = this.$refs.secondQuestion as HTMLElement;
       secondElement.style.pointerEvents = "auto";
+      secondElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const thirdElement = this.$refs.thirdQuestion as HTMLElement;
       thirdElement.style.pointerEvents = "auto";
+      thirdElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const fourthElement = this.$refs.fourthQuestion as HTMLElement;
       fourthElement.style.pointerEvents = "auto";
+      fourthElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
       const fifthElement = this.$refs.fifthQuestion as HTMLElement;
       fifthElement.style.pointerEvents = "auto";
+      fifthElement.querySelectorAll("*").forEach(child => { (child as HTMLElement).removeAttribute("tabIndex"); });
 
       // Resetting questions
       (this.firstQuestionShowCorrect = false),
@@ -682,60 +662,70 @@ export default defineComponent({
       this.firstQuestionShowCorrect = true;
       const element = this.$refs.firstQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFirstIncorrectClick() {
       this.firstQuestionShowIncorrect = true;
       const element = this.$refs.firstQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onSecondCorrectClick() {
       this.secondQuestionShowCorrect = true;
       const element = this.$refs.secondQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onSecondIncorrectClick() {
       this.secondQuestionShowIncorrect = true;
       const element = this.$refs.secondQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onThirdCorrectClick() {
       this.thirdQuestionShowCorrect = true;
       const element = this.$refs.thirdQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onThirdIncorrectClick() {
       this.thirdQuestionShowIncorrect = true;
       const element = this.$refs.thirdQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onFourthCorrectClick() {
       this.fourthQuestionShowCorrect = true;
       const element = this.$refs.fourthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFourthIncorrectClick() {
       this.fourthQuestionShowIncorrect = true;
       const element = this.$refs.fourthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     onFifthCorrectClick() {
       this.fifthQuestionShowCorrect = true;
       const element = this.$refs.fifthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onCorrectClick();
     },
     onFifthIncorrectClick() {
       this.fifthQuestionShowIncorrect = true;
       const element = this.$refs.fifthQuestion as HTMLElement;
       element.style.pointerEvents = "none";
+      element.querySelectorAll("*").forEach(child_element => { const child = child_element as HTMLElement; child.tabIndex = -1; child.blur(); })
       this.onIncorrectClick();
     },
     handleReferenceClick(referenceSectionId: string) {
@@ -793,11 +783,12 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 1200px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -903,5 +894,20 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+#upArrowText {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-b {
+    width: 260px;
+    height: 200px;
+  }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-   <div class="card terms-card" style="width: 18rem;">
+   <div class="card terms-card" :style="{width: '18rem', height: `${cardHeight}px`}">
       <div class="card-header terms-card-header">
-        <p class="card-header-title mb-0">Important terms</p>
-        <span class="card-header-subtitle">Hover to learn more</span>
+        <p class="terms-card-header-title mb-0">Important terms</p>
+        <span class="terms-card-header-subtitle">Hover to learn more</span>
       </div>
       <ul class="list-group list-group-flush">
         <li 
@@ -27,6 +27,10 @@ export default defineComponent({
     name: 'ImportantTermsCard',
     props: {
         'termsAndDefinitions': Array as () => TermObject[],
+        'cardHeight': {
+          type: [String, Number],
+          default: 200
+        }
     },
     methods: {
         getTooltipContent(item: TermObject) {
@@ -47,12 +51,12 @@ export default defineComponent({
   color: #ffffff;
 }
 
-.card-header-title {
+.terms-card-header-title {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
 }
 
-.card-header-subtitle {
+.terms-card-header-subtitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-size: 0.7rem;

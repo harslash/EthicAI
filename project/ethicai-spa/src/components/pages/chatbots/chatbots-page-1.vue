@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'chatbots'"/>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="section-one container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
@@ -33,13 +33,13 @@
         <div class="col-md-5 d-flex align-items-center justify-content-md-start justify-content-center ">
           <a title="File:ELIZA conversation.jpg, Public domain, via Wikimedia Commons"
             href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">
-            <img width="400" alt="ELIZA conversation"
+            <img width="400" alt="ELIZA conversation, terminal interface"
               src="https://upload.wikimedia.org/wikipedia/commons/7/79/ELIZA_conversation.png"></a>
         </div>
       </div>
       <div class="row h-30 mb-3">
         <div class="col-md-5 d-flex justify-content-center justify-content-md-end pb-5">
-          <important-terms-card :terms-and-definitions="termsAndDefinitions"></important-terms-card>
+          <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="300"></important-terms-card>
         </div>
         <div class="col-md-7 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -61,13 +61,13 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="!section1Completed" :text="'Continue'"
+          <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
             @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
         </div>
       </div>
     </div>
-    <div ref="secondSection" class="section-two 
-      container mb-5 
+    <div ref="secondSection" class="section-two
+      container mb-5
       text-section" :class="{ 'hidden': !showSecondSection }">
       <div class="row">
         <div class="col-md-12">
@@ -81,14 +81,17 @@
             </p>
           </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 d-flex flex-column align-items-center">
           <img src="../../../assets//chatbots_page_1_a.png" class="img-a"
-            alt="flowchat diagram explaing the interaction between a user and ChatGPT" />
+            alt="flowchat diagram, training data trains ChatGPT, which responds to User, which prompts ChatGPT in return" />
+             <p class="section-text">
+            In the training process of LLMs like ChatGPT, human trainers instruct the model in tasks such as completing sentences with the most fitting words. As the LLM becomes adept at this, it develops a nuanced understanding of the statistical relationships between words in a language, comprehending which words are likely to appear together. When you send a prompt to ChatGPT, it leverages this acquired knowledge and interprets your specific context to produce responses. Unlike a static database lookup, ChatGPT dynamically generates responses, ensuring they are not only contextually accurate but also coherent and relevant to your input.
+            </p>
         </div>
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
+          <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'"
             @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
         </div>
       </div>
@@ -97,17 +100,17 @@
       <div class="row h-40">
         <div class="col-md-12 pb-2">
           <div class="d-flex align-items-center flex-column">
-            <h5>Engage with ChatGPT</h5>
-            <p class="section-text">Welcome to our ChatGPT interaction feature. You can interact in two ways:</p>
-            <p class="section-text px-3">1. Your Questions: Enter your own questions or prompts in the text box and
-              receive responses from ChatGPT.</p>
-            <p class="section-text px-3">2. Pre-Generated Prompts: Choose from a selection of pre-made prompts to start a
+            <h5>Engage with LLM</h5>
+            <p class="section-text">Welcome to our LLM interaction feature. You can interact in two ways:</p>
+            <p class="section-text px-3">1. <b>Your Questions:</b> Enter your questions or prompts in the text box and
+              receive responses from an LLM.</p>
+            <p class="section-text px-3">2. <b>Pre-Generated Prompts:</b> Choose from pre-made prompts to start a
               conversation.</p>
 
             <p class="section-text">Feel free to explore and experiment. Your curiosity is the key to discovering
-              ChatGPT's capabilities. Enjoy the interaction!</p>
-            <span class="gpt-prompt-note">Note: This demo is powered by the OpenAssistant model from Hugging Face. Visit
-              https://chat.openai.com/ to experiment with the official ChatGPT model.</span>
+              the capability of LLMs. Enjoy the interaction!</p>
+            <span class="gpt-prompt-note">Note: This demo is powered by <a href="https://github.com/Soulter/hugging-chat-api" target="_blank">hugging-chat-api</a>.
+              You can also experiment with more powerful models, such as <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.</span>
           </div>
 
         </div>
@@ -121,8 +124,8 @@
       </div>
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <router-link to="/chatbots/too-good-to-be-true">
-            <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+          <router-link to="/chatbots/chatgpt-101">
+            <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
           </router-link>
         </div>
       </div>
@@ -131,7 +134,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from '../../reusable/module-navigation-bar.vue';
 import ImportantTermsCard from '../../reusable/important-terms-card.vue';
@@ -192,6 +195,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('chatbots', 'the-age-of-chatbots');
     },
@@ -238,11 +242,12 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 2000px;
+  max-height: 2100px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;

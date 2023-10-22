@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="section-one container mb-5 text-section" :class="{ hidden: !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
@@ -40,7 +40,7 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'" @click="
             showSecondSection = true;
           scrollIntoSecondSection();
           section1Completed = true;
@@ -73,7 +73,7 @@
           <div class="article-snippet text-center align-items-center mx-auto">
             <div class="article-image">
               <a href="https://archive.ph/604QJ" target="_blank">
-                <img src="../../../assets//nyt_article.png" alt="New York Times article snippet" />
+                <img src="../../../assets//nyt_article.png" alt="Noisy speckled image of a train tunnel entrance" />
               </a>
             </div>
             <h2 class="article-title">
@@ -96,7 +96,7 @@
 
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
-          <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
             showThirdSection = true;
           scrollIntoThirdSection();
           section2Completed = true;
@@ -136,7 +136,7 @@
             <br />
             <div class="col-md-10 d-flex align-items-center justify-content-center">
               <figure>
-                <img class="img-a" src="../../../assets//pope.png" alt="an art piece depicting a purple swirl" style="
+                <img class="img-a" src="../../../assets//pope.png" alt="Pope Francis wearing a large puffer jacket coat" style="
                     display: inline-block;
                     margin: 12.5px 5px;
                     border-radius: 5px;
@@ -167,7 +167,7 @@
       <div class="row h-20">
         <div class="col-md-12 d-flex justify-content-end">
           <!-- Center align the "Continue" button -->
-          <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+          <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
             showFourthSection = true;
           scrollIntoFourthSection();
           section3Completed = true;
@@ -189,8 +189,8 @@
       <div class="col-md-1"></div>
       <div class="col-md-10 d-flex align-items-center justify-content-center text-center">
         <figure>
-          <img class="img-a mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
-            alt="a happy kid in front of a laptop" style="
+          <img class="img-b mx-auto" src="../../../assets//copyright-copywrong-happykid.png"
+            alt="a happy kid in front of a laptop, cartoon image" style="
               display: inline-block;
               margin: 12.5px 5px;
               border-radius: 5px;
@@ -248,7 +248,7 @@
     <div class="row h-20">
       <div class="col-md-12 d-flex justify-content-end">
         <router-link to="/dalle/quiz">
-          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" role="link"></purple-btn>
+          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" role="link"></purple-btn>
         </router-link>
       </div>
     </div>
@@ -331,6 +331,7 @@ export default defineComponent({
       const hash = `#${referenceSectionId}`;
       this.$router.push({ name: "references", hash });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted("dalle", "the-complexities-of-copyright");
     },
@@ -384,11 +385,12 @@ export default defineComponent({
 
 .text-section {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 1200px;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -474,5 +476,19 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-a {
+    width: 70%;
+  }
+
+  .img-b {
+    width: 60%;
+  }
 }
 </style>

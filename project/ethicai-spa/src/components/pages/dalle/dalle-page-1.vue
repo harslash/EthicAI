@@ -2,13 +2,13 @@
   <div>
     <nav-bar />
     <module-navigation-bar :moduleName="'dalle'"></module-navigation-bar>
-    <div class="container-fluid page-container text-center">
-      <div class="row h-25">
+    <div id="main" class="container-fluid page-container text-center mb-5">
+      <div class="row h-10 mb-5">
         <div class="col-md-12">
           <h1 class="tw-mt-24">The Rise of DALL·E</h1>
         </div>
       </div>
-      <div ref="firstSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFirstSection }">
+      <div ref="firstSection" class="row h-30 mb-5" :class="{ hidden: !showFirstSection }">
         <div class="col-md-8 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="text-left section-text">
@@ -28,13 +28,13 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start ">
           <img class="img-a" src="../../../assets//dalle_page1_img.png" alt="an art piece depicting a purple swirl" />
         </div>
       </div>
       <div class="row h-30 mb-10 justify-content-center">
         <div class="col-md-6 d-flex justify-content-center">
-          <important-terms-card :terms-and-definitions="termsAndDefinitions" />
+          <important-terms-card :terms-and-definitions="termsAndDefinitions" :cardHeight="240"></important-terms-card>
         </div>
         <div class="col-md-6 d-flex align-items-center">
           <p class="text-right section-text">
@@ -47,12 +47,9 @@
         </div>
 
         <div class="row h-20">
-          <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="!section1Completed" :text="'Continue'" @click="
-              showSecondSection = true;
-            scrollIntoSecondSection();
-            section1Completed = true;
-            " />
+          <div class="col-md-12 d-flex justify-content-end" >
+            <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
+              @click="showSecondSection = true; scrollIntoSecondSection(); section1Completed = true;" style="margin-right: 35px;" />
           </div>
         </div>
       </div>
@@ -62,8 +59,8 @@
           <h1 class="mt-5" style="font-size: 28px">Imagine ...</h1>
           <br />
         </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <img class="img-a-small" src="../../../assets//artist.png" alt="a female artist holding a paintbrush" />
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img class="img-a-small" src="../../../assets//artist.png" alt="a girlish artist holding palette and paintbrush, stylised design" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -76,11 +73,11 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'" @click="
               showThirdSection = true;
             scrollIntoThirdSection();
             section2Completed = true;
-            " />
+            " style="margin-right: 35px;" />
           </div>
         </div>
       </div>
@@ -96,22 +93,22 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
           <img class="img-a-large" src="../../../assets//haters.png" alt="mean Instagram comments section" />
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'" @click="
               showFourthSection = true;
             scrollIntoFourthSection();
             section3Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
       <div ref="fourthSection" class="row h-30 mb-5 justify-content-center" :class="{ hidden: !showFourthSection }">
-        <div class="col-md-4 d-flex align-items-center">
-          <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces that look identical" />
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img class="img-a-medium" src="../../../assets//identical_art.jpeg" alt="two art pieces with identical linework, but in different colours" />
         </div>
         <div class="col-md-4 d-flex align-items-center">
           <div class="d-flex justify-content-center flex-wrap">
@@ -130,11 +127,11 @@
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section3Completed && !section4Completed" :text="'Continue'" @click="
               showFifthSection = true;
             scrollIntoFifthSection();
             section4Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
@@ -155,16 +152,16 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex align-items-center">
-          <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="mean Instagram comments section" />
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <img class="img-a-medium" src="../../../assets//sad_piggy.jpeg" alt="piggy bank with coins, with messed up text that almost looks like 'Bank'. AI generated artwork" />
         </div>
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end">
-            <purple-btn v-if="section4Completed && !section5Completed" :text="'Continue'" @click="
+            <purple-btn :tag="'button'" v-if="section4Completed && !section5Completed" :text="'Continue'" @click="
               showSixthSection = true;
             scrollIntoSixthSection();
             section5Completed = true;
-            " />
+            " style="margin-right: 35px;"/>
           </div>
         </div>
       </div>
@@ -188,7 +185,7 @@
           <div class="article-image">
             <a href="https://www.theverge.com/2023/1/16/23557098/generative-ai-art-copyright-legal-lawsuit-stable-diffusion-midjourney-deviantart"
               target="_blank">
-              <img src="../../../assets//artist_article.webp" alt="Artist at Work" />
+              <img src="../../../assets//artist_article.webp" alt="Many pieces of AI generated art, astronaut, distorted witch with multiple mouths, castle" />
             </a>
           </div>
           <h2 class="article-title">
@@ -213,10 +210,10 @@
         <div class="row h-20">
           <div class="col-md-12 d-flex justify-content-end align-items-center">
             <div class="mr-10">
-              <p style="margin-bottom: 0"><b>How does this happen?</b></p>
+              <p style="margin-right: 20px; margin-bottom: 0px;"><b>How does this happen?</b></p>
             </div>
-            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-left: 20px">
-              <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+            <router-link to="/dalle/ai-generated-vs-human-art" class="my-button" style="margin-right: 35px;">
+              <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
             </router-link>
           </div>
         </div>
@@ -251,6 +248,11 @@ export default defineComponent({
           term: "Deepfake",
           definition:
             "A deepfake is a computer-made imitation video, image, or audio, mimicking reality and often impersonating individuals (Seon, n.d.).",
+        },
+        {
+          term: "Copyright",
+          definition:
+            "Copyright is a form of intellectual property right. It gives the person who creates an original work exclusive rights to copy, publish, publicly perform, transmit and adapt their material (Copyright Licensing NZ, 2023)",
         },
       ],
       showFirstSection: true,
@@ -331,6 +333,7 @@ export default defineComponent({
       const hash = `#${referenceSectionId}`;
       this.$router.push({ name: "references", hash });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted("dalle", "the-rise-of-dalle");
     },
@@ -377,6 +380,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -439,5 +443,21 @@ export default defineComponent({
   padding: 20px;
   margin-top: 20px;
   max-width: 500px;
+}
+
+
+@media (max-width: 767.98px) {
+  .section-text {
+    width: 90%;
+  }
+
+  .img-a, .img-a-medium, .img-a-small{
+    width: 60%;
+  }
+
+  .img-a-large {
+    width: 80%;
+  }
+
 }
 </style>

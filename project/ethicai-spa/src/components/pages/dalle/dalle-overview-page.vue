@@ -1,12 +1,13 @@
 <template>
     <nav-bar/>
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
+                    :module-img-alt-text ="moduleImgAltText"
                     :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
@@ -37,7 +38,8 @@ export default defineComponent({
             modulePageRoutes: ['the-rise-of-dalle', 'ai-generated-vs-human-art', 'the-complexities-of-copyright', 'dalle-quiz'],
             moduleName: 'dalle',
             pageName: 'the-rise-of-dalle',
-            moduleImgFilename: 'purple_robot.jpeg'
+            moduleImgFilename: 'purple_robot.jpeg',
+            moduleImgAltText: 'Small robot smiling holding paintbrush and picture in frame'
         }
     },
     methods: {
@@ -67,7 +69,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
    .container-fluid.page-container {
-        height: 120vh       
+        height: 1200px;
     }
 }
 </style>

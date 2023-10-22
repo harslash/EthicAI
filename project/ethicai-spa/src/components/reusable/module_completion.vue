@@ -10,7 +10,7 @@
       <p class="congrats-text">Woo! Great Job!</p>
       <img
         src="../../assets/celebration.svg"
-        alt="Celebration Image"
+        alt="Two women holding balloons, one is jumping, stylised Corporate Memphis design"
         class="celebration-image"
       />
       <router-link to="/all-modules" class="continue-link">

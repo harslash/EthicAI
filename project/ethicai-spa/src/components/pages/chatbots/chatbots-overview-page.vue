@@ -1,12 +1,13 @@
 <template>
     <nav-bar/>
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview
                     :module-title="moduleTitle"
                     :module-description="moduleDescription"
                     :module-img-filename ="moduleImgFilename"
+                    :module-img-alt-text ="moduleImgAltText"
                     :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes"
                     :module-name="moduleName"
@@ -33,11 +34,12 @@ export default defineComponent({
             moduleTitle: 'The Age of Chatbots',
             moduleDescription: 'In this module, you’ll learn about what chatbots are, the limitations of ChatGPT, and guidelines surrounding using ChatGPT.',
             moduleImgSrc: '../../../assets/chatbots_module.png',
-            modulePageNames: ['The Age of Chatbots', 'Too Good to be True?', 'Hallucination','Misuse and Plagiarism', 'Module Quiz'],
-            modulePageRoutes: ['the-age-of-chatbots', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbots-quiz'],
+            modulePageNames: ['The Age of Chatbots', 'ChatGPT 101', 'Too Good to be True?', 'Hallucination','Misuse and Plagiarism', 'Module Quiz'],
+            modulePageRoutes: ['the-age-of-chatbots', 'chatgpt-101', 'too-good-to-be-true', 'hallucination', 'misuses-and-plagiarism', 'chatbots-quiz'],
             moduleName: 'chatbots',
             pageName: 'the-age-of-chatbots',
-            moduleImgFilename: 'chatbots_module.png'
+            moduleImgFilename: 'chatbots_module.png',
+            moduleImgAltText: 'happy robots speak to each other'
         }
     },
     methods: {
@@ -66,7 +68,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
    .container-fluid.page-container {
-        height: 120vh       
+        height: 1200px;
     }
 }
 </style>

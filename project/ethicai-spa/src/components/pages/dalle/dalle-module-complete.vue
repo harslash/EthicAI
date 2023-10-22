@@ -3,7 +3,7 @@
     <ModuleCompletion
       :moduleTitle="'The Rise of DALL·E'"
       :moduleName="'dalle'"
-      :buttonText="'Module Complete'"
+      :buttonText="'Return Home'"
     />
   </div>
 </template>

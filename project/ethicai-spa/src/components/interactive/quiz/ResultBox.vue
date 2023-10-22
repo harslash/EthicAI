@@ -19,7 +19,7 @@ let pass = grade >= 50;
 
 <template>
   <div class="container tw-h-full tw-w-full tw-justify-center tw-items-center tw-content-center">
-    <div class="tw-mx-auto tw-p-16 tw-w-full tw-h-full tw-justify-center">
+    <div class="tw-mx-auto tw-mt-10 tw-p-16 tw-w-full tw-h-full tw-justify-center md:tw-p-2 md:tw-mt-20">
       <p class="tw-text-4xl tw-text-center tw-font-bold tw-mb-8" style="color:#6D0CFF">Quiz Results</p>
       <div class="tw-m-auto tw-w-fit">
         <img :src="`/quiz/${pass ? 'correct1' : 'wrong1'}.svg`" :class="'tw-w-[100px] tw-h-[100px]'"
@@ -28,7 +28,7 @@ let pass = grade >= 50;
       <p class="tw-text-2xl tw-text-center tw-my-10">
         {{ pass ? 'Nice job, you passed!' : 'Sorry, you didn\'t pass :(' }}
       </p>
-      <div class="tw-flex tw-w-3/6 tw-m-auto">
+      <div class="tw-flex tw-w-3/6 tw-m-auto md:tw-w-full">
         <div class="tw-w-60 tw-h-38 tw-m-auto" style="background-color: #f2f2f2;">
           <p class="tw-uppercase tw-text-center tw-font-bold tw-mt-2" style="color:#6D0CFF">Grade</p>
           <p class="tw-text-center tw-text-4xl">{{ grade }}%</p>
@@ -45,14 +45,14 @@ let pass = grade >= 50;
         </div>
       </div>
       <div class="tw-flex tw-justify-center tw-items-center tw-mt-20">
-        <div v-if="!pass" onclick="location.reload()" :style="{ backgroundColor: '#6D0CFF' }"
-          class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150">
-          <p class="tw-text-xl tw-text-center tw-text-white">Retry</p>
-        </div>
+        <button v-if="!pass" onclick="location.reload()" :style="{ backgroundColor: '#6D0CFF' }"
+          class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150 tw-border-none">
+          <p class="tw-text-xl tw-text-center tw-text-white">Retry Quiz</p>
+        </button>
         <router-link class="tw-no-underline tw-ml-5" :to="`/${category}/module-complete`">
           <div :style="{ backgroundColor: '#6D0CFF' }"
             class="tw-w-40 tw-h-12 tw-p-2 tw-cursor-pointer tw-rounded-xl tw-transition-all tw-duration-150">
-            <p class="tw-text-xl tw-text-center tw-text-white">Continue</p>
+            <p class="tw-text-xl tw-text-center tw-text-white">Next Page</p>
           </div>
         </router-link>
       </div>

@@ -23,6 +23,7 @@ export default {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .module-complete-button:hover {

@@ -4,6 +4,9 @@
       <div
         class="prev-icon-container d-flex align-items-center justify-content-center"
         @click="handlePrevIconClick()"
+        @keypress="handleNextIconClick()"
+        title="Previous Page"
+        tabindex="0"
       >
         <i
           class="fas fa-solid fa-chevron-left prev-icon"
@@ -23,6 +26,9 @@
       <div
         class="next-icon-container d-flex align-items-center justify-content-center"
         @click="handleNextIconClick()"
+        @keypress="handleNextIconClick()"
+        title="Next Page"
+        tabindex="0"
       >
         <i
           class="fas fa-solid fa-chevron-right next-icon"
@@ -34,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, PropType } from "vue";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "ModuleNavigationBar",
@@ -55,6 +61,7 @@ export default defineComponent({
       ],
       chatbotsModulePageRoutes: [
         "the-age-of-chatbots",
+        'chatgpt-101',
         "too-good-to-be-true",
         "hallucination",
         "misuses-and-plagiarism",

@@ -4,3 +4,28 @@
     color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
     cursor: pointer;
 }
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+h1 {
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-weight: 400;
+}

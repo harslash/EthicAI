@@ -1,19 +1,21 @@
 <template>
   <form class="form-container d-flex justify-content-around align-items-center flex-column">
 
-    <div class="form-group d-flex">
-        <div v-if="!loading" class="pre-generated-prompt" @click="handlePromptClick()">
-            {{preGeneratedPrompt}}
-        </div>
+    <div class="form-group d-flex align-items-center">
+        <button v-if="!loading" class="pre-generated-prompt" title="Use example prompt" @click="handlePromptClick()">
+            Example: {{preGeneratedPrompt}}
+        </button>
         <button v-if="!loading" class="btn btn-primary refresh-btn mx-3"
                 type="button"
                 @click="refreshPrompt()"
+                title="Refresh example prompt"
                 :disabled="loading">
             <font-awesome-icon :icon="faArrowsRotate" style="color: #ffffff;"></font-awesome-icon>
         </button>
     </div>
 
-    <div class="form-group">
+    <div class="form-group d-flex flex-column">
+        <span class="demo-explanation">Your question:</span>
         <textarea
         v-model="inputPromptText"
         class="form-control"
@@ -27,17 +29,20 @@
             </div>
             <button class="btn btn-primary"
                     type="button"
-                    @click="clearPrompText()"
+                    @click="clearPromptText()"
+                    title="Clear prompt text"
                     :disabled="loading || !isReadyForClearingPrompt">
                 <font-awesome-icon :icon="faTrash" style="color: #ffffff;"></font-awesome-icon>
             </button>
              <send-btn
                 @button-clicked="handleButtonClick"
+                title="Submit prompt"
                 :disable-button="loading || !isReadyForNewPrompt"
                 ></send-btn>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group d-flex flex-column">
+        <span class="demo-explanation">LLM's reply:</span>
         <textarea
         v-model="outputPromptText"
         class="form-control output-box"
@@ -100,7 +105,7 @@ export default defineComponent({
         let isReadyForClearingPrompt = ref(false);
 
 
-        const clearPrompText = () => {
+        const clearPromptText = () => {
             inputPromptText.value = '';
             outputPromptText.value = ''
             isReadyForNewPrompt.value = true;
@@ -191,7 +196,7 @@ export default defineComponent({
             preGeneratedPrompt,
             handleButtonClick,
             handlePromptClick,
-            clearPrompText,
+            clearPromptText,
             inputPromptText,
             refreshPrompt,
             outputPromptText,
@@ -251,6 +256,14 @@ export default defineComponent({
 .refresh-btn {
     height: 40px;
     width: 40px;
+}
+
+.demo-explanation {
+    font-size: 0.9rem;
+    text-align: left;
+    color: #C324FF;
+    font-weight: 600;
+    /* font-style: italic; */
 }
 
 

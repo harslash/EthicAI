@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-primary">{{text}}</button>
+    <component :is="tag" type="button" class="btn btn-primary">{{text}}</component>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -7,10 +7,11 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'PurpleButton',
     props: {
-        'text': String
+        'text': String,
+        'tag': {type: String, default: "div"}
     },
     methods: {
-    }
+    },
 });
 
 </script>
@@ -34,4 +35,4 @@ export default defineComponent({
 .btn:hover {
     background-color: #8638fc;
 }
-</style>>
+</style>

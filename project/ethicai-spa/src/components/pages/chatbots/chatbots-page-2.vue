@@ -1,11 +1,11 @@
 <template>
     <nav-bar />
     <module-navigation-bar :moduleName="'chatbots'" />
-    <div class="container-fluid page-container text-center">
+    <div id="main" class="container-fluid page-container text-center">
         <div class="container mb-5 text-section" :class="{ 'hidden': !showFirstSection }">
             <div class="row h-10 mb-5">
                 <div class="col-md-12">
-                    <h1 class="tw-mt-24">Too Good To Be True</h1>
+                    <h1 class="tw-mt-24">Too Good To Be True?</h1>
                 </div>
             </div>
             <div class="row h-30 mb-5">
@@ -26,12 +26,12 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-a" src="../../../assets//chatbots_page_2_a.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                        alt="2d illustration of a robot pulling messages from a box, AI generated image" />
                 </div>
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="!section1Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
                         @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
                 </div>
             </div>
@@ -45,7 +45,9 @@
                             textual data, exceeding a staggering 570 GB
                             <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Ruby, 2023)
                             </span>. To put it in perspective, that's equivalent to more than 1.3 million novels' worth of
-                            information! This data amalgamation includes a myriad of sources like books, articles, and web
+                            information
+                            <span class="reference-link" @click="handleReferenceClick('tooGoodToBeTrue')">(Gupta, 2023)
+                            </span>! This data amalgamation includes a myriad of sources like books, articles, and web
                             pages.
                         </p>
                         <p class="section-text">
@@ -62,12 +64,12 @@
                 </div>
                 <div class="col-md-12">
                     <img class="img-b" src="../../../assets//chatbots_page_2_b.jpeg"
-                        alt="2d illustration of a robot pulling messages from a box" />
+                        alt="two baby robots sit on the ground, and share a speech bubble, AI generated image" />
                 </div>
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section1Completed && !section2Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="section1Completed && !section2Completed" :text="'Continue'"
                         @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
                 </div>
             </div>
@@ -92,12 +94,12 @@
                 </div>
                 <div class="col-md-12">
                     <img src="../../../assets//chatbots_page_2_c.png" class="img-c"
-                        alt="flowchat diagram explaing training process of ChatGPT" />
+                        alt="flowchart diagram, training data and user prompt (asking 'what does it look like') go to ChatGPT, which reads conversational context of a cat. ChatGPT looks at most likely words ('claws, tail, fur') and unlikely words ('wings, beak, tall'). Then ChatGPT gives user a sentence about a typical cat having claws and a long tail" />
                 </div>
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section2Completed && !section3Completed" :text="'Continue'"
+                    <purple-btn :tag="'button'" v-if="section2Completed && !section3Completed" :text="'Continue'"
                         @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
                 </div>
             </div>
@@ -120,21 +122,21 @@
                 </div>
                 <div class="col-md-12">
                     <img src="../../../assets//chatbots_page_2_d.png" class="img-d"
-                        alt="flowchat diagram explaing training process of ChatGPT" />
+                        alt="flowchart diagram, Markov chain takes input from user and corpus. User sends a sentence word by word, and Markov chain calculates probabilities for the next word in the sequence" />
                 </div>
             </div>
             <div class="row h-20">
                 <div class="col-md-12 d-flex justify-content-end">
-                    <purple-btn v-if="section3Completed && !section4Completed" :text="'Continue'"
-                        @click="showfifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
+                    <purple-btn :tag="'button'" v-if="section3Completed && !section4Completed" :text="'Continue'"
+                        @click="showFifthSection = true; scrollIntoSection('fifthSection'); section4Completed = true;" />
                 </div>
             </div>
         </div>
-        <div ref="fifthSection" class="container text-section pb-5" :class="{ 'hidden': !showfifthSection }">
+        <div ref="fifthSection" class="container text-section pb-5" :class="{ 'hidden': !showFifthSection }">
             <div class="row h-30 pb-5">
                 <div class="col-md-12 pb-5">
                     <div class="d-flex align-items-center flex-column">
-                        <h5>Exploring Biases in ChatGPT</h5>
+                        <h5>Exploring Potential Biases in ChatGPT</h5>
                         <p class="section-text">Welcome to our Bias Exploration feature. Here's how you can engage with our
                             Markov chain powered demo:</p>
                         <p class="section-text px-3">• <b>Train Model:</b> Click "Train Model" to observe the Markov Chain
@@ -144,14 +146,14 @@
                         <p class="section-text px-3">• <b>Experimentation:</b> You have the freedom to experiment by:</p>
 
                         <p class="section-text px-5">
-                            •Adjusting biases: See how biases can look different for the same corpus if we use another type
+                            • Adjusting biases: See how biases can look different for the same corpus if we use another type
                             of biased training.
                         </p>
                         <p class="section-text px-5">
-                            •Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's
+                            • Changing the Corpus: Alter the corpus to observe various biases that might exist in ChatGPT's
                             training data.
                         </p>
-                        <p class="section-text">Dive in and uncover the intricacies of biases in ChatGPT's responses!</p>
+                        <p class="section-text">Dive in and discover the intricacies of LLM biases, such as ChatGPT's biases.</p>
                     </div>
                 </div>
                 <div class="col-md-2"></div>
@@ -163,7 +165,7 @@
             <div class="row h-20 pb-5">
                 <div class="col-md-12 d-flex justify-content-end">
                     <router-link to="/chatbots/hallucination">
-                        <purple-btn :text="'Continue'" @click="handlePageCompletionClick()" />
+                        <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()" />
                     </router-link>
                 </div>
             </div>
@@ -203,6 +205,7 @@ export default defineComponent({
                 }
             });
         },
+        // eslint-disable-next-line 
         handlePageCompletionClick(this: any) {
             this.$registerPageAsCompleted('chatbots', 'too-good-to-be-true');
         },
@@ -249,6 +252,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -266,12 +270,12 @@ export default defineComponent({
 
     .img-a,
     .img-b {
-        width: 60%;
+        width: 80%;
     }
 
     .img-c,
     .img-d {
-        width: 90%;
+        width: 100%;
     }
 }
 </style>

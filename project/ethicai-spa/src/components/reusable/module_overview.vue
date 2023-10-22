@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
           <div class="image">
-            <img :src="require(`@/assets/${moduleImgFilename}`)" alt="image">
+            <img :src="require(`@/assets/${moduleImgFilename}`)" :alt="moduleImgAltText">
           </div>
           <div>
             <p class="module-name">{{ moduleTitle }}</p>
@@ -19,9 +19,9 @@
                 v-for="(item, index) in modulePageNames"
                 :key="item"
               >
-                <div class="list-item" @click="handleListItemClick(index)">
+                <a href="javascript:void(0);" class="list-item" @click="handleListItemClick(index)" style="text-decoration: none;">
                   <span
-                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index) }"
+                    :class="{ 'strikethrough': isPageVisted(index), 'non-strikethrough': !isPageVisted(index)}"
                   >{{ item }}</span>
                   <i
                     v-if="isPageVisted(index)"
@@ -33,25 +33,28 @@
                     class="far fa-circle"
                     :style="{ color: '#C324FF', transform: 'scale(1.2)' }"
                   ></i>
-                </div>
+                </a>
               </li>
             </ul>
           </div>
           <div class="bottom-child">
             <!-- Content for the bottom child container (30% height) -->
-            <div class="continue-button">
+            <div class="row h-20">
+              <div class="col-md-12 d-flex justify-content-end">
               <router-link :to="generateRoute(moduleName, pageName)">
-                <button @click="continueClicked">Continue</button>
+                <purple-btn :text="'Start Module'" @click="continueClicked" />
               </router-link>
+              </div>
             </div>
           </div>
         </div>
     </div>
-   
+
   </div>
 </template>
 <script lang="ts">
 import { defineComponent} from 'vue';
+import PurpleBtn from "../reusable-ui/purple-btn.vue";
 
 export default defineComponent({
   name: 'ModuleOverview',
@@ -59,6 +62,7 @@ export default defineComponent({
     moduleTitle: String,
     moduleDescription: String,
     moduleImgFilename: String,
+    moduleImgAltText: String,
     modulePageNames: Array as () => string[],
     modulePageRoutes: Array as () => string[],
     moduleName: String,
@@ -100,7 +104,6 @@ export default defineComponent({
 
           //set the pages states accordingly
           storedArray.forEach((pageState, index) => {
-            const pageStateKey = Object.keys(pageState)[0];
             const pageStateValue = Object.values(pageState)[0]
             this.modulePageStates[index] = pageStateValue
           })
@@ -125,6 +128,9 @@ export default defineComponent({
       }
     }
   },
+  components: {
+    "purple-btn": PurpleBtn,
+  },
    mounted() {
     this.setModulePageStates();
   }
@@ -134,7 +140,7 @@ export default defineComponent({
 <style scoped>
 
 @import "~@fortawesome/fontawesome-free/css/all.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 /* Add your CSS styles here, scoped to this component */
 body {
   font-family: Arial, sans-serif;
@@ -172,7 +178,6 @@ body {
 }
 
 .bottom-child {
-  flex: 5; /* 30% height */
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Align content to the bottom */
@@ -181,13 +186,15 @@ body {
 }
 
 .module-name {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   text-align: center;
 }
 
 .module-structure {
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -197,7 +204,7 @@ body {
 .contents {
   margin: 20px;
   padding: 0;
-  text-align: left;
+  text-align: center;
   font-size: 15px;
 }
 
@@ -217,22 +224,16 @@ body {
   font-weight: bold;
 }
 
-.continue-button button {
-  background-color: #6d0cff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 .strikethrough {
+  text-align: left;
   text-decoration: line-through;
   color: #6D0CFF;
 }
 
 .non-strikethrough {
   color: #C324FF;
+  text-align: left;
 }
 
 .contents li {

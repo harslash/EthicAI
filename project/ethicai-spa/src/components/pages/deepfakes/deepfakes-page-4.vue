@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <module-navigation-bar :moduleName="'deepfakes'"></module-navigation-bar>
-  <div class="container-fluid page-container text-center">
+  <div id="main" class="container-fluid page-container text-center">
     <div class="container text-section" :class="{ 'hidden': !showFirstSection }">
       <div class="row h-10 mb-5">
         <div class="col-md-12">
@@ -23,21 +23,20 @@
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn v-if="!section1Completed" :text="'Continue'"
+        <purple-btn :tag="'button'" v-if="!section1Completed" :text="'Continue'"
           @click="showSecondSection = true; scrollIntoSection('secondSection'); section1Completed = true;" />
       </div>
     </div>
     <div ref="secondSection" class="container row m-auto" :class="{ 'hidden': !showSecondSection }">
       <div class="row h-30">
-        <div class="col-md-12 pb-1">
+        <div class="col-md-12 pb-5">
           <div class="d-flex justify-content-center flex-wrap">
             <p class="section-text text-center">
               Take a look at this video of Morgan Freeman:
             </p>
-            <div>
-              <iframe width="560" height="315" class="mb-5"
-                src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo?si=06eqD0yiQuZhzHNy" title="YouTube video player"
-                frameborder="0"
+            <div class="tw-mb-5">
+              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oxXpB9pSETo"
+                title="YouTube video player" frameborder="0" class="md:tw-w-full md:tw-h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen></iframe>
             </div>
@@ -49,11 +48,42 @@
         </div>
       </div>
       <div class="col-md-12 d-flex justify-content-end">
-        <purple-btn v-if="!section2Completed" :text="'Continue'"
+        <purple-btn :tag="'button'" v-if="!section2Completed" :text="'Continue'"
           @click="showThirdSection = true; scrollIntoSection('thirdSection'); section2Completed = true;" />
       </div>
     </div>
     <div ref="thirdSection" class="container row m-auto" :class="{ 'hidden': !showThirdSection }">
+      <div class="row h-30 mb-5">
+        <div class="col-md-12 pb-5">
+          <div class="d-flex justify-content-center flex-wrap">
+            <p class="section-text">
+              The deepfake of Morgan Freeman above is a pretty advanced deepfake, created to be very convincing with a lot
+              more effort and processing power.
+            </p>
+            <p class="section-text">
+              More commonly on the internet, you will find deepfakes that look something like this video of Volodymyr
+              Zelenskyy:
+            </p>
+            <div class="tw-mb-5">
+              <iframe width="560" height="315"
+                src="https://www.youtube-nocookie.com/embed/X17yrEV5sl4?si=lNWGRhDQvixDBqvy" title="YouTube video player"
+                frameborder="0" class="md:tw-w-full md:tw-h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <p class="section-text">
+              While they are a lot less convincing, you may not notice if you are not paying close attention to the
+              details.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 d-flex justify-content-end">
+        <purple-btn :tag="'button'" v-if="!section3Completed" :text="'Continue'"
+          @click="showFourthSection = true; scrollIntoSection('fourthSection'); section3Completed = true;" />
+      </div>
+    </div>
+    <div ref="fourthSection" class="container row m-auto" :class="{ 'hidden': !showFourthSection }">
       <div class="row h-30 mb-5">
         <div class="col-md-12 pb-5">
           <div class="d-flex justify-content-center flex-wrap">
@@ -100,7 +130,7 @@
       </div>
       <div class="col-md-12 d-flex justify-content-end mb-2">
         <router-link to="/deepfakes/judgement-day">
-          <purple-btn :text="'Continue'" @click="handlePageCompletionClick()"></purple-btn>
+          <purple-btn :text="'Next Page'" @click="handlePageCompletionClick()"></purple-btn>
         </router-link>
       </div>
     </div>
@@ -108,7 +138,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../../reusable/nav-bar.vue';
 import ModuleNavigationBar from "../../reusable/module-navigation-bar.vue";
 import PurpleBtn from '../../reusable-ui/purple-btn.vue';
@@ -121,6 +151,7 @@ export default defineComponent({
       showFirstSection: true,
       showSecondSection: false,
       showThirdSection: false,
+      showFourthSection: false,
       section1Completed: false,
       section2Completed: false,
       section3Completed: false,
@@ -135,6 +166,7 @@ export default defineComponent({
         }
       });
     },
+    // eslint-disable-next-line 
     handlePageCompletionClick(this: any) {
       this.$registerPageAsCompleted('deepfakes', 'deepfakes-in-media');
     }
@@ -166,6 +198,7 @@ export default defineComponent({
 }
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;

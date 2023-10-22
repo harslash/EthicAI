@@ -18,7 +18,7 @@
                 "User interactions with them",
                 "Digitised books"
             ],
-            "explanation": "Large Language Models are trained on text from the internet, books, and their interactions with users."
+            "explanation": "Large Language Models are trained on text from the internet, books, and their interactions with users. Your conversations with ChatGPT may not be private."
         },
         {
             "question": "In what situations do you need to check if ChatGPT is hallucinating?",
@@ -54,7 +54,9 @@
             "question": "Why does ChatGPT produce biased outputs?",
             "correct_answer": "It was trained on biased text from the internet",
             "incorrect_answers": [
-                "It reflects the bias in the questions humans prompt it with"
+                "It reflects the bias in the questions humans prompt it with",
+                "It was created by biased engineers",
+                "ChatGPT is a machine, so cannot be biased"
             ],
             "explanation": "ChatGPT can reflect the biases in the text it was trained on."
         },
@@ -72,9 +74,11 @@
             "question": "Which prompt is most likely to lead to hallucinated facts from ChatGPT?",
             "correct_answer": "\"When was the Kate Edger Information Commons opened?\"",
             "incorrect_answers": [
-                "\"Write me a sonnet about frogs.\""
+                "\"Write me a sonnet about frogs.\"",
+                "\"Who wrote Romeo & Juliet?\"",
+                "\"Hello ChatGPT!\""
             ],
-            "explanation": "Sonnets about frogs don't exist, so ChatGPT will have to make them up. Even though you could call the sonnet 'hallucinated', it's not a hallucinated fact."
+            "explanation": "ChatGPT can correctly answer many commonly asked questions, but is less likely to provide info about local buildings. Sonnets about frogs don't exist, so ChatGPT will have to make them up. But even though you could call the sonnet 'hallucinated', it's not a hallucinated fact."
         },
         {
             "question": "Which of these is <em>NOT</em> a technique for improving your prompts?",

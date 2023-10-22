@@ -7,20 +7,21 @@
         </div>
         <div class="row" :class="{ 'hidden': !showButtons}">
             <div class="col-md-12 d-flex justify-content-around pb-5">
-                <purple-btn-outline v-if="isReadyForAnswer" :text="'Hallucination'" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
-                <purple-btn-outline v-if="isReadyForAnswer" :text="'Correct'" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
-                <purple-btn-outline v-if="!isReadyForAnswer" :text="'Next'" @click="handleNextBtnClick()"> </purple-btn-outline>
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Guess \'Hallucination\''" @click="handleHallucinationBtnClick(true)"> </purple-btn-outline>
+                <purple-btn-outline v-if="isReadyForAnswer" :text="'Guess \'Correct\''" @click="handleCorrectBtnClick(false)"> </purple-btn-outline>
             </div>
             <div class="col-md-2"></div>
-            <div  v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
+            <div v-if="isQuizStarted" class="col-md-8 d-flex justify-content-center">
                 <div class="explanation-container" :class="isUserCorrect ? 'alert alert-success' : 'alert alert-danger'">
                     <p v-if="isUserCorrect" class="h5">Well done!</p>
-                    <p v-else class="h5">Try again!</p>
+                    <p v-else class="h5">Sorry, that guess wasn't right...</p>
 
                     <p v-if="isHallucination" class="h6">ChatGPT produces hallucination here</p>
                     <p v-else class="h6">The response is factually correct</p>
 
                     <p>{{ explanationText }}</p>
+
+                    <purple-btn-outline v-if="isQuizStarted" :text="'Next Question'" @click="handleNextBtnClick()"> </purple-btn-outline>
                 </div>
             </div>
             <div class="col-md-2"></div>
@@ -77,7 +78,7 @@ export default defineComponent({
                 isReadyForAnswer.value = false;
             }
 
-            if (questionId.value < 5) { 
+            if (questionId.value < 5) {
                 if (value == jsonData.data[questionId.value].isHallucination) {
                     isUserCorrect.value = true;
                     isHallucination.value = false;
@@ -86,8 +87,8 @@ export default defineComponent({
                     isHallucination.value = true;
                 }
                 questionId.value += 1;
-             }  
-             
+             }
+
         }
 
         const handleNextBtnClick = () => {
@@ -95,7 +96,7 @@ export default defineComponent({
                 context.emit('end-of-demo-event');
                 showButtons.value = false;
             }
-            
+
             isReadyForAnswer.value = true;
             isQuizStarted.value = false;
             refreshCard();
@@ -106,7 +107,7 @@ export default defineComponent({
                 questionText.value = jsonData.data[questionId.value].prompt;
                 answerText.value = jsonData.data[questionId.value].response;
                 explanationText.value = jsonData.data[questionId.value].explanation;
-            }  
+            }
         }
 
         const questionText = ref('');
@@ -145,6 +146,7 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 .hidden {
+  display: none;
   opacity: 0;
   max-height: 0;
   overflow: hidden;

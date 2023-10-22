@@ -1,10 +1,10 @@
 <template>
     <nav-bar />
-    <div class="container-fluid page-container">
+    <div id="main" class="container-fluid page-container">
         <div class="row h-100">
             <div class="col-md-12 d-flex align-items-center">
                 <module-overview :module-title="moduleTitle" :module-description="moduleDescription"
-                    :module-img-filename="moduleImgFilename" :module-page-names="modulePageNames"
+                    :module-img-filename="moduleImgFilename" :module-img-alt-text ="moduleImgAltText" :module-page-names="modulePageNames"
                     :module-page-routes="modulePageRoutes" :module-name="moduleName"
                     :page-name="pageName"></module-overview>
             </div>
@@ -31,7 +31,8 @@ export default defineComponent({
             modulePageRoutes: ['the-depth-of-deepfakes', 'ai-for-evil', 'real-or-not-real', 'deepfakes-in-media', 'judgement-day', 'deepfakes-quiz'],
             moduleName: 'deepfakes',
             pageName: 'the-depth-of-deepfakes',
-            moduleImgFilename: 'deepfakes_module.png'
+            moduleImgFilename: 'deepfakes_module.png',
+            moduleImgAltText: 'Illustration of face, one half human, one half robotic'
         }
     },
     methods: {
@@ -61,7 +62,7 @@ export default defineComponent({
 
 @media (max-width: 767.98px) {
     .container-fluid.page-container {
-        height: 120vh
+        height: 1200px;
     }
 }
 </style>

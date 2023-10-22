@@ -1,53 +1,49 @@
 <template>
     <div>
-   <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Third navbar example">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <router-link to="/">
-                  <img src="../../assets/logo.png" alt="Company Logo" width="130">
-            </router-link>    
-          </a>
-          <button class="navbar-toggler" type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavDropdown" 
-            aria-controls="navbarNavDropdown" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" aria-label="Navigation bar">
+            <div class="container-fluid">
+                <a href="#main" class="skiplink">Skip to main content</a>
+                <router-link to="/" class="navbar-brand">
+                    <img src="../../assets/logo.png" alt="EthicAI Logo with swirl" width="130">
+                </router-link>
 
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/">
-                        Home
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/all-modules">
-                       Modules
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/resources">
-                        Resources
-                    </router-link>
-                </li>
-                <li class="nav-item">
-                     <router-link class="nav-link" to="/about-us">
-                           About Us
-                    </router-link>
-                </li>  
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/">
+                                Home
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/all-modules">
+                                Modules
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/resources">
+                                Resources
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" to="/about-us">
+                                About Us
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'NavBar',
@@ -62,6 +58,7 @@ export default defineComponent({
 
 <style lang="css" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 /* Your component-specific styles go here */
 .navbar {
     border-bottom: 2px solid #C9C9C9;
@@ -71,11 +68,14 @@ export default defineComponent({
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     color: #4d4d4d;
+    border-radius: 3px;
+
 }
 
 a.nav-link:hover {
     color: white;
     background-color: #6D0CFF;
+    border-radius: 3px;
 }
 
 li.nav-item {
@@ -94,5 +94,19 @@ li.nav-item {
     color: #6D0CFF;
 }
 
+.skiplink {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
+.skiplink:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
 </style>
+

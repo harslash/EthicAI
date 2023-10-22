@@ -1,9 +1,9 @@
 <template>
     <div>
-        <ModuleCompletion :moduleTitle="'The Age of Chatbots'" :moduleName="'chatbots'" :buttonText="'Module Complete'" />
+        <ModuleCompletion :moduleTitle="'The Age of Chatbots'" :moduleName="'chatbots'" :buttonText="'Return Home'" />
     </div>
 </template>
-  
+
 <script lang="ts">
 import { registerPageAsCompleted } from '@/helpers';
 import ModuleCompletion from '../../../components/reusable/module_completion.vue';
@@ -23,4 +23,3 @@ export default defineComponent({
     },
 });
 </script>
-  
