@@ -20,10 +20,10 @@ We are a passionate team of final-year computer science students with diverse sk
 ### Project Management Tool 🛠️ ###
 
 ***
-Our team used [JIRA](https://ethicai.atlassian.net/jira/software/projects/EAI/boards/1/timeline?shared=&atlOrigin=eyJpIjoiMmMxMDViYmQ4MGUxNGRlNjgwZjgzNGRiOGIyM2VlNmQiLCJwIjoiaiJ9) and [Trello](https://trello.com/b/Ydes48Ob/cs399) as our primary project management tool. For all other project-related files, such as API specifications and meeting notes, we used [Google Drive](https://drive.google.com).
+Our team used [Jira](https://ethicai.atlassian.net/jira/software/projects/EAI/boards/1/timeline?shared=&atlOrigin=eyJpIjoiMmMxMDViYmQ4MGUxNGRlNjgwZjgzNGRiOGIyM2VlNmQiLCJwIjoiaiJ9) and [Trello](https://trello.com/b/Ydes48Ob/cs399) as our primary project management tool. For all other project-related files, such as API specifications and meeting notes, we used [Google Drive](https://drive.google.com).
 
-Our JIRA Gantt Chart/Timeline is shown below:
-![JIRA Project Timeline](./markdown/jira-timeline.png)
+Our Jira Gantt Chart/Timeline is shown below:
+![Jira Project Timeline](./markdown/jira-timeline.png)
 
 ### Technologies  👨‍💻
 
