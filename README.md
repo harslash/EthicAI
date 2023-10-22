@@ -69,13 +69,13 @@ cd project/ethicai-spa
 npm install
 ```
 
-To run the project locally, run the following command in the terminal:
+To run the project locally, run the following command in the terminal (in the `project/ethicai-spa` directory):
 
 ```bash
 npm run serve
 ```
 
-To build the project, run the following command in the terminal:
+To build the project, run the following command in the terminal (in the `project/ethicai-spa` directory):
 
 ```bash
 npm run build
