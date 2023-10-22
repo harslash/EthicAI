@@ -23,32 +23,37 @@ Our JIRA Gantt Chart/Timeline is shown below:
 ![JIRA Project Timeline](./markdown/jira-timeline.png)
 
 ### Technologies  👨‍💻
+
 ***
 
 #### Front End ####
+
 Name | Version
 ------------- | -------------
+[HTML](https://html.spec.whatwg.org/multipage/) | v5.0
+[CSS](https://www.w3.org/Style/CSS/) | v3.0
+[Typescript](https://www.typescriptlang.org/) | v4.5.5
 [Vue.js](https://vuejs.org/) | v3.3.4
 [PrimeVue](https://primevue.org/) | v3.34.0
 [Bootstrap](https://getbootstrap.com/) | v5.3.1
-[Tailwind](https://tailwindcss.com/) | v3.3.3
-[Typescript](https://www.typescriptlang.org/) | v4.5.5
-
+[TailwindCSS](https://tailwindcss.com/) | v3.3.3
 
 #### Back End ####
+
 Name | Version
 ------------- | -------------
-[Node.js](https://nodejs.org/en) |
-[Python](https://www.google.com/search?q=pytho&oq=pytho&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgYIAhBFGDsyCQgDECMYJxiKBTIKCAQQABixAxiABDIGCAUQRRg9MgYIBhBFGDwyBggHEEUYPdIBCDE3NDlqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8) |
-[AWS Lamda](https://aws.amazon.com/lambda/) |
-
+[Node.js](https://nodejs.org/en) | v18.18.2
+[Python](https://www.python.org/) | v3.11
+[AWS Lambda](https://aws.amazon.com/lambda/) |
 
 #### Hosting ####
+
 Name | Version
 ------------- | -------------
 [AWS S3 Bucket](https://aws.amazon.com/s3/) |
 [AWS CloudFront](https://aws.amazon.com/cloudfront/) |
 
+This is a list of the main technologies used in the project. For a full list of dependencies, please refer to the `package.json` file in the project directory.
 
 ### Installation 📖
 ***
