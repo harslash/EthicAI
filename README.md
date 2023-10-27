@@ -11,11 +11,11 @@ Access EthicAI here: [https://ethicai.co.nz/](https://ethicai.co.nz/)
 ***
 We are a passionate team of final-year computer science students with diverse skills, including content research, UI design and web development.
 
-* Georgia Purkiss - Front End Developer and UI/UX Designer
-* Kevin Wong - Frontend Developer and Backend Developer
-* Matthew Kwok - Frontend Developer and UI/UX Designer
-* Gali Mortimer-Webster - Content Writer and Frontend Developer
-* Harlean Hansra - Frontend Developer
+* Georgia Purkiss - Front-end Developer and UI/UX Designer
+* Kevin Wong - Front-end Developer and Back-end Developer
+* Matthew Kwok - Front-end Developer and UI/UX Designer
+* Gali Mortimer-Webster - Content Writer and Front-end Developer
+* Harlean Hansra - Front-end Developer
 
 ### Project Management Tool 🛠️ ###
 
